@@ -5,7 +5,6 @@ date: 2012-05-01
 tags:
   - case study
 ---
-## {{description}}
 
 <figure>
   {% image "./cosmos_thumb.jpg","Man holding a strange star-gazing object to the sky" %}

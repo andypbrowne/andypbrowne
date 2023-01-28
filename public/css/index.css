@@ -2,7 +2,10 @@
 :root {
 	--font-family: -apple-system, system-ui, sans-serif;
 	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+}
 
+/* Responsive typography */
+:root {
 	--font-size-xs: clamp(0.64rem, 0.11vw + 0.62rem, 0.7rem);
 	--font-size-sm: clamp(0.8rem, 0.23vw + 0.75rem, 0.94rem);
 	--font-size-base: clamp(1rem, 0.42vw + 0.92rem, 1.25rem);
@@ -62,7 +65,8 @@ html {
 	overflow-y: scroll;
 }
 body {
-	max-width: 40em;
+	max-width: 48em;
+	font-size: var(--font-size-base);
 }
 h1,
 h2,
@@ -73,11 +77,12 @@ h3 {
 }
 
 h1 {
-	font-size: var(--font-size-lg);
+	font-size: var(--font-size-xxl);
+	margin-block-start: .04em;
 }
 
 h2 {
-	font-size: var(--font-size-md);
+	font-size: var(--font-size-xl);
 }
 
 h2, h3 {
@@ -92,7 +97,6 @@ blockquote {
 	font-family: var(--headings-font);
 	font-variation-settings: "wght" 500;
 	color: var(--color-midnight-80);
-	text-transform: uppercase;
 	text-align: center;
 	margin: 2rem;
 }
@@ -108,9 +112,12 @@ small {
 figure {
 	display: block;
     margin-block-start: 0px;
-    margin-block-end: 0px;
+    margin-block-end: 2.8rem;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
+}
+figure img {
+	border-radius: 10px;
 }
 figcaption {
 	font-style: italic;
@@ -118,7 +125,7 @@ figcaption {
     margin-top: 1.2rem;
 }
 img {
-	max-width: 100%;
+	width: 100%;
 	height: auto;
 }
 
@@ -173,6 +180,8 @@ article h2 + p::first-letter {
 article h2.post-deck {
 	font-style: italic;
 	color: #989898;
+	text-align: center;
+	margin: 2.4rem 0 2.2rem;
     background: -webkit-gradient(linear, left top, right top, from(#3668cc), to(#7500ed));
     background: linear-gradient(to right, #3668cc 50%, #7500ed 100%);
     background-clip: text;
