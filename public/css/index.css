@@ -2,6 +2,15 @@
 :root {
 	--font-family: -apple-system, system-ui, sans-serif;
 	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+
+	--font-size-xs: clamp(0.64rem, 0.11vw + 0.62rem, 0.7rem);
+	--font-size-sm: clamp(0.8rem, 0.23vw + 0.75rem, 0.94rem);
+	--font-size-base: clamp(1rem, 0.42vw + 0.92rem, 1.25rem);
+	--font-size-md: clamp(1.25rem, 0.69vw + 1.11rem, 1.67rem);
+	--font-size-lg: clamp(1.56rem, 1.1vw + 1.34rem, 2.22rem);
+	--font-size-xl: clamp(1.95rem, 1.68vw + 1.62rem, 2.96rem);
+	--font-size-xxl: clamp(2.44rem, 2.51vw + 1.94rem, 3.95rem);
+	--font-size-xxxl: clamp(3.05rem, 3.68vw + 2.32rem, 5.26rem);
 }
 
 /* Theme colors */
@@ -54,6 +63,47 @@ html {
 }
 body {
 	max-width: 40em;
+}
+h1,
+h2,
+h3 {
+	font-family: var(--headings-font);
+	font-weight: 700;
+	font-variation-settings: "wght" 700;
+}
+
+h1 {
+	font-size: var(--font-size-lg);
+}
+
+h2 {
+	font-size: var(--font-size-md);
+}
+
+h2, h3 {
+	margin: 2.4rem 0 .8rem;
+}
+
+p, ul, ol {
+	margin: 0px 0px 20px;
+  }
+
+blockquote {
+	font-family: var(--headings-font);
+	font-variation-settings: "wght" 500;
+	color: var(--color-midnight-80);
+	text-transform: uppercase;
+	text-align: center;
+	margin: 2rem;
+}
+
+blockquote p {
+	font-size: var(--font-size-md);
+	line-height: 1.1;
+}
+
+small {
+	font-size: var(--font-size-sm);
 }
 figure {
 	display: block;
@@ -110,6 +160,24 @@ main {
 }
 main :first-child {
 	margin-top: 0;
+}
+
+article h2 + p::first-letter {
+    font-size: 250%;
+  	padding: 0px;
+  	margin-right: 6px;
+  	float: left;
+    font-weight: bold;
+}
+
+article h2.post-deck {
+	font-style: italic;
+	color: #989898;
+    background: -webkit-gradient(linear, left top, right top, from(#3668cc), to(#7500ed));
+    background: linear-gradient(to right, #3668cc 50%, #7500ed 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(0, 0, 0, 0.15);
 }
 
 /* header {

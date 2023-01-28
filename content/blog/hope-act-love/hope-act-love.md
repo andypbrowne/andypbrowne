@@ -6,8 +6,6 @@ tags:
   - case study
 ---
 
-## {{description}}
-
 <figure>
     {% image "./fa-vital-key.jpg", "A charcoal image of a bare tree trunk" %}
      <figcaption >Vine carcoal illustration for the Vital Key component of an exhibit called <em>Hope Act Love</figcaption>

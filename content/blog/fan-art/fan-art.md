@@ -5,7 +5,6 @@ date: 2011-05-25
 tags:
   - case study
 ---
-## {{description}}
 
 <figure>
     {% image "./fa-bleu.jpg", "A french bulldog illustration" %}
