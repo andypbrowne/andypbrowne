@@ -13,7 +13,7 @@ eleventyNavigation:
 {% set latestPostsCount = postsCount | min(6) %}
 <h1 class="visually-hidden">Latest {{ latestPostsCount }} Post{% if latestPostsCount != 1 %}s{% endif %}</h1>
 
-{% set postslist = collections.posts | head(-6) %}
+{% set postslist = collections.featured | head(-6) %}
 {% set postslistCounter = postsCount %}
 {% include "postslist.njk" %}
 

@@ -1,13 +1,17 @@
 ---
 title: Cosmos
-description: Editorial and graphic design by a favorite television show
+description: Editorial and graphic design inspired by a favorite television show
+thumbnail: assets/images/cosmos_thumb.jpg
+thumbnailAlt: Man holding a strange star-gazing object to the sky
 date: 2012-05-01
 tags:
   - case study
+  - post
+  - featured
 ---
 
 <figure>
-  {% image "./cosmos_thumb.jpg","Man holding a strange star-gazing object to the sky" %}
+  {% image "../../assets/images/cosmos_thumb.jpg","Man holding a strange star-gazing object to the sky" %}
 <figcaption>A closeup of source material found in the image library at the New York Public Library</figcaption>  
 </figure>
 
@@ -18,7 +22,7 @@ The theme of space was first created by a typography exercise called illustrated
 A valuable piece of inspiration for this piece was the image library at the mid-manhattan branch of the New York Public Library. There they have a catalogue of thousands of images. The most interesting images were etchings and lithographs. These images are incorporated throughout the 4-page editorial spread.
 
 <figure>
-  {% image "./img054cosmos.jpg","Man holding a strange star-gazing object to the sky" %}
+  {% image "./img054cosmos.jpg", "Man holding a strange star-gazing object to the sky" %}
 <figcaption>Study for a wordmark</figcaption>  
 </figure>
 <figure>
