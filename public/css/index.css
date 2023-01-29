@@ -190,6 +190,20 @@ article h2.post-deck {
     -webkit-text-fill-color: rgba(0, 0, 0, 0.15);
 }
 
+section.hero {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	gap: 1rem;
+}
+
+section.hero h2 {
+	grid-column: 1;
+}
+
+section.hero p {
+	grid-column: 2;
+}
+
 /* header {
 	border-bottom: 1px dashed var(--color-gray-20);
 } */
