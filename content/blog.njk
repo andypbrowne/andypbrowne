@@ -6,5 +6,10 @@ eleventyNavigation:
 ---
 <h1>Archive</h1>
 
+{% set postsCount = collections.posts | length %}
+{% set latestPostsCount = postsCount %}
+<p>Keep scrolling for all {{ latestPostsCount }} Post{% if latestPostsCount != 1 %}s{% endif %}</p>
+
 {% set postslist = collections.posts %}
+{% set postslistCounter = postsCount %}
 {% include "postslist.njk" %}

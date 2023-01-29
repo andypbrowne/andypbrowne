@@ -116,7 +116,8 @@ figure {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
 }
-figure img {
+figure img,
+img.thumbnail {
 	border-radius: 10px; 
 }
 figcaption {
