@@ -11,7 +11,7 @@ tags:
 ---
 
 <figure>
-  {% image "./frottage-golden-gate.jpg","A wide view of a map rubbing" %}
+  {% image "./frottage-golden-gate.jpg", "A wide view of a map rubbing" %}
 <figcaption>Example frottage work from the Golden Gate Bridge</figcaption>  
 </figure>
 

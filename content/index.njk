@@ -12,9 +12,13 @@ layout: layouts/home.njk
 {% set latestPostsCount = postsCount | min(6) %}
 <h1 class="visually-hidden">Latest {{ latestPostsCount }} Post{% if latestPostsCount != 1 %}s{% endif %}</h1>
 
+<div class="featured-post-grid">
+
 {% set postslist = collections.featured | head(-6) %}
 {% set postslistCounter = postsCount %}
 {% include "postslist.njk" %}
+
+</div>
 
 {% if postsCount > 3 %}
 <p>More posts can be found in <a href="/blog/">the archive</a>.</p>

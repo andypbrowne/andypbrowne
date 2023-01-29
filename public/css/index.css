@@ -28,6 +28,7 @@
 	--text-color-link: #082840;
 	--text-color-link-active: #5f2b48;
 	--text-color-link-visited: #17050F;
+	--subtle-border: #2b3e51;
 
 	--syntax-tab-size: 2;
 }
@@ -65,8 +66,12 @@ html {
 	overflow-y: scroll;
 }
 body {
-	max-width: 98em;
 	font-size: var(--font-size-base);
+}
+
+main {
+	max-width: 80em;
+	margin: 0 auto;
 }
 
 article {
@@ -83,12 +88,12 @@ h3 {
 }
 
 h1 {
-	font-size: var(--font-size-xxl);
+	font-size: var(--font-size-xl);
 	margin-block-start: .04em;
 }
 
 h2 {
-	font-size: var(--font-size-xl);
+	font-size: var(--font-size-lg);
 }
 
 h2, h3 {
@@ -136,6 +141,11 @@ img {
 	height: auto;
 }
 
+iframe.yt-shortcode {
+	aspect-ratio: 16 / 9;
+	width: 100%;
+}
+
 /* https://www.a11yproject.com/posts/how-to-hide-content/ */
 .visually-hidden {
 	clip: rect(0 0 0 0);
@@ -172,9 +182,9 @@ a[href]:active {
 main {
 	padding: 1rem;
 }
-main :first-child {
+/* main :first-child {
 	margin-top: 0;
-}
+} */
 
 article h2 + p::first-letter {
     font-size: 250%;
@@ -196,18 +206,49 @@ article h2.post-deck {
     -webkit-text-fill-color: rgba(0, 0, 0, 0.15);
 }
 
-section.hero {
+section.hero,
+.about-page {
 	display: grid;
 	grid-template-columns: 2fr 1fr;
-	gap: 1rem;
+	gap: 2rem;
+	margin-bottom: 2rem;
 }
 
 section.hero h2 {
-	grid-column: 1;
+	margin-top: 0px;
 }
 
-section.hero p {
+section.hero h2,
+section.bio {
+	grid-column: 1;
+	margin-bottom: 2rem;
+}
+
+section.bio .container-center {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 2rem;
+}
+
+section.bio img {
+	width: 150px;
+	height: auto;
+	border-radius: 500px;
+}
+
+section.hero p,
+section.bio-details {
 	grid-column: 2;
+}
+
+.featured-post-grid {
+	border-bottom: 1px solid var(--subtle-border);
+}
+
+.featured-post-grid ol {
+	display: grid;
+	gap: 2rem;
+	grid-template-columns: repeat(3, 1fr);
 }
 
 /* header {
