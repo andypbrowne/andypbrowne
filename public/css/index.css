@@ -65,9 +65,15 @@ html {
 	overflow-y: scroll;
 }
 body {
-	max-width: 48em;
+	max-width: 98em;
 	font-size: var(--font-size-base);
 }
+
+article {
+	max-width: 48em;
+	margin: 0 auto;
+}
+
 h1,
 h2,
 h3 {
