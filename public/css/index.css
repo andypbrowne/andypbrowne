@@ -117,7 +117,7 @@ figure {
     margin-inline-end: 0px;
 }
 figure img {
-	border-radius: 10px;
+	border-radius: 10px; 
 }
 figcaption {
 	font-style: italic;
@@ -274,22 +274,22 @@ header {
 .postlist {
 	list-style: none;
 	padding: 0;
-	padding-left: 1.5rem;
+	/* padding-left: 1.5rem; */
 }
 .postlist-item {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: baseline;
-	counter-increment: start-from -1;
+	/* counter-increment: start-from -1; */
 	margin-bottom: 1em;
 }
 .postlist-item:before {
 	display: inline-block;
 	pointer-events: none;
-	content: "" counter(start-from, decimal-leading-zero) ". ";
+	/* content: "" counter(start-from, decimal-leading-zero) ". "; */
 	line-height: 100%;
 	text-align: right;
-	margin-left: -1.5rem;
+	/* margin-left: -1.5rem; */
 }
 .postlist-date,
 .postlist-item:before {
@@ -303,8 +303,8 @@ header {
 	font-size: 1.1875em; /* 19px /16 */
 	font-weight: 700;
 	flex-basis: calc(100% - 1.5rem);
-	padding-left: .25em;
-	padding-right: .5em;
+	/* padding-left: .25em;
+	padding-right: .5em; */
 	text-underline-position: from-font;
 	text-underline-offset: 0;
 	text-decoration-thickness: 1px;
