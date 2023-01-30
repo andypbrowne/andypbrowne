@@ -7,7 +7,6 @@ date: 2015-08-16
 tags:
   - post
   - vets
-  - featured
 draft: false
 ---
 

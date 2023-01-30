@@ -6,7 +6,7 @@ thumbnailAlt: American flags waving on 5th Ave
 date: 2014-11-11
 tags:
   - post
-  - featured
+  - vets
 ---
 
 <figure>
