@@ -1,6 +1,7 @@
 /* Defaults */
 :root {
-	--font-family: -apple-system, system-ui, sans-serif;
+	--font-family: 'Inter var', system-ui, sans-serif;
+	--font-headings: 'Inter var', system-ui, sans-serif;
 	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
 }
 
@@ -82,9 +83,9 @@ article {
 h1,
 h2,
 h3 {
-	font-family: var(--headings-font);
-	font-weight: 700;
-	font-variation-settings: "wght" 700;
+	font-family: var(--font-headings);
+	font-weight: 900;
+	font-variation-settings: "wght" 900;
 }
 
 h1 {
@@ -130,6 +131,10 @@ figure {
 figure img,
 img.thumbnail {
 	border-radius: 10px; 
+}
+img.thumbnail {
+	aspect-ratio: 16 / 9;
+	object-fit: cover;
 }
 figcaption {
 	font-style: italic;
@@ -231,7 +236,7 @@ section.bio .container-center {
 }
 
 section.bio img {
-	width: 150px;
+	width: 16rem;
 	height: auto;
 	border-radius: 500px;
 }
@@ -249,6 +254,10 @@ section.bio-details {
 	display: grid;
 	gap: 2rem;
 	grid-template-columns: repeat(3, 1fr);
+}
+
+section.archive {
+	max-width: 65ch;
 }
 
 /* header {
@@ -342,9 +351,9 @@ header {
 	/* padding-left: 1.5rem; */
 }
 .postlist-item {
-	display: flex;
+	/* display: flex;
 	flex-wrap: wrap;
-	align-items: baseline;
+	align-items: flex-start; */
 	/* counter-increment: start-from -1; */
 	margin-bottom: 1em;
 }

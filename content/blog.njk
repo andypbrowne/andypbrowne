@@ -4,6 +4,7 @@ eleventyNavigation:
   key: Archive
   order: 2
 ---
+<section class="archive">
 <h1>Archive</h1>
 
 {% set postsCount = collections.posts | length %}
@@ -15,7 +16,7 @@ eleventyNavigation:
 <ol reversed class="postlist" style="counter-reset: start-from {{ (postslistCounter or postslist.length) + 1 }}">
 {% for post in postslist | reverse %}
 	<li class="postlist-item {% if post.url == url %} postlist-item-active{% endif %}">
-		<time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("LLLL yyyy") }}</time>
+		<time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("LLLL yyyy") }}</time><br>
 		<a href="{{ post.url }}" class="postlist-link">
 			{% if post.data.title %}
 			{{ post.data.title }}
@@ -28,3 +29,4 @@ eleventyNavigation:
 	</li>
 {% endfor %}
 </ol>
+</section>

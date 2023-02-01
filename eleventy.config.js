@@ -14,6 +14,7 @@ module.exports = function(eleventyConfig) {
 		"./node_modules/prismjs/themes/prism-okaidia.css": "/css/prism-okaidia.css",
 	});
 	eleventyConfig.addPassthroughCopy('./content/assets');
+	eleventyConfig.addPassthroughCopy('./public/css/webfonts.css');
 
 	eleventyConfig.addShortcode("youtube", (videoURL, title) => {
 		const url = new URL(videoURL);
@@ -27,6 +28,7 @@ module.exports = function(eleventyConfig) {
 	
 	// Run Eleventy when these files change:
 	// https://www.11ty.dev/docs/watch-serve/#add-your-own-watch-targets
+	eleventyConfig.addWatchTarget("public/css/");
 
 	// Watch content images for the image pipeline.
 	eleventyConfig.addWatchTarget("content/**/*.{svg,webp,png,jpeg}");
