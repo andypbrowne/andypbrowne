@@ -19,8 +19,6 @@ layout: layouts/base.njk
 
 {{ content | safe }}
 
-<hr>
-
 {%- if collections.posts %}
 {%- set previousPost = collections.posts | getPreviousCollectionItem %}
 {%- set nextPost = collections.posts | getNextCollectionItem %}
