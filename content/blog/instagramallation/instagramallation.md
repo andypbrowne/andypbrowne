@@ -3,7 +3,7 @@ title: Instagramallation
 description: A web experiment used for environmental design
 thumbnail: assets/images/instagram_2lifeRemix.jpg
 thumbnailAlt: Man working in a maker space 
-date: 2023-01-29
+date: 2018-12-08
 tags:
   - case study
   - post

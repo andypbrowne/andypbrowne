@@ -1,6 +1,40 @@
+@font-face {
+    font-family: 'Inter var';
+    font-weight: 100 900;
+    font-display: swap;
+    font-style: normal;
+    font-named-instance: 'Regular';
+    src: url("../../content/assets/fonts/Inter-roman.var.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: 'Inter var';
+    font-weight: 100 900;
+    font-display: swap;
+    font-style: italic;
+    font-named-instance: 'Italic';
+    src: url("../../content/assets/fonts/Inter-italic.var.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: 'Newsreader';
+    font-weight: 100 900;
+    font-display: swap;
+    font-style: normal;
+    font-named-instance: 'Regular';
+    src: url("../../content/assets/fonts/Newsreader.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: 'Newsreader';
+    font-weight: 100 900;
+    font-display: swap;
+    font-style: italic;
+    font-named-instance: 'Italic';
+    src: url("../../content/assets/fonts/Newsreader-Italic.woff2") format("woff2");
+  }
+
 /* Defaults */
 :root {
 	--font-family: 'Inter var', system-ui, sans-serif;
+	--font-family-italic: 'Newsreader', serif;
 	--font-headings: 'Inter var', system-ui, sans-serif;
 	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
 }
@@ -128,6 +162,10 @@ figure {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
 }
+figcaption {
+	font-family: var(--font-family-italic);
+	font-weight: inherit;
+}
 figure img,
 img.thumbnail {
 	border-radius: 10px; 
@@ -200,7 +238,10 @@ article h2 + p::first-letter {
 }
 
 article h2.post-deck {
+	font-family: var(--font-family-italic);
 	font-style: italic;
+	font-kerning: auto;
+	font-weight: 800;
 	color: #989898;
 	text-align: center;
 	margin: 2.4rem 0 2.2rem;
