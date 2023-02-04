@@ -54,12 +54,18 @@
 /* Theme colors */
 :root {
 	--color-gray-20: #e0e0e0;
-	--color-gray-50: #C0C0C0;
-	--color-gray-90: #333;
+	--color-gray-40: #C0C0C0;
+	--color-gray-60: #787878;
+	--color-gray-80: #333;
 
-	--background-color: #fff;
+	--color-midnight-20: #E3E4E5;
+	--color-midnight-40: #7792a9;
+	--color-midnight-60: #496174;
+	--color-midnight-80: #0F2B42;
 
-	--text-color: var(--color-gray-90);
+	--color-base-bg: #FFFCF5;
+
+	--text-color: var(--color-midnight-80);
 	--text-color-link: #082840;
 	--text-color-link-active: #5f2b48;
 	--text-color-link-visited: #17050F;
@@ -70,16 +76,26 @@
 
 @media (prefers-color-scheme: dark) {
 	:root {
-		--color-gray-20: #e0e0e0;
-		--color-gray-50: #C0C0C0;
-		--color-gray-90: #dad8d8;
+		--color-gray-20: #333;
+		--color-gray-40: #787878;
+		--color-gray-60: #C0C0C0;
+		--color-gray-80: #e0e0e0;
 
-		/* --text-color is assigned to --color-gray-_ above */
+		--text-color: var(--color-midnight-20);
 		--text-color-link: #1493fb;
 		--text-color-link-active: #6969f7;
 		--text-color-link-visited: #a6a6f8;
 
-		--background-color: #15202b;
+		--color-base-bg: #15202b;
+		
+	}
+
+	img {
+		opacity: .6;
+    	transition: opacity .5s ease-in-out;
+	}
+	img:hover {
+		opacity: 1;
 	}
 }
 
@@ -95,7 +111,7 @@ body {
 	margin: 0 auto;
 	font-family: var(--font-family);
 	color: var(--text-color);
-	background-color: var(--background-color);
+	background-color: var(--color-base-bg);
 }
 html {
 	overflow-y: scroll;
@@ -132,7 +148,7 @@ h2 {
 }
 
 h2, h3 {
-	margin: 2.4rem 0 .8rem;
+	margin: 2.4rem 0 1.8rem;
 }
 
 p, ul, ol {
@@ -254,21 +270,47 @@ article h2.post-deck {
 
 section.hero,
 .about-page {
-	display: grid;
-	grid-template-columns: 2fr 1fr;
+	display: block;
 	gap: 2rem;
 	margin-bottom: 2rem;
 }
-
 section.hero h2 {
 	margin-top: 0px;
+	max-width: 48ch;
+	font-size: var(--font-size-xl);
 }
 
-section.hero h2,
-section.bio {
-	grid-column: 1;
-	margin-bottom: 2rem;
+section.hero .hero-details {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
+
+section.hero .hero-details {
+	max-width: 60ch;
+}
+
+@media screen and (min-width: 650px) {
+
+  }
+@media screen and (min-width: 900px) {
+
+}
+@media screen and (min-width: 1100px) {
+	section.hero,
+	.about-page {
+		display: grid;
+		grid-template-columns: repeat (8, 1fr);
+	}
+	section.hero h2 {
+		grid-column: 1 / 6;
+	}
+	section.hero .hero-details {
+		grid-column: 6 / 8;
+	}
+}
+
+
 
 section.bio .container-center {
 	display: flex;
@@ -282,13 +324,9 @@ section.bio img {
 	border-radius: 500px;
 }
 
-section.hero p,
-section.bio-details {
-	grid-column: 2;
-}
-
 .featured-post-grid {
 	border-bottom: 1px solid var(--subtle-border);
+	margin-bottom: 2rem;
 }
 
 .featured-post-grid ol {
@@ -426,7 +464,7 @@ header {
 .postlist-date,
 .postlist-item:before {
 	font-size: 0.8125em; /* 13px /16 */
-	color: var(--color-gray-90);
+	color: var(--color-gray-80);
 }
 .postlist-date {
 	word-spacing: -0.5px;
@@ -494,6 +532,28 @@ h2 + .header-anchor {
 	font-size: 1.5em;
 }
 
+/* social links */
+.social ul {
+	display: flex;
+	gap: 2rem;
+	margin: 0;
+	padding: 0;
+}
+.social li {
+	display: inline-block;
+	vertical-align: middle;
+  }
+  .social svg {
+	  fill: var(--color-gray-80);
+	  opacity: 1;
+	  width: 36px;
+	  height: 100%;
+	  vertical-align: middle;
+  }
+  .social a {
+	  display: block;
+	  text-align: center; 
+  }
 
 /* Special filtering for a grid of items */
 
@@ -520,8 +580,8 @@ ol.filters {
   transition: all 0.1s;
 }
 .filters label:hover {
-  background: var(--color-gray-90);
-  /* color: var(--white); */
+  background: var(--color-gray-80);
+  color: var(--color-gray-20);
 }
 
 /* Grid Layout */
@@ -577,7 +637,7 @@ li.filter-grid-item figure {
 }
 .filter-grid .filter-grid-item-categories a:hover {
   background: var(--color-gray-20);
-  color: var(--color-gray-90);
+  color: var(--color-gray-80);
 }
 
 
@@ -603,6 +663,6 @@ li.filter-grid-item figure {
 [value="four"]:checked ~ .filters [for="video"],
 [value="five"]:checked ~ .filters [for="intimateSharing"],
 [value="six"]:checked ~ .filters [for="wildCard"] {
-  background: var(--color-gray-90);
-  color: initial;
+  background: var(--color-gray-60);
+  color: var(--color-gray-20);
 }
