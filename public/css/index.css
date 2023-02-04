@@ -294,7 +294,22 @@ section.bio-details {
 .featured-post-grid ol {
 	display: grid;
 	gap: 2rem;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: 1fr;
+}
+@media screen and (min-width: 650px) {
+	.featured-post-grid ol {
+	  grid-template-columns: repeat(2, 1fr);
+	}
+  }
+@media screen and (min-width: 900px) {
+	.featured-post-grid ol {
+	  grid-template-columns: repeat(3, 1fr);
+	}
+}
+@media screen and (min-width: 1600px) {
+	.featured-post-grid ol {
+	  grid-template-columns: repeat(4, 1fr);
+	}
 }
 
 section.archive {
@@ -514,9 +529,19 @@ ol.filters {
 ol.filter-grid {
   display: grid;
   grid-gap: 1.5rem;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   padding: 0 0 2rem 0;
   border-bottom: 1px solid var(--subtle-border);
+}
+@media screen and (min-width: 650px) {
+	ol.filter-grid {
+	  grid-template-columns: repeat(3, 1fr);
+	}
+  }
+@media screen and (min-width: 900px) {
+	ol.filter-grid {
+	  grid-template-columns: repeat(4, 1fr);
+	}
 }
 li.filter-grid-item {
 	list-style-type: none;
@@ -554,16 +579,7 @@ li.filter-grid-item figure {
   background: var(--color-gray-20);
   color: var(--color-gray-90);
 }
-@media screen and (max-width: 900px) {
-  .filter-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-@media screen and (max-width: 650px) {
-  .filter-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
+
 
 /* Filtering style for Insta Strategy*/
 
