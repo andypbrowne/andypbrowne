@@ -311,11 +311,11 @@ section.hero .hero-details {
 	}
 	section.hero h2,
 	.about-page section.bio {
-		grid-column: 1 / 6;
+		grid-column: 1 / 7;
 	}
 	section.hero .hero-details,
 	.about-page section.bio-details {
-		grid-column: 6 / 8;
+		grid-column: 7 / 8;
 	}
 }
 
@@ -366,11 +366,11 @@ section.archive {
 /* header {
 	border-bottom: 1px dashed var(--color-gray-20);
 } */
-header:after {
+/* header:after {
 	content: "";
 	display: table;
 	clear: both;
-}
+} */
 
 .links-nextprev {
 	list-style: none;
@@ -416,7 +416,10 @@ code {
 
 /* Header */
 header {
+	max-width: 80em;
+    margin: auto;
 	display: flex;
+	justify-content: space-between;
 	gap: 1em .5em;
 	flex-wrap: wrap;
 	align-items: center;
@@ -430,10 +433,20 @@ header {
 .home-link:link:not(:hover) {
 	text-decoration: none;
 }
+span.view-mode:before {
+	content: "👋Internet Traveler";
+}
+
+@media (prefers-color-scheme: dark) {
+	span.view-mode:before {
+		content: "😎We both love darkness";
+	}
+}
 
 /* Nav */
 .nav {
 	display: flex;
+	gap: 1.6rem;
 	padding: 0;
 	margin: 0;
 	list-style: none;
