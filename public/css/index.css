@@ -293,8 +293,12 @@ section.hero .hero-details {
 @media screen and (min-width: 650px) {
 
   }
-@media screen and (min-width: 900px) {
-
+@media screen and (min-width: 650px) {
+	.about-page section.bio-details {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 2rem;
+	}
 }
 @media screen and (min-width: 1100px) {
 	section.hero,
@@ -302,10 +306,15 @@ section.hero .hero-details {
 		display: grid;
 		grid-template-columns: repeat (8, 1fr);
 	}
-	section.hero h2 {
+	.about-page section.bio-details {
+		display: block;
+	}
+	section.hero h2,
+	.about-page section.bio {
 		grid-column: 1 / 6;
 	}
-	section.hero .hero-details {
+	section.hero .hero-details,
+	.about-page section.bio-details {
 		grid-column: 6 / 8;
 	}
 }
