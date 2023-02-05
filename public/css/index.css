@@ -359,7 +359,8 @@ section.bio img {
 	}
 }
 
-section.archive {
+section.archive,
+section.cv {
 	max-width: 65ch;
 }
 
