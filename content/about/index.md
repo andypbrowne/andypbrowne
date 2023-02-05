@@ -22,7 +22,7 @@ A former US Army Captain, Andy served in the Infantry for seven years. He was as
 
 Andy is a life-long student. He completed a Bachelors of Science at Tulane University studying business management and fine art. He is a graduate of the Maneuver Captain’s Career Course among other military training. He holds an Associates Degree in Web Design and Interactive Media from the Art Institute of New York City. He has also completed continuing education courses at the School of Visual Arts studying Interaction Design and Information Design.
 
-For a detailed list of Andy’s activities see his [/cv/](Curriculum Vitae).
+For a detailed list of Andy’s activities see his <a href="/cv/">Curriculum Vitae</a>.
 
 </section>
 <section class="bio-details">
