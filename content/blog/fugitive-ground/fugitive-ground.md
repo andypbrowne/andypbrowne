@@ -8,11 +8,10 @@ tags:
   - case study
   - post
   - featured
-draft: true
 ---
-<figure style="width: 500px; max-width: 100%; height:auto; margin: auto;" >
+<figure style="width: 500px; max-width: 100%; height:auto; margin-left: auto; margin-right:auto;">
   {% image "./fg_thumb3.png", "A sun and ground symbol bordered by a negative and positive number one" %}
-<figcaption>A symbol created for the project that represents the fugitive ground practice</figcaption>
+  <figcaption>A symbol created for the project that represents the fugitive ground practice</figcaption>
 </figure>
 
 Fugitive Ground is an ongoing collaboration with friends and fellow artists. The themes are centered around mindfulness, meditation, perception and art. The process of constructing print pieces, hosting workshops and developing web components provided the same kind of meditation prescribed by the project itself. 
