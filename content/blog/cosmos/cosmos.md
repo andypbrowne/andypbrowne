@@ -7,7 +7,6 @@ date: 2012-05-01
 tags:
   - case study
   - post
-  - featured
 ---
 
 <figure>
