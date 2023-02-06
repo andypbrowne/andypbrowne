@@ -601,18 +601,18 @@ h2 + .header-anchor {
 .social li {
 	display: inline-block;
 	vertical-align: middle;
-  }
-  .social svg {
-	  fill: var(--color-gray-80);
-	  opacity: 1;
-	  width: 36px;
-	  height: 100%;
-	  vertical-align: middle;
-  }
-  .social a {
-	  display: block;
-	  text-align: center; 
-  }
+}
+.social svg {
+	fill: var(--color-gray-80);
+	opacity: 1;
+	width: 36px;
+	height: 100%;
+	vertical-align: middle;
+}
+.social a {
+	display: block;
+	text-align: center; 
+}
 
 /* Special filtering for a grid of items */
 
@@ -724,4 +724,4 @@ li.filter-grid-item figure {
 [value="six"]:checked ~ .filters [for="wildCard"] {
   background: var(--color-gray-60);
   color: var(--color-gray-20);
-}
+}}
