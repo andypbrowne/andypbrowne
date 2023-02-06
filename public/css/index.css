@@ -34,7 +34,7 @@
 /* Defaults */
 :root {
 	--font-family: 'Inter var', system-ui, sans-serif;
-	--font-family-italic: 'Newsreader', serif;
+	--font-family-serif: 'Newsreader', serif;
 	--font-headings: 'Inter var', system-ui, sans-serif;
 	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
 }
@@ -179,7 +179,7 @@ figure {
     margin-inline-end: 0px;
 }
 figcaption {
-	font-family: var(--font-family-italic);
+	font-family: var(--font-family-serif);
 	font-weight: inherit;
 }
 figure img,
@@ -254,14 +254,28 @@ article h2 + p::first-letter {
 }
 
 article h2.post-deck {
-	font-family: var(--font-family-italic);
+	font-family: var(--font-family-serif);
+	font-size: var(--font-size-lg);
 	font-style: italic;
 	font-kerning: auto;
 	font-weight: 800;
 	color: #989898;
 	text-align: center;
 	margin: 2.4rem 0 2.2rem;
-    background: -webkit-gradient(linear, left top, right top, from(#3668cc), to(#7500ed));
+}
+
+article h2.post-deck span.text-italic {
+	
+}
+
+span.text-italic {
+	font-family: var(--font-family-serif);
+	font-style: italic;
+	font-size: 116%;
+}
+
+.text-gradient {
+	background: -webkit-gradient(linear, left top, right top, from(#3668cc), to(#7500ed));
     background: linear-gradient(to right, #3668cc 50%, #7500ed 100%);
     background-clip: text;
     -webkit-background-clip: text;
@@ -277,7 +291,13 @@ section.hero,
 section.hero h2 {
 	margin-top: 0px;
 	max-width: 48ch;
-	font-size: var(--font-size-xl);
+	font-size: var(--font-size-md);
+}
+
+@media screen and (min-width: 650px) {
+	section.hero h2 {
+		font-size: var(--font-size-lg);
+	}
 }
 
 section.hero .hero-details {
@@ -291,31 +311,42 @@ section.hero .hero-details {
 }
 
 @media screen and (min-width: 650px) {
-
-  }
-@media screen and (min-width: 650px) {
 	.about-page section.bio-details {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		gap: 2rem;
 	}
-}
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 900px) {
 	section.hero,
 	.about-page {
-		display: grid;
-		grid-template-columns: repeat (8, 1fr);
+		display:grid;
+		grid-template-columns: repeat(3, 1fr);
 	}
 	.about-page section.bio-details {
 		display: block;
 	}
 	section.hero h2,
 	.about-page section.bio {
-		grid-column: 1 / 7;
+		grid-column: 1 / 3;
 	}
 	section.hero .hero-details,
 	.about-page section.bio-details {
-		grid-column: 7 / 8;
+		grid-column: 3 / 4;
+	}
+}
+@media screen and (min-width: 1600px) {
+	section.hero,
+	.about-page {
+		display: grid;
+		grid-template-columns: repeat(8, 1fr);
+	}
+	section.hero h2,
+	.about-page section.bio {
+		grid-column: 1 / 6;
+	}
+	section.hero .hero-details,
+	.about-page section.bio-details {
+		grid-column: 6 / 9;
 	}
 }
 
@@ -434,6 +465,8 @@ header {
 .home-link:link:not(:hover) {
 	text-decoration: none;
 }
+
+@media screen and (min-width: 650px) {
 span.view-mode:before {
 	content: "👋Internet Traveler";
 }
@@ -442,6 +475,7 @@ span.view-mode:before {
 	span.view-mode:before {
 		content: "😎We both love darkness";
 	}
+}
 }
 
 /* Nav */
@@ -486,8 +520,10 @@ span.view-mode:before {
 }
 .postlist-date,
 .postlist-item:before {
-	font-size: 0.8125em; /* 13px /16 */
+	/* font-size: 0.8125em;  */
 	color: var(--color-gray-80);
+	opacity: .6;
+	font-variant-caps: all-small-caps;
 }
 .postlist-date {
 	word-spacing: -0.5px;

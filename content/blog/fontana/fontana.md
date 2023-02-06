@@ -2,7 +2,9 @@
 title: Fontana
 description: An artist’s installations making use of sound as a sculptural medium to transform the audience’s perceptions of visual and architectural settings 
 date: 2009-12-17
-tags: second tag
+tags: 
+ - featured
+ - post
 ---
 
 Bill Fontana is a bit dry in interviews but he is big on sound. Bill attended the New School in New York City and studied music and philosophy. He is trained and practiced as a composer but he is known internationally for creating sound art. These installations use sound as a sculptural medium to transform the audience’s perceptions of visual and architectural settings. Bill calls this work sound sculpture and it has been featured around the world including San Francisco, New York City, Paris, London, Berlin, Venice, and Tokyo. Much of the work deals with retrieval of ambient sound from multiple reception points and beaming that sound to the sculpture site.
