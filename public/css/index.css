@@ -81,7 +81,12 @@
 		--color-gray-60: #C0C0C0;
 		--color-gray-80: #e0e0e0;
 
-		--text-color: var(--color-midnight-20);
+		--color-midnight-20: #0F2B42;
+		--color-midnight-40: #496174;
+		--color-midnight-60: #7792a9;
+		--color-midnight-80: #E3E4E5;
+
+		/* --text-color: var(--color-midnight-20); */
 		--text-color-link: #1493fb;
 		--text-color-link-active: #6969f7;
 		--text-color-link-visited: #a6a6f8;
@@ -157,9 +162,10 @@ p, ul, ol {
   }
 
 blockquote {
-	font-family: var(--headings-font);
+	font-family: var(--font-family-serif);
 	font-variation-settings: "wght" 500;
-	color: var(--color-midnight-80);
+	font-size: var(--font-size-xl);
+	/* color: var(--color-midnight-80); */
 	text-align: center;
 	margin: 2rem;
 }
@@ -171,6 +177,16 @@ blockquote p {
 
 small {
 	font-size: var(--font-size-sm);
+}
+.small-caps {
+	font-variant-caps: all-small-caps;
+	letter-spacing: .08rem;
+}
+.serif {
+	font-family: var(--font-family-serif);
+}
+.centered {
+	text-align: center;
 }
 figure {
 	display: block;

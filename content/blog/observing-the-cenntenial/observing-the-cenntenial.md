@@ -35,7 +35,7 @@ tags:
 
 <figure>
   {% image "./b41bfe4f2f949128a25ba05eac240c8d.jpg", "Horses and men in gas masks" %}
-<figcaption>orses and men in gas masks during tests to find the best protection against gas attacks</figcaption>  
+<figcaption>Horses and men in gas masks during tests to find the best protection against gas attacks</figcaption>  
 </figure>
   
 <p class="serif">Each innovation spurred more innovations as <span class="small-caps">20th</span>-century technology made its first appearance in wartime. Commanders applied time-honored tactics to battlegrounds evolving more rapidly than ever before in history. The scale of killing was impossible to predict as governments deployed accurate, long-range artillery, combined arms, barbed wire, the machine gun, chemical releases, submarines, battleships, and the tank.</p>
@@ -55,11 +55,11 @@ tags:
     
 
 <blockquote class="serif large">A few maps provide a way to begin to understand the scale and complexity of an incomprehensible war</blockquote>
-     
-<img src="img/blog/Schlieffen_Plan_fr.svg.png" >
-   
-   
-<p class="caption centered">The Schlieffen Plan</p>
+
+<figure>
+  {% image "./Schlieffen_Plan_fr.svg.png", "A Map of europe with battle lines drawn between france and germany" %}
+<figcaption>A map of Europe in 1914 illustrating the Schlieffen Plan</figcaption>  
+</figure>
     
 <p class="serif"><span class="small-caps">Many fronts around the world</span> gave this conflict the name <span class="small-caps">&#8220;World War.&#8221;</span> Most familiar is the Western Front in Europe, but the Great War was fought on a truly global scale. Land campaigns involved Africa and Asia and naval engagements extended to the Indian and Pacific oceans as well as the Atlantic Ocean and the Mediterranean and North seas.
 </p>
@@ -68,17 +68,11 @@ tags:
 Vox Magazine offers <a href="http://www.vox.com/a/world-war-i-maps" rel="nofollow"><em><span class="small-caps">40</span> Maps That Explain <span class="small-caps">WWI</span></em></a><em> (online article)</em>. The BBC&#8217;s <a href="http://www.bbc.co.uk/history/interactive/animations/western_front/index_embed.shtml" rel="nofollow"><em>animated map</em></a> (flash website) gives an overview of the geography of the conflicts. For an idea of how this war forced globalization into the minds of parochial Americans, see how <a href="http://news.nationalgeographic.com/news/2014/07/140716-world-war-maps-history-cartography/" rel="nofollow"><em><span class="small-caps">WWI</span> launched mapmaking at National Geographic</em></a>.
 </p>
 <p class="centered">&hellip;</p>
-    
-    
-    
-  
-    
-    
-<img alt="many poppie flowers in a field" src="img/blog/Poppies_Field_in_Flanders.jpg">
-    
 
-<p class="caption centered">Poppies Field in Flanders, Belgium</p>
-
+<figure>
+  {% image "./Poppies_Field_in_Flanders.jpg", "many poppie flowers in a field" %}
+<figcaption>Poppies Field in Flanders, Belgium</figcaption>  
+</figure>
 
 <blockquote class="serif large">In Flanders fields the poppies blow<br>
 Between the crosses, row on row,<br>
