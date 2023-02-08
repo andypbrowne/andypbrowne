@@ -442,7 +442,9 @@ code {
 /* Header and footer styles */
 header {
 	flex-wrap: wrap;
+	padding: 2rem 0;
 }
+
 header,
 footer .footer-container {
 	max-width: 80em;
@@ -451,12 +453,12 @@ footer .footer-container {
 	justify-content: space-between;
 	gap: 1em .5em;
 	align-items: center;
-	padding: 2rem 0;
 }
 footer .footer-container {
 	align-items: flex-start;
 	flex-direction: column;
 	border-top: 1px solid var(--subtle-border);
+	padding: 4rem 0;
 }
 footer .footer-container ul {
 	list-style: none;
@@ -551,6 +553,7 @@ footer .footer-links {
 }
 .postlist-date {
 	word-spacing: -0.5px;
+	letter-spacing: .08rem;
 }
 .postlist-link {
 	font-size: 1.1875em; /* 19px /16 */
