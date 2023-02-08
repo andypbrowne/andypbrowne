@@ -118,6 +118,7 @@ html {
 }
 body {
 	font-size: var(--font-size-base);
+	padding: 1rem;
 }
 
 main {
@@ -238,20 +239,13 @@ a[href]:active {
 	color: var(--text-color-link-active);
 }
 
-main {
-	padding: 1rem;
-}
-/* main :first-child {
-	margin-top: 0;
-} */
-
-article h2 + p::first-letter {
+/* article h2 + p::first-letter {
     font-size: 250%;
   	padding: 0px;
   	margin-right: 6px;
   	float: left;
     font-weight: bold;
-}
+} */
 
 article h2.post-deck {
 	font-family: var(--font-family-serif);
@@ -264,9 +258,9 @@ article h2.post-deck {
 	margin: 2.4rem 0 2.2rem;
 }
 
-article h2.post-deck span.text-italic {
+/* article h2.post-deck span.text-italic {
 	
-}
+} */
 
 span.text-italic {
 	font-family: var(--font-family-serif);
@@ -316,6 +310,7 @@ section.hero .hero-details {
 		grid-template-columns: repeat(2, 1fr);
 		gap: 2rem;
 	}
+}
 @media screen and (min-width: 900px) {
 	section.hero,
 	.about-page {
@@ -350,8 +345,6 @@ section.hero .hero-details {
 	}
 }
 
-
-
 section.bio .container-center {
 	display: flex;
 	justify-content: center;
@@ -364,8 +357,8 @@ section.bio img {
 	border-radius: 500px;
 }
 
-.featured-post-grid {
-	border-bottom: 1px solid var(--subtle-border);
+.featured-post-grid,
+section.archive {
 	margin-bottom: 2rem;
 }
 
@@ -446,16 +439,36 @@ code {
 	word-break: break-all;
 }
 
-/* Header */
+/* Header and footer styles */
 header {
+	flex-wrap: wrap;
+}
+header,
+footer .footer-container {
 	max-width: 80em;
     margin: auto;
 	display: flex;
 	justify-content: space-between;
 	gap: 1em .5em;
-	flex-wrap: wrap;
 	align-items: center;
-	padding: 1em;
+	padding: 2rem 0;
+}
+footer .footer-container {
+	align-items: flex-start;
+	flex-direction: column;
+	border-top: 1px solid var(--subtle-border);
+}
+footer .footer-container ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+footer .footer-container ul li {
+	margin-bottom: .8rem;
+}
+footer .footer-links {
+	display: flex;
+	gap: 4rem;
 }
 .home-link {
 	font-size: 1em; /* 16px /16 */
@@ -467,15 +480,22 @@ header {
 }
 
 @media screen and (min-width: 650px) {
-span.view-mode:before {
-	content: "👋Internet Traveler";
+	span.view-mode:before {
+		content: "👋Internet Traveler";
+	}
+	footer .footer-container {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	footer .footer-links {
+		gap: 8rem;
+	}
 }
 
 @media (prefers-color-scheme: dark) {
 	span.view-mode:before {
 		content: "😎We both love darkness";
 	}
-}
 }
 
 /* Nav */
@@ -594,6 +614,7 @@ h2 + .header-anchor {
 /* social links */
 .social ul {
 	display: flex;
+	flex-wrap: wrap;
 	gap: 2rem;
 	margin: 0;
 	padding: 0;
@@ -650,7 +671,6 @@ ol.filter-grid {
   grid-gap: 1.5rem;
   grid-template-columns: repeat(2, 1fr);
   padding: 0 0 2rem 0;
-  border-bottom: 1px solid var(--subtle-border);
 }
 @media screen and (min-width: 650px) {
 	ol.filter-grid {

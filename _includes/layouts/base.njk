@@ -66,6 +66,25 @@
 
 		<footer>
 			{# {% include "_includes/components/footer.njk" %} #}
+			<div class="footer-container">
+			<div class="footer-links">
+			<ul>
+				<li><a href="./feed/feed.xml">RSS</a></li>
+				<li><a href="https://twitter.com/DTAndyB">Twitter</a></li>
+				<li><a href="https://www.linkedin.com/in/andypbrowne">LinkedIn</a></li>
+				<li><a href="https://www.instagram.com/andypbrowne/">Instagram</a></li>
+				<li><a href="https://github.com/andypbrowne">Github</a></li>
+				<li><a href="https://codepen.io/andypbrowne">Codepen</a></li>
+			</ul>
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/about/">About</a></li>
+				<li><a href="/archive/">Archive</a></li>
+				<li><a href="/tags/">Tags</a></li>
+			</ul>
+			</div>
+			<p>&copy; {{ helpers.currentYear() }} andypbrowne.com</p>
+			</div>
 		</footer>
 
 		{# Current page: {{ page.url | htmlBaseUrl }}  #}
