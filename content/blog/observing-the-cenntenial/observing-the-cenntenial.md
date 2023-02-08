@@ -6,6 +6,7 @@ thumbnailAlt: Soldiers walking through a dead muddy forest
 date: 2015-02-11
 tags:
   - post
+  - vets
 ---
 
 <figure>
