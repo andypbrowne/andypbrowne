@@ -69,7 +69,7 @@
 	--text-color-link: #082840;
 	--text-color-link-active: #5f2b48;
 	--text-color-link-visited: #17050F;
-	--subtle-border: #2b3e51;
+	--subtle-border: #2b3e513a;
 
 	--syntax-tab-size: 2;
 }
@@ -470,6 +470,10 @@ footer .footer-links {
 	display: flex;
 	gap: 4rem;
 }
+.license {
+	font-size: smaller;
+	max-width: 48ch;
+}
 .home-link {
 	font-size: 1em; /* 16px /16 */
 	font-weight: 700;
@@ -481,7 +485,7 @@ footer .footer-links {
 
 @media screen and (min-width: 650px) {
 	span.view-mode:before {
-		content: "👋Internet Traveler";
+		content: "👋 Internet Traveler";
 	}
 	footer .footer-container {
 		flex-direction: row;
@@ -494,7 +498,7 @@ footer .footer-links {
 
 @media (prefers-color-scheme: dark) {
 	span.view-mode:before {
-		content: "😎We both love darkness";
+		content: "😎 We both love darkness";
 	}
 }
 
@@ -744,4 +748,4 @@ li.filter-grid-item figure {
 [value="six"]:checked ~ .filters [for="wildCard"] {
   background: var(--color-gray-60);
   color: var(--color-gray-20);
-}}
+}
