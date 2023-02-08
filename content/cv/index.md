@@ -4,7 +4,6 @@ layout: layouts/base.njk
 description: The Exhibitions, Speaking Engagements and Education of Andy Garber-Browne
 ---
 
-<div class="about-page">
 <section class="cv">
 
 # CV
@@ -53,4 +52,3 @@ AOS, Web Design & Interactive Media
 BS Management
 
 </section>
-</div>
