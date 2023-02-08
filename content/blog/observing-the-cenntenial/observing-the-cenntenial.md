@@ -95,7 +95,7 @@ In Flanders fields.</blockquote>
 <p class="caption centered">In Flanders Fields by <a href="http://www.greatwar.co.uk/poems/john-mccrae-in-flanders-fields.htm" rel="nofollow" target="_blank">Major John McCrae</a>
 </p>
 
-
+<p class="centered">&hellip;</p>
 
 <p class="serif">
     <span class="small-caps">Among the organizations guiding the commemoration</span> of the centennial, the <a href="http://www.flandershouse.org/house" rel="nofollow"><em>Flanders House NY</em></a> provides a gateway between Flanders, Belgium and the United States. Their programming provides a strong platform for meaningful response. In particular their focus on the arts is a great gesture to the men, women, and children of the <span class="small-caps">WWI</span> era and to those of us today who wish to honor and learn from their experience in this monumental event.

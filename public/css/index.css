@@ -195,9 +195,13 @@ figure {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
 }
-figcaption {
+figcaption,
+.caption {
 	font-family: var(--font-family-serif);
 	font-weight: inherit;
+	font-style: italic;
+	text-align: center;
+    margin-top: 1.2rem;
 }
 figure img,
 img.thumbnail {
@@ -206,11 +210,6 @@ img.thumbnail {
 img.thumbnail {
 	aspect-ratio: 16 / 9;
 	object-fit: cover;
-}
-figcaption {
-	font-style: italic;
-	text-align: center;
-    margin-top: 1.2rem;
 }
 img {
 	width: 100%;
