@@ -68,7 +68,8 @@
 	--text-color: var(--color-midnight-80);
 	--text-color-link: #082840;
 	--text-color-link-active: #5f2b48;
-	--text-color-link-visited: #17050F;
+	/* --text-color-link-visited: #17050F;   */
+	--text-color-link-visited: var(--text-color);
 	--subtle-border: #2b3e513a;
 
 	--syntax-tab-size: 2;
@@ -301,6 +302,8 @@ section.hero h2 {
 	margin-top: 0px;
 	max-width: 48ch;
 	font-size: var(--font-size-md);
+	font-style: italic;
+	font-family: var(--font-family-serif);
 }
 
 @media screen and (min-width: 650px) {
@@ -353,6 +356,7 @@ section.hero .hero-details {
 	section.hero h2,
 	.about-page section.bio {
 		grid-column: 1 / 6;
+		font-size: var(--font-size-xl);
 	}
 	section.hero .hero-details,
 	.about-page section.bio-details {
@@ -562,7 +566,7 @@ footer .footer-links {
 .postlist-date,
 .postlist-item:before {
 	/* font-size: 0.8125em;  */
-	color: var(--color-gray-80);
+	color: var(--text-color);
 	opacity: .6;
 	font-variant-caps: all-small-caps;
 }
