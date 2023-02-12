@@ -24,3 +24,5 @@ tags:
 </figure> 
 
 </div>
+
+An archive of the original [gallery show website](https://web.archive.org/web/20141104044322/http://hopeactlove.info/index.html) exists in the wayback machine. 
