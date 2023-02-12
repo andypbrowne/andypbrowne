@@ -6,7 +6,6 @@ thumbnailAlt: An illustration of a french bulldog that is apparently from brookl
 date: 2011-05-25
 tags:
   - case study
-  - featured
 ---
 
 <figure>

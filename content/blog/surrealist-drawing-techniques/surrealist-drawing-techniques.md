@@ -5,9 +5,7 @@ thumbnail: assets/images/frottage-golden-gate_thumb.jpg
 thumbnailAlt: Closeup of a map rubbing 
 date: 2014-04-06
 tags:
-  - case study
   - post
-  - featured
 ---
 
 <figure>

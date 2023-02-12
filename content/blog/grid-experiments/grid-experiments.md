@@ -6,7 +6,6 @@ thumbnailAlt: A layout of text and shapes with lines marking a custom grid
 date: 2020-08-01
 tags:
   - post
-  - featured
 ---
 ## Bauhaus Postcard Reproduction
 

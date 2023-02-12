@@ -212,6 +212,9 @@ img.thumbnail {
 	aspect-ratio: 16 / 9;
 	object-fit: cover;
 }
+img.thumbnail:hover {
+	opacity: .8;
+}
 img {
 	width: 100%;
 	height: auto;
@@ -281,7 +284,7 @@ article h2.post-deck {
 span.text-italic {
 	font-family: var(--font-family-serif);
 	font-style: italic;
-	font-size: 116%;
+	/* font-size: 116%; */
 }
 
 .text-gradient {
@@ -301,15 +304,21 @@ section.hero,
 section.hero h2 {
 	margin-top: 0px;
 	max-width: 48ch;
-	font-size: var(--font-size-md);
+	/* font-size: var(--font-size-lg); */
 	font-style: italic;
 	font-family: var(--font-family-serif);
 }
+.image-thumbnail-grid,
+.image-gallery-grid  {
+	display:grid;
+	grid-template-columns: repeat(2, 1fr);
+	margin-bottom: 2rem;
+}
 
-@media screen and (min-width: 650px) {
-	section.hero h2 {
-		font-size: var(--font-size-lg);
-	}
+.image-gallery-grid {
+	gap: 2rem;
+	grid-template-columns: 1fr;
+	grid-auto-flow: dense;
 }
 
 section.hero .hero-details {
@@ -323,10 +332,19 @@ section.hero .hero-details {
 }
 
 @media screen and (min-width: 650px) {
+	section.hero h2 {
+		font-size: var(--font-size-lg);
+	}
 	.about-page section.bio-details {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		gap: 2rem;
+	}
+	.image-thumbnail-grid {
+		grid-template-columns: repeat(3, 1fr);
+	}
+	.image-gallery-grid {
+		grid-template-columns: repeat(2, 1fr);
 	}
 }
 @media screen and (min-width: 900px) {
@@ -346,6 +364,9 @@ section.hero .hero-details {
 	.about-page section.bio-details {
 		grid-column: 3 / 4;
 	}
+	.image-thumbnail-grid {
+		grid-template-columns: repeat(4, 1fr);
+	}
 }
 @media screen and (min-width: 1600px) {
 	section.hero,
@@ -361,6 +382,12 @@ section.hero .hero-details {
 	section.hero .hero-details,
 	.about-page section.bio-details {
 		grid-column: 6 / 9;
+	}
+	.image-thumbnail-grid {
+		grid-template-columns: repeat(5, 1fr);
+	}
+	.image-gallery-grid {
+		grid-template-columns: repeat(2, 1fr);
 	}
 }
 

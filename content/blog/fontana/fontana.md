@@ -3,7 +3,6 @@ title: Fontana
 description: An artist’s installations making use of sound as a sculptural medium to transform the audience’s perceptions of visual and architectural settings 
 date: 2009-12-17
 tags: 
- - featured
  - post
 ---
 

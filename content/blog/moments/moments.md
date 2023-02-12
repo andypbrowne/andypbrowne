@@ -5,9 +5,7 @@ thumbnail: assets/images/thumb-moments.jpg
 thumbnailAlt: alternative text 
 date: 2016-08-12
 tags:
-  - case study
   - post
-  - featured
 draft: true
 ---
 <figure>

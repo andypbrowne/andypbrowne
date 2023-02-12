@@ -5,9 +5,7 @@ thumbnail: assets/images/instastrategy-thumb.png
 thumbnailAlt: a collection of line drawings with a variety of subjects 
 date: 2017-08-07
 tags:
-  - case study
   - post
-  - featured
 draft: true
 ---
 
