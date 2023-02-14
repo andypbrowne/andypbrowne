@@ -29,23 +29,25 @@ For a detailed list of Andy’s activities see his <a href="/cv/">Curriculum Vit
 
 <div>
 
-<h2>Skills</h2>
+## Skills
+
 User Research, Evaluative Testing, Interaction Design, Prototyping, Workshop Facilitation, Project Management, Web Development, Leadership, and Survival…
 
-<h2>Favorite Tools</h2>
-Optimal Workshop, Lookback, Figma, Framer, Visual Studio Code, Affinity Suite, Premiere Pro, JIRA, Trello…
+## Favorite Tools
+
+Optimal Workshop, Lookback, Figma, Visual Studio Code, Affinity Suite, Premiere Pro, JIRA, Trello…
 
 </div>
 <div>
 
 ## Find Me
-- I prefer to blog right here on my own site because I believe in owning your own content
-- I use [https://twitter.com/DTAndyB](Twitter) as my source of news and it is a good place for direct messages
-- [https://www.linkedin.com/in/andypbrowne](Linkedin) is my preferred channel to receive messages from people I don’t know
-- I have a public Instagram account to stay connected with friends
-- I use Telegram to message with anyone who also has telegram.
-- I stay active on GitHub because I think someone will look at my profile and be impressed
-- I post stuff to Codepen because I like to make things on the web in my spare time
+- I prefer to [blog right here](/blog/) on my own site because I believe in owning your own content
+- I use [Twitter](https://twitter.com/DTAndyB) as my source of news and it is a good place for direct messages
+- [Linkedin](https://www.linkedin.com/in/andypbrowne) is my preferred channel to receive messages from people I don’t know
+- I have a public [Instagram](https://www.instagram.com/andypbrowne/) account to stay connected with friends
+- I use [Telegram](https://telegram.org/) to message with anyone who also has telegram.
+- I stay active on [GitHub](https://github.com/andypbrowne) because I think someone will look at my profile and be impressed
+- I post stuff to [Codepen](https://codepen.io/andypbrowne) because I like to make things on the web in my spare time
 
 </div>
 </section>
