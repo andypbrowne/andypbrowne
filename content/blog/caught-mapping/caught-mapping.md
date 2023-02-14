@@ -5,7 +5,7 @@ thumbnail: assets/images/cm_thumb.jpg
 thumbnailAlt: A printed promotional newsprint sitting on a table alongside other ephemera like a typewriter and hipster magazines 
 date: 2012-09-22
 tags:
-  - case study
+  - fine art
   - post
   - featured
 draft: true

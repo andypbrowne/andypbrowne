@@ -3,7 +3,8 @@ title: Hope Act Love
 description: A group gallery show to benefit natural disaster victims
 date: 2011-06-18
 tags:
-  - case study
+  - fine art
+  - post
 ---
 <div class="image-gallery-grid">
 <figure>

@@ -7,26 +7,12 @@ eleventyNavigation:
 <section class="archive">
 <h1>Archive</h1>
 
-{% set postsCount = collections.posts | length %}
-{% set latestPostsCount = postsCount %}
-<p>Keep scrolling for all {{ latestPostsCount }} Post{% if latestPostsCount != 1 %}s{% endif %}</p>
+<div class="postlist-container">
 
 {% set postslist = collections.posts %}
-{% set postslistCounter = postsCount %}
-<ol reversed class="postlist" style="counter-reset: start-from {{ (postslistCounter or postslist.length) + 1 }}">
-{% for post in postslist | reverse %}
-	<li class="postlist-item {% if post.url == url %} postlist-item-active{% endif %}">
-		<time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("LLLL yyyy") }}</time><br>
-		<a href="{{ post.url }}" class="postlist-link">
-			{% if post.data.title %}
-			{{ post.data.title }}
-			{% else %}
-			<code>{{ post.url }}</code>
-			{% endif %}</a>
-		{% if post.data.description %}
-			<p>{{ post.data.description }}</p>
-		{% endif %}
-	</li>
-{% endfor %}
-</ol>
+{% include "../_includes/simple-postslist.njk" %}
+
+{% include "../_includes/components/post-counter.njk" %}
+
+</div>
 </section>

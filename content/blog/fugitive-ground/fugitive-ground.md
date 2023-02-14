@@ -5,7 +5,7 @@ thumbnail: assets/images/fg_thumb3.png
 thumbnailAlt: A sun and ground symbol bordered by a negative and positive number one 
 date: 2014-08-15
 tags:
-  - case study
+  - fine art
   - post
   - featured
 ---

@@ -143,6 +143,7 @@ h3 {
 	font-family: var(--font-headings);
 	font-weight: 900;
 	font-variation-settings: "wght" 900;
+	line-height: 1.12;
 }
 
 h1 {
@@ -296,7 +297,8 @@ span.text-italic {
 }
 
 section.hero,
-.about-page {
+.about-page,
+.postlist-container {
 	display: block;
 	gap: 2rem;
 	margin-bottom: 2rem;
@@ -332,6 +334,17 @@ section.hero .hero-details {
 }
 
 @media screen and (min-width: 650px) {
+	.postlist-container {
+		display:grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 2rem;
+	}
+	.postlist-container .postlist {
+		grid-column: 1 / 3;
+	}
+	.postlist-container .post-counter{
+		grid-column: 3 / 4;
+	}
 	section.hero h2 {
 		font-size: var(--font-size-lg);
 	}
@@ -349,7 +362,8 @@ section.hero .hero-details {
 }
 @media screen and (min-width: 900px) {
 	section.hero,
-	.about-page {
+	.about-page,
+	.postlist-container {
 		display:grid;
 		grid-template-columns: repeat(3, 1fr);
 	}
@@ -357,11 +371,13 @@ section.hero .hero-details {
 		display: block;
 	}
 	section.hero h2,
-	.about-page section.bio {
+	.about-page section.bio,
+	.postlist-container .postlist {
 		grid-column: 1 / 3;
 	}
 	section.hero .hero-details,
-	.about-page section.bio-details {
+	.about-page section.bio-details,
+	.postlist-container .post-counter {
 		grid-column: 3 / 4;
 	}
 	.image-thumbnail-grid {
@@ -369,18 +385,31 @@ section.hero .hero-details {
 	}
 }
 @media screen and (min-width: 1600px) {
+	.postlist-container {
+		display:grid;
+		grid-template-columns: repeat(8, 1fr);
+		gap: 2rem;
+	}
+	.postlist-container .postlist {
+		grid-column: 1 / 6;
+	}
+	.postlist-container .post-counter{
+		grid-column: 6 / 9;
+	}
 	section.hero,
 	.about-page {
 		display: grid;
 		grid-template-columns: repeat(8, 1fr);
 	}
 	section.hero h2,
-	.about-page section.bio {
+	.about-page section.bio,
+	.postlist-container .postlist {
 		grid-column: 1 / 6;
-		font-size: var(--font-size-xl);
+		/* font-size: var(--font-size-xl); */
 	}
 	section.hero .hero-details,
-	.about-page section.bio-details {
+	.about-page section.bio-details,
+	.postlist-container .post-counter {
 		grid-column: 6 / 9;
 	}
 	.image-thumbnail-grid {
@@ -429,19 +458,9 @@ section.archive {
 	}
 }
 
-section.archive,
 section.cv {
 	max-width: 65ch;
 }
-
-/* header {
-	border-bottom: 1px dashed var(--color-gray-20);
-} */
-/* header:after {
-	content: "";
-	display: table;
-	clear: both;
-} */
 
 .links-nextprev {
 	list-style: none;
