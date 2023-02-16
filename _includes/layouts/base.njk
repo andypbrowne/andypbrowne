@@ -5,14 +5,21 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>{{ title or metadata.title }}</title>
 		<meta name="description" content="{{ description or metadata.description }}">
+		<link rel="canonical" href="{{ metadata.url }}{{ page.url }}">
 		
 		{# SEO and social share properties #}
-		<meta property="og:title" content="{{ title or metadata.title }}">
+		<meta property="og:title" content={{ title or renderData.title or metadata.title }}/>
 		<meta property="og:type" content="article" />
-		<meta name="og:description" content="{{ description or metadata.description }}">
+		<meta name="og:description" content={description or renderData.description} />
 		<meta property="og:image" content="{{ thumbnail }}">
 		<meta name="twitter:image:alt" content="{{ thumbnailAlt }}">
 		<meta property="og:url" content="{{ page.url }}">
+
+		<!-- favicons -->
+		<link rel="apple-touch-icon" sizes="180x180" href="/assets/imgages/favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/assets/imgages/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/assets/imgages/favicon/favicon-16x16.png">
+		<link rel="shortcut icon" href="/assets/imgages/favicon/favicon.ico">
 
 		{#- Atom and JSON feeds included by default #}
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
@@ -26,7 +33,7 @@
 		<meta property="og:type" content="article" /> #}
 
 		{#- Uncomment this if you’d like folks to know that you used Eleventy to build your site!  #}
-		{#- <meta name="generator" content="{{ eleventy.generator }}"> #}
+		<meta name="generator" content="{{ eleventy.generator }}">
 
 {# -
 		Choices for CSS:
