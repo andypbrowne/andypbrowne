@@ -163,7 +163,8 @@ p, ul, ol {
 	margin: 0px 0px 20px;
   }
 
-ul li {
+ul li,
+ol li {
 	margin-bottom: 0.8rem;
 }
 
