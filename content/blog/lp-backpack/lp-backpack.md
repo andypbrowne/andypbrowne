@@ -7,7 +7,6 @@ date: 2015-07-30
 tags:
   - case study
   - post
-  - featured
 ---
 
 A series of design artifacts proposes a digital product for the fictional client Lonely Planet. Specifically this project included: 15+ user interviews, 3 generated personas, ecosystem and competitive analysis, card sorting exercises, MVP analysis, site map, features &amp; functionality matrix, user flows and detailed annotated wireframes. The five week process concluded with a client presentation where this proposal was chosen as one of the top three out of twelve presentations.

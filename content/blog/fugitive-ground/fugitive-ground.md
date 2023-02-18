@@ -9,7 +9,7 @@ tags:
   - post
   - featured
 ---
-<figure style="width: 500px; max-width: 100%; height:auto; margin-left: auto; margin-right:auto;">
+<figure class="stamp">
   {% image "./fg_thumb3.png", "A sun and ground symbol bordered by a negative and positive number one" %}
   <figcaption>A symbol created for the project that represents the fugitive ground practice</figcaption>
 </figure>
