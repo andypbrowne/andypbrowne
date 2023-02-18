@@ -10,7 +10,7 @@ tags:
 draft: false
 ---
 <figure>
-  {% image "../../assets/images/culture-secrets-extended.jpg", "A group of nine book covers with one spot remaining vacant" %}
+  {% image "./culture-secrets-extended.jpg", "A group of nine book covers with one spot remaining vacant" %}
 <figcaption></figcaption>
 </figure>
 
