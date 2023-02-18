@@ -71,6 +71,7 @@
 	/* --text-color-link-visited: #17050F;   */
 	--text-color-link-visited: var(--text-color);
 	--subtle-border: #2b3e513a;
+	--border-radius: 10px;
 
 	--syntax-tab-size: 2;
 }
@@ -137,6 +138,24 @@ article {
 	margin: 0 auto;
 }
 
+aside {
+	font-size: smaller;
+	background-color: var(--color-midnight-20);
+	margin-bottom: 2rem;
+	padding: 1.2rem 1rem 1.8rem;
+	border-radius: var(--border-radius);
+}
+
+aside h2 {
+	margin-top: 0px;
+}
+
+@media screen and (min-width: 650px) {
+	aside {
+		padding: 3.2rem 3rem 3.8rem;
+	}
+}
+
 h1,
 h2,
 h3 {
@@ -172,7 +191,7 @@ blockquote {
 	font-family: var(--font-family-serif);
 	font-variation-settings: "wght" 500;
 	font-size: var(--font-size-xl);
-	/* color: var(--color-midnight-80); */
+	line-height: 1.12;
 	text-align: center;
 	margin: 2rem;
 }
@@ -212,7 +231,7 @@ figcaption,
 }
 figure img,
 img.thumbnail {
-	border-radius: 10px; 
+	border-radius: var(--border-radius); 
 }
 img.thumbnail {
 	aspect-ratio: 16 / 9;
@@ -224,6 +243,20 @@ img.thumbnail:hover {
 img {
 	width: 100%;
 	height: auto;
+}
+
+figure.stamp {
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+figure.stamp img {
+	width: 300px; 
+	max-width: 100%; 
+	height:auto; 
+	margin-left: auto; 
+	margin-right:auto;
 }
 
 iframe.yt-shortcode {
@@ -616,8 +649,9 @@ footer .footer-links {
 }
 .postlist-date,
 .postlist-item:before {
-	/* font-size: 0.8125em;  */
+	font-size: 1.4125rem;
 	color: var(--text-color);
+	font-weight: 650;
 	opacity: .8;
 	font-variant-caps: all-small-caps;
 }
