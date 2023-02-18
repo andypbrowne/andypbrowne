@@ -618,7 +618,7 @@ footer .footer-links {
 .postlist-item:before {
 	/* font-size: 0.8125em;  */
 	color: var(--text-color);
-	opacity: .6;
+	opacity: .8;
 	font-variant-caps: all-small-caps;
 }
 .postlist-date {
