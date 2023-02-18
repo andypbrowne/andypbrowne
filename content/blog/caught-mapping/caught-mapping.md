@@ -8,7 +8,7 @@ tags:
   - fine art
   - post
   - featured
-draft: true
+draft: false
 ---
 <figure>
   {% image "./cm-reader-w-typewriter.jpg", "{{ thumbnailAlt }}" %}

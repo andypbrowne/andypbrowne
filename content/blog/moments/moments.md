@@ -6,7 +6,7 @@ thumbnailAlt: alternative text
 date: 2016-08-12
 tags:
   - post
-draft: true
+draft: false
 ---
 <figure>
   {% image "./57ae6ac37480b42b138b46fc.jpg", "A man sitting on a subway platform playing an upright piano" %}
