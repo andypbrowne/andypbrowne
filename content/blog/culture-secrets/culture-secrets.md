@@ -2,7 +2,7 @@
 title: Culture Secrets
 description: Because culture and community doesn't happen by accident
 thumbnail: assets/images/culture-secrets-extended.jpg
-thumbnailAlt: alternative text 
+thumbnailAlt: A group of nine book covers with one spot remaining vacant
 date: 2023-01-02
 tags:
   - post
@@ -10,7 +10,7 @@ tags:
 draft: false
 ---
 <figure>
-  {% image "../../assets/images/culture-secrets-extended.jpg", "{{ thumbnailAlt }}" %}
+  {% image "../../assets/images/culture-secrets-extended.jpg", "A group of nine book covers with one spot remaining vacant" %}
 <figcaption></figcaption>
 </figure>
 
@@ -20,7 +20,7 @@ So, I wanted to share the original post with you and expand on some of the takea
 
 <figure>
   {% image "./linkedin-post.jpg", "A screenshot of a linked in post with 298 likes and 29 comments" %}
-<figcaption>The most popular linkedin posts I ever made</figcaption>
+<figcaption>The most popular linkedin post I ever made</figcaption>
 </figure>
 
 ## Some of the original take aways
