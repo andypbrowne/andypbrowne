@@ -1,6 +1,6 @@
 ---
 title: Fan Art
-description: Fan art and miscelaneous illustration
+description: Fan art and miscellaneous illustration
 thumbnail: assets/images/bleu_thumb.jpg
 thumbnailAlt: An illustration of a french bulldog that is apparently from brooklyn
 date: 2011-05-25
