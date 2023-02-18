@@ -10,7 +10,7 @@ tags:
 ---
 
 <figure>
-  {% image "../../assets/images/cosmos_thumb.jpg","Man holding a strange star-gazing object to the sky" %}
+  {% image "../../assets/images/cosmos_thumb.jpg", "Man holding a strange star-gazing object to the sky" %}
 <figcaption>A closeup of source material found in the image library at the New York Public Library</figcaption>  
 </figure>
 
@@ -25,26 +25,26 @@ A valuable piece of inspiration for this piece was the image library at the mid-
 <figcaption>Study for a wordmark</figcaption>  
 </figure>
 <figure>
-  {% image "./img053cosmos.jpg","Man holding a strange star-gazing object to the sky" %}
+  {% image "./img053cosmos.jpg", "A line drawing illustration of the voyager spacecraft" %}
 <figcaption>Line drawing of the Hubble Space Telescope</figcaption>  
 </figure>
 <figure>
-  {% image "./img052cosmos.jpg","Man holding a strange star-gazing object to the sky" %}
+  {% image "./img052cosmos.jpg", "A line drawing illustration of the Hubble Space telescope" %}
 <figcaption>Line drawing of the Voyager spacecraft</figcaption>  
 </figure>
 <figure>
-  {% image "./cosmos-1.jpg","Man holding a strange star-gazing object to the sky" %}
+  {% image "./Cosmos-1.jpg", "An editorial spread with images, text and a prominent COSMOS wordmark" %}
 <figcaption>Editorial Spread 1/4 with finished wordmark</figcaption>  
 </figure>
 <figure>
-  {% image "./cosmos-2.jpg","Man holding a strange star-gazing object to the sky" %}
+  {% image "./Cosmos-2.jpg", "An editorial spread with images, text and a prominent pullquote that says We Are Star Stuff" %}
 <figcaption>Editorial Spread 2/4</figcaption>  
 </figure>
 <figure>
-  {% image "./cosmos-3.jpg","Man holding a strange star-gazing object to the sky" %}
+  {% image "./Cosmos-3.jpg", "An editorial spread with images, text and an image with a commet filling the sky behind a hot air ballon" %}
 <figcaption>Editorial Spread 3/4</figcaption>  
 </figure>
 <figure>
-  {% image "./cosmos-4.jpg","Man holding a strange star-gazing object to the sky" %}
+  {% image "./Cosmos-4.jpg", "An editorial spread with images, text and an images of astronomers looking through telescopes" %}
 <figcaption>Editorial Spread 4/4</figcaption>  
 </figure>
