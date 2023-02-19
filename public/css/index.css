@@ -618,6 +618,7 @@ footer .footer-links {
 .nav-item {
 	display: inline-block;
 	margin-right: 1em;
+	margin-bottom: 0px;
 }
 .nav-item a[href]:not(:hover) {
 	text-decoration: none;
