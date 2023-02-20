@@ -8,7 +8,7 @@ tags:
   - case study
   - post
   - featured
-draft: true
+draft: false
 ---
 
 <figure class="stamp">
