@@ -659,6 +659,10 @@ footer .footer-links {
 .postlist-date {
 	word-spacing: -0.5px;
 	letter-spacing: .08rem;
+	line-height: 1.5;
+}
+article time.postlist-date {
+	line-height: 3;
 }
 .postlist-link {
 	font-size: 1.1875em; /* 19px /16 */
