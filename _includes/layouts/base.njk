@@ -8,9 +8,9 @@
 		<link rel="canonical" href="{{ metadata.url }}{{ page.url }}">
 		
 		{# SEO and social share properties #}
-		<meta property="og:title" content={{ title or renderData.title or metadata.title }}/>
+		<meta property="og:title" content="{{ title or renderData.title or metadata.title }}"/>
 		<meta property="og:type" content="article" />
-		<meta name="og:description" content={description or renderData.description} />
+		<meta name="og:description" content="{{ description or renderData.description }}" />
 		<meta property="og:image" content="{{ thumbnail }}">
 		<meta name="twitter:image:alt" content="{{ thumbnailAlt }}">
 		<meta property="og:url" content="{{ page.url }}">
