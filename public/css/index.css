@@ -230,14 +230,15 @@ figcaption,
     margin-top: 1.2rem;
 }
 figure img,
-img.thumbnail {
+img.thumbnail,
+li.postlist-item a picture img {
 	border-radius: var(--border-radius); 
 }
-img.thumbnail {
+li.postlist-item a picture img {
 	aspect-ratio: 16 / 9;
 	object-fit: cover;
 }
-img.thumbnail:hover {
+li.postlist-item a picture img:hover {
 	opacity: .8;
 }
 img {

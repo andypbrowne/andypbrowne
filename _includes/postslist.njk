@@ -3,10 +3,7 @@
 	<li class="postlist-item {% if post.url == url %} postlist-item-active{% endif %}">
 		{% if post.data.thumbnail %}
 		<a href="{{ post.url }}">
-			<picture>
-				<source type="image/avif" srcset="{{ post.data.thumbnailavif }}">
-				<img class="thumbnail" src="{{ post.data.thumbnail }}" alt="{{ post.data.thumbnailAlt }}" width="600" height="315">
-			</picture>
+			{% image post.data.thumbnail, post.data.thumbnailAlt %}
 		</a>
 		{% endif %}
 		<time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("LLLL yyyy") }}</time><br>
