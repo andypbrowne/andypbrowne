@@ -15,6 +15,14 @@
     src: url("../fonts/Inter-italic.var.woff2") format("woff2");
   }
   @font-face {
+    font-family: 'Newsreader Display Italic';
+    font-weight: 900;
+    font-display: swap;
+    font-style: italic;
+    font-named-instance: 'Newsreader Display Italic';
+    src: url("../fonts/Newsreader72pt-ExtraBoldItalic.woff2") format("woff2");
+  }
+  @font-face {
     font-family: 'Newsreader';
     font-weight: 100 900;
     font-display: swap;
@@ -34,6 +42,7 @@
 /* Defaults */
 :root {
 	--font-family: 'Inter var', system-ui, sans-serif;
+	--font-familiy-display-serif: 'Newsreader Display Italic', serif;
 	--font-family-serif: 'Newsreader', serif;
 	--font-headings: 'Inter var', system-ui, sans-serif;
 	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
@@ -307,22 +316,13 @@ a[href]:active {
 } */
 
 article h2.post-deck {
-	font-family: var(--font-family-serif);
-	font-size: var(--font-size-lg);
-	font-style: italic;
-	font-kerning: auto;
-	font-weight: 800;
 	color: #989898;
 	text-align: center;
-	margin: 2.4rem 0 2.2rem;
+	margin: 2.4rem auto 2.2rem;
 }
 
-/* article h2.post-deck span.text-italic {
-	
-} */
-
 span.text-italic {
-	font-family: var(--font-family-serif);
+	/* font-family: var(--font-family-serif); */
 	font-style: italic;
 	/* font-size: 116%; */
 }
@@ -342,12 +342,13 @@ section.hero,
 	gap: 2rem;
 	margin-bottom: 2rem;
 }
-section.hero h2 {
+section.hero h2,
+h2.post-deck {
 	margin-top: 0px;
 	max-width: 48ch;
 	/* font-size: var(--font-size-lg); */
 	font-style: italic;
-	font-family: var(--font-family-serif);
+	font-family: var(--font-familiy-display-serif);
 }
 .image-thumbnail-grid,
 .image-gallery-grid  {
@@ -384,7 +385,8 @@ section.hero .hero-details {
 	.postlist-container .post-counter{
 		grid-column: 3 / 4;
 	}
-	section.hero h2 {
+	section.hero h2,
+	article h2.post-deck {
 		font-size: var(--font-size-lg);
 	}
 	.about-page section.bio-details {
@@ -410,9 +412,14 @@ section.hero .hero-details {
 		display: block;
 	}
 	section.hero h2,
+	article h2.post-deck,
 	.about-page section.bio,
 	.postlist-container .postlist {
 		grid-column: 1 / 3;
+	}
+	section.hero h2,
+	article h2.post-deck {
+		font-size: var(--font-size-lg);
 	}
 	section.hero .hero-details,
 	.about-page section.bio-details,
@@ -440,11 +447,14 @@ section.hero .hero-details {
 		display: grid;
 		grid-template-columns: repeat(8, 1fr);
 	}
-	section.hero h2,
+	
 	.about-page section.bio,
 	.postlist-container .postlist {
 		grid-column: 1 / 6;
-		/* font-size: var(--font-size-xl); */
+	}
+	section.hero h2,
+	article h2.post-deck {
+		font-size: var(--font-size-xl);
 	}
 	section.hero .hero-details,
 	.about-page section.bio-details,
