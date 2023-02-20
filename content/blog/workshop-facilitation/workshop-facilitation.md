@@ -2,6 +2,7 @@
 title: Workshop Facilitation
 description: LEGOs® can put corporate colleagues on the therapy couch
 thumbnail: assets/images/thumb-lsp.jpg
+thumbnailavif: assets/images/thumb-lsp.avif
 thumbnailAlt: A pile of LEGO bricks
 date: 2018-12-23
 tags:

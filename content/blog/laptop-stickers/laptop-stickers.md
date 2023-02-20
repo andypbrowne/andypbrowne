@@ -2,6 +2,7 @@
 title: Laptop Stickers
 description: If you gotta sticker…
 thumbnail: assets/images/Laptop-Stickers-Thumb.jpg
+thumbnailavif: assets/images/Laptop-Stickers-Thumb.avif
 thumbnailAlt: the top cover of a laptop covered with various stickers 
 date: 2022-01-17
 tags:
@@ -16,6 +17,10 @@ tags:
 </figure>
 
 In no particular order here are some descriptions of the stickers on my laptop. I enjoy the aesthetics of the stickers – but what I enjoy mostly is the reminder of what they represent. Here is some of that background listed from left to right and top-to-bottom. Show us your stickers too and as the great designer Aaron Draplin would say &ldquo;Don&rsquo;t be precious about your stickers, if you have a sticker, stick it!&rdquo;
+
+<figure class="stamp">
+  {% image "./Personal-2018-Present-minimap.png", "A number map of the first image in a sequence that goes from left to right and top to bottom" %}
+</figure>
 
 ### Heatonist
 

@@ -2,6 +2,7 @@
 title: Podcasts
 description: Did you just say podcast? You’ve got my attention
 thumbnail: assets/images/podcasts-thumb.jpg
+thumbnailavif: assets/images/podcasts-thumb.avif
 thumbnailAlt: a grid of atleast twenty-four podcast cover artworks
 date: 2019-04-02
 tags:

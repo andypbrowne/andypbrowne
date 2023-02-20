@@ -2,6 +2,7 @@
 title: Caught Mapping
 description: A continuing collaboration between artists exploring cartography and invented landscapes
 thumbnail: assets/images/cm_thumb.jpg
+thumbnailavif: assets/images/cm_thumb.avif
 thumbnailAlt: A printed promotional newsprint sitting on a table alongside other ephemera like a typewriter and hipster magazines 
 date: 2012-09-22
 tags:
