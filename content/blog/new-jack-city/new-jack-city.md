@@ -2,7 +2,6 @@
 title: Remember New Jack City
 description: What it is like being shaped by extremes
 thumbnail: assets/images/thumb-njc-rocks.jpg
-thumbnailavif: assets/images/thumb-njc-rocks.avif
 thumbnailAlt: A photo of large rocks in the desert
 date: 2020-10-18
 tags:

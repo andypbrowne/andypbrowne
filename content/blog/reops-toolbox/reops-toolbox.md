@@ -2,7 +2,6 @@
 title: Building the ResearchOps Toolbox
 description: Working on a community-based project with lessons learned
 thumbnail: assets/images/thumb-toolbox.jpg
-thumbnailavif: assets/images/thumb-toolbox.avif
 thumbnailAlt: alternative text 
 date: 2023-02-19
 tags:

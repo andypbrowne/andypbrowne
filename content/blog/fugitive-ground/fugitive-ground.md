@@ -2,7 +2,6 @@
 title: Fugitive Ground
 description: A personal or shared experience as simple as the practice of awareness, a conversation between friends, a collective effort to shift perception, or a place and time to make art
 thumbnail: assets/images/fg_thumb3.png
-thumbnailavif: assets/images/fg_thumb3.avif
 thumbnailAlt: A sun and ground symbol bordered by a negative and positive number one 
 date: 2014-08-15
 tags:

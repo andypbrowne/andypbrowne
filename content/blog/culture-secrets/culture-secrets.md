@@ -2,7 +2,6 @@
 title: Culture Secrets
 description: Because culture and community doesn't happen by accident
 thumbnail: assets/images/culture-secrets-thumb.jpg
-thumbnailavif: assets/images/culture-secrets-thumb.avif
 thumbnailAlt: A group of nine book covers with one spot remaining vacant
 date: 2023-01-02
 tags:

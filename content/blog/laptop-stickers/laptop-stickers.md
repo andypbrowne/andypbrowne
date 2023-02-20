@@ -2,7 +2,6 @@
 title: Laptop Stickers
 description: If you gotta sticker…
 thumbnail: assets/images/Laptop-Stickers-Thumb.jpg
-thumbnailavif: assets/images/Laptop-Stickers-Thumb.avif
 thumbnailAlt: the top cover of a laptop covered with various stickers 
 date: 2022-01-17
 tags:
