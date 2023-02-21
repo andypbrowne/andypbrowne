@@ -452,6 +452,9 @@ section.hero .hero-details {
 	.postlist-container .postlist {
 		grid-column: 1 / 6;
 	}
+	section.hero h2 {
+		grid-column: 1 / 6;
+	}
 	section.hero h2,
 	article h2.post-deck {
 		font-size: var(--font-size-xl);
@@ -661,7 +664,7 @@ footer .footer-links {
 }
 .postlist-date,
 .postlist-item:before {
-	font-size: 1.4125rem;
+	font-size: var(--font-size-base);
 	color: var(--text-color);
 	font-weight: 650;
 	opacity: .8;
@@ -674,6 +677,11 @@ footer .footer-links {
 }
 article time.postlist-date {
 	line-height: 3;
+}
+
+li.postlist-item a h2 {
+	margin-top: 0px;
+	font-size: var(--font-size-md);
 }
 .postlist-link {
 	font-size: 1.1875em; /* 19px /16 */

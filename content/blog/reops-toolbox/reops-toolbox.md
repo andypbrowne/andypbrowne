@@ -31,7 +31,9 @@ Recently I was involved in a community-based project called *The Research Operat
 
 It’s a lot to talk about – so for now I just want to share a small bit about how it was made and some things I learned about the practice of research.
 
-I was really lucky to work with two great collaborators on this project. Carolyn Morgan is a UX Researcher and the brains behind the survey design: she lent her expertise in 18+ interviews and the survey design we conducted. I’m most thankful to Caro for driving these things home and bringing so much confidence to the project. Derek Nguyen is a Web Developer (and an impressive UX Designer too) who used our Airtable data and turned it into an interactive website. On this project I focused on project management and interaction design, but also learned a lot from my collaborators. 
+## Into the toolbox
+
+I was really lucky to work with two great collaborators on this project. Carolyn Morgan is a UX Researcher and the brains behind the survey design: she lent her expertise in 18+ interviews. I’m most thankful to Caro for driving these things home and bringing so much rigor and confidence to the project. Derek Nguyen is a Web Developer (and an impressive UX Designer too) who used our Airtable data and turned it into an interactive website. On this project I focused on project management and interaction design, but also learned a lot from my collaborators. 
 
 One area I was able to get some new experience in was research note taking and qualitative analysis. In the past I would have used plain text documents or an app like Optimal Workshop’s Reframer for note taking and analysis. But this time Caro suggested a more integrated approach. We took notes on a digital whiteboard called Miro. We even layered observations on top of screen shots of the block-level wireframes (see 2nd screenshot below). I suppose this could have been done directly in Figma~~,~~ where I designed the wires, but with the Miro board, we were able to tag/label the sticky notes to make the later analysis easier.
 
@@ -56,7 +58,9 @@ There is never any one right way to do this type of work. In this case, where we
 5. **Protect your participants** - Those really good note taking techniques I mentioned earlier allowed us to delete the recordings within one week. Those recordings were a lifesaver to make sure we got all the details right, but we did not need to keep them on file any longer than that. Like Kasey Canlas would say: [just delete it](https://dscout.com/people-nerds/kasey-canlas)!
 6. **Secret sauce** - The layered notes and insights made the next steps of the design process so much easier. It’s like the answers to the test were right there in the research. As a designer I didn’t have to question myself about which navigation patterns would work. The team and I had confidence that it would work and be enjoyable.
 
-The most important thing I learned is how rewarding it can be to be involved in a community-based project. In the case of the ResearchOps community it can be as simple as starting a new channel or taking on a big ambitious project. We can share our amazing skills or learn new ones by participating. If this sounds interesting to you, here is the new [ReOps volunteer form](#) (link avail soon). 
+## The rewards of volunteering
+
+The most important thing I learned is how rewarding it can be to be involved in a community-based project. In the case of the ResearchOps community it can be as simple as starting a new channel or taking on a big ambitious project. We can share our amazing skills or learn new ones by participating. If this sounds interesting to you, here is the new [ReOps volunteer form]() (link avail soon). 
 
 This post is also published on the [ReOps Community Blog](https://medium.com/researchops-community).
 
