@@ -56,7 +56,7 @@ See all the route names at [The Mountain Project](https://www.mountainproject.co
 
 ## The Extremes
 
-Because any other point of interest is a vast distance away from Barstow, New Jack City was was an oasis for me. Being out in nature with my friends and getting in some great (world class) climbing is a really fond memory. It was also a time of extremes for me. I was extremely isolated, but it brought me closer to the people I cared about. 
+Because any other point of interest is a vast distance away from Barstow, New Jack City was an oasis for me. Being out in nature with my friends and getting in some great (world class) climbing is a really fond memory. It was also a time of extremes for me. I was extremely isolated, but it brought me closer to the people I cared about. 
 
 My friends and I were training for a deployment to Iraq. We would spend weeks doing maneuvers in the desert, making a certain choreography with tanks and armored personnel carriers. The military has a long history of training in the high desert. Temperatures could reach 120 degrees F in the summer and drop as much as 50 degrees at night. 
 
