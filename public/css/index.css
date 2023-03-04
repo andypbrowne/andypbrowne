@@ -237,6 +237,8 @@ figcaption,
 	font-style: italic;
 	text-align: center;
     margin-top: 1.2rem;
+	hyphens: auto;
+	word-break: break-all;
 }
 figure img,
 img.thumbnail,
@@ -616,8 +618,10 @@ footer .footer-links {
 }
 
 @media (prefers-color-scheme: dark) {
-	span.view-mode:before {
-		content: "😎 We both love darkness";
+	@media screen and (min-width: 650px) {
+		span.view-mode:before {
+			content: "😎 We both love darkness";
+		}
 	}
 }
 
