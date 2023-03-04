@@ -60,7 +60,7 @@ There is never any one right way to do this type of work. In this case, where we
 
 ## The rewards of volunteering
 
-The most important thing I learned is how rewarding it can be to be involved in a community-based project. In the case of the ResearchOps community it can be as simple as starting a new channel or taking on a big ambitious project. We can share our amazing skills or learn new ones by participating. If this sounds interesting to you, here is the new [ReOps volunteer form]() (link avail soon). 
+The most important thing I learned is how rewarding it can be to be involved in a community-based project. In the case of the ResearchOps community it can be as simple as starting a new channel or taking on a big ambitious project. We can share our amazing skills or learn new ones by participating. If this sounds interesting to you, here is the new [Re+Ops Volunteer sign up form](https://airtable.com/shr1lnFpVMlwkPmTi). 
 
 This post is also published on the [ReOps Community Blog](https://medium.com/researchops-community).
 
