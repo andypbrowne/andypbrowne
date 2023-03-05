@@ -4,7 +4,7 @@
     font-display: swap;
     font-style: normal;
     font-named-instance: 'Regular';
-    src: url("../fonts/Inter-roman.var.woff2") format("woff2");
+    src: url("/public/fonts/Inter-roman.var.woff2") format("woff2");
   }
   @font-face {
     font-family: 'Inter var';
@@ -12,7 +12,7 @@
     font-display: swap;
     font-style: italic;
     font-named-instance: 'Italic';
-    src: url("../fonts/Inter-italic.var.woff2") format("woff2");
+    src: url("/public/fonts/Inter-italic.var.woff2") format("woff2");
   }
   @font-face {
     font-family: 'Newsreader Display Italic';
@@ -20,7 +20,7 @@
     font-display: swap;
     font-style: italic;
     font-named-instance: 'Newsreader Display Italic';
-    src: url("../fonts/Newsreader72pt-ExtraBoldItalic.woff2") format("woff2");
+    src: url("/public/fonts/Newsreader72pt-ExtraBoldItalic.woff2") format("woff2");
   }
   @font-face {
     font-family: 'Newsreader';
@@ -28,7 +28,7 @@
     font-display: swap;
     font-style: normal;
     font-named-instance: 'Regular';
-    src: url("../fonts/Newsreader.woff2") format("woff2");
+    src: url("/public/fonts/Newsreader.woff2") format("woff2");
   }
   @font-face {
     font-family: 'Newsreader';
@@ -36,7 +36,7 @@
     font-display: swap;
     font-style: italic;
     font-named-instance: 'Italic';
-    src: url("../fonts/Newsreader-Italic.woff2") format("woff2");
+    src: url("/public/fonts/Newsreader-Italic.woff2") format("woff2");
   }
 
 /* Defaults */
