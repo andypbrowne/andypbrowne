@@ -155,7 +155,8 @@ aside {
 	border-radius: var(--border-radius);
 }
 
-aside h2 {
+aside h2,
+aside h3 {
 	margin-top: 0px;
 }
 
