@@ -14,6 +14,20 @@ H</span>ow do you find new podcasts? For me, discovery never happens by just bro
 
 What podcasts do you listen to and in which category do they fit? [Let me know on twitter](https://twitter.com/dtandyb/status/1115472627915722753). 
 
+<aside>
+
+  ### Note to visitors
+  
+  3 new podcasts were recentlyi added to this post including _Cautionary Tales_, _Hard Fork_, and _Design Better_. 
+
+</aside>
+
+## The Categories
+- <a href="#road-tripping">Road Tripping</a>
+- <a href="#morning-commuting">Morning Commuting</a>
+- <a href="#sleep-aids">Sleep Aids</a>
+- <a href="#design-learning">Design Learning</a>
+
 ### Road Tripping
 
 Here are a set of podcasts that are great for the road. Generally, these are longer in format and deserve undivided attention.
@@ -28,6 +42,7 @@ Here are a set of podcasts that are great for the road. Generally, these are lon
 <img src="https://is3-ssl.mzstatic.com/image/thumb/Music118/v4/4c/1b/4d/4c1b4d83-8ec8-7703-2b12-c463350676d3/source/170x170bb.jpg" alt="Reply All">
 <img src="https://media.npr.org/images/podcasts/primary/icon_555340969-f6feebc9855d433100823701ba758f6ade087945-s700-c85.png" alt="There Goes the Neighborhood">
 <img src="https://is3-ssl.mzstatic.com/image/thumb/Music118/v4/6c/f4/24/6cf4246b-7d67-2d48-f2a4-afac63b3f96f/source/170x170bb.jpg" alt="Revisionist History">
+<img src="https://is5-ssl.mzstatic.com/image/thumb/Podcasts122/v4/06/02/84/06028448-771b-33bc-aa09-6f8ff5403845/mza_10542795652437011877.jpg/536x0w.webp" alt="Cautionary Tales">
 </div>
 
 
@@ -41,6 +56,7 @@ Here are a set of podcasts that are great for the road. Generally, these are lon
 - [There goes the Neighborhood Episode 1 Mouth to Ear](https://www.wnycstudios.org/story/mouth-ear-brooklyn-gentrification) - Who are the people who are affected by change and who is bringing it in the gentrification of Brooklyn?
 - [The Satire Paradox from Revisionist History](http://revisionisthistory.com/episodes/10-the-satire-paradox) - How does exactly the opposite of what you wanted happen? Malcolm Gladwell asks whether laughter and social protest are friends or foes.
 - [Reply All theme music by Breakmaster Cyliner on Song Exploder](http://songexploder.net/reply-all) - A mysterious artist breaks down a surprising process that introduces another one of the postcasts on this list.
+- [Cautionary Tales – Office Hell: The demise of the playful workspace](https://timharford.com/2023/03/cautionary-tales-office-hell-the-demise-of-the-playful-workspace/) - A history of the open office and offers some insight into what can actually make employees happy with their work setup (spoiler its about autonomy).
 
 ### Morning Commuting
 
@@ -94,7 +110,9 @@ There is a lot to keep up with in the space of technology and interaction design
 <img src="https://is5-ssl.mzstatic.com/image/thumb/Music128/v4/a4/c3/ef/a4c3ef32-525a-269f-e4c0-a2a544ae5c9a/source/170x170bb.jpg" alt="Wireframe">
 <img src="https://is4-ssl.mzstatic.com/image/thumb/Music49/v4/31/93/e2/3193e2a9-c8d1-4d32-0838-973691721c49/source/170x170bb.jpg" alt="A Responsive Web Design Podcast">
 <img src="https://is4-ssl.mzstatic.com/image/thumb/Music114/v4/90/45/5a/90455a9c-a959-d7b4-e3b9-200d911f3f41/source/170x170bb.jpg" alt="Design Tomorrow">
-<img src="https://video-images.vice.com/topics/57a205628cb727dec795a6b1/lede/1547319922877-2-A.png">
+<img src="https://video-images.vice.com/topics/57a205628cb727dec795a6b1/lede/1547319922877-2-A.png" alt="Cyber Motherboard">
+<img src ="https://is1-ssl.mzstatic.com/image/thumb/Podcasts122/v4/90/c6/68/90c6680c-0ad0-ac08-b2c8-6bda5f057654/mza_11004870069464171643.jpg/536x0w.webp" alt="Hard Fork">
+<img src="https://is3-ssl.mzstatic.com/image/thumb/Podcasts116/v4/77/56/ee/7756ee1e-42f0-1158-5397-166d744ff117/mza_8911789949626966255.png/536x0w.webp" alt="design better">
 </div>
 
 **Favorite Episodes:**
@@ -107,3 +125,5 @@ There is a lot to keep up with in the space of technology and interaction design
 - [The City of Boston from the Responsive Web Design Podcast](https://responsivewebdesign.com/podcast/city-of-boston/) - Many amazing episodes to choose from here but this work on a civic website is memorable because of the relationship between user needs of citizens and how a responsive redesign offers an opportunity to organize a website’s content and features around that. When you listen to all of the episodes of this podcast like I have, you will notice that Ethan and Karen always ask the same set of questions. These must be really good questions because they get really fresh answers from every guest.
 - [Episode 11 of the Design Tomorrow Podcast. Getting Out of Our Own Way](https://designtomorrow.co/) - Host Christopher Butler covers in a sort of monologue fashion how we can practice better. In episode 11 he references the work of John Cage to demonstrate the questioning nature of design as its biggest strength
 - [Motherboard from Vice hosts Cyber](https://motherboard.vice.com/en_us/article/xwbnkd/how-the-new-york-times-protects-its-journalists-from-hackers-and-spies) - A podcast about the rapidly evolving landscape of cybersecurity. The latest episode talks about how journalists at the New York Times a protected by the company.
+- [Hard Fork episode called Bard Fork, and How to Talk So Chatbots Will Lissten](https://www.nytimes.com/2023/03/24/podcasts/hard-fork-bard.html?action=click&module=audio-series-bar&region=header&pgtype=Article) - In this episode the hosts hear from listeners about novel ways they are using A.I. for novel 
+- [Meredith Black: A New Era of DesigOps](https://www.designbetter.co/podcast/meredith-black-2) - As someone who works in Design Operations this episode is essential listening for me. Design teams have grown to much larger sizes over the past few years and Meredith talks about how to care for them.
