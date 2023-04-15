@@ -527,18 +527,24 @@ section.cv {
 	max-width: 65ch;
 }
 
+div.nextprev {
+	border-top: 1px solid var(--subtle-border);
+	margin-top: 2rem;
+}
+
 .links-nextprev {
 	list-style: none;
 	/* border-top: 1px dashed var(--color-gray-20); */
 	padding: 1em 0;
 	margin-top: 2rem;
 	display: flex;
+	gap: 1rem;
 	flex-direction: row;
 	justify-content: space-between;
-	border-top: 1px solid var(--subtle-border);
 }
 .links-nextprev li {
 	display: flex;
+	flex: 1;
 	flex-direction: column;
 	max-width: 12rem;
 }

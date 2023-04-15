@@ -21,6 +21,10 @@ layout: layouts/base.njk
 
 <div class="end-mark">🧐</div>
 
+<div class="nextprev">
+
+<h2 class="visually-hidden">Read more posts</h2>
+
 {%- if collections.posts %}
 {%- set previousPost = collections.posts | getPreviousCollectionItem %}
 {%- set nextPost = collections.posts | getNextCollectionItem %}
@@ -41,6 +45,7 @@ layout: layouts/base.njk
 			<a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></li>
 	{% endif %}
 </ul>
+</div>
 </article>
 {%- endif %}
 {%- endif %}
