@@ -58,6 +58,7 @@
 	--font-size-xl: clamp(1.95rem, 1.68vw + 1.62rem, 2.96rem);
 	--font-size-xxl: clamp(2.44rem, 2.51vw + 1.94rem, 3.95rem);
 	--font-size-xxxl: clamp(3.05rem, 3.68vw + 2.32rem, 5.26rem);
+	--font-weight-bold: 600;
 }
 
 /* Theme colors */
@@ -147,6 +148,10 @@ article {
 	margin: 0 auto;
 }
 
+div.end-mark {
+	text-align: center;
+}
+
 aside {
 	font-size: smaller;
 	background-color: var(--color-midnight-20);
@@ -197,6 +202,10 @@ ol li {
 	margin-bottom: 0.8rem;
 }
 
+strong {
+	font-weight: var(--font-weight-bold);
+}
+
 blockquote {
 	font-family: var(--font-family-serif);
 	font-variation-settings: "wght" 500;
@@ -217,6 +226,7 @@ small {
 .small-caps {
 	font-variant-caps: all-small-caps;
 	letter-spacing: .08rem;
+	font-weight: var(--font-weight-bold);
 }
 .serif {
 	font-family: var(--font-family-serif);
@@ -526,6 +536,18 @@ section.cv {
 	flex-direction: row;
 	justify-content: space-between;
 	border-top: 1px solid var(--subtle-border);
+}
+.links-nextprev li {
+	display: flex;
+	flex-direction: column;
+}
+
+.thumbnail-nextprev {
+	aspect-ratio: 16 / 9;
+    object-fit: cover;
+	border-radius: var(--border-radius);
+	width: 12rem;
+    height: auto;
 }
 
 table {
