@@ -6,7 +6,11 @@
 		<title>{{ title or metadata.title }}</title>
 		<meta name="description" content="{{ description or metadata.description }}">
 		<link rel="canonical" href="{{ metadata.url }}{{ page.url }}">
+<<<<<<< Updated upstream
 		<link rel="alternate" type="application/rss+xml" href="https://andypbrowne.com/feed/feed.xml" title="Andy's RSS Feed" />
+=======
+		<meta name="view-transition" content="same-origin" />
+>>>>>>> Stashed changes
 		
 		{# SEO and social share properties #}
 		<meta property="og:title" content="{{ title or renderData.title or metadata.title }}"/>
