@@ -2,12 +2,13 @@
 layout: layouts/base.njk
 ---
 <article>
+<header style="view-transition-name: post-{{ id }}">
+  <time class="postlist-date" datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
 
-<time class="postlist-date" datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
+  <h1>{{ title }}</h1>
 
-<h1>{{ title }}</h1>
-
-<h2 class="post-deck text-gradient">{{description}}</h2>
+  <h2 class="post-deck text-gradient">{{description}}</h2>
+</header>
 
 {# <ul class="post-metadata">
 	<li><time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time></li>

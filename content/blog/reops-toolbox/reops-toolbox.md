@@ -1,5 +1,6 @@
 ---
 title: Building the ResearchOps Toolbox
+id: toolbox
 description: Working on a community-based project with lessons learned
 thumbnail: assets/images/thumb-toolbox.jpg
 thumbnailAlt: alternative text 
