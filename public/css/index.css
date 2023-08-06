@@ -73,6 +73,8 @@
 	--color-midnight-60: #496174;
 	--color-midnight-80: #0F2B42;
 
+	--color-aside: oldlace;
+
 	--color-base-bg: #FFFCF5;
 
 	--text-color: var(--color-midnight-80);
@@ -97,6 +99,8 @@
 		--color-midnight-40: #496174;
 		--color-midnight-60: #7792a9;
 		--color-midnight-80: #E3E4E5;
+
+		--color-aside: var(--color-midnight-20);
 
 		/* --text-color: var(--color-midnight-20); */
 		--text-color-link: #1493fb;
@@ -154,7 +158,7 @@ div.end-mark {
 
 aside {
 	font-size: smaller;
-	background-color: var(--color-midnight-20);
+	background-color: var(--color-aside);
 	margin-bottom: 2rem;
 	padding: 1.2rem 1rem 1.8rem;
 	border-radius: var(--border-radius);
