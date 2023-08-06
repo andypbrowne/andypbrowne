@@ -702,7 +702,7 @@ footer .footer-links {
 }
 .postlist-date,
 .postlist-item:before {
-	font-size: var(--font-size-base);
+	font-size: var(--font-size-md);
 	color: var(--text-color);
 	font-weight: 650;
 	opacity: .8;
