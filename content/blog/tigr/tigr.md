@@ -1,7 +1,7 @@
 ---
 title: UX and the TIGR Patrol Debrief Program
 description: How did you get your start in User Experience?
-thumbnail: assets/images/854582410-thumb.jpg
+thumbnail: assets/images/thumb-tigr.jpg
 thumbnailAlt: A digtial satilite map that shows a complex interface including markers a route and an informatinal overlay
 date: 2023-08-06
 tags:
@@ -10,7 +10,7 @@ tags:
 draft: false
 ---
 <figure>
-  {% image "./854582410.jpg", "{{ thumbnailAlt }}" %}
+  {% image "./854582410.jpg", "{{ Graphic user interface with a map and icons that also displays a route}}" %}
 <figcaption>A screenshot of the TIGR Patrol Debrief Program</figcaption>
 </figure>
 
