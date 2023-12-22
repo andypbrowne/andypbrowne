@@ -16,7 +16,7 @@ eleventyNavigation:
 
 </div>
 
-Andy is a Design Operations Program Manager in JPMorgan Chase & Co.’s Global Technology department. He supports an Employee Experience organization and does what he can to make a few hundred designers and researchers lives better. Over the past decade he has worked for the firm’s Corporate and Investment Bank and the Corporate Line of Business in creative roles. He has a passion for Interaction Design, User Experience Research, and Web Development.
+Andy is a Design Operations Program Manager in JPMorgan Chase & Co.’s department. He supports an Employee Experience organization and does what he can to make a few hundred designers and researchers lives better. Over the past decade he has worked for the firm’s Corporate and Investment Bank and the Corporate Line of Business in creative roles. He has a passion for Interaction Design, User Experience Research, and Web Development.
 
 A former US Army Captain, Andy served in the Infantry for seven years. He was assigned to a variety of positions including platoon leader, civil military officer, operations officer, and liaison officer. Andy served in a one year-long assignment to Korea and two deployments to Iraq during Operation Iraqi Freedom.
 
@@ -42,7 +42,6 @@ Optimal Workshop, Lookback, Figma, Visual Studio Code, Affinity Suite, Premiere 
 
 ## Find Me
 - I prefer to [blog right here](/blog/) on my own site because I believe in owning your own content
-- I use [Twitter](https://twitter.com/DTAndyB) as my source of news and it is a good place for direct messages
 - [Linkedin](https://www.linkedin.com/in/andypbrowne) is my preferred channel to receive messages from people I don’t know
 - I have a public [Instagram](https://www.instagram.com/andypbrowne/) account to stay connected with friends
 - I use [Telegram](https://telegram.org/) to message with anyone who also has telegram.
