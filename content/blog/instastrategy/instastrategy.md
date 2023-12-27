@@ -7,6 +7,7 @@ date: 2017-08-07
 tags:
   - post
 draft: false
+css: /assets/css/instastrategy-filtering.css
 ---
 
 Instagram a a social media platform has emerged a the most authentic way to represent yourself online. It's simplicity and format provide a built-in bullshit filter. As a bonus, the interface makes the process of discovery, curation and promotion intuitive and user-friendly.
