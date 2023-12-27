@@ -54,6 +54,9 @@
 		{% include "node_modules/prismjs/themes/prism-okaidia.css" %}
 		{% include "public/css/prism-diff.css" %}
 		</style> 
+		{% if css %}
+      		<link rel="stylesheet" href="{{css}}" />
+    	{% endif %}
 {#
 		3. You could even swap between the two methods above using {% if eleventy.env.runMode === "serve" %}
 		4. Concatenate CSS to one file (site performance is slower than 2 but faster than 1):
