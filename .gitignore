@@ -2,5 +2,6 @@ _site/
 node_modules/
 package-lock.json
 content/blog/_template
+.env
 # Local Netlify folder
 .netlify
