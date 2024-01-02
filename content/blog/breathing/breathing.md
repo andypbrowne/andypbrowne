@@ -1,13 +1,13 @@
 ---
 title: Breathing
 description: A group of resources to help form healthy habits
-thumbnail: 
-thumbnailAlt: #
+thumbnail: assets/images/thumb-breath.jpg
+thumbnailAlt: a collage of image thumbnails and one says breath distinctly
 date: 2024-01-01
 tags:
   - post
   - featured
-draft: true
+draft: false
 css: /assets/css/breathing.css
 resources:
   - title: Breath by James Nestor
@@ -60,15 +60,16 @@ This is a growing list of resources I’m gathering to help me form some healthy
 
 <div class="grid">{% for resource in resources %}
     <div class="card">
-        {%- if (resource.image) -%}<a href="{{ resource.link }}" rel="norefer"><img class="custom-size-images" src="{{ resource.image }}" alt="" width="150px"></a>{%- else -%}<div><img class="custom-size-images" src="https://placehold.co/600x400?text=Take+a+deep+breath"></div>{%- endif -%}
-        <div>
+        {%- if (resource.image) -%}<a href="{{ resource.link }}" rel="norefer"><img class="custom-size-images" src="{{ resource.image }}" alt="{{ resource.alt }}" width="150px"></a>{%- else -%}<div><img class="custom-size-images" src="https://placehold.co/600x400?text=Take+a+deep+breath"></div>{%- endif -%}
+        <div class="card-body">
             <a href="{{ resource.link }}" rel="norefer"><h2> {{ resource.title }} </h2></a>
             <p>{{ resource.description }}</p>
         </div>
-        <div>
+        <div class="card-footer">
             <div class="resource-tag">{{ resource.tag }}</div>
             <hr>
         </div>
     </div>{% endfor %}</div>
 
-This post will be updated with more resources. Submit a pull request if you want to add any. 
+
+This post will be updated with more resources. Submit a [pull request](https://github.com/andypbrowne/andypbrowne/blob/main/content/blog/breathing/breathing.md?plain=1) or contact me if you want to add any. 

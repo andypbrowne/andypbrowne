@@ -32,6 +32,13 @@ figure {
     border-start-start-radius: var(--border-radius);
     border-start-end-radius: var(--border-radius);
 }
+.card .card-body {
+    display: block;
+}
+
+.card .card-footer {
+    display: block;
+}
 
 .card h2 {
     padding: 0px;
