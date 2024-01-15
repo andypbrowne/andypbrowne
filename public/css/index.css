@@ -506,23 +506,27 @@ section.archive {
 	margin-bottom: 2rem;
 }
 
-.featured-post-grid ol {
+.featured-post-grid ol,
+.grid {
 	display: grid;
 	gap: 2rem;
 	grid-template-columns: 1fr;
 }
 @media screen and (min-width: 650px) {
-	.featured-post-grid ol {
+	.featured-post-grid ol,
+	.grid {
 	  grid-template-columns: repeat(2, 1fr);
 	}
   }
 @media screen and (min-width: 900px) {
-	.featured-post-grid ol {
+	.featured-post-grid ol,
+	.grid {
 	  grid-template-columns: repeat(3, 1fr);
 	}
 }
 @media screen and (min-width: 1600px) {
-	.featured-post-grid ol {
+	.featured-post-grid ol,
+	.grid {
 	  grid-template-columns: repeat(4, 1fr);
 	}
 }

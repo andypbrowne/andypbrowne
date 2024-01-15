@@ -42,7 +42,7 @@ resources:
   - title: Revealing the Secrets of Tibetan Inner Fire Meditation
     image: "https://lirp.cdn-website.com/013c49cb/dms3rep/multi/opt/himalayas-g188aeff57_1280-1920w.jpg"
     alt: Snow capped mountains with a line of tibetan streamers in foreground
-    description: A post that discusses the Tibetan Buddhist meditation practice of Inner Fire Meditation (Tummo). It reveals instructions for this secret practice that are said to improve concentration, health, open the chakras, and cultivate bliss and confidence.
+    description: A post about the meditation practice of Inner Fire Meditation (Tummo). It reveals instructions for this secret practice that are said to improve concentration, health, open the chakras, and cultivate bliss and confidence.
     link: "https://www.thewayofmeditation.com.au/revealing-the-secrets-of-tibetan-inner-fire-meditation"
     tag: article
   - title: Breathwork Bay Area
@@ -58,10 +58,13 @@ There is this happy side-effect when you read a book about health and breathing.
 
 This is a growing list of resources I’m gathering to help me form some healthy habits. 
 
-<div class="grid">{% for resource in resources %}
+This post will be updated with more resources. Submit a [pull request](https://github.com/andypbrowne/andypbrowne/blob/main/content/blog/breathing/breathing.md?plain=1) or contact me if you want to add anything else on breathing and health. 
+
+&nbsp;
+<div class="grid"> {% for resource in resources %}
     <div class="card">
+      <div class="card-body">
         {%- if (resource.image) -%}<a href="{{ resource.link }}" rel="norefer"><img class="custom-size-images" src="{{ resource.image }}" alt="{{ resource.alt }}" width="150px"></a>{%- else -%}<div><img class="custom-size-images" src="https://placehold.co/600x400?text=Take+a+deep+breath"></div>{%- endif -%}
-        <div class="card-body">
             <a href="{{ resource.link }}" rel="norefer"><h2> {{ resource.title }} </h2></a>
             <p>{{ resource.description }}</p>
         </div>
@@ -70,6 +73,3 @@ This is a growing list of resources I’m gathering to help me form some healthy
             <hr>
         </div>
     </div>{% endfor %}</div>
-
-
-This post will be updated with more resources. Submit a [pull request](https://github.com/andypbrowne/andypbrowne/blob/main/content/blog/breathing/breathing.md?plain=1) or contact me if you want to add any. 
