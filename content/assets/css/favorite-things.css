@@ -1,5 +1,5 @@
 @media (prefers-color-scheme: dark) {
-    img {
+    figure.sketch img {
 	    filter: invert(1);
     }
 }

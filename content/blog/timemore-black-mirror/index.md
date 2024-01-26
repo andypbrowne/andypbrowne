@@ -10,7 +10,7 @@ tags:
 draft: true
 css: /assets/css/favorite-things.css
 ---
-<figure>
+<figure class="sketch">
   {% image "./coffee-scale.png", "Line drawing of a square a minimal looking kitchen scale" %}
 <figcaption></figcaption>
 </figure>
