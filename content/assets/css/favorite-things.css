@@ -1,0 +1,17 @@
+@media (prefers-color-scheme: dark) {
+    img {
+	    filter: invert(1);
+    }
+}
+sub { font-variant-position: sub; }
+sup { font-variant-position: super; }
+.fraction {
+    font-feature-settings: frac;
+}
+
+@supports (font-variant-numeric: diagonal-fractions) {
+  .fraction {
+      font-feature-settings: frac;
+      font-variant-numeric: diagonal-fractions;
+  }
+}
