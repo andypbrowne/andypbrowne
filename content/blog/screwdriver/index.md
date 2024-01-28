@@ -15,7 +15,7 @@ css: /assets/css/favorite-things.css
 <figcaption></figcaption>
 </figure>
 
-The screwdriver that comes with the [Google Nest Thermostat](https://store.google.com/gb/product/nest_learning_thermostat_3rd_gen/) is a treasure. Immediately we notice the aesthetics and great ergonomic handle. I always reach for it in the utility drawer.
+The screwdriver that comes with the [Google Nest Thermostat](https://www.bould.com/work/nest-thermostat) is a treasure. Immediately we notice the aesthetics and great ergonomic handle. I always reach for it in the utility drawer.
 
 There is actually more to the story. The screwdriver is included in the Nest packaging. Its there because it reduces installation time of the thermostat. The persistance of the screwdriver also keeps the Nest brand top of mind and creates word-of-mouth. Ultimately the cost of including the screwdriver pays for itself even though it seems counter-intuitive.
 
