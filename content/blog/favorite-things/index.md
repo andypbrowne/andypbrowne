@@ -3,10 +3,11 @@ eleventyImport:
   collections: ["favoriteThings"]
 title: Favorite Things
 description: This is a list of my favorite things
+thumbnail: assets/images/thumb-favorite-things.jpg
 thumbnailAlt: alternative text 
-date: 2024-01-23
+date: 2024-01-28
 tags: featured
-draft: true
+draft: false
 css: /assets/css/favorite-things.css
 ---
 
@@ -25,6 +26,10 @@ css: /assets/css/favorite-things.css
 			{% endif %}</a>
 		{% if post.data.description %}<p>{{ post.data.description }}</p>{% endif %}
 	  </div>
-  </div>
+  <div class="card-footer">
+            <div class="resource-tag">favorite thing</div>
+            <hr>
+        </div>
+</div>
 {% endfor %}
 </div>
