@@ -37,11 +37,14 @@ User Research, Evaluative Testing, Interaction Design, Prototyping, Workshop Fac
 
 Optimal Workshop, Lookback, Figma, Visual Studio Code, Affinity Suite, Premiere Pro, JIRA, Trello…
 
+## This Site
+
+Built with [Eleventy](https://www.11ty.dev/), written in markdown because I prefer to [own my own content](https://ownyourcontent.wordpress.com/).
+
 </div>
 <div>
 
 ## Find Me
-- I prefer to [blog right here](/blog/) on my own site because I believe in owning your own content
 - [Linkedin](https://www.linkedin.com/in/andypbrowne) is my preferred channel to receive messages from people I don’t know
 - I have a public [Instagram](https://www.instagram.com/andypbrowne/) account to stay connected with friends
 - I use [Telegram](https://telegram.org/) to message with anyone who also has telegram.
