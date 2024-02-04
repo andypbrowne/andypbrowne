@@ -32,18 +32,22 @@ layout: layouts/base.njk
 {%- if nextPost or previousPost %}
 <ul class="links-nextprev">
 	{%- if previousPost %}
+	{%- if not previousPost.data.rss_only %}
 		<li><strong>Previous:</strong>
 			<a href="{{ previousPost.url }}">
 				<img class="thumbnail-nextprev" src="/{{ previousPost.data.thumbnail }}" alt="{{ previousPost.data.thumbnailAlt }}">
 			</a>
 			<a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a></li>
 	{% endif %}
+	{% endif %}
 	{%- if nextPost %}
+	{%- if not nextPost.data.rss_only %}
 		<li><strong>Next:</strong> 
 			<a href="{{ nextPost.url }}">
 				<img class="thumbnail-nextprev" src="/{{ nextPost.data.thumbnail }}" alt="{{ nextPost.data.thumbnailAlt }}">
 			</a>
 			<a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></li>
+	{% endif %}
 	{% endif %}
 </ul>
 </div>
