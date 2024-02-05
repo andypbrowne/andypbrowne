@@ -26,7 +26,7 @@ If I had studied in Spain – I think I might remember the music. So to fabricat
 
 ## Nightlife and Food
 
-In Spain, you learn to socialize out in sidewalk cafes and experience the nightlife late into the evening. One of my favorites would surely have been [Bar El Tigre](https://bareltigre.es/). This is a spot that offers free tapas with every drink order – perfect for a student on a budget. Don’t forget that lunch is the biggest meal in Spain. Embracing the large lunch and siesta just after is 
+In Spain, you learn to socialize out in sidewalk cafes and experience the nightlife late into the evening. One of my favorites would surely have been [Bar El Tigre](https://bareltigre.es/). This is a spot that offers free tapas with every drink order – perfect for a student on a budget. Don’t forget that lunch is the biggest meal in Spain. Embracing the large lunch and siesta just after is a lifestyle adjustment that tourists don't typically make – but one a student abroad can celebrate.
 
 When I’m looking for places to go these days I’m always starting with the coffee shops and bookstores. I’ve got a [list of some](https://foursquare.com/dtandyb/list/cl%C3%A1sico-madrid) of the places for that. My partner and I now like to sa*y there are no wrong turns in Madrid*. So the idea is to just pick a spot and just walk.
 
