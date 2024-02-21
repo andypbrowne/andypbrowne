@@ -16,9 +16,9 @@ eleventyNavigation:
 
 </div>
 
-Andy is a Design Operations Program Manager in JPMorgan Chase & Co.’s Employee Experience department. He does what he can to make a few hundred designers and researchers lives better. Over the past decade he has worked for the firm’s Corporate and Investment Bank and the Corporate Line of Business in creative roles. He has a passion for Interaction Design, User Experience Research, and Web Development.
+Andy is a Design Operations Program Manager in JPMorgan Chase & Co.’s Employee Experience department. He does what he can to make a few hundred designers’ and researchers’ lives better. Over the past decade, he has worked for the firm’s Corporate and Investment Bank and the Corporate Line of Business in creative roles. He has a passion for Interaction Design, User Experience Research, and Web Development.
 
-A former US Army Captain, Andy served in the Infantry for seven years. He was assigned to a variety of positions including platoon leader, civil military officer, operations officer, and liaison officer. Andy served in a one year-long assignment to Korea and two deployments to Iraq during Operation Iraqi Freedom.
+A former US Army Captain, Andy served in the Infantry for seven years. He was assigned to a variety of positions, including platoon leader, civil military officer, operations officer, and liaison officer. Andy served in a one year-long assignment to Korea and two deployments to Iraq during Operation Iraqi Freedom.
 
 Andy is a life-long student. He completed a Bachelors of Science at Tulane University studying business management and fine art. He is a graduate of the Maneuver Captain’s Career Course among other military training. He holds an Associates Degree in Web Design and Interactive Media from the Art Institute of New York City. He has also completed continuing education courses at the School of Visual Arts studying Interaction Design and Information Design.
 

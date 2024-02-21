@@ -12,7 +12,7 @@ description: The Exhibitions, Speaking Engagements and Education of Andy Garber-
 
 2022 | [Building a ResearchOps Toolbox, ReOps Conference](https://joinlearners.com/talk/building-a-researchops-toolbox)
 
-2018 | <a href="quent.com/atomic-design-nyc-2018" target="_blank">Creating a Big Bang Around Customer Experience with Atomic Design</a> (panelist)
+2018 | <a href="aquent.com/atomic-design-nyc-2018" target="_blank">Creating a Big Bang Around Customer Experience with Atomic Design</a> (panelist)
 
 2016 | Creativity in Corporate De$ign 
 
