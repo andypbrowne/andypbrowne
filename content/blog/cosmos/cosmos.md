@@ -14,11 +14,13 @@ tags:
 <figcaption>A closeup of source material found in the image library at the New York Public Library</figcaption>  
 </figure>
 
-Cosmos is a student project from 2011. It is a 4-page editorial spread that appropriated the transcription of my favorite episode of Cosmos. The “Backbone of Night” is about the mystery and the compelling nature of the universe.  
+Cosmos is a student project from 2011. It is a 4-page editorial spread that appropriated the transcription of my favorite episode of <em>Cosmos</em>. The “Backbone of Night” is about the mystery and the compelling nature of the universe.  
 
 The theme of space was first created by a typography exercise called illustrated word. I also like to think of it as words at play. Matteo Bologna would call it type masturbation.
 
 A valuable piece of inspiration for this piece was the image library at the mid-manhattan branch of the New York Public Library. There they have a catalogue of thousands of images. The most interesting images were etchings and lithographs. These images are incorporated throughout the 4-page editorial spread.
+
+Larger resolution: [browneCosmos19Sept2010](https://www.dropbox.com/scl/fi/agp0r1yx82x97wrj28asn/browneCosmos.pdf?rlkey=s8wd7aac7akxwwh3g16zghyha&dl=0)
 
 <figure>
   {% image "./img054cosmos.jpg", "Man holding a strange star-gazing object to the sky" %}
