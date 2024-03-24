@@ -4,10 +4,13 @@ description: More than just great aesthetics
 thumbnail: assets/images/thumb-screwdriver.jpg
 thumbnailAlt: A line drawing of a screwdriver with a very ergonomic and rounded handle 
 date: 2024-01-25
+collections:
+  - favorite-thing
 tags:
   - favorite-thing
   - post
 draft: false
+eleventyExcludeFromCollection.posts: true
 css: /assets/css/favorite-things.css
 ---
  <figure class="sketch">

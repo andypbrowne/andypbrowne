@@ -8,6 +8,7 @@ tags:
   - favorite-thing
   - post
 draft: false
+eleventyExcludeFromCollection.posts: true
 css: /assets/css/favorite-things.css
 ---
  <figure class="sketch">

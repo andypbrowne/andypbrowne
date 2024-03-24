@@ -6,7 +6,9 @@ description: This is a list of my favorite things
 thumbnail: assets/images/thumb-favorite-things.jpg
 thumbnailAlt: alternative text 
 date: 2024-01-28
-tags: featured
+tags: 
+  - post
+  - featured
 draft: false
 css: /assets/css/favorite-things.css
 ---

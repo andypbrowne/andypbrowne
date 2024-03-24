@@ -4,9 +4,7 @@ description: The water is so smooth you can see reflections of everything
 thumbnail: assets/images/thumb-waterski.jpg
 thumbnailAlt: A sketchy drawing of a boy wearing a life jacket 
 date: 2024-03-18
-tags:
-  - post
-  - featured
+tags: post
 draft: false
 css: /assets/css/favorite-things.css
 ---
