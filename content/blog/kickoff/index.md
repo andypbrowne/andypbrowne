@@ -7,7 +7,7 @@ date: 2024-03-23
 tags:
   - post
   - tips
-draft: true
+draft: false
 ---
 ## There are 2 things
 
