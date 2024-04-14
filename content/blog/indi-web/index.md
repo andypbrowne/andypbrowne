@@ -17,5 +17,5 @@ There are 3 levels of indiWeb citizenship:
 1. Publishing to the IndiWeb by marking up your content with microformats and adding the ability to send webmentions to other IndieWeb site.
 1. Adding reply contexts to your site and receiving webmentions on your site. This is basically like having an open-source comments at the bottom of your blog posts.
 
-Here is a link to all the things I implemented today: [Link to code respository commit to be provided](#)
+Here is a link to all the things I implemented today: [Link to code commit](https://github.com/andypbrowne/andypbrowne/commit/543b02d86f0af5686cb8b90069f81a548f168044)
 
