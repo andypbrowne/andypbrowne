@@ -145,6 +145,7 @@ body {
 main {
 	max-width: 80em;
 	margin: 0 auto;
+	min-height: calc(80vh - 20vh);
 }
 
 article {
@@ -357,9 +358,6 @@ span.text-italic {
     linear-gradient(
       to right in oklab, 
       oklch(53.78% 0.2742 262.342) 0%, oklch(53.78% 0.2742 262.342) 31% 31%, oklch(53.78% 0.3063 293.163) 100%);
-}
-
-
 }
 
 section.hero,
