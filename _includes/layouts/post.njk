@@ -2,9 +2,9 @@
 layout: layouts/base.njk
 ---
 
-<article>
-
-<time class="postlist-date" datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
+<article class="h-entry">
+<div class="visually-hidden"><a tabindex="-1" class="u-url" href="https://andypbrowne.com/{{ page.url | url }}">{{ title }}</a></div>
+<time class="postlist-date dt-published" datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
 
 <h1>{{ title }}</h1>
 
