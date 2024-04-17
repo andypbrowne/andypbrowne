@@ -44,6 +44,6 @@ This interview is no substitute for some real user research – but it is a grea
 2. Provide, in the intake or right after, all the sources of data, everything is useful to the designer.
 3. List the next steps and send intake to the client to confirm that we heard everything correctly.
 
-That’s it, the most important things I think about when starting a new project. I’d like to thank the graphic design students at [Hofstra University](https://www.hofstra.edu/) who recently asked me this question during a class visit. 
+That’s it, the most important things I think about when starting a new project. I’d like to thank the graphic design students at [Hostos](https://www.hostos.cuny.edu/About-Hostos/) who recently asked me this question during a class visit. 
 
 [^1] note to self: create a new blog post with a list of great icebreakers  
