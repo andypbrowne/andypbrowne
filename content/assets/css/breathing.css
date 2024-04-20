@@ -54,12 +54,18 @@ figure {
     display: block;
 }
 
-.card h2 {
+.card .card-body h2 a {
     padding: 0px;
     margin: 0px 0px 1rem;
+    font-size: var(--font-size-md);
+	text-decoration-line: underline;
+	text-decoration-thickness: 4px;
     font-weight: 700;
     font-variation-settings: "wght" 700;
     line-height: 1.12;
+}
+.card .card-body h2 {
+    margin-top: 0px;
 }
 
   .card .resource-tag {

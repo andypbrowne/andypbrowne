@@ -11,20 +11,20 @@ draft: false
 css: /assets/css/breathing.css
 resources:
   - title: Breath by James Nestor
-    image: "https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/71OfD29lJRL._AC_UF1000,1000_QL80_.jpg"
+    image: "https://m.media-amazon.com/images/I/71gxuHqAF-L._SY522_.jpg"
     alt: Book cover where the title "Breath is evaporating
     description: An exploration of the science, history, and cultural practices surrounding breathing, revealing its profound impact on our health, well-being, and overall quality of life.
     tag: book
   - title: Science of Breath by Swami Rama
-    image: "https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/61IXOdrYkAL._AC_UY436_FMwebp_QL65_.jpg"
+    image: "https://m.media-amazon.com/images/I/41Rg9fnBo1L._SY445_SX342_.jpg"
     alt: An old-school book cover with an image of a nose
     description: Blends Eastern philosophy with Western scientific principles, providing a holistic understanding of the breath's influence on health, vitality, and connection to self.
     link: "https://shop.himalayaninstitute.org/products/science-of-breath"
     tag: book
-  - title: Body Electric Series from TED Radio Hour
+  - title: Body Electric Series
     image: "https://media.npr.org/assets/img/2023/10/03/wide-crop_smaller-size_wide-3b69d8656a0df59c57282aecec17f1f05909124c.jpg"
     alt: The classic image of davinci but made with a texture of circuts
-    description: A 6-part investigation and interactive project to understand the impact of your tech on your body … and how to live better with your devices.
+    description: From TED Radio Hour a 6-part investigation and interactive project to understand the impact of your tech on your body … and how to live better with your devices.
     link: "https://www.npr.org/series/1199526213/body-electric"
     tag: podcast
   - title: 4-7-8 Breathing Technique

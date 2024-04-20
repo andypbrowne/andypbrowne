@@ -41,10 +41,12 @@
 
 /* Defaults */
 :root {
-	--font-family: 'Inter var', system-ui, sans-serif;
+	/* --font-family: 'Inter var', system-ui, sans-serif; */
+	--font-family: system-ui, "Segoe UI", 'Inter var', Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 	--font-familiy-display-serif: 'Newsreader Display Italic', serif;
 	--font-family-serif: 'Newsreader', serif;
-	--font-headings: 'Inter var', system-ui, sans-serif;
+	/* --font-headings: 'Inter var', system-ui, sans-serif; */
+	--font-headings: system-ui, "Segoe UI", 'Inter var', Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
 }
 
@@ -726,7 +728,7 @@ footer .footer-links {
 }
 .postlist-date,
 .postlist-item:before {
-	font-size: var(--font-size-md);
+	font-size: var(--font-size-base);
 	color: var(--text-color);
 	font-weight: 650;
 	opacity: .8;
@@ -744,9 +746,12 @@ article time.postlist-date {
 li.postlist-item a h2 {
 	margin-top: 0px;
 	font-size: var(--font-size-md);
+	text-decoration-line: underline;
+	text-decoration-thickness: 4px;
 }
 .postlist-link {
 	font-size: 1.1875em; /* 19px /16 */
+	font-size: var(--font-size-md);
 	font-weight: 700;
 	flex-basis: calc(100% - 1.5rem);
 	/* padding-left: .25em;

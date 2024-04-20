@@ -9,7 +9,7 @@
 		<time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("LLLL yyyy") }}</time><br>
 		<a href="{{ post.url }}" class="postlist-link">
 			{% if post.data.title %}
-			{{ post.data.title }}
+			<h2>{{ post.data.title }}</h2>
 			{% else %}
 			<code>{{ post.url }}</code>
 			{% endif %}</a>
