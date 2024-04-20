@@ -717,6 +717,8 @@ footer .footer-links {
 	align-items: flex-start; */
 	/* counter-increment: start-from -1; */
 	margin-bottom: 1em;
+	padding-bottom: 1em;
+	border-bottom: 1px solid var(--color-midnight-60);
 }
 .postlist-item:before {
 	display: inline-block;
@@ -746,19 +748,17 @@ article time.postlist-date {
 li.postlist-item a h2 {
 	margin-top: 0px;
 	font-size: var(--font-size-md);
-	text-decoration-line: underline;
-	text-decoration-thickness: 4px;
-}
-.postlist-link {
-	font-size: 1.1875em; /* 19px /16 */
-	font-size: var(--font-size-md);
 	font-weight: 700;
 	flex-basis: calc(100% - 1.5rem);
 	/* padding-left: .25em;
 	padding-right: .5em; */
+	text-decoration-line: underline;
 	text-underline-position: from-font;
 	text-underline-offset: 0;
-	text-decoration-thickness: 1px;
+	text-decoration-thickness: 4px;
+}
+.postlist-link {
+	
 }
 .postlist-item-active .postlist-link {
 	font-weight: bold;
