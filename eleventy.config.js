@@ -5,6 +5,7 @@ const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginNavigation = require("@11ty/eleventy-navigation");
 const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
+const readingTime = require('eleventy-plugin-reading-time');
 
 module.exports = function(eleventyConfig) {
 	// Copy the contents of the `public` folder to the output folder
@@ -16,7 +17,7 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addPassthroughCopy('./content/assets');
 	eleventyConfig.addPassthroughCopy('./public/css/webfonts.css');
 	eleventyConfig.addPassthroughCopy("public/fonts");
-
+	eleventyConfig.addPlugin(readingTime);
 	eleventyConfig.addShortcode("youtube", (videoURL, title) => {
 		const url = new URL(videoURL);
 		const id = url.searchParams.get("v");
