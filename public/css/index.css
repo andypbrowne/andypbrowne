@@ -426,7 +426,7 @@ section.hero .hero-details {
 	}
 	section.hero h2,
 	article h2.post-deck {
-		font-size: var(--font-size-lg);
+		font-size: var(--font-size-md);
 	}
 	.about-page section.bio-details {
 		display: grid;
@@ -458,7 +458,7 @@ section.hero .hero-details {
 	}
 	section.hero h2,
 	article h2.post-deck {
-		font-size: var(--font-size-lg);
+		/* font-size: var(--font-size-lg); */
 	}
 	section.hero .hero-details,
 	.about-page section.bio-details,
@@ -496,7 +496,7 @@ section.hero .hero-details {
 	}
 	section.hero h2,
 	article h2.post-deck {
-		font-size: var(--font-size-xl);
+		font-size: var(--font-size-lg);
 	}
 	section.hero .hero-details,
 	.about-page section.bio-details,
@@ -539,7 +539,7 @@ section.archive {
 	.grid {
 	  grid-template-columns: repeat(2, 1fr);
 	}
-  }
+}
 @media screen and (min-width: 900px) {
 	.featured-post-grid ol,
 	.grid {
@@ -621,7 +621,13 @@ code {
 /* Header and footer styles */
 header {
 	flex-wrap: wrap;
-	padding: 2rem 0;
+	padding: .2rem 0 2rem;
+}
+
+@media screen and (min-width: 650px) {
+	header {
+		padding: 2rem 0;
+	}
 }
 
 header,
@@ -742,7 +748,7 @@ footer .footer-links {
 	line-height: 1.5;
 }
 article time.postlist-date {
-	line-height: 3;
+	line-height: inherit;
 }
 
 li.postlist-item a h2 {
@@ -757,9 +763,7 @@ li.postlist-item a h2 {
 	text-underline-offset: 0;
 	text-decoration-thickness: 4px;
 }
-.postlist-link {
-	
-}
+
 .postlist-item-active .postlist-link {
 	font-weight: bold;
 }
