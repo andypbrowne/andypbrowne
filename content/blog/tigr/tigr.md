@@ -92,9 +92,6 @@ Study all the [U.S. Army Ranks](https://www.army.mil/ranks/)
 </aside>
 
 ## Footnotes
-
 - [1] I’ve always been fond of operations because I studied organizational behavior at the A.B. Freeman School of Business at Tulane University. In my Army Staff positions I was always in operations, and not logistics, personnel, or supply. Working in User Experience at JPMorgan Chase I always found myself drawn to ops work like org design, project management, and team building. When my department formed a DesignOps team I was a natural fit and have been doing it for the last 2-years. My specific area right now is about Culture, Learning, and Growth. I also [wrote about that recently](https://andypbrowne.com/blog/culture-secrets/) as well. 
-
 - [2] I’ve previously written about my time in the high desert of California in a post called [Remember New Jack City](https://andypbrowne.com/blog/new-jack-city/)
-
 - [3] Back in undergrad I studied business and fine art. It was much later that I came to understand that art is not the same thing as design. I like to explain the difference as art being about self-expression and design being about solving problems for other people. For more on that I liked this post from a [blog called Brain Art](https://brainart.co/art-and-design-what-is-the-difference/).

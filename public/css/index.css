@@ -155,6 +155,22 @@ article {
 	margin: 0 auto;
 }
 
+article p:first-of-type::first-letter {
+	float: left;
+	font-size: 6.4rem;
+	font-weight: 900;
+	line-height: 0.65;
+	margin: 0.1em 0.1em 0.1em 0;
+}
+
+article aside p:first-of-type::first-letter {
+	float: none;
+	font-size: inherit;
+	font-weight: normal;
+	line-height: inherit;
+	margin: inherit;
+}
+
 div.end-mark {
 	text-align: center;
 }
