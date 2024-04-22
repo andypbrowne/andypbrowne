@@ -1,16 +1,12 @@
 ---
 title: Verano Extranjero Eterno
 description: The summer that never was
+thumbnail: assets/images/thumb-extranjero.jpg
+thumbnailAlt: A collection of album art
 date: 2024-02-04
 draft: false
-rss_only: true
+rss_only: false
 ---
-
-<aside class="notice">
-  <tt>This post is a secret. Please don't share with others because the only way I want folks to find it is via RSS Club.
-    <a href="https://daverupert.com/2018/01/welcome-to-rss-club/">Read more about RSS Club</a>.
-  </tt>
-</aside>
 
 I think often about the summer I never spent abroad. This would have been that privileged semester that I’d have spent in Madrid, Spain – but never happened IRL.
 
@@ -21,6 +17,7 @@ So, what if I could imagine that alternate reality where, in around the year 200
 ## The Music
 
 <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2mTDoROy5xRo6mMDRuG2VU?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<br><br>
 
 If I had studied in Spain, I think I’d remember the music. In order to fabricate this trip, I made [a playlist](https://open.spotify.com/playlist/2mTDoROy5xRo6mMDRuG2VU?si=60b9015b123d4858) (see embed above). It includes music mostly from around the year 2000. But – in the spirit of an eternal foreign summer (Verano Extranjero Eterno) – I have included some additional modern tracks. One of the greatest things about music in Spanish is its international variety. On this list, you will see artists from Spain, Colombia, Argentina, and many more. It's a great window into the Spanish language and I would like to think I’d be fluent by now if I had immersed myself in the music and culture at just the right time. 
 
@@ -40,4 +37,4 @@ The Reina Sofia would be the most memorable museum (that is where I took my daug
 
 My sister was lucky enough to study abroad in Spain. Some of the things she remembers most were the mini-trips to Barcelona, Sevilla, and Valencia. There are also numerous day trips you can make from Madrid to places like Ávila, Segovia, and Toledo. These are historic places with visible history. Such an adjustment for those of us who live in a country that destroyed any remnants of history beyond 300 years. 
 
-Well, thanks for going on this journey with me. If you did find this secret RSS Club post, I hope you will tell me where your version of this story takes you. 
+Well, thanks for going on this journey with me. Please let me know if it inspires you to go on a similar one.

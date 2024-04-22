@@ -26,7 +26,7 @@ css: /assets/css/favorite-things.css
 			{% else %}
 			<code>{{ post.url }}</code>
 			{% endif %}</a>
-		{% if post.data.description %}<p>{{ post.data.description }}</p>{% endif %}
+		{% if post.data.description %}{{ post.data.description }}{% endif %}
 	  </div>
   <div class="card-footer">
             <div class="resource-tag">favorite thing</div>

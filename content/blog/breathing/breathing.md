@@ -66,7 +66,7 @@ This post will be updated with more resources. Submit a [pull request](https://g
       <div class="card-body">
         {%- if (resource.image) -%}<a href="{{ resource.link }}" rel="norefer"><img class="custom-size-images" src="{{ resource.image }}" alt="{{ resource.alt }}" width="150px"></a>{%- else -%}<div><img class="custom-size-images" src="https://placehold.co/600x400?text=Take+a+deep+breath"></div>{%- endif -%}
             <a href="{{ resource.link }}" rel="norefer"><h2> {{ resource.title }} </h2></a>
-            <p>{{ resource.description }}</p>
+            {{ resource.description }}
         </div>
         <div class="card-footer">
             <div class="resource-tag">{{ resource.tag }}</div>
