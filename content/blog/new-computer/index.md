@@ -1,5 +1,5 @@
 ---
-title: A New computer
+title: A New Computer
 description: I’m still downloading all the software after half a day’s work
 thumbnail: assets/images/thumb-new-computer.jpg
 thumbnailAlt: This is a placeholder image
@@ -11,7 +11,7 @@ draft: false
 
 <figure>
 {% image "../../assets/images/thumb-new-computer.jpg", "{{ Illusrtation of a corgi wearing sunglasses }}" %}
-<figcaption>This is the peal-away back of a rainbow corgi that was the first sticker I put on my new computer. This illustration is 100% my kid who brought this corgo to life. </figcaption>
+<figcaption>This is the peal-away back of a <a href="https://learn-with-jason.myshopify.com/products/corgi-pal-sticker">rainbow corgi</a> that was the first sticker I put on my new computer. This illustration is 100% my kid who brought this corgo to life. He was my supervisor </figcaption>
 </figure>
 
 Today I got a new computer. Even though I had made a list days prior – I still spend a whole day installing apps. Here is a list that I made it most of the way through. They are mostly native apps I installed. I'm very excited about having a more streamlined setup thanks to this house cleaning effort.
@@ -37,6 +37,7 @@ Today I got a new computer. Even though I had made a list days prior – I still
 1. [Davinci Resolve](https://www.blackmagicdesign.com/products/davinciresolve) - I've always loved video editing and I'm hoping to get to play around a little now that I have a more powerful laptop. Bonus points because this is a free app!
 1. [Colour Contrast Checker](https://usecontrast.com/) - I use the mac app to make sure that designs are accessible.
 1. [Mouseless](https://github.com/ueberdosis/mouseless/) - This is a gamified app to learn keyboard shortcuts - which is a superpower of great technologists. I just found out that development has been discontinued.
+1. [H&Co Ditital Type Capsule](https://www.typography.com/fonts/digital-type-capsule/overview) - I own this set of typefaces for the Operator Mono which I use in my code editor. I also installed [Inter](https://rsms.me/inter/) to use on my website. But you are more likely seeing a system font unless you have Inter Variable installed.
 
 ## Development Stuff
 

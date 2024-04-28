@@ -272,6 +272,7 @@ figure {
 figcaption,
 .caption {
 	font-family: var(--font-family-serif);
+	line-height: 1.5;
 	font-weight: inherit;
 	font-style: italic;
 	text-align: center;
