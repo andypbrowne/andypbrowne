@@ -171,6 +171,11 @@ article aside p:first-of-type::first-letter {
 	margin: inherit;
 }
 
+article h1 {
+	text-align:center;
+	font-size: var(--font-size-xxxl);
+}
+
 div.end-mark {
 	text-align: center;
 }
@@ -205,7 +210,7 @@ h3 {
 
 h1 {
 	font-size: var(--font-size-xl);
-	margin-block-start: .4em;
+	/* margin-block-start: .4em; */
 }
 
 h2 {
@@ -355,6 +360,7 @@ article h2.post-deck {
 	color: #989898;
 	text-align: center;
 	margin: 2.4rem auto 2.2rem;
+	margin-block-end: 16vh;
 }
 
 span.text-italic {
@@ -389,7 +395,7 @@ section.hero h2,
 h2.post-deck {
 	margin-top: 0px;
 	max-width: 48ch;
-	/* font-size: var(--font-size-lg); */
+	/* font-size: var(--font-size-xl); */
 	font-style: italic;
 	font-family: var(--font-familiy-display-serif);
 }
@@ -442,7 +448,8 @@ section.hero .hero-details {
 	}
 	section.hero h2,
 	article h2.post-deck {
-		font-size: var(--font-size-md);
+		font-size: var(--font-size-lg);
+		margin-block-end: 16vh;
 	}
 	.about-page section.bio-details {
 		display: grid;
@@ -512,7 +519,7 @@ section.hero .hero-details {
 	}
 	section.hero h2,
 	article h2.post-deck {
-		font-size: var(--font-size-lg);
+		font-size: var(--font-size-xl);
 	}
 	section.hero .hero-details,
 	.about-page section.bio-details,
@@ -765,6 +772,9 @@ footer .footer-links {
 }
 article time.postlist-date {
 	line-height: inherit;
+	display: block;
+	text-align: center;
+	margin-top: 16vh;
 }
 
 li.postlist-item a h2 {
