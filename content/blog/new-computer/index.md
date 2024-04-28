@@ -11,7 +11,7 @@ draft: false
 
 <figure>
 {% image "../../assets/images/thumb-new-computer.jpg", "{{ Illusrtation of a corgi wearing sunglasses }}" %}
-<figcaption>This is the peal-away back of a <a href="https://learn-with-jason.myshopify.com/products/corgi-pal-sticker">rainbow corgi</a> that was the first sticker I put on my new computer. This illustration is 100% my kid who brought this corgo to life. He was my supervisor </figcaption>
+<figcaption>This is the peal-away back of a <a href="https://learn-with-jason.myshopify.com/products/corgi-pal-sticker">rainbow corgi</a> that was the first sticker I put on my new computer. This illustration is 100% my kid who brought this corgo to life. He was my supervisor for the installattion of approximatly 22 apps on my new computer. </figcaption>
 </figure>
 
 Today I got a new computer. Even though I had made a list days prior – I still spend a whole day installing apps. Here is a list that I made it most of the way through. They are mostly native apps I installed. I'm very excited about having a more streamlined setup thanks to this house cleaning effort.
