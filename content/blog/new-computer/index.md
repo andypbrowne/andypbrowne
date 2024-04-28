@@ -6,7 +6,7 @@ thumbnailAlt: This is a placeholder image
 date: 2024-04-27
 tags:
   - post
-draft: true
+draft: false
 ---
 
 <figure>
