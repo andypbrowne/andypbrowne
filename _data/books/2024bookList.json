@@ -1,0 +1,47 @@
+[
+  {
+    "cover": "https://learning.oreilly.com/covers/9781098168612/500h/",
+    "coverAlt": "Apparently the 48th A Book Apart Book",
+    "link": "https://abookapart.com/products/surviving-change-at-work",
+    "title": "Surviving Change at Work",
+    "author": "Vanessa Gennarelli",
+    "tags": ["Business", "Career Development"],      
+    "description": "Description of Book 2."
+  },
+  {
+    "cover": "https://learning.oreilly.com/covers/9780857089540/500h/",
+    "coverAlt": "A medal with ribbon and a subtitle that says Speaking for Powerful Communication",
+    "link": "https://www.wiley.com/en-us/The+Storytelling+Hero%3A+Speaking+for+Powerful+Communication-p-9780857089540",
+    "title": "The Storytelling Hero",
+    "author": "Steward Bewley",
+    "tags": ["business", "communication"],
+    "description": "Description of Book 3."
+  },
+  {
+    "cover": "https://m.media-amazon.com/images/I/71gxuHqAF-L._SY522_.jpg",
+    "coverAlt": "An abstract illustration of lungs and a subtitle that says the new science of a lost art",
+    "link": "https://www.mrjamesnestor.com/breath-book",
+    "title": "Breath",
+    "author": "James Nestor",
+    "tags": ["meditation", "health", "wellness"],
+    "description": "In 'Breath,' James Nestor delves into the science and art of breathing, revealing how this fundamental act impacts our health, well-being, and performance. Through captivating stories and research, Nestor explores ancient wisdom and modern science to uncover the secrets of optimal breathing for a healthier life."
+  }, 
+  {
+    "cover": "https://m.media-amazon.com/images/I/41Rg9fnBo1L._SY445_SX342_.jpg",
+    "coverAlt": "Illustration of a nose",
+    "link": "https://shop.himalayaninstitute.org/products/science-of-breath",
+    "title": "Science of Breath: A Practical Guide",
+    "author": "Swami Rama",
+    "tags": ["meditation", "health", "wellness"],
+    "description": "In this comprehensive guide, Swami Rama explores the science of breath and its profound impact on health, wellness, and spiritual growth. Discover practical techniques and insights to harness the power of breath for a balanced and harmonious life."
+  },
+  {
+    "cover": "https://m.media-amazon.com/images/I/918EkrTDaRL._SY522_.jpg",
+    "coverAlt": "Simple cover graphic with 2 circles",
+    "link": "https://sites.prh.com/thecreativeact",
+    "title": "The Creative Act: A Way of Being",
+    "author": "Rick Rubin",
+    "tags": ["creativity", "self-help"],
+    "description": "Description of Book 1."
+  }
+]
