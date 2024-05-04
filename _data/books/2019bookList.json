@@ -42,11 +42,31 @@
       {
         "cover": "https://m.media-amazon.com/images/I/71esL4ZoEwL._SY522_.jpg",
         "coverAlt": "A greek or roman statue heading a soccer ball",
-        "link": "https://www.penguinrandomhouse.com/books/564826/what-we-think-about-when-we-think-about-soccer-by-simon-critchley/",
+        "link": "https://www.inventorypress.com/product/a-new-program-for-graphic-design",
         "title": "What We Think About When We Think About Soccer",
         "subTitle": "",
         "author": "Simon Critchley",
         "tags": ["sports", "philosophy"],    
         "description": "A super nerdy take on the sport and its history"
+      },
+      {
+        "cover": "https://m.media-amazon.com/images/I/71esL4ZoEwL._SY522_.jpg",
+        "coverAlt": "A greek or roman statue heading a soccer ball",
+        "link": "https://www.inventorypress.com/product/a-new-program-for-graphic-design",
+        "title": "What We Think About When We Think About Soccer",
+        "subTitle": "",
+        "author": "Simon Critchley",
+        "tags": ["sports", "philosophy"],    
+        "description": "A super nerdy take on the sport and its history"
+      },
+      {
+        "cover": "https://m.media-amazon.com/images/I/71DL4rnBMOL._SY522_.jpg",
+        "coverAlt": "A ladder built out of number 2 pencils",
+        "link": "https://www.inventorypress.com/product/a-new-program-for-graphic-design",
+        "title": "The Gift of Failure",
+        "subTitle": "How the Best Parents Learn to Let Go So Their Children Can Succeed",
+        "author": "Jessica Lahey",
+        "tags": ["parenting"],    
+        "description": ""
       }
 ]

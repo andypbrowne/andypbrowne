@@ -60,3 +60,13 @@ css: /assets/css/bookshelf.css
     {% endfor -%}
 </ol>
 
+<header>
+    <h2>Older Notable Reads</h2>
+    {% set booksData = books.0000bookList -%}{% set bookList0000 = booksData %}{% set bookCount0000 = bookList0000 | length %}
+    <span class="bookcount">{{ bookCount0000 }} total books</span>
+</header>
+<ol class="bookshelf">
+    {% for book in books.0000bookList -%}
+    {% include "../_includes/bookcard.njk" %}
+    {% endfor -%}
+</ol>
