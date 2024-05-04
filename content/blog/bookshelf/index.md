@@ -22,7 +22,7 @@ The other thing that helped me get into reading even more, starting in 2023, was
 I’ve really wanted a digital bookshelf for a while now. I just had a bunch of false starts because of the technology. Setting up a whole content management system was just overkill for what I wanted to do. I would be spending more time coding that I would be reading. Luckily the platform I use to make this blog, Eleventy, has a really handy feature called [Global Data Files](https://www.11ty.dev/docs/data-global/). You just drop some JSON into a folder and edit the content in plain text. 
 
 {% raw %}
-```
+```js
 [  
   {
     "cover": "https://learning.oreilly.com/covers/9781098168612/500h/",
@@ -41,15 +41,16 @@ I’ve really wanted a digital bookshelf for a while now. I just had a bunch of 
 To display that content on a webpage its an even simpler format. You write the template once and it will display all the books. These are some very simple web development patterns. But it makes be proud to make something like this work in one weekend. 
 
 {% raw %}
-```
+```html
 <ol class="bookshelf">  
 {% for book in books.2024bookList -%}
 <li>
-  <a href="{{ book.link }}"><img loading="lazy" width="180" height="270" src="{{ book.cover }}" alt="{{ book.coverAlt }}" /></a>
+  <a href="{{ book.link }}">
+    <img loading="lazy" width="180" height="270" src="{{ book.cover }}" alt="{{ book.coverAlt }}" /></a>
   <div class="info">
-  <h3>{{ book.title }}</h3>
-  <p>{{ book.subTitle }}</p>
-  <p>{{ book.author }}</p>
+    <h3>{{ book.title }}</h3>
+    <p>{{ book.subTitle }}</p>
+    <p>{{ book.author }}</p>
   </div>
 </li>
 {% endfor -%}
@@ -61,6 +62,6 @@ To display that content on a webpage its an even simpler format. You write the t
 
 1. Read
 1. Add some filtering to the bookshelf based on the tags I have already included
-1. Read some more
+1. Read more
 1. Experiment with the new popover (or maybe the dialog) html element to display the description data
 1. Read even more
