@@ -1,0 +1,52 @@
+[
+    {
+        "cover": "https://m.media-amazon.com/images/I/51UdJg6xTsL._SY522_.jpg",
+        "coverAlt": "A misty scene of a hiker standing on top of a mountain peek wearing a headlamp that is shining downward and illuminating the dark scene",
+        "link": "https://uxresearchbook.com/",
+        "title": "Think Like a UX Researcher",
+        "subTitle": "How to Observe Users, Influence Design, and Shape Business Strategy",
+        "author": "David Travis, Philip Hodgson",
+        "tags": ["research", "business"],
+        "description": ""
+      },
+      {
+        "cover": "https://m.media-amazon.com/images/I/31jb3IZ7f1L._SY445_SX342_.jpg",
+        "coverAlt": "A small golden keyhole",
+        "link": "https://www.penguinrandomhouse.com/books/237251/what-we-see-when-we-read-by-peter-mendelsund/",
+        "title": "What We See When We Read",
+        "subTitle": "",
+        "author": "Peter Mendelsund",
+        "tags": ["design"],
+        "description": "This is in the style of an experimental paperback. The illustrations are very clever and its nice to have around."
+      },
+      {
+        "cover": "https://m.media-amazon.com/images/I/91akS1bncHL._SY522_.jpg",
+        "coverAlt": "",
+        "link": "https://us.macmillan.com/books/9781137464248/theinevitablecity",
+        "title": "The Inevitable City",
+        "subTitle": "The Resurgence of New Orleans and the Future of Urban America",
+        "author": "Scott Cowen with Betsy Seifter",
+        "tags": ["urbanization", "city-planning"],
+        "description": "I went to school in New Orleans. The topic of designing a city and supporting its history is always a good read for me. In particular the generosity of New Orleans itself is shared in this read."
+      },
+      {
+        "cover": "https://m.media-amazon.com/images/I/61rS4ktR59L._SY522_.jpg",
+        "coverAlt": "A simple color wheel showing red green bule and white",
+        "link": "https://www.inventorypress.com/product/a-new-program-for-graphic-design",
+        "title": "A *New* Program for Graphic Design",
+        "subTitle": "A toolkit for visual literacy in the 21st century",
+        "author": "David Reinfurt",
+        "tags": ["design", "education"],    
+        "description": ""
+      },
+      {
+        "cover": "https://m.media-amazon.com/images/I/71esL4ZoEwL._SY522_.jpg",
+        "coverAlt": "A greek or roman statue heading a soccer ball",
+        "link": "https://www.penguinrandomhouse.com/books/564826/what-we-think-about-when-we-think-about-soccer-by-simon-critchley/",
+        "title": "What We Think About When We Think About Soccer",
+        "subTitle": "",
+        "author": "Simon Critchley",
+        "tags": ["sports", "philosophy"],    
+        "description": "A super nerdy take on the sport and its history"
+      }
+]

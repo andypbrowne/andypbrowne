@@ -1,0 +1,22 @@
+[
+    {
+      "cover": "https://m.media-amazon.com/images/I/81gMzrfCKEL._SY522_.jpg",
+      "coverAlt": "A classic graphic of the evolution of man except the last step is a man pushing a stroller",
+      "link": "https://www.scottbehson.com/workingdadssurvivalguide",
+      "title": "Working Dad's Survival Guide",
+      "subTitle": "How to Succeed at Work and at Home",
+      "author": "Scott Behson, PhD",
+      "tags": ["parenting"],
+      "description": ""
+    },
+    {
+      "cover": "../assets/images/cover-offscreen-18.jpeg",
+      "coverAlt": "A classic graphic of the evolution of man except the last step is a man pushing a stroller",
+      "link": "https://www.offscreenmag.com/issues/18",
+      "title": "Offscreen Magazine",
+      "subTitle": "The Human Side of Technology",
+      "author": "Scott Behson, PhD",
+      "tags": ["magazine", "design"],
+      "description": ""
+    }
+]

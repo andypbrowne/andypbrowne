@@ -48,5 +48,15 @@
     "author": "Rick Rubin",
     "tags": ["creativity", "self-help"],
     "description": ""
+  },
+  {
+    "cover": "../assets/images/scheme-cover-web.png",
+    "coverAlt": "A bridge and a glowing light",
+    "link": "https://www.robinsloan.com/books/annabel-scheme/",
+    "title": "Annabel Scheme",
+    "subTitle": "And the Adventure of the New Golden Gate",
+    "author": "Robin Sloan",
+    "tags": ["fiction"],
+    "description": ""
   }
 ]
