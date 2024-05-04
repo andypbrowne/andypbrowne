@@ -68,5 +68,35 @@
         "author": "Jessica Lahey",
         "tags": ["parenting"],    
         "description": ""
+      },
+      {
+        "cover": "https://m.media-amazon.com/images/I/915zOvllIWL._SY522_.jpg",
+        "coverAlt": "A ladder built out of number 2 pencils",
+        "link": "https://www.penguinrandomhouse.com/series/HYC/hyperion-cantos/",
+        "title": "Hyperion",
+        "subTitle": "",
+        "author": "Dan Simmons",
+        "tags": ["science fiction"],    
+        "description": "I really wanted to like this book because I'm always on the search for new sci-fi. Unfortunatly I was not able to finish this one. Must have been just the wrong time for me."
+      },
+      {
+        "cover": "https://m.media-amazon.com/images/I/61Ga-ZFeDXL._SY522_.jpg",
+        "coverAlt": "Just the title of the book in block letters",
+        "link": "https://www.svpg.com/books/inspired-how-to-create-tech-products-customers-love-2nd-edition/",
+        "title": "INSPIRED",
+        "subTitle": "How to Create Tech Products Customers Love (Silicon Valley Product Group)",
+        "author": "Marty Cagan",
+        "tags": ["business"],    
+        "description": ""
+      },
+      {
+        "cover": "https://m.media-amazon.com/images/I/71zhGU7l-TL._SY522_.jpg",
+        "coverAlt": "An illustration of a balance scale",
+        "link": "https://www.fairplaylife.com/the-book/",
+        "title": "Fair Play",
+        "subTitle": "A Game-Changing Solution for When You Have Too Much to Do (and More Life to Live)",
+        "author": "Eve Rodsky",
+        "tags": ["parenting"],    
+        "description": ""
       }
 ]

@@ -38,5 +38,25 @@
       "author": "Ernest Cline",
       "tags": ["science fiction"],
       "description": ""
+    },
+    {
+      "cover": "https://m.media-amazon.com/images/I/41TGke78mUL.jpg",
+      "coverAlt": "A cut-up collage that looks futuristic",
+      "link": "https://www.inventorypress.com/product/the-electric-information-age-book-mcluhan-agel-fiore-and-the-experimental-paperback/",
+      "title": "The Electric Information Age Book",
+      "subTitle": "McLuhan/Agel/Fiore and the Experimental Paperback",
+      "author": "Jeffrey Schnapp, Adam Michaels ",
+      "tags": ["design"],
+      "description": "Sometimes I want to put books on here because the cover looks cool. Interestingly I also have the record soundtrack that this one comes with. It's weird too."
+    },
+    {
+      "cover": "https://m.media-amazon.com/images/I/91lZ6jbwVdL._SY522_.jpg",
+      "coverAlt": "A photograph of a woman recliing and looking up",
+      "link": "https://shop.thegreatdiscontent.com/collections/issues/products/the-great-discontent-issue-one",
+      "title": "The Great Discontent",
+      "subTitle": "Issue 1",
+      "author": "Various Authors",
+      "tags": ["design"],
+      "description": ""
     }
 ]

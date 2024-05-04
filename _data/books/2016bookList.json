@@ -22,11 +22,51 @@
     {
       "cover": "https://m.media-amazon.com/images/I/51GR+H2kvYL._SY522_.jpg",
       "coverAlt": "Just big block text that displays the book title",
-      "link": "https://abbycovert.com/make-sense//",
+      "link": "https://abbycovert.com/make-sense/",
       "title": "How to Make Sense of Any Mess",
       "subTitle": "Information Architecture for Everybody",
       "author": "Abbyy Covert",
       "tags": ["design"],
       "description": ""
-      }
+    },
+    {
+      "cover": "https://m.media-amazon.com/images/I/71y2wZgkJ6L._SY522_.jpg",
+      "coverAlt": "Sprint in big friendly letters",
+      "link": "https://www.thesprintbook.com/",
+      "title": "Sprint",
+      "subTitle": "How to Solve Big Problems and Test New Ideas in Just Five Days",
+      "author": "Jake Knapp, John Zeratsky, Braden Kowitz",
+      "tags": ["design"],
+      "description": ""
+    },
+    {
+      "cover": "https://m.media-amazon.com/images/I/51tQgxpmEUL.jpg",
+      "coverAlt": "A cover that looks like a number 2 pencil",
+      "link": "https://www.penguinrandomhouse.com/books/214252/how-to-sharpen-pencils-by-david-rees/",
+      "title": "How to Sharpen Pencils",
+      "subTitle": "A Practical & Theoretical Treatise on the Artisanal Craft of Pencil Sharpening for Writers, Artists, Contractors, Flange Turners, Anglesmiths, & Civil Servants",
+      "author": "David Rees",
+      "tags": ["humor"],
+      "description": "I bought this as a gift and I had to get the kindle version for myself"
+    },
+    {
+      "cover": "https://m.media-amazon.com/images/I/71JY5oAI+8L._SY522_.jpg",
+      "coverAlt": "A very 1970s looking illustration of a home",
+      "link": "https://www.penguinrandomhouse.com/books/557020/vacationland-by-john-hodgman/",
+      "title": "Vacationland",
+      "subTitle": "True Stories from Painful Beaches",
+      "author": "John Hodgman",
+      "tags": ["humor"],
+      "description": ""
+    },
+    {
+      "cover": "https://m.media-amazon.com/images/I/81b5LmgwzHL._SY522_.jpg",
+      "coverAlt": "Three dimentional and pixelated block letters surrounded by human characters",
+      "link": "https://www.harpercollins.com/products/blood-sweat-and-pixels-jason-schreier?variant=32894785355810",
+      "title": "Blood, Sweat, and Pixels",
+      "subTitle": "The Triumphant, Turbulent Stories Behind How Video Games Are Made",
+      "author": "Jason Schreier",
+      "tags": ["technology", "design"],
+      "description": ""
+    }
 ]
