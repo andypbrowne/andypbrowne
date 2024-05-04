@@ -1,0 +1,62 @@
+[
+    {
+      "cover": "https://m.media-amazon.com/images/I/81p4Y+0HzbL._SY522_.jpg",
+      "coverAlt": "Illustration of a futuristic cityscape with digital elements",
+      "link": "https://www.nealstephenson.com/snow-crash.html",
+      "title": "Snow Crash",
+      "subTitle": "A Novel",
+      "author": "Neal Stephenson",
+      "tags": ["science fiction"],
+      "description": ""
+    },
+    {
+      "cover": "https://m.media-amazon.com/images/I/51jsZU-i2fL._SY522_.jpg",
+      "coverAlt": "An illustration of a chamaeleon or maybe an iguana",
+      "link": "https://adaptivewebdesign.info/",
+      "title": "Adaptive Web Design",
+      "subTitle": "Crafting Rich Experiences with Progressive Enhancement",
+      "author": "Aaron Gustafson",
+      "tags": ["design"],
+      "description": ""
+    },
+    {
+      "cover": "https://m.media-amazon.com/images/I/81ksslV+kZL._SY522_.jpg",
+      "coverAlt": "An illustration of a chamaeleon or maybe an iguana",
+      "link": "https://www.penguinrandomhouse.com/books/317123/modern-romance-by-aziz-ansari-with-eric-klinenberg/",
+      "title": "Modern Romance",
+      "subTitle": "",
+      "author": "Aziz Ansari with Eric Klinenberg",
+      "tags": ["humor"],
+      "description": ""
+    },
+    {
+      "cover": "https://m.media-amazon.com/images/I/91Hx+u1tSXL._SY522_.jpg",
+      "coverAlt": "A futuristic city, but its made out of trailors stacked on top of each other",
+      "link": "https://www.penguinrandomhouse.com/books/317123/modern-romance-by-aziz-ansari-with-eric-klinenberg/",
+      "title": "Ready Player One",
+      "subTitle": "",
+      "author": "Ernest Cline",
+      "tags": ["science fiction"],
+      "description": ""
+    },
+    {
+      "cover": "https://m.media-amazon.com/images/I/41TGke78mUL.jpg",
+      "coverAlt": "A cut-up collage that looks futuristic",
+      "link": "https://www.inventorypress.com/product/the-electric-information-age-book-mcluhan-agel-fiore-and-the-experimental-paperback/",
+      "title": "The Electric Information Age Book",
+      "subTitle": "McLuhan/Agel/Fiore and the Experimental Paperback",
+      "author": "Jeffrey Schnapp, Adam Michaels ",
+      "tags": ["design"],
+      "description": "Sometimes I want to put books on here because the cover looks cool. Interestingly I also have the record soundtrack that this one comes with. It's weird too."
+    },
+    {
+      "cover": "https://m.media-amazon.com/images/I/91lZ6jbwVdL._SY522_.jpg",
+      "coverAlt": "A photograph of a woman recliing and looking up",
+      "link": "https://shop.thegreatdiscontent.com/collections/issues/products/the-great-discontent-issue-one",
+      "title": "The Great Discontent",
+      "subTitle": "Issue 1",
+      "author": "Various Authors",
+      "tags": ["design"],
+      "description": ""
+    }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "cover": "https://learning.oreilly.com/covers/9781098168612/500h/",
+    "coverAlt": "Apparently the 48th A Book Apart Book",
+    "link": "https://abookapart.com/products/surviving-change-at-work",
+    "title": "Surviving Change at Work",
+    "subTitle": "Find clarity as you drive toward the next step in your tech career.",
+    "author": "Vanessa Gennarelli",
+    "tags": ["Business", "Technology", "Career Development"],      
+    "description": "This book is great because it also has some practical exercises to complete. I frequently recommmend this title."
+  },
+  {
+    "cover": "https://learning.oreilly.com/covers/9780857089540/500h/",
+    "coverAlt": "A medal with ribbon that also looks like a speach bubble",
+    "link": "https://www.wiley.com/en-us/The+Storytelling+Hero%3A+Speaking+for+Powerful+Communication-p-9780857089540",
+    "title": "The Storytelling Hero",
+    "subTitle": "Speaking for Powerful Communication",
+    "author": "Steward Bewley",
+    "tags": ["business", "communication"],
+    "description": "Another title with practical exercises. Its also a very quick and quality read."
+  },
+  {
+    "cover": "https://m.media-amazon.com/images/I/41aYi-hfFOL._SY445_SX342_.jpg",
+    "coverAlt": "An illustrated word Breath that makes it look like the letters are evaporating",
+    "link": "https://www.mrjamesnestor.com/breath-book",
+    "title": "Breath",
+    "subTitle": "The New Science of a Lost Art",
+    "author": "James Nestor",
+    "tags": ["meditation", "health", "wellness"],
+    "description": "One of those Malcom Gladwell style books. Probably the best parts is how the reader can't help but practice breathing exercises while reading. It's like it has its own built-in"
+  }, 
+  {
+    "cover": "https://m.media-amazon.com/images/I/41Rg9fnBo1L._SY445_SX342_.jpg",
+    "coverAlt": "Illustration of a nose",
+    "link": "https://shop.himalayaninstitute.org/products/science-of-breath",
+    "title": "Science of Breath",
+    "subTitle": "A Practical Guide",
+    "author": "Swami Rama",
+    "tags": ["meditation", "health", "wellness"],
+    "description": ""
+  },
+  {
+    "cover": "https://m.media-amazon.com/images/I/918EkrTDaRL._SY522_.jpg",
+    "coverAlt": "Simple cover graphic with 2 circles",
+    "link": "https://sites.prh.com/thecreativeact",
+    "title": "The Creative Act",
+    "subTitle": "A Way of Being",
+    "author": "Rick Rubin",
+    "tags": ["creativity", "self-help"],
+    "description": ""
+  },
+  {
+    "cover": "../assets/images/scheme-cover-web.png",
+    "coverAlt": "A bridge and a glowing light",
+    "link": "https://www.robinsloan.com/books/annabel-scheme/",
+    "title": "Annabel Scheme",
+    "subTitle": "And the Adventure of the New Golden Gate",
+    "author": "Robin Sloan",
+    "tags": ["fiction"],
+    "description": ""
+  }
+]

@@ -1,0 +1,52 @@
+[
+    {
+        "cover": "https://m.media-amazon.com/images/I/41rsnAy8sqL._SY445_SX342_.jpg",
+        "coverAlt": "Illustration of a pink bird wearing a smart hat",
+        "link": "https://www.the-culturebook.com/",
+        "title": "Cultivating a Creative Culture",
+        "subTitle": "Human-Centered Interaction, Design, & Inspirationl",
+        "author": "Justin Dauer",
+        "tags": ["design", "business", "culture"],
+        "description": "This one talks about the new day one experience and how we can apply a human-centered design process to ourselves."
+      },
+      {
+        "cover": "https://m.media-amazon.com/images/I/21s5BcFE7aL._SY445_SX342_.jpg",
+        "coverAlt": "A book cover that looks like a warm glowing fire",
+        "link": "https://press.stripe.com/get-together",
+        "title": "Cultivating a Creative Culture",
+        "subTitle": "How to Build a Community With Your People",
+        "author": "Bailey Richardson, Kevin Huynh, and Kai Elmer Sotto",
+        "tags": ["business", "culture", "community"],
+        "description": "Packed with case studies about special communities and how they got their start."
+      },
+      {
+        "cover": "https://learning.oreilly.com/covers/urn:orm:book:9781492079217/400w/",
+        "coverAlt": "1 green parot",
+        "link": "https://learning.oreilly.com/library/view/articulating-design-decisions/9781492079217/",
+        "title": "Org Design for Design Orgs",
+        "subTitle": "Communicate with Stakeholders, Keep Your Sanity, and Deliver the Best User Experience",
+        "author": "Tom Greever",
+        "tags": ["business", "design"],
+        "description": ""
+      },
+      {
+        "cover": "https://m.media-amazon.com/images/I/41FITDzuhpL._SY445_SX342_.jpg",
+        "coverAlt": "An abstract cover that looks like a water color painting of flowers",
+        "link": "https://www.priyaparker.com/book-art-of-gathering",
+        "title": "The Art of Gathering",
+        "subTitle": "How We Meet and Why It Matters",
+        "author": "Priya Parker",
+        "tags": ["culture", "community"],
+        "description": "This book shows you how to intentionally design gatherings that will make your friends and loved ones feel special and taken care of."
+      },
+      {
+        "cover": "https://m.media-amazon.com/images/I/51F+hBykS-L._SY445_SX342_.jpg",
+        "coverAlt": "Bright bold text on top of a crashing wave",
+        "link": "https://gabriellezevin.com/tomorrowx3/",
+        "title": "Tomorrow, and Tomorrow, and Tomorrow",
+        "subTitle": "A Novel",
+        "author": "Gabrielle Zevin",
+        "tags": ["fiction"],
+        "description": ""
+      }
+]

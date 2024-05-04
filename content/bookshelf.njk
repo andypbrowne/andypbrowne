@@ -1,0 +1,72 @@
+---
+title: Bookshelf
+layout: layouts/home.njk
+css: /assets/css/bookshelf.css
+---
+
+<h1>{{ title }}</h1>
+<header>
+    <h2>2024</h2>
+    {% set booksData = books.2024bookList -%}{% set bookList2024 = booksData %}{% set bookCount2024 = bookList2024 | length %}
+    <span class="bookcount">{{ bookCount2024 }} total books</span>
+</header>
+<ol class="bookshelf">  
+{% for book in books.2024bookList -%}
+{% include "../_includes/bookcard.njk" %}
+{% endfor -%}
+</ol>
+
+<header>
+    <h2>2023</h2>
+    {% set booksData = books.2023bookList -%}{% set bookList2023 = booksData %}{% set bookCount2023 = bookList2023 | length %}
+    <span class="bookcount">{{ bookCount2023 }} total books</span>
+</header>
+<ol class="bookshelf">
+    {% for book in books.2023bookList -%}
+    {% include "../_includes/bookcard.njk" %}
+    {% endfor -%}
+</ol>
+
+<header>
+    <h2>2022</h2>
+    {% set booksData = books.2022bookList -%}{% set bookList2022 = booksData %}{% set bookCount2022 = bookList2022 | length %}
+    <span class="bookcount">{{ bookCount2022 }} total books</span>
+</header>
+<ol class="bookshelf">
+    {% for book in books.2022bookList -%}
+    {% include "../_includes/bookcard.njk" %}
+    {% endfor -%}
+</ol>
+
+<header>
+    <h2>2019 to 2021</h2>
+    {% set booksData = books.2019bookList -%}{% set bookList2019 = booksData %}{% set bookCount2019 = bookList2019 | length %}
+    <span class="bookcount">{{ bookCount2019 }} total books</span>
+</header>
+<ol class="bookshelf">
+    {% for book in books.2019bookList -%}
+    {% include "../_includes/bookcard.njk" %}
+    {% endfor -%}
+</ol>
+
+<header>
+    <h2>2016 to 2018</h2>
+    {% set booksData = books.2016bookList -%}{% set bookList2016 = booksData %}{% set bookCount2016 = bookList2016 | length %}
+    <span class="bookcount">{{ bookCount2016 }} total books</span>
+</header>
+<ol class="bookshelf">
+    {% for book in books.2016bookList -%}
+    {% include "../_includes/bookcard.njk" %}
+    {% endfor -%}
+</ol>
+
+<header>
+    <h2>Older Notable Reads</h2>
+    {% set booksData = books.0000bookList -%}{% set bookList0000 = booksData %}{% set bookCount0000 = bookList0000 | length %}
+    <span class="bookcount">{{ bookCount0000 }} total books</span>
+</header>
+<ol class="bookshelf">
+    {% for book in books.0000bookList -%}
+    {% include "../_includes/bookcard.njk" %}
+    {% endfor -%}
+</ol>

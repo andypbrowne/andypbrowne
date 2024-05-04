@@ -737,7 +737,7 @@ footer .footer-links {
 
 /* Posts list */
 .postlist {
-	list-style: none;
+	list-style: none;border-bottom: 1px solid var(--color-midnight-60);
 	padding: 0;
 	/* padding-left: 1.5rem; */
 }

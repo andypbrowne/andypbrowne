@@ -1,0 +1,102 @@
+[
+    {
+        "cover": "https://m.media-amazon.com/images/I/51UdJg6xTsL._SY522_.jpg",
+        "coverAlt": "A misty scene of a hiker standing on top of a mountain peek wearing a headlamp that is shining downward and illuminating the dark scene",
+        "link": "https://uxresearchbook.com/",
+        "title": "Think Like a UX Researcher",
+        "subTitle": "How to Observe Users, Influence Design, and Shape Business Strategy",
+        "author": "David Travis, Philip Hodgson",
+        "tags": ["research", "business"],
+        "description": ""
+      },
+      {
+        "cover": "https://m.media-amazon.com/images/I/31jb3IZ7f1L._SY445_SX342_.jpg",
+        "coverAlt": "A small golden keyhole",
+        "link": "https://www.penguinrandomhouse.com/books/237251/what-we-see-when-we-read-by-peter-mendelsund/",
+        "title": "What We See When We Read",
+        "subTitle": "",
+        "author": "Peter Mendelsund",
+        "tags": ["design"],
+        "description": "This is in the style of an experimental paperback. The illustrations are very clever and its nice to have around."
+      },
+      {
+        "cover": "https://m.media-amazon.com/images/I/91akS1bncHL._SY522_.jpg",
+        "coverAlt": "",
+        "link": "https://us.macmillan.com/books/9781137464248/theinevitablecity",
+        "title": "The Inevitable City",
+        "subTitle": "The Resurgence of New Orleans and the Future of Urban America",
+        "author": "Scott Cowen with Betsy Seifter",
+        "tags": ["urbanization", "city-planning"],
+        "description": "I went to school in New Orleans. The topic of designing a city and supporting its history is always a good read for me. In particular the generosity of New Orleans itself is shared in this read."
+      },
+      {
+        "cover": "https://m.media-amazon.com/images/I/61rS4ktR59L._SY522_.jpg",
+        "coverAlt": "A simple color wheel showing red green bule and white",
+        "link": "https://www.inventorypress.com/product/a-new-program-for-graphic-design",
+        "title": "A *New* Program for Graphic Design",
+        "subTitle": "A toolkit for visual literacy in the 21st century",
+        "author": "David Reinfurt",
+        "tags": ["design", "education"],    
+        "description": ""
+      },
+      {
+        "cover": "https://m.media-amazon.com/images/I/71esL4ZoEwL._SY522_.jpg",
+        "coverAlt": "A greek or roman statue heading a soccer ball",
+        "link": "https://www.inventorypress.com/product/a-new-program-for-graphic-design",
+        "title": "What We Think About When We Think About Soccer",
+        "subTitle": "",
+        "author": "Simon Critchley",
+        "tags": ["sports", "philosophy"],    
+        "description": "A super nerdy take on the sport and its history"
+      },
+      {
+        "cover": "https://m.media-amazon.com/images/I/71esL4ZoEwL._SY522_.jpg",
+        "coverAlt": "A greek or roman statue heading a soccer ball",
+        "link": "https://www.inventorypress.com/product/a-new-program-for-graphic-design",
+        "title": "What We Think About When We Think About Soccer",
+        "subTitle": "",
+        "author": "Simon Critchley",
+        "tags": ["sports", "philosophy"],    
+        "description": "A super nerdy take on the sport and its history"
+      },
+      {
+        "cover": "https://m.media-amazon.com/images/I/71DL4rnBMOL._SY522_.jpg",
+        "coverAlt": "A ladder built out of number 2 pencils",
+        "link": "https://www.inventorypress.com/product/a-new-program-for-graphic-design",
+        "title": "The Gift of Failure",
+        "subTitle": "How the Best Parents Learn to Let Go So Their Children Can Succeed",
+        "author": "Jessica Lahey",
+        "tags": ["parenting"],    
+        "description": ""
+      },
+      {
+        "cover": "https://m.media-amazon.com/images/I/915zOvllIWL._SY522_.jpg",
+        "coverAlt": "A ladder built out of number 2 pencils",
+        "link": "https://www.penguinrandomhouse.com/series/HYC/hyperion-cantos/",
+        "title": "Hyperion",
+        "subTitle": "",
+        "author": "Dan Simmons",
+        "tags": ["science fiction"],    
+        "description": "I really wanted to like this book because I'm always on the search for new sci-fi. Unfortunatly I was not able to finish this one. Must have been just the wrong time for me."
+      },
+      {
+        "cover": "https://m.media-amazon.com/images/I/61Ga-ZFeDXL._SY522_.jpg",
+        "coverAlt": "Just the title of the book in block letters",
+        "link": "https://www.svpg.com/books/inspired-how-to-create-tech-products-customers-love-2nd-edition/",
+        "title": "INSPIRED",
+        "subTitle": "How to Create Tech Products Customers Love (Silicon Valley Product Group)",
+        "author": "Marty Cagan",
+        "tags": ["business"],    
+        "description": ""
+      },
+      {
+        "cover": "https://m.media-amazon.com/images/I/71zhGU7l-TL._SY522_.jpg",
+        "coverAlt": "An illustration of a balance scale",
+        "link": "https://www.fairplaylife.com/the-book/",
+        "title": "Fair Play",
+        "subTitle": "A Game-Changing Solution for When You Have Too Much to Do (and More Life to Live)",
+        "author": "Eve Rodsky",
+        "tags": ["parenting"],    
+        "description": ""
+      }
+]

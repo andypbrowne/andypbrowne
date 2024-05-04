@@ -1,6 +1,6 @@
 ---
 title: Bookshelf
-description: A digital product that helps form a reading habit
+description: A simple webpage that helps form a reading habit
 thumbnail: assets/images/thumb-fpo.png
 thumbnailAlt: Just a placeholder image that says FPO which means for placeholder only 
 date: 2024-05-04
