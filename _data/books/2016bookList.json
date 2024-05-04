@@ -18,5 +18,15 @@
       "author": "Scott Behson, PhD",
       "tags": ["magazine", "design"],
       "description": "I first found several issues of Offscreen left out on the sidewalk. What a find because it is an elegant mixture of print design and stories about building digital products – which are not available in digital form."
-    }
+    },
+    {
+      "cover": "https://m.media-amazon.com/images/I/51GR+H2kvYL._SY522_.jpg",
+      "coverAlt": "Just big block text that displays the book title",
+      "link": "https://abbycovert.com/make-sense//",
+      "title": "How to Make Sense of Any Mess",
+      "subTitle": "Information Architecture for Everybody",
+      "author": "Abbyy Covert",
+      "tags": ["design"],
+      "description": ""
+      }
 ]
