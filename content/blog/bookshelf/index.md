@@ -13,7 +13,7 @@ I finally made a [digital bookshelf](/bookshelf/). Its a simple page that keeps 
 
 ## Getting Into Reading
 
-There are two other things that have helped me start reading more in the last few years. First, in 2014, I got a new sister-in-law who is an author of young-adult books. If you are wondering why both my digital and IRL bookshelf have numerous titles intended for teenagers &mdash; it’s because I read them and really enjoyed the fantacy and science fiction elements. I find that knowing the author really makes it easy to read other books. Its a contageous process. 
+There are two other things that have helped me start reading more in the last few years. First, in 2014, I got a new sister-in-law who is an author of young-adult books. If you are wondering why both my digital and IRL bookshelf have numerous titles intended for teenagers &mdash; it’s because I read them and really enjoyed the fantacy and science fiction elements of her novels. I find that knowing the author really makes it easy to get into the books. Its a contageous process. 
 
 The other thing that helped me get into reading even more, starting in 2023, was a book club we started at work. We have this culture and community initiative on the user experience team. Book Club has been one of our most successful activities. We choose a title, typically from our O’Reilly Reading account, and host a zoom call to discuss once-a-month. O’Reilly is all technology and business titles. Luckily it also has a lot of design books. So it has me re-reading some of the classics like: *Don't Make Me Think*, *The Design of Everyday Things*, and *Articulating Design Decisions*. 
 
