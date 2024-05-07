@@ -58,5 +58,74 @@
       "author": "Various Authors",
       "tags": ["design"],
       "description": ""
-    }
+    },
+    {
+      "cover": "https://m.media-amazon.com/images/I/41rb3o0c39L._SY445_SX342_.jpg",
+      "coverAlt": "A headless man in a coat and tie",
+      "link": "https://www.paloaltonetworks.com/blog/2013/12/cyber-security-canon-we-are-anonymous/",
+      "title": "We Are Anonymous",
+      "subTitle": "Inside the Hacker World of LulzSec, Anonymous, and the Global Cyber Insurgency",
+      "author": "Parmy Olson",
+      "tags": ["cybersecurity"],
+      "description": "This was on the top of my reading list when I started in the cybersecurity department. It really helped me undestand a lot of the lingo. So something that sounded silly, like script kiddie or DDoS, actually made scense. its also a really good narative – why isn't it a movie yet?"
+    },
+    {
+      "cover": "https://m.media-amazon.com/images/I/41RJ25XMQHL._SY445_SX342_.jpg",
+      "coverAlt": "A film reel looking set of portraits of famous people",
+      "link": "https://www.abebooks.com/9781892145314/100-New-Yorkers-Guide-Illustrious-1892145316/plp",
+      "title": "100 New Yorkers",
+      "subTitle": "A guide to the Illustrious Lives & Locations",
+      "author": "Julia Holmes",
+      "tags": ["New York City History"],
+      "description": "When I first moved to NYC I read a lot of local history. There is so many great titles in the genre. You should have seen the evening that our local pub trivia had a round on NYC History. My teammates lost their mind with what I knew. They did not know how many books a podcasts I had consumed."
+    },
+    {
+      "cover": "https://m.media-amazon.com/images/I/415icSdUJ2L._SY445_SX342_.jpg",
+      "coverAlt": "Illustration of a traveler's journey through historical and cultural  landmarks",
+      "link": "https://penguinrandomhousehighereducation.com/book/?isbn=9780307592187",
+      "title": "The Sinner's Grand Tour",
+      "subTitle": "A Journey Through The Historical Underbelly of Europe",
+      "author": "Ian Thomson",
+      "tags": ["travel"],
+      "description": "I used to go to this travel writer meetup called Restless Legs. A friend of mine, Josh, and I would watch the website and meet up in the basement of a bar. These writers would read from their novel. The best ones wouldn't read but just tell us one of the stories of travel. I really miss that series and I'm going to google it now to see if it is ever coming back. This is another great example of how meeting the author "
+    },
+    {
+      "cover": "https://m.media-amazon.com/images/I/41Akw7F66LL._SY445_SX342_.jpg",
+      "coverAlt": "A cover that looks like a secret document folder, the stamp Declassified is on the front",
+      "link": "https://shop.spyscape.com/products/bk-official-cia-manual-of-trickery-and-deception",
+      "title": "The Official C.I.A. Manual of Trickery and Deception",
+      "subTitle": "",
+      "author": "H. Keith Melton, Robert Wallace",
+      "tags": ["none"],
+      "description": ""
+    },
+    {
+      "cover": "https://m.media-amazon.com/images/I/513zZB8XFRL._SY445_SX342_.jpg",
+      "coverAlt": "Illustration of a runner standing on a trail with a scenic background",
+      "link": "https://www.chrismcdougall.com/born-to-run/",
+      "title": "Born to Run",
+      "subTitle": "A Hidden Tribe, Superathletes, and the Greatest Race the World Ha  Never Seen",
+      "author": "Christopher McDougall",
+      "tags": ["running"],
+      "description": "I once did a meetup with the author and ran barefoot around prospect park. It wasn't that bad!"
+    },
+    {
+      "cover": "https://m.media-amazon.com/images/I/51aDo0cXmrL._SY445_SX342_.jpg",
+      "coverAlt": "An arial shot of a highway artery",
+      "link": "https://web.archive.org/web/20151025195255/http://howtheygotthere.com/",
+      "title": "How They Got There",
+      "subTitle": "Interviews with Digital Designers About Their Career Journeys",
+      "author": "Khoi Vinh",
+      "tags": ["design"],
+      "description": ""
+    },  
+    {
+      "cover": "https://m.media-amazon.com/images/I/71fZYFiTHqL._SY522_.jpg",
+      "coverAlt": "Illustration of a cityscape with artistic and experimental elements including arrows and military figures",
+      "link": "https://mitpress.mit.edu/9780262692250/the-situationist-city/",
+      "title": "The Situationist City",
+      "author": "Simon Sadler",
+      "tags": ["urbanism"],
+      "description": "I was gifted this book, or more like long-term borrowed, when I was doing an art show called Caught Mapping. A lot of the elements of that show like navigation and mapping of urban landscapes."
+    }   
 ]
