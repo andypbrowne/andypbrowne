@@ -50,16 +50,6 @@
         "description": "A super nerdy take on the sport and its history"
       },
       {
-        "cover": "https://m.media-amazon.com/images/I/71esL4ZoEwL._SY522_.jpg",
-        "coverAlt": "A greek or roman statue heading a soccer ball",
-        "link": "https://www.inventorypress.com/product/a-new-program-for-graphic-design",
-        "title": "What We Think About When We Think About Soccer",
-        "subTitle": "",
-        "author": "Simon Critchley",
-        "tags": ["sports", "philosophy"],    
-        "description": "A super nerdy take on the sport and its history"
-      },
-      {
         "cover": "https://m.media-amazon.com/images/I/71DL4rnBMOL._SY522_.jpg",
         "coverAlt": "A ladder built out of number 2 pencils",
         "link": "https://www.inventorypress.com/product/a-new-program-for-graphic-design",
@@ -83,7 +73,7 @@
         "cover": "https://m.media-amazon.com/images/I/61Ga-ZFeDXL._SY522_.jpg",
         "coverAlt": "Just the title of the book in block letters",
         "link": "https://www.svpg.com/books/inspired-how-to-create-tech-products-customers-love-2nd-edition/",
-        "title": "INSPIRED",
+        "title": "Inspired",
         "subTitle": "How to Create Tech Products Customers Love (Silicon Valley Product Group)",
         "author": "Marty Cagan",
         "tags": ["business"],    
@@ -97,6 +87,16 @@
         "subTitle": "A Game-Changing Solution for When You Have Too Much to Do (and More Life to Live)",
         "author": "Eve Rodsky",
         "tags": ["parenting"],    
+        "description": ""
+      },
+      {
+        "cover": "https://m.media-amazon.com/images/I/51--2TR1JPL._SY445_SX342_.jpg",
+        "coverAlt": "An illustration of a girl surrounded by carnivorous plants",
+        "link": "https://rominagarber.com/books/lobizona/",
+        "title": "Wolves of No World",
+        "subTitle": "Undocumented. Unprotected. Unbreakable",
+        "author": "Romina Garber",
+        "tags": ["fantacy"],    
         "description": ""
       }
 ]

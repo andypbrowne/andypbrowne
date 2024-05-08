@@ -48,5 +48,25 @@
         "author": "Gabrielle Zevin",
         "tags": ["fiction"],
         "description": ""
+      },
+      {
+        "cover": "../assets/images/SW26-cover-cropped.jpg",
+        "coverAlt": "A man smoking and drinking coffee",
+        "link": "https://standartmag.com/collections/single-issues/products/issue-26/",
+        "title": "Standart Issue 26",
+        "subTitle": "Rivers, waves, and coffee",
+        "author": "Various",
+        "tags": ["magazine", "coffee"],
+        "description": ""
+      },
+      {
+        "cover": "../assets/images/cover-fable.jpg",
+        "coverAlt": "A siloette of a man",
+        "link": "https://www.userfocus.co.uk/fable/",
+        "title": "The Fable of the User-centered Designer",
+        "subTitle": "The Small Book That Has Big Results",
+        "author": "David Travis",
+        "tags": ["design"],
+        "description": ""
       }
 ]

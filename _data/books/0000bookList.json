@@ -127,5 +127,15 @@
       "author": "Simon Sadler",
       "tags": ["urbanism"],
       "description": "I was gifted this book, or more like long-term borrowed, when I was doing an art show called Caught Mapping. A lot of the elements of that show like navigation and mapping of urban landscapes."
+    }, 
+    {
+      "cover": "https://m.media-amazon.com/images/I/81vajf0ENRL._SY522_.jpg",
+      "coverAlt": "An illustration of a nebula in space with the constallations of cancer and Aries",
+      "link": "https://rominagarber.com/books/zodiac/",
+      "title": "Zodiac Series",
+      "subTitle": "Beware the 13th Sign",
+      "author": "Romina Garber",
+      "tags": ["science fiction", "fantacy"],
+      "description": ""
     }   
 ]
