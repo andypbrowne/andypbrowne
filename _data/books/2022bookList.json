@@ -66,7 +66,17 @@
         "title": "The Fable of the User-centered Designer",
         "subTitle": "The Small Book That Has Big Results",
         "author": "David Travis",
-        "tags": ["design"],
+        "tags": ["design", "free"],
         "description": ""
+      },
+      {
+        "cover": "../assets/images/cover-the-explorers-journal.jpg",
+        "coverAlt": "A siloette of a man",
+        "link": "https://www.theexplorersjournal.org/",
+        "title": "The Explorers Journal",
+        "subTitle": "Close Encounters",
+        "author": "Various",
+        "tags": ["travel", "adventure", "magazine"],
+        "description": "Please don't tell my hipster barber shop that I like to steal these issues, they have multiple copies."
       }
 ]

@@ -137,5 +137,55 @@
       "author": "Romina Garber",
       "tags": ["science fiction", "fantacy"],
       "description": ""
+    },  
+    {
+      "cover": "../assets/images/cover-atomic-design.svg",
+      "coverAlt": "A simple illustration of circles that looks like an atom with one nucleus and one electron",
+      "link": "https://atomicdesign.bradfrost.com/",
+      "title": "Atomic Design",
+      "subTitle": "",
+      "author": "Brad Frost",
+      "tags": ["design"],
+      "description": "I picked up my signed copy of this book at an event with the author. When I had him sign it I asked for him to mention that my copy would be for corporate libary use only and he got a really big kick out of that."
+    },   
+    {
+      "cover": "https://learning.oreilly.com/covers/urn:orm:book:9780134077994/400w/",
+      "coverAlt": "Apparently the 12th A Book Apart title with a forward by Austin Kleon",
+      "link": "https://abookapart.com/products/youre-my-favorite-client/",
+      "title": "You're My Favorite Client",
+      "subTitle": "",
+      "author": "Mike Monteiro",
+      "tags": ["design"],
+      "description": ""
+    },   
+    {
+      "cover": "https://learning.oreilly.com/covers/urn:orm:book:9781492017868/400w/",
+      "coverAlt": "Apparently the 16th A Book Apart title with a forward by Frank Chimero",
+      "link": "https://abookapart.com/products/going-responsive/",
+      "title": "Going Responsive",
+      "subTitle": "",
+      "author": "Karen McGrane",
+      "tags": ["design"],
+      "description": ""
+    },  
+    {
+      "cover": "https://learning.oreilly.com/covers/urn:orm:book:9781098124021/400w/",
+      "coverAlt": "Apparently the 22nd A Book Apart title with a forward by Kim Goodwin",
+      "link": "https://abookapart.com/products/practical-design-discovery/",
+      "title": "Practical Design Discovery",
+      "subTitle": "",
+      "author": "Dan Brown",
+      "tags": ["design"],
+      "description": ""
+    },   
+    {
+      "cover": "https://m.media-amazon.com/images/I/51KZB8Cs1jL._SY445_SX342_.jpg",
+      "coverAlt": "A collage",
+      "link": "https://abookapart.com/products/practical-design-discovery/",
+      "title": "In the Blink of An Eye",
+      "subTitle": "A Perspective on Film Editing",
+      "author": "Walter Murch",
+      "tags": ["film", "editing"],
+      "description": ""
     }   
 ]

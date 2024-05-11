@@ -26,7 +26,7 @@ I’ve really wanted a digital bookshelf for a while now. I just had a bunch of 
 [  
   {
     "cover": "https://learning.oreilly.com/covers/9781098168612/500h/",
-    "coverAlt": "Apparently the 48th A Book Apart Book",
+    "coverAlt": "Apparently the 48th A Book Apart Book with forward by Cassidy Williams",
     "link": "https://abookapart.com/products/surviving-change-at-work",
     "title": "Surviving Change at Work",
     "subTitle": "Find clarity as you drive toward the next step in your tech career.",

@@ -98,5 +98,15 @@
         "author": "Romina Garber",
         "tags": ["fantacy"],    
         "description": ""
+      },
+      {
+        "cover": "../assets/images/cover-brooklyn-mag.jpg",
+        "coverAlt": "A stylized typeface with ",
+        "link": "https://www.bkmag.com/",
+        "title": "Brooklyn Magazine",
+        "subTitle": "",
+        "author": "Various",
+        "tags": ["magazine", "culture"],    
+        "description": "Late in the pandemic I was buying masks at a dry cleaning place. There was this whole stack of Brooklyn Magazines that she was just willing to give me. Its very cool that the relaunch issue had about 4 different covers and I got all of them."
       }
 ]
