@@ -5,6 +5,7 @@ date: 2011-06-18
 tags:
   - fine art
   - post
+  - web
 ---
 <div class="image-gallery-grid">
 <figure>

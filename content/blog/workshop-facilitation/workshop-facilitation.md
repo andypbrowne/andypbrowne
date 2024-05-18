@@ -7,6 +7,7 @@ date: 2018-12-23
 tags:
   - case study
   - post
+  - ux
   - featured
 draft: false
 ---

@@ -800,8 +800,9 @@ li.postlist-item a h2 {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	text-transform: capitalize;
-	font-style: italic;
+	text-transform: uppercase;
+	font-weight: 600;
+	font-style: normal;
 }
 .postlist-item > .post-tag {
 	align-self: center;

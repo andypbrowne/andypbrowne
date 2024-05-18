@@ -6,6 +6,8 @@ thumbnailAlt: A group of nine book covers with one spot remaining vacant
 date: 2023-01-02
 tags:
   - post
+  - books
+  - ux
   - featured
 draft: false
 ---

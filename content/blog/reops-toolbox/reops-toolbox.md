@@ -6,6 +6,7 @@ thumbnailAlt: alternative text
 date: 2023-02-19
 tags:
   - case study
+  - ux
   - post
   - featured
 draft: false

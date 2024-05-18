@@ -7,6 +7,7 @@ date: 2018-12-08
 tags:
   - case study
   - post
+  - web
 draft: false
 ---
 <figure>

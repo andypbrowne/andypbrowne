@@ -6,6 +6,7 @@ thumbnailAlt: Just a placeholder image that says FPO which means for placeholder
 date: 2024-05-04
 tags:
   - post
+  - books
 draft: false
 ---
 
