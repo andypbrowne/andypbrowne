@@ -68,5 +68,15 @@
       "author": "Jason Schreier",
       "tags": ["technology", "design"],
       "description": ""
+    },
+    {
+      "cover": "https://m.media-amazon.com/images/I/416bJcehT7L.jpg",
+      "coverAlt": "A loaf of floating bread that kinda looks like a spaceship",
+      "link": "https://www.robinsloan.com/books/sourdough/",
+      "title": "Sourdough",
+      "subTitle": "A Novel",
+      "author": "Robin Sloan",
+      "tags": ["fiction"],
+      "description": ""
     }
 ]

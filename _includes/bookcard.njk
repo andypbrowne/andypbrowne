@@ -1,4 +1,4 @@
-<li class="filter-grid-item" data-category="{{ book.tags | join(', ') }}"> 
+<li class="filter-grid-item" data-tags="{{ book.tags | join(', ') }}"> 
   <a href="{{ book.link }}"><img loading="lazy" width="180" height="270" src="{{ book.cover }}" alt="{{ book.coverAlt }}" /></a>
   <div class="info">
   <h3>{{ book.title }}</h3>

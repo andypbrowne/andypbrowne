@@ -187,5 +187,15 @@
       "author": "Walter Murch",
       "tags": ["film", "editing"],
       "description": ""
+    },   
+    {
+      "cover": "https://m.media-amazon.com/images/I/81ehEnDuFmL._SY522_.jpg",
+      "coverAlt": "Stacks of books arranged both horizontally and vertically",
+      "link": "https://www.robinsloan.com/books/penumbra/",
+      "title": "Mr. Penumbra's 24-Hour Bookstore",
+      "subTitle": "A Novel",
+      "author": "Robin Sloan",
+      "tags": ["fiction"],
+      "description": ""
     }   
 ]
