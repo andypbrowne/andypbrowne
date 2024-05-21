@@ -61,3 +61,61 @@ ol.bookshelf li div.info p {
 ol.bookshelf li img {
     border: 1px solid var(--color-midnight-60);
 }
+
+/* Special filtering for the bookshelf */
+
+input[type="radio"] {
+    position: absolute;
+    left: -9999px;
+  }
+
+ol.filters {
+  /* text-align: center; */
+  margin-bottom: 2rem;
+  list-style: none;
+  padding-inline-start: 0;
+}
+.filters * {
+  display: inline-block;
+}
+.filters label {
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.25rem;
+  border-radius: 2rem;
+  min-width: 50px;
+  line-height: normal;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+.filters label:hover {
+  background: var(--color-gray-80);
+  color: var(--color-gray-20);
+}
+
+/* Filtering style for bookshelf*/
+
+[value="0"]:checked ~ .filter-grid [data-category] {
+    display: block;
+  }
+  
+  [value="1"]:checked ~ .filter-grid .filter-grid-item:not([data-category~="design"]),
+  [value="2"]:checked ~ .filter-grid .filter-grid-item:not([data-category~="business"]),
+  [value="3"]:checked ~ .filter-grid .filter-grid-item:not([data-category~="technology"]),
+  [value="4"]:checked ~ .filter-grid .filter-grid-item:not([data-category~="health"]),
+  [value="5"]:checked ~ .filter-grid .filter-grid-item:not([data-category~="creativity"]),
+  [value="6"]:checked ~ .filter-grid .filter-grid-item:not([data-category~="fiction"]),
+  [value="7"]:checked ~ .filter-grid .filter-grid-item:not([data-category~="scifi"]) {
+    display: none;
+  }
+  
+  [value="0"]:checked ~ .filters [for="showAll"],
+  [value="1"]:checked ~ .filters [for="design"],
+  [value="2"]:checked ~ .filters [for="business"],
+  [value="3"]:checked ~ .filters [for="technology"],
+  [value="4"]:checked ~ .filters [for="health"],
+  [value="5"]:checked ~ .filters [for="creativty"],
+  [value="6"]:checked ~ .filters [for="fiction"],
+  [value="7"]:checked ~ .filters [for="scifi"] {
+    background: var(--color-gray-60);
+    color: var(--color-gray-20);
+  }

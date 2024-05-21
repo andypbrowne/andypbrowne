@@ -6,7 +6,7 @@
       "title": "Snow Crash",
       "subTitle": "A Novel",
       "author": "Neal Stephenson",
-      "tags": ["science fiction"],
+      "tags": ["scifi"],
       "description": ""
     },
     {
@@ -36,7 +36,7 @@
       "title": "Ready Player One",
       "subTitle": "",
       "author": "Ernest Cline",
-      "tags": ["science fiction"],
+      "tags": ["scifi"],
       "description": ""
     },
     {
@@ -135,7 +135,7 @@
       "title": "Zodiac Series",
       "subTitle": "Beware the 13th Sign",
       "author": "Romina Garber",
-      "tags": ["science fiction", "fantacy"],
+      "tags": ["scifi", "fantacy", "fiction"],
       "description": ""
     },  
     {
