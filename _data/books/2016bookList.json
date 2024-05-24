@@ -70,6 +70,16 @@
       "description": ""
     },
     {
+      "cover": "https://m.media-amazon.com/images/I/71q8yLJrfNL._SY522_.jpg",
+      "coverAlt": "Three dimentional and pixelated block letters surrounded by human characters",
+      "link": "https://www.amazon.com/Group-Glue-connective-questions-conversations/dp/0998126616/",
+      "title": "Group Glue",
+      "subTitle": "The connective power of how simple questions lead to great conversations",
+      "author": "Jeffrey T Cook",
+      "tags": ["culture"],
+      "description": ""
+    },
+    {
       "cover": "https://m.media-amazon.com/images/I/416bJcehT7L.jpg",
       "coverAlt": "A loaf of floating bread that kinda looks like a spaceship",
       "link": "https://www.robinsloan.com/books/sourdough/",
@@ -77,6 +87,16 @@
       "subTitle": "A Novel",
       "author": "Robin Sloan",
       "tags": ["fiction"],
+      "description": ""
+    },
+    {
+      "cover": "https://m.media-amazon.com/images/I/41pSinXG0FL._SY445_SX342_.jpg",
+      "coverAlt": "An illustration of a realistic human heart with buildings growing out of it",
+      "link": "https://www.ucpress.edu/book/9780520285958/nonstop-metropolis/",
+      "title": "Nonstop Metropolis",
+      "subTitle": "A New York City Atlas",
+      "author": "Rebecca Solnit, Joshua Jelly-Schapiro",
+      "tags": ["history", "maps"],
       "description": ""
     }
 ]
