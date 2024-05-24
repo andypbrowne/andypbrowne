@@ -7,7 +7,7 @@
     "subTitle": "Find clarity as you drive toward the next step in your tech career.",
     "author": "Vanessa Gennarelli",
     "tags": ["business", "technology", "Career Development"],      
-    "description": "This book is great because it also has some practical exercises to complete. I frequently recommmend this title."
+    "description": "Great because it also has some practical exercises to complete. I frequently recommmend this title."
   },
   {
     "cover": "https://learning.oreilly.com/covers/9780857089540/500h/",
@@ -64,9 +64,19 @@
     "coverAlt": "Apparently the 33rd title from A Book Apart with a forward by Yasmine Mustafa",
     "link": "https://abookapart.com/products/design-for-cognitive-bias/",
     "title": "Design for Cognative Bias",
-    "subTitle": "",
+    "subTitle": "Understand the logic powering human bias and learn to start designing more consciously",
     "author": "David Dylan Thomas",
     "tags": ["design"],
-    "description": ""
+    "description": "I highlighted this one so much. Will be worthy of it’s own culture moment or blog post."
+  },
+  {
+    "cover": "https://m.media-amazon.com/images/I/51kYUcbJkyL._SY522_.jpg",
+    "coverAlt": "Apparently the 47th title from A Book Apart with a forward by Clarissa Redwine",
+    "link": "https://abookapart.com/products/you-deserve-a-tech-union/",
+    "title": "You Deserve a Tech Union",
+    "subTitle": "By standing together, we can build a better version of the tech industry",
+    "author": "Ethan Marcotte",
+    "tags": ["design"],
+    "description": "I enjoy this title because it really reinforces the themes of ethics and fairness that needs to be a part of all our work."
   }
 ]

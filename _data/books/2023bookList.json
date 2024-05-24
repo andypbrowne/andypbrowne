@@ -70,6 +70,16 @@
     "description": ""
   },
   {
+    "cover": "https://m.media-amazon.com/images/I/61+LSoUMk0L._SY522_.jpg",
+    "coverAlt": "The title of the book written in a very swash-like watercolor",
+    "link": "https://www.creativeconfidence.com/",
+    "title": "Creative Confidence",
+    "subTitle": "Unleashing the Creative Potential Within Us All",
+    "author": "Tom Kelley, David Kelley",
+    "tags": ["design"],
+    "description": ""
+  },
+  {
     "cover": "https://learning.oreilly.com/covers/urn:orm:book:9781491938393/400w/",
     "coverAlt": "3 tropical fish",
     "link": "https://learning.oreilly.com/library/view/org-design-for/9781491938393/",
