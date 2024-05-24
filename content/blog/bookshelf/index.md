@@ -45,13 +45,20 @@ To display that content on a webpage its an even simpler format. You write the t
 ```html
 <ol class="bookshelf">  
 {% for book in books.2024bookList -%}
-<li>
-  <a href="{{ book.link }}">
-    <img loading="lazy" width="180" height="270" src="{{ book.cover }}" alt="{{ book.coverAlt }}" /></a>
+<li class="filter-grid-item" data-tags="{{ book.tags | join(', ') }}"> 
+  <a href="{{ book.link }}"><img loading="lazy" width="180" height="270" src="{{ book.cover }}" alt="{{ book.coverAlt }}" /></a>
   <div class="info">
-    <h3>{{ book.title }}</h3>
-    <p>{{ book.subTitle }}</p>
-    <p>{{ book.author }}</p>
+  <h3>{{ book.title }}</h3>
+  <p>{{ book.subTitle }}</p>
+  <p>{{ book.author }}</p>
+  {% if book.description %}
+  <details>
+    <summary><strong>Notes</strong></summary>
+    <div class="notes">
+      <p>{{ book.description }}</p>
+    </div>
+  </details>
+  {% endif %}
   </div>
 </li>
 {% endfor -%}

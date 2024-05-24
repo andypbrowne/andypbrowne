@@ -62,6 +62,34 @@ ol.bookshelf li img {
     border: 1px solid var(--color-midnight-60);
 }
 
+details {
+  position: relative;
+}
+
+details[open] > summary {
+  z-index: 2;
+}
+
+details > summary {
+  cursor: pointer;
+  position: relative;
+  -webkit-user-select: none;
+}
+
+.notes {
+  background: var(--color-base-bg);
+  border: 1px solid var(--color-midnight-40);
+  /* border: 1px solid pink; */
+  border-radius: var(--border-radius);
+  margin: -1.5em -0.5em;
+  padding: 2em 0.5em 0.5em;
+  position: absolute;
+  top: 100%;
+  z-index: 1;
+  transition-behavior: allow-discrete;
+  transition: opacity 0.2s ease-out, display 0.2s ease-out, height 0.2s ease-out;
+}
+
 /* Special filtering for the bookshelf */
 
 /* input[type="radio"] {

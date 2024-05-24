@@ -4,5 +4,13 @@
   <h3>{{ book.title }}</h3>
   <p>{{ book.subTitle }}</p>
   <p>{{ book.author }}</p>
+  {% if book.description %}
+  <details>
+    <summary><strong>Notes</strong></summary>
+    <div class="notes">
+      <p>{{ book.description }}</p>
+    </div>
+  </details>
+  {% endif %}
   </div>
 </li>
