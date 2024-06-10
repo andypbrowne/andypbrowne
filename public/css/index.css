@@ -611,12 +611,26 @@ div.nextprev {
     height: auto;
 }
 
+/* Table Styles */
+
 table {
 	margin: 1em 0;
+	border-spacing: 0.5rem;
+	border-collapse: collapse;
+	width: 100%;
 }
+
 table td,
 table th {
 	padding-right: 1em;
+	padding-block: 2.2rem;
+	border-bottom: 1px solid var(--color-midnight-60);
+	text-align: left;
+}
+
+table th {
+	border-bottom: none;
+	padding-block-end: 0px;
 }
 
 pre,
