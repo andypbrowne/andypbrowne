@@ -80,10 +80,9 @@
 	--color-base-bg: #FFFCF5;
 
 	--text-color: var(--color-midnight-80);
-	--text-color-link: #082840;
-	--text-color-link-active: #5f2b48;
-	/* --text-color-link-visited: #17050F;   */
-	--text-color-link-visited: var(--text-color);
+	--text-color-link: #0000EE;
+	--text-color-link-active: #FF0000;
+	--text-color-link-visited: #551A8B;
 	--subtle-border: #2b3e513a;
 	--border-radius: 10px;
 
@@ -618,6 +617,7 @@ table {
 	border-spacing: 0.5rem;
 	border-collapse: collapse;
 	width: 100%;
+	Font-size: smaller;
 }
 
 table td,
@@ -636,6 +636,11 @@ table th {
 pre,
 code {
 	font-family: var(--font-family-monospace);
+	border-radius: 4px;
+    padding: 3px 6px;
+	white-space: nowrap;
+    background-color: var(--color-midnight-20);
+    transition: color 0.25s, background-color 0.5s;
 }
 pre:not([class*="language-"]) {
 	margin: .5em 0;
