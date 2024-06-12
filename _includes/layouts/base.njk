@@ -12,7 +12,7 @@
 		<meta property="og:title" content="{{ title or renderData.title or metadata.title }}"/>
 		<meta property="og:type" content="article" />
 		<meta name="og:description" content="{{ description or renderData.description }}" />
-		<meta property="og:image" content="{{ thumbnail or renderData.thumbnail or metadata.thumbnail}}">
+		<meta property="og:image" content="/{{ thumbnail or renderData.thumbnail or metadata.thumbnail}}">
 		<meta name="twitter:image:alt" content="{{ thumbnailAlt or renderData.thumbnailAlt or metadata.thumbnailAlt }}">
 		<meta property="og:url" content="{{ page.url }}">
 
