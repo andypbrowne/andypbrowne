@@ -90,9 +90,19 @@
       "description": ""
   },
   {
+      "cover": "https://m.media-amazon.com/images/I/41zFETkBlfL._SY445_SX342_.jpg",
+      "coverAlt": "A simple cover with some quotes in some colorful circles, one has the sub title and the other has the phrase the co-creators of Axios and Politico",
+      "link": "https://www.axioshq.com/smart-brevity-book",
+      "title": "Multipage Version",
+      "subTitle": "The Power of Saying More with Less",
+      "author": "Jim VandeHei, Mike Allen, Roy Schwartz",
+      "tags": ["business"],
+      "description": "I have mixed feelings. It’s important to communicate this way, but I very much miss good prose. So I plan to take what I need and leave the rest"
+  },
+  {
       "cover": "../assets/images/yrrgdmftt3w2oby4s0t578y6ece6.webp",
       "coverAlt": "Some very distressed looking text that looks overlayed on some documentation about websites",
-      "link": "https://urbanlandscape.com/",
+      "link": "https://multipa.ge/",
       "title": "Multipage Version",
       "subTitle": "Issue #1: We Fucked Up Headings",
       "author": "Various",
