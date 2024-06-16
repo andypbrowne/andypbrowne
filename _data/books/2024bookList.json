@@ -78,5 +78,25 @@
     "author": "Ethan Marcotte",
     "tags": ["design"],
     "description": "I enjoy this title because it really reinforces the themes of ethics and fairness that needs to be a part of all our work."
+  },
+  {
+      "cover": "../assets/images/mag-other-means.jpg",
+      "coverAlt": "A woman riding a bike while holding onto a van",
+      "link": "https://othermeansmag.com/products/volume-one",
+      "title": "Other Means",
+      "subTitle": "",
+      "author": "Various",
+      "tags": ["magazine", "cycling"],
+      "description": ""
+  },
+  {
+      "cover": "../assets/images/yrrgdmftt3w2oby4s0t578y6ece6.webp",
+      "coverAlt": "Some very distressed looking text that looks overlayed on some documentation about websites",
+      "link": "https://urbanlandscape.com/",
+      "title": "Multipage Version",
+      "subTitle": "Issue #1: We Fucked Up Headings",
+      "author": "Various",
+      "tags": ["magazine", "design"],
+      "description": ""
   }
 ]
