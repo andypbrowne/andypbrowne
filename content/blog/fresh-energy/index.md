@@ -9,7 +9,7 @@ tags:
   - tips
   - ux
   - post
-draft: true
+draft: false
 ---
 <aside>
 <em>Note: This post is still in draft, please watch this space for updates</em>
@@ -34,7 +34,7 @@ Frequently these methodologies and ways of working are new to our team members, 
 
 ## So, what to do about it?
 
-As a humble designer, you must meet them where they are. You know everything that needs to be done. You know you need to talk to real users. You know you should test your products before shipping to production. Yet that product owner or development lead just wants some wireframes. Maybe they want a customer journey map that is totally based on assumptions. **Give it to them.**
+As a humble designer, you must *meet them where they are.* You know everything that needs to be done. You know you need to talk to real users. You know you should test your products before shipping to production. Yet that product owner or development lead just wants some wireframes. Maybe they want a customer journey map that is totally based on assumptions. **Give it to them.**
 
 You should not be precious about the work. Part of getting a seat at the table is being a team player. Under a tight timeline, tell them what you can do for them and deliver. Do it with a smile on your face. Be that benevolent designer that is there to help others solve problems. Do it with buddha-like mindset. They need something done in less than 2-weeks? Maybe they need something done in 1-day? Tell them *what* can be done, and **do it for them.**
 
