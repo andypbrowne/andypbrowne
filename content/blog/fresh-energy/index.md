@@ -1,7 +1,7 @@
 ---
 title: Fresh energy and the reality of the design process
 description: What we mean when we say “meet them where they are”
-thumbnail: assets/images/fpo.png
+thumbnail: assets/images/thumb-fpo.png
 thumbnailAlt: The initials FPO which mean for placeholder only
 date: 2024-06-16
 rss_only: true
@@ -17,7 +17,7 @@ draft: false
 
 When we start out in User Experience (UX), a world is opened to us… we emerge idealistic and full of enthusiasm. This is great &mdash; it’s the kind of energy that sparks creativity and innovation all around us. Then something happens. You don’t have to be in a super-corporate workplace to encounter people do don’t understand the value of design &mdash; the same way you do. 
 
-If you feel like a resource, miss-understood, demoralized by the instructions to “just make it look pretty” &mdash; you are not alone. Practically, you are not getting the support you need to practice the methods you know to be effective. Things like interviewing real users, workshopping ideas, experimenting, and usability testing. You might feel like spend more time advocating for a *real* UX process than you spend doing the actual work. 
+If you feel like a resource, miss-understood, demoralized by the instructions to “just make it look pretty” &mdash; you are not alone. Practically, you are not getting the support you need to practice the methods you know to be effective. Things like interviewing real users, workshopping ideas, experimenting, and usability testing. You might feel like you spend more time advocating for a *real* UX process than you spend doing the actual work. 
 
 ## The reality
 
