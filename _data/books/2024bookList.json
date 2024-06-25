@@ -108,5 +108,15 @@
       "author": "Various",
       "tags": ["magazine", "design"],
       "description": ""
+  },
+  {
+      "cover": "https://m.media-amazon.com/images/I/41CGz9ZpuIL._SY445_SX342_.jpg",
+      "coverAlt": "A scene of earth and sky with a gigantic rip in the clouds that exposes a moon. The letters on the book also glow in the dark!",
+      "link": "https://www.robinsloan.com/moonbound/",  
+      "title": "Moonbound",
+      "subTitle": "A Novel",
+      "author": "Robin Sloan",
+      "tags": ["sci-fi", "fantacy"],
+      "description": "The best part of Sloan’s books is all the extras you get with them. A pre-order means you get printed matter and the author website contains all kinds of hidden gems. All of the deep story makes you want to be part of the world."
   }
 ]
