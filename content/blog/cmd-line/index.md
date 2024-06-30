@@ -9,6 +9,7 @@ tags:
   - tips
 draft: false
 css: /assets/css/breathing.css
+js: /assets/js/clipboard.min.js, 
 resources:
   - title: Duplicate a directory
     snippit: cp -r content/blog/_template content/blog/title-tk
@@ -46,5 +47,7 @@ A list of helpful code snippits for us making this, my personal blog. This post 
 ## To Do
 
 - Add a [Clipboard.js](https://clipboardjs.com/) feature to allow easy copy/paste
+
+
 
 
