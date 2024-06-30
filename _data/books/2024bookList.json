@@ -118,5 +118,15 @@
       "author": "Robin Sloan",
       "tags": ["sci-fi", "fantacy"],
       "description": "The best part of Sloan’s books is all the extras you get with them. A pre-order means you get printed matter and the author website contains all kinds of hidden gems. All of the deep story makes you want to be part of the world."
+  },
+  {
+      "cover": "https://m.media-amazon.com/images/I/61SpFvJ4R9S._SY522_.jpg",
+      "coverAlt": "A simple design that also indicates the second edition",
+      "link": "https://shop.wildsam.com/collections/city-guides/products/san-francisco-2nd-edition",  
+      "title": "San Francisco",
+      "subTitle": "Wildsam Field Guides",
+      "author": "Multiple",
+      "tags": ["travel"],
+      "description": "This series is better than other guides. There are particular histories like cultural movements, timelines, and illustrated maps. Also fun, the cover is in International Orange, the same as the Golden Gate Bridge."
   }
 ]
