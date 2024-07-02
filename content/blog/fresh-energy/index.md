@@ -12,7 +12,7 @@ tags:
 draft: false
 ---
 <aside>
-<em>Note: This post is still in draft, please watch this space for updates</em>
+<em>Note: This post is based on my experience in a large corporate environment. Applicability the advice may vary based on your work environment. </em>
 </aside>
 
 When we start out in User Experience (UX), a world is opened to us… we emerge idealistic and full of enthusiasm. This is great &mdash; it’s the kind of energy that sparks creativity and innovation all around us. Then something happens. You don’t have to be in a super-corporate workplace to encounter people do don’t understand the value of design &mdash; the same way you do. 
