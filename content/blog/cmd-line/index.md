@@ -17,6 +17,10 @@ resources:
     snippit: git pull --rebase
   - title: Create new branch
     snippit: git checkout -b NEW_BRANCH_NAME
+  - title: open VS Code editor (w/ shell command installed)
+    snippit: code .
+  - title: review last commit
+    snippit: git log [BRANCH NAME]
 ---
 
 A list of helpful code snippits for us making this, my personal blog. This post assumes you are using the command line to work on a personal website. The primary reasons for doing this is to speed up workflow and to look cool while you are doing it.
