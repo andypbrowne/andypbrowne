@@ -4,7 +4,7 @@ description: What we mean when we say “meet them where they are”
 thumbnail: assets/images/thumb-fpo.png
 thumbnailAlt: The initials FPO which mean for placeholder only
 date: 2024-06-16
-rss_only: true
+rss_only: false
 tags:
   - tips
   - ux
