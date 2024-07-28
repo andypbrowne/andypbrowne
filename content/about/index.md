@@ -16,7 +16,7 @@ eleventyNavigation:
 
 </div>
 
-Andy is a Design Operations Program Manager in JPMorgan Chase & Co.’s Employee Experience department. He does what he can to make a few hundred designers’ and researchers’ lives better. Over the past decade, he has worked for the firm’s Corporate and Investment Bank and the Corporate Line of Business in creative roles. He has a passion for Interaction Design, User Experience Research, and Web Development.
+Andy is a Design Operations Program Manager in JPMorgan Chase’s Employee Experience department. He does what he can to make a few hundred designers’ and researchers’ lives better. Over the past decade, he has worked for the firm’s Corporate and Investment Bank and the Cybersecurity department in creative roles. He has a passion for Interaction Design, User Experience Research, and Web Development.
 
 A former US Army Captain, Andy served in the Infantry for seven years. He was assigned to a variety of positions, including platoon leader, civil military officer, operations officer, and liaison officer. Andy served in a one year-long assignment to Korea and two deployments to Iraq during Operation Iraqi Freedom.
 
@@ -35,7 +35,9 @@ User Research, Evaluative Testing, Interaction Design, Prototyping, Workshop Fac
 
 ## Favorite Tools
 
-Optimal Workshop, Lookback, Figma, Visual Studio Code, Affinity Suite, Premiere Pro, JIRA, Trello…
+Optimal Workshop, Lookback, Figma, Visual Studio Code, Affinity Suite, Davinci Resolve, JIRA, Trello…
+
+Read more about tools in this [post about my new computer](../blog/new-computer/)
 
 ## This Site
 
