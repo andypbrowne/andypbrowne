@@ -138,5 +138,15 @@
       "author": "Multiple",
       "tags": ["travel"],
       "description": "This series is better than other guides. There are particular histories like cultural movements, timelines, and illustrated maps. Also fun, the cover is in International Orange, the same as the Golden Gate Bridge."
+  },
+  {
+    "cover": "https://m.media-amazon.com/images/I/61IHmbkc8mL._SY522_.jpg",
+    "coverAlt": "A book cover with a boy with a big smile and a girl with a crown",
+    "link": "http://www.junotdiaz.com/books/the-brief-wondrous-life-of-oscar-wao/",
+    "title": "The Brief Wondrous Life of Oscar Wao",
+    "subTitle": "",
+    "author": "Junot Díaz",
+    "tags": ["fiction", "latino"],
+    "description": "A Pulitzer Prize-winning novel about a young Dominican-American boy growing up in the Bronx. It's a story about family, love, and the immigrant experience. Note: This is an AI generated description"
   }
 ]
