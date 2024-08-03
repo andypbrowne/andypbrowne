@@ -1,5 +1,6 @@
 ---
 layout: layouts/base.njk
+css: /assets/css/instastrategy-filtering.css
 eleventyNavigation:
   key: About
   order: 3
@@ -16,13 +17,49 @@ eleventyNavigation:
 
 </div>
 
-Andy is a Design Operations Program Manager in JPMorgan Chase’s Employee Experience department. He does what he can to make a few hundred designers’ and researchers’ lives better. Over the past decade, he has worked for the firm’s Corporate and Investment Bank and the Cybersecurity department in creative roles. He has a passion for Interaction Design, User Experience Research, and Web Development.
+<input type="radio" id="snappy" name="categories" value="one" checked>
+<input type="radio" id="chatty" name="categories" value="two">
+<input type="radio" id="windy" name="categories" value="three">
+
+<ol class="filters">
+  <li><label for="snappy">Snappy</label></li>
+  <li><label for="chatty">Chatty</label></li>
+  <li><label for="windy">Windy</label></li>
+</ol>
+
+<div class="filter-grid">
+
+<section class="filter-grid-item" data-category="one">
+
+Andy is a Design Operations Program Manager. He specializes in culture, learning, growth, and user experience tools. He works hard to make a couple of hundred designers and researchers lives easier and fulfilled in their careers.
+
+</section>
+<section class="filter-grid-item" data-category="two">
+
+Andy is a Design Operations Program Manager in JPMorgan Chase’s Employee Experience department. He works hard to make a few hundred designers’ and researchers’ lives better. Over the past decade, he has worked for the firm’s Corporate and Investment Bank and the Cybersecurity department in creative roles. He has a passion for Interaction Design, User Experience Research, and Web Development.
 
 A former US Army Captain, Andy served in the Infantry for seven years. He was assigned to a variety of positions, including platoon leader, civil military officer, operations officer, and liaison officer. Andy served in a one year-long assignment to Korea and two deployments to Iraq during Operation Iraqi Freedom.
 
 Andy is a life-long student. He completed a Bachelors of Science at Tulane University studying business management and fine art. He is a graduate of the Maneuver Captain’s Career Course among other military training. He holds an Associates Degree in Web Design and Interactive Media from the Art Institute of New York City. He has also completed continuing education courses at the School of Visual Arts studying Interaction Design and Information Design.
 
 For a detailed list of Andy’s activities see his <a href="/cv/">Curriculum Vitae</a>.
+
+</section>
+<section class="filter-grid-item" data-category="three">
+
+Andy is a Design Operations Program Manager in JPMorgan Chase’s Employee Experience department. He works hard to make a few hundred designers’ and researchers’ lives better. Over the past decade, he has worked for the firm’s Corporate and Investment Bank and the Cybersecurity department in creative roles. He has a passion for Interaction Design, User Experience Research, and Web Development.
+
+A former US Army Captain, Andy served in the Infantry for seven years. He was assigned to a variety of positions, including platoon leader, civil military officer, operations officer, and liaison officer. Andy served in a one year-long assignment to Korea and two deployments to Iraq during Operation Iraqi Freedom.
+
+Andy is a life-long student. He completed a Bachelors of Science at Tulane University studying business management and fine art. He is a graduate of the Maneuver Captain’s Career Course among other military training. He holds an Associates Degree in Web Design and Interactive Media from the Art Institute of New York City. He has also completed continuing education courses at the School of Visual Arts studying Interaction Design and Information Design.
+
+For a detailed list of Andy’s activities see his <a href="/cv/">Curriculum Vitae</a>.
+
+Andy has been married to his spouse, Meli, for over one decade. She is a teacher and we live in Brooklyn, NY with our daughter. To various degree we enjoy walking in the city, eating on sidewalks, pretending that we already retired in Miami, and building with Lego®.
+
+</section>
+
+</div>
 
 </section>
 <section class="bio-details">
