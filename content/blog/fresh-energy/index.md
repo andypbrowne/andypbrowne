@@ -21,7 +21,7 @@ If you feel like a resource, miss-understood, demoralized by the instructions to
 
 ## The reality
 
-We grow as UX professionals and learn a few additional skills; learning how to sell the business value of design turns out to be a really big part of the job. I would argue that it is the biggest part of the job. The work of design and UX is not art and it’s not magic. There is a process to do great work and you need to bring everyone along. This is commonly called [co-creation](https://www.interaction-design.org/literature/topics/co-creation). It emphasizes collaboration with others and guiding a group through a sustainable design process. 
+We grow as UX professionals and learn a few additional skills; learning how to sell the business value of design turns out to be a really big part of the job. It’s the biggest part of the job. The work of design and UX is not art and it’s not magic. There is a process to do great work and you need to bring everyone along. This is commonly called [co-creation](https://www.interaction-design.org/literature/topics/co-creation). It emphasizes collaboration with others and guiding a group through a sustainable design process. 
 
 <figure>
 <blockquote>Don’t make it for them, make it with them.</blockquote>
@@ -42,10 +42,11 @@ Then you **get back to work.** That product team or development partner now has 
 
 This work is really all about facilitation. It is the future of our UX field. If you are doing this right they won't even know exactly what was happening to them. Not judo or a jedi mind trick. Just a complete design process. 
 
-If you would like to go deeper, I’ll share a few links to learn more about facilitation and influence. As I remember more resources I’ll be sure to add them.
+Reach out if you would like to discuss this topic in more detail!
 
 ## Go deeper
 
 - [You’re My Favorite Client](https://abookapart.com/products/youre-my-favorite-client/) by Mike Monteiro. Design isn’t magic, but when it’s done right it sure does feel like magic.
 - [Articulating Design Decisions](https://tomgreever.com/articulating-design-decisions-book/) by Tom Greever. You don’t need agreement, just support to move forward.
 - [Think like a UX Researcher](https://uxresearchbook.com/) by David Travis and Philip Hodgson. Take a more strategic view of user research and product design.
+- [UX Stakeholder Engagement 101](https://www.nngroup.com/articles/stakeholder-engagement/) NN/g says dialog, action, and compromise are all needed to build successful, mutually supportive relationships with your project’s stakeholders.
