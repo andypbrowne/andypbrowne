@@ -10,6 +10,16 @@
       "description": ""
     },
     {
+      "cover": "https://m.media-amazon.com/images/I/51TBeHq9zqL._SY445_SX342_.jpg",
+      "coverAlt": "An illustration of a big man with a big bird on his head",
+      "link": "https://www.nealstephenson.com/snow-crash.html",
+      "title": "A Confederacy of Dunces",
+      "subTitle": "",
+      "author": "John Kennedy Toole",
+      "tags": ["fiction"],
+      "description": "Picked this up on my University Bookstore shelf. Its a reward for all that academic reading. It was a good choice because I love new orleans and it is laugh-till-you-hurt funny."
+    },
+    {
       "cover": "https://m.media-amazon.com/images/I/51jsZU-i2fL._SY522_.jpg",
       "coverAlt": "An illustration of a chamaeleon or maybe an iguana",
       "link": "https://adaptivewebdesign.info/",
@@ -197,5 +207,5 @@
       "author": "Robin Sloan",
       "tags": ["fiction"],
       "description": ""
-    }   
+    }
 ]
