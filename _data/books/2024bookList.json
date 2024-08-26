@@ -148,5 +148,15 @@
     "author": "Junot Díaz",
     "tags": ["fiction", "latino"],
     "description": "This was the ultimate beach read when visiting the main protagonist of this novel, the Dominican Republic. I could have sworn that I had read this before, and I can't remember what book it reminded me so much of. Perhaps that is why I liked it so much."
+  },
+  {
+    "cover": "../assets/images/cover-severance.webp",
+    "coverAlt": "A beat up looking business manual ",
+    "link": "https://severance.wiki/severance-_the_lexington_letter",
+    "title": "Severance",
+    "subTitle": "The Lexington Letter",
+    "author": "Anonymous",
+    "tags": ["fiction"],
+    "description": "Like reading a mini episode of the popular show. Toteally excited for the second season because sometimes I feel like I need to be severed from my corporate job."
   }
 ]
