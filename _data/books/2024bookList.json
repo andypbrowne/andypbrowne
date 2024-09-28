@@ -158,5 +158,25 @@
     "author": "Anonymous",
     "tags": ["fiction"],
     "description": "Like reading a mini episode of the popular show. Toteally excited for the second season because sometimes I feel like I need to be severed from my corporate job."
+  },
+  {
+    "cover": "https://m.media-amazon.com/images/I/41QUk+u-FML._SY445_SX342_.jpg",
+    "coverAlt": "An illustrated scene of an open book with dark figures walking through city strets",
+    "link": "https://www.penguinrandomhouse.com/books/292766/the-shadow-of-the-wind-by-carlos-ruiz-zafon/",
+    "title": "Shadow of the Wind",
+    "subTitle": "",
+    "author": "Carlos Ruiz Zafón",
+    "tags": ["fiction", "gothic", "historical"],
+    "description": "" 
+  },
+  {
+    "cover": "https://m.media-amazon.com/images/I/71wwxj2PdGL._SY522_.jpg",
+    "coverAlt": "An image of a cookie cutter in the shape of a person over a background of flat color",
+    "link": "https://www.penguinrandomhouse.com/books/292766/the-shadow-of-the-wind-by-carlos-ruiz-zafon/",
+    "title": "Filterworld",
+    "subTitle": "How Algorithms Flattened Culture",
+    "author": "Kyle Chayka",
+    "tags": ["business", "technology"],
+    "description": "I skipped the middle part of this book. I think the best take-aways were found in the conclusion which covered the importance of curation and taste." 
   }
 ]
