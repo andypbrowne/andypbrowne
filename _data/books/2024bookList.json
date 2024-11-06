@@ -164,6 +164,17 @@
     "description": "Like reading a mini episode of the popular show. Toteally excited for the second season because sometimes I feel like I need to be severed from my corporate job."
   },
   {
+    "cover": "https://embed.cdn.pais.scholastic.com/v1/channels/sso/products/identifiers/isbn/9780590353403/primary/renditions/700",
+    "coverAlt": "A iconic cover with a young Harry Potter riding a broom and flying into Hogwarts",
+    "link": "https://shop.scholastic.com/parent-ecommerce/books/harry-potter-and-the-sorcerers-stone-9780590353403.html",
+    "title": "Harry Potter and the Philosopher's Stone",
+    "subTitle": "",
+    "author": "J.K. Rowling",
+    "type": "audio",
+    "tags": ["fantasy", "young adult", "adventure"],
+    "description": ""
+  },
+  {
     "cover": "https://m.media-amazon.com/images/I/41QUk+u-FML._SY445_SX342_.jpg",
     "coverAlt": "An illustrated scene of an open book with dark figures walking through city strets",
     "link": "https://www.penguinrandomhouse.com/books/292766/the-shadow-of-the-wind-by-carlos-ruiz-zafon/",

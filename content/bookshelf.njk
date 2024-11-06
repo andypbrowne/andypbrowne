@@ -26,9 +26,13 @@ css: /assets/css/bookshelf.css
   <li><label for="scifi">Sci-fi</label></li>
 </ol> #}
 
+{# | filter(book => book.type != 'magazine' && book.type != 'other') #}
+
 <header>
     <h2>2024</h2>
-    {% set booksData = books.2024bookList -%}{% set bookList2024 = booksData %}{% set bookCount2024 = bookList2024 | length %}
+    {% set booksData = books.2024bookList -%}
+    {% set bookList2024 = booksData %}
+    {% set bookCount2024 = bookList2024 | length %}
     <span class="bookcount">{{ bookCount2024 }} total books</span>
 </header>
 <ol class="bookshelf filter-grid">  
