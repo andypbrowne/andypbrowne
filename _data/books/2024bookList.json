@@ -86,6 +86,7 @@
       "title": "Other Means",
       "subTitle": "",
       "author": "Various",
+      "type": "magazine",
       "tags": ["magazine", "cycling"],
       "description": ""
   },
@@ -106,6 +107,7 @@
       "title": "Multipage Version",
       "subTitle": "Issue #1: We Fucked Up Headings",
       "author": "Various",
+      "type": "magazine",
       "tags": ["magazine", "design"],
       "description": ""
   },
@@ -126,6 +128,7 @@
     "title": "The Prompt Issue 2",
     "subTitle": "A Magazine by Figma",
     "author": "Multiple",
+    "type": "magazine",
     "tags": ["magazine", "design"],
     "description": "The physical copy is very difficult to read because of very small text and transparent pages. Totally read the online version of these articles."
   },
@@ -156,6 +159,7 @@
     "title": "Severance",
     "subTitle": "The Lexington Letter",
     "author": "Anonymous",
+    "type": "other",
     "tags": ["fiction"],
     "description": "Like reading a mini episode of the popular show. Toteally excited for the second season because sometimes I feel like I need to be severed from my corporate job."
   },
@@ -178,5 +182,15 @@
     "author": "Kyle Chayka",
     "tags": ["business", "technology"],
     "description": "I skipped the middle part of this book. I think the best take-aways were found in the conclusion which covered the importance of curation and taste." 
+  },
+  {
+    "cover": "https://m.media-amazon.com/images/I/915EwVKtdOL._SY522_.jpg",
+    "coverAlt": "A graphic cover with a crow perched on top of a city",
+    "link": "https://www.kirajanebuxton.com/hollow-kingdom",
+    "title": "Hollow Kingdom",
+    "subTitle": "A Novel",
+    "author": "Kira Jane Buxton",
+    "tags": ["fiction", "humor"],
+    "description": ""
   }
 ]
