@@ -10,6 +10,8 @@ description: The Exhibitions, Speaking Engagements and Education of Andy Garber-
 
 ## Speaking Engagements
 
+2024 | [The ResearchOps Toolbox + Graph ,Nodes 24](https://neo4j.com/nodes2024/agenda/the-researchops-toolbox-graph-discovering-the-right-tools-for-ux-research-and-design-teams/)
+
 2022 | [Building a ResearchOps Toolbox, ReOps Conference](https://joinlearners.com/talk/building-a-researchops-toolbox)
 
 2018 | <a href="aquent.com/atomic-design-nyc-2018" target="_blank">Creating a Big Bang Around Customer Experience with Atomic Design</a> (panelist)
