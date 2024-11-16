@@ -203,5 +203,17 @@
     "author": "Kira Jane Buxton",
     "tags": ["fiction", "humor"],
     "description": ""
+  },
+  {
+    "cover": "https://m.media-amazon.com/images/I/811bzOshn5L._SY522_.jpg",
+    "coverAlt": "the supercommunicators title of the book repeated over and over like the title is building",
+    "link": "https://www.charlesduhigg.com/supercommunicators",
+    "title": "Supercommunicators",
+    "subTitle": "How to Unlock the Secret Language of Connection",
+    "author": "Charles Duhigg",
+    "type": "",
+    "tags": ["business", "culture"],
+    "currentlyReading": "true",
+    "description": ""
   }
 ]
