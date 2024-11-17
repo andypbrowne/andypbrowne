@@ -756,7 +756,8 @@ footer .footer-links {
 
 /* Posts list */
 .postlist {
-	list-style: none;border-bottom: 1px solid var(--color-midnight-60);
+	list-style: none;
+	/* border-bottom: 1px solid var(--color-midnight-60); */
 	padding: 0;
 	/* padding-left: 1.5rem; */
 }
@@ -767,7 +768,7 @@ footer .footer-links {
 	/* counter-increment: start-from -1; */
 	margin-bottom: 1em;
 	padding-bottom: 1em;
-	border-bottom: 1px solid var(--color-midnight-60);
+	border-bottom: 1px solid var(--subtle-border);
 }
 .postlist-item:before {
 	display: inline-block;
