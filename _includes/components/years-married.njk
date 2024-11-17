@@ -1,0 +1,7 @@
+{% set startDate = '2014' | date %}
+{% set endDate = now | date %}
+{% set years = [] %}
+
+{% for year in range(startDate.year, endDate.year + 1) %}
+  {% set years = years | push(yearsMarried) %}
+{% endfor %}
