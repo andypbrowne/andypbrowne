@@ -90,6 +90,24 @@ details > summary {
   transition: opacity 0.2s ease-out, display 0.2s ease-out, height 0.2s ease-out;
 }
 
+@media screen and (max-width: 540px) {
+  aside.currently-reading ol.bookshelf li {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+aside.currently-reading ol.bookshelf li {
+  display: flex;
+  flex-direction: column;
+}
+
+aside.currently-reading ol.bookshelf li img {
+  width: 100%;
+}
+
+
+
 /* Special filtering for the bookshelf */
 
 /* input[type="radio"] {

@@ -1,5 +1,6 @@
 ---
 layout: layouts/home.njk
+css: /assets/css/bookshelf.css
 ---
 
 <section class="hero">
@@ -21,6 +22,8 @@ layout: layouts/home.njk
 </div>
 </section>
 
+<section>
+
 {% set postsCount = collections.posts | length %}
 {% set latestPostsCount = postsCount | min(6) %}
 <h1 class="visually-hidden">Latest {{ latestPostsCount }} Post{% if latestPostsCount != 1 %}s{% endif %}</h1>
@@ -37,11 +40,21 @@ layout: layouts/home.njk
 
 </div>
 
-{# List every content page in the project #}
-{#
-<ul>
-	{%- for entry in collections.all %}
-	<li><a href="{{ entry.url }}"><code>{{ entry.url }}</code></a></li>
-	{%- endfor %}
-</ul>
-#}
+</section>
+
+<aside class="currently-reading">
+
+<h2>Currently Reading</h2>
+    {% set booksData = books.2024bookList -%}
+    {% set bookList2024 = booksData %}
+<ol class="bookshelf">  
+{% for book in books.2024bookList -%}
+{% if book.currentlyReading == "true" %}
+{% include "../_includes/bookcard.njk" %}
+{% endif %}
+{% endfor -%}
+</ol>
+
+<p style="margin-top: 1em;">More reading on <a href="/bookshelf/">bookshelf</a></p>
+
+</aside>
