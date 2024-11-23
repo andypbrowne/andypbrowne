@@ -43,7 +43,7 @@
 :root {
 	/* --font-family: 'Inter var', system-ui, sans-serif; */
 	--font-family: 'Inter V', system-ui, "Segoe UI", 'Inter var', Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-	--font-familiy-display-serif: 'Newsreader Display Italic', serif;
+	--font-family-display-serif: 'Newsreader Display Italic', serif;
 	--font-family-serif: 'Newsreader', serif;
 	/* --font-headings: 'Inter var', system-ui, sans-serif; */
 	--font-headings: 'Inter V', system-ui, "Segoe UI", 'Inter var', Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -73,7 +73,7 @@
 	--color-midnight-20: #E3E4E5;
 	--color-midnight-40: #7792a9;
 	--color-midnight-60: #496174;
-	--color-midnight-80: #0F2B42;
+	--color-midnight-80: #174367;
 
 	--color-aside: oldlace;
 
@@ -192,9 +192,30 @@ aside h3 {
 	margin-top: 0px;
 }
 
+aside.currently-reading .featured-book {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	margin-block-start: 1.6rem;
+	font-family: var(--font-family-serif);
+}
+aside.currently-reading .featured-book .info h3 {
+	font-family: var(--font-family-display-serif);
+	font-style: normal;
+}
+
+aside.currently-reading .featured-book .info {
+	max-width: 50ch;
+	font-family: var(--font-family-serif);
+}
+
 @media screen and (min-width: 650px) {
 	aside {
 		padding: 3.2rem 3rem 3.8rem;
+	}
+	aside.currently-reading .featured-book {
+		flex-direction: row;
+		gap: 2rem;
 	}
 }
 
@@ -397,7 +418,7 @@ h2.post-deck {
 	max-width: 48ch;
 	/* font-size: var(--font-size-xl); */
 	font-style: italic;
-	font-family: var(--font-familiy-display-serif);
+	font-family: var(--font-family-display-serif);
 }
 .image-thumbnail-grid,
 .image-gallery-grid  {

@@ -35,7 +35,7 @@ css: /assets/css/bookshelf.css
 {% include "postslist.njk" %}
 
 {% if postsCount > 3 %}
-<p>More posts can be found in <a href="/blog/">the archive</a>.</p>
+<p>More posts can be found in <a href="/blog/">the archive &rarr;</a>.</p>
 {% endif %}
 
 </div>
@@ -47,14 +47,35 @@ css: /assets/css/bookshelf.css
 <h2>Currently Reading</h2>
     {% set booksData = books.2024bookList -%}
     {% set bookList2024 = booksData %}
-<ol class="bookshelf">  
 {% for book in books.2024bookList -%}
 {% if book.currentlyReading == "true" %}
-{% include "../_includes/bookcard.njk" %}
+<div class="featured-book">
+<div>
+	<a href="{{ book.link }}"><img loading="lazy" width="180" height="270" src="{{ book.cover }}" alt="{{ book.coverAlt }}" /></a>
+</div>
+<div class="info">
+  <h3>{{ book.title }} 
+    {% if book.type == 'audio' %}
+    🎧  
+    {% endif %} 
+  </h3>
+  <p class="sub-title">{{ book.subTitle }}</p>
+  <p class="author">{{ book.author }}</p>
+  {% if book.description %}
+  <p>{{ book.description }}</p>
+  {# <details>
+    <summary><strong>Notes</strong></summary>
+    <div class="notes">
+      <p>{{ book.description }}</p>
+    </div>
+  </details> #}
+</div>
+</div>
+  {% endif %}
+
 {% endif %}
 {% endfor -%}
-</ol>
 
-<p style="margin-top: 1em;">More reading on <a href="/bookshelf/">bookshelf</a></p>
+<p style="margin-top: 1em;">More reading on <a href="/bookshelf/">the bookshelf &rarr;</a></p>
 
 </aside>
