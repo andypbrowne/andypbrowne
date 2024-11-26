@@ -588,11 +588,12 @@ section.archive {
 .featured-post-grid ol li.postlist-item {
 	min-width: 80vw;
 	scroll-snap-align: start;
+	padding-inline-start: 1rem;
 }
 
-.featured-post-grid ol li.postlist-item {
+/* .featured-post-grid ol li.postlist-item:first-child {
 	margin-inline-start: 1rem;
-}
+} */
 
 .featured-post-grid ol li.postlist-item:last-child {
 	margin-inline-end: 1rem;
