@@ -9,23 +9,27 @@ tags:
   - tips
 draft: false
 css: /assets/css/breathing.css
-js: /assets/js/clipboard.min.js, 
 resources:
-  - title: Duplicate a directory
+  - id: 01
+    title: Duplicate a directory
     snippit: cp -r content/blog/_template content/blog/title-tk
-  - title: "Error Fatal: Not possible to fast-forward, aborting"
+  - id: 02
+    title: "Error Fatal: Not possible to fast-forward, aborting"
     snippit: git pull --rebase
-  - title: Create new branch
+  - id: 03
+    title: Create new branch
     snippit: git checkout -b NEW_BRANCH_NAME
-  - title: open VS Code editor (w/ shell command installed)
+  - id: 04
+    title: Open VS Code editor (w/ shell command installed)
     snippit: code .
-  - title: review last commit
+  - id: 05
+    title: review last commit
     snippit: git log [BRANCH NAME]
 ---
 
 A list of helpful code snippits for us making this, my personal blog. This post assumes you are using the command line to work on a personal website. The primary reasons for doing this is to speed up workflow and to look cool while you are doing it.
 
-## Snippits
+<h2 class="visually-hidden">Snippits</h2>
 
 <div class="grid"> {% for resource in resources %}
   <div class="card" 
@@ -33,13 +37,8 @@ A list of helpful code snippits for us making this, my personal blog. This post 
     border: 1px solid var(--subtle-border);
     border-radius: var(--border-radius);
     padding: 1rem 1rem 1.2rem;">
-    <div class="card-body">
-      <h3 style="margin-top: 0px;">{{ resource.title }}</h3>
+      <h3 style="margin-top: 0px;">{{ resource.id }}. {{ resource.title }}</h3>
       <code>{{ resource.snippit }}</code>
-    </div>
-    <div class="card-footer">
-      <button id="btn" data-clipboard-text="1"><span>Copy</span></button>
-    </div>
   </div>{% endfor %}
 </div>
 

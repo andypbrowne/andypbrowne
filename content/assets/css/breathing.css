@@ -5,13 +5,14 @@ figure {
 	/* max-width: 100%; */
 }
 
-/* .grid {
-    display: flex;
+.grid {
+    display: grid;
     flex-wrap: wrap;    
     gap: 2rem;
-    grid-auto-rows: 120px auto auto;
+    /* grid-auto-rows: 120px auto auto; */
     container-type: inline-size;
-} */
+}
+
 @media screen and (min-width: 1400px) {
     .grid {
         margin-inline: -12rem;
@@ -79,3 +80,8 @@ figure {
   .card hr {
     opacity: .4;
   }
+
+  code {
+    word-break: break-all;
+    text-wrap: wrap;
+}

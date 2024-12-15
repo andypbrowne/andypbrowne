@@ -121,7 +121,7 @@
 			</div>
 		</footer>
 		{% if js %}
-			<script src="{{js}}"></script>
+    		<script type="module" src="{{ js }}"></script>
 		{% endif %}
 		{# Current page: {{ page.url | htmlBaseUrl }}  #}
 	</body>
