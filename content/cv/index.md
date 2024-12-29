@@ -8,9 +8,11 @@ description: The Exhibitions, Speaking Engagements and Education of Andy Garber-
 
 # CV
 
-## Speaking Engagements
+## Engagements & Honors
 
 2024 | [The ResearchOps Toolbox + Graph ,Nodes 24](https://neo4j.com/nodes2024/agenda/the-researchops-toolbox-graph-discovering-the-right-tools-for-ux-research-and-design-teams/)
+
+2024 | Figma Champions Program, Recognized at the [Figma Config Conference](https://www.youtube.com/watch?v=n5gJgkO2Dg0&list=PLXDU_eVOJTx402DljIPagaDKLibF-qfF0&index=1) as an inspiring creator
 
 2022 | [Building a ResearchOps Toolbox, ReOps Conference](https://joinlearners.com/talk/building-a-researchops-toolbox)
 

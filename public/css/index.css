@@ -458,6 +458,16 @@ section.hero .hero-details {
 	grid-row: 1;
 }
 
+ul.post-tags {
+	column-count: auto;
+	column-width: 10rem;
+	padding-inline: 0px;
+}
+
+ul.post-tags li {
+	list-style-type: none;
+}
+
 @media screen and (min-width: 650px) {
 	.postlist-container {
 		grid-template-columns: repeat(3, 1fr);
