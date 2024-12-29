@@ -1,5 +1,6 @@
 ---
 title: Creator Micro
+number: 7
 description: Bringing joy to your hardware and software
 thumbnail: assets/images/thumb-macropad.png
 thumbnailAlt: A line drawing of keyboard keys 

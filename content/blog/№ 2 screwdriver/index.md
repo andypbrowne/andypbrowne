@@ -1,5 +1,6 @@
 ---
 title: Google Nest Screwdriver
+number: 2
 description: More than just great aesthetics
 thumbnail: assets/images/thumb-screwdriver.jpg
 thumbnailAlt: A line drawing of a screwdriver with a very ergonomic and rounded handle 

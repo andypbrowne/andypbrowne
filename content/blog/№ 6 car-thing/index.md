@@ -1,5 +1,6 @@
 ---
 title: Car Thing
+number: 6
 description: Rest in peace
 thumbnail: assets/images/thumb-car-thing.png
 thumbnailAlt:  Line drawing a playstation 5 controller with a wide array of buttons

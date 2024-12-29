@@ -22,7 +22,7 @@ css: /assets/css/favorite-things.css
     <div class="card-body">
 		<a href="{{ post.url }}">
       <img class="custom-size-images" src="../../{{ post.data.thumbnail }}" alt=" {{ post.data.thumbnailAlt }}"></a>
-    {% if post.data.title %}<h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+    {% if post.data.title %}<h2><a href="{{ post.url }}">{{ post.data.number }}: {{ post.data.title }}</a></h2>
 			{% else %}
 			<code>{{ post.url }}</code>
 			{% endif %}</a>

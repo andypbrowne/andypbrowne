@@ -1,5 +1,6 @@
 ---
 title: Duolingo
+number: 8
 description: Help, I’m not learning Spanish!
 thumbnail: assets/images/thumb-duo.png
 thumbnailAlt: Sketch of a cartoon owl named Duo  

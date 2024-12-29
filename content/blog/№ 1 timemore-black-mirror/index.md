@@ -1,5 +1,6 @@
 ---
 title: Timemore Black Mirror Coffee Scale
+number: 1
 description: Removing a variable from the brewing process
 thumbnail: assets/images/thumb-coffee-scale.jpg
 thumbnailAlt: alternative text 

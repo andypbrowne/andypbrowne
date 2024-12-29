@@ -849,23 +849,33 @@ footer .footer-links {
 	/* margin-left: -1.5rem; */
 }
 .postlist-date,
-.postlist-item:before {
+.postlist-item:before,
+.post-number {
 	font-size: var(--font-size-base);
 	color: var(--text-color);
 	font-weight: 650;
 	opacity: .8;
 	font-variant-caps: all-small-caps;
 }
-.postlist-date {
+.postlist-date,
+.post-number {
 	word-spacing: -0.5px;
 	letter-spacing: .08rem;
 	line-height: 1.5;
 }
-article time.postlist-date {
+article time.postlist-date,
+.post-number {
 	line-height: inherit;
 	display: block;
 	text-align: center;
 	margin-top: 16vh;
+}
+
+.post-number {
+	font-size: var(--font-size-xl);
+	font-weight: 800;
+	color: var(--text-color);
+	margin-top: 8vh;
 }
 
 li.postlist-item a h2 {
