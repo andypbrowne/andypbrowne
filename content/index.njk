@@ -45,9 +45,9 @@ css: /assets/css/bookshelf.css
 <aside class="currently-reading">
 
 <h2>Currently Reading</h2>
-    {% set booksData = books.2024bookList -%}
+    {% set booksData = books.2025bookList -%}
     {% set bookList2024 = booksData %}
-{% for book in books.2024bookList -%}
+{% for book in books.2025bookList -%}
 {% if book.currentlyReading == "true" %}
 <div class="featured-book">
 <div>

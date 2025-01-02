@@ -29,6 +29,19 @@ css: /assets/css/bookshelf.css
 {# | filter(book => book.type != 'magazine' && book.type != 'other') #}
 
 <header class="bookshelf-header">
+    <h2>2025</h2>
+    {% set booksData = books.2025bookList -%}
+    {% set bookList2025 = booksData %}
+    {% set bookCount2025 = bookList2025 | length %}
+    <span class="bookcount">{{ bookCount2025 }} total books</span>
+</header>
+<ol class="bookshelf filter-grid">  
+{% for book in books.2025bookList -%}
+{% include "../_includes/bookcard.njk" %}
+{% endfor -%}
+</ol>
+
+<header class="bookshelf-header">
     <h2>2024</h2>
     {% set booksData = books.2024bookList -%}
     {% set bookList2024 = booksData %}
