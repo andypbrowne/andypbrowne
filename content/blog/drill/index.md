@@ -1,6 +1,6 @@
 ---
 title: Hoto Brushless Drill
-number: 3
+number: 2
 description: A power tool from the future
 thumbnail: assets/images/thumb-drill.jpg
 thumbnailAlt:  Line drawing a futuristic looking drill power tool
