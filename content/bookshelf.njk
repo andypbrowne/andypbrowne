@@ -20,8 +20,8 @@ css: /assets/css/bookshelf.css
   <li><label for="design">Design</label></li>
   <li><label for="business">Business</label></li>
   <li><label for="technology">Technology</label></li>
-  <li><label for="health">Health</Habel></li>
-  <li><label for="creativity">Creativity</Cabel></li>
+  <li><label for="health">Health</label></li>
+  <li><label for="creativity">Creativity</label></li>
   <li><label for="fiction">Fiction</label></li>
   <li><label for="scifi">Sci-fi</label></li>
 </ol> #}
@@ -45,7 +45,7 @@ css: /assets/css/bookshelf.css
     <h2>2024</h2>
     {% set booksData = books.2024bookList -%}
     {% set bookList2024 = booksData %}
-    {% set bookCount2024 = bookList2024 | length %}
+    {% set bookCount2024 = bookList2024 | length  %}
     <span class="bookcount">{{ bookCount2024 }} total books</span>
 </header>
 <ol class="bookshelf filter-grid">  
