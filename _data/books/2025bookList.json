@@ -10,5 +10,17 @@
     "tags": ["technology", "culture"],
     "currentlyReading": "true",
     "description": "Written by an artist who draws from history to understand how we can live a more purposeful life. The provocative title actually implies a balance we need to achieve and the necessity of missing out."
+  },
+  {
+    "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1351191064i/9822.jpg",
+    "coverAlt": "An illustration of a mouse in a red cape riding on the back of a crow",
+    "link": "https://en.wikipedia.org/wiki/Mrs._Frisby_and_the_Rats_of_NIMH",
+    "title": "Mrs. Frisby and the Rats of NIMH",
+    "subTitle": "",
+    "author": "Robert C. O'Brien",
+    "type": "library, eBook",
+    "tags": ["fantacy", "fiction"],
+    "currentlyReading": "false",
+    "description": "Adding some books that I am reading to my child. This is one that I was very excited to share with her."
   }
 ]
