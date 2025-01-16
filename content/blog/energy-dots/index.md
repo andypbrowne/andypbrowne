@@ -7,6 +7,7 @@ date: 2025-01-15
 tags:
   - post
   - featured
+  - tips
 draft: false
 css: /assets/css/favorite-things.css
 ---
@@ -18,13 +19,28 @@ css: /assets/css/favorite-things.css
 There is a user experience facilitation method called dot voting. I don’t think it gets enough use and its benefits are glorious and mysterious. There are only a few simple things we need to do to make it work.
 
 ## Make it work
+
+### You will need
+
+- Sharpie or [Paper Mate Flair Felt Tip Pens](https://www.papermate.com/pens/felt-tip-pens/paper-mate-flair-felt-tip-pens-medium-point-0.7mm/SAP_8430152.html)
+- [Post-it Super Sticky Notes](https://www.officedepot.com/a/products/336977/Post-it-Notes-Super-Sticky-Notes/#Reviews)
+- [See-Thru™ Removable Color Dots](https://www.officedepot.com/a/products/760227/Office-Depot-Brand-See-Thru-Removable/?region_id=005910&gQT=1#Reviews)
+
+### Setup
+
 1. Pair it with another method like rapid sketching, crazy 8s, a mood board, or some existing concepts.
 2. Take these things and spread them out in a digital or physical space.
 3. Find participants. These can be collaborators, clients, and decision makers. 
+
+### Do the thing
+
 4. Decide on some voting criteria. The group should agree to vote based on one or more criteria like: ease of use, feasibility, business impact, desirability, accessibility, or even just excitement and motivation for the team to build it.
 5. Distribute the voting dots. They can be physical stickers or digital shapes and should be small so they don’t cover too much information. Sometimes it is great if the dots are slightly transparent because you can read what is underneath. Bonus points for using different colored dots for different voting criteria.
-6. Set things up so they will photograph well. We want to give people confidence in their decision making. Photos memorialize the energy of the design process. Make those sketches more visible by using marker. I suggest a common Sharpie or [Paper Mate Flair Felt Tip Pens](https://www.papermate.com/pens/felt-tip-pens/paper-mate-flair-felt-tip-pens-medium-point-0.7mm/SAP_8430152.html). 
+6. Set things up so they will photograph well. We want to give people confidence in their decision making. Photos memorialize the energy of the design process. Make those sketches more visible by using marker. 
 7. Set a timer and let people vote according to the criteria. If you are using a digital space you can make the voting anonymous so that participants don’t influence other’s decisions. 
+
+### Wrap up
+
 8. A heatmap will be formed and some of the best ideas will immediately be easy to spot. 
 9. Review and discuss.
 10. Decide on some next steps like implement the design or pack up and go for drinks.
@@ -37,6 +53,7 @@ Of course, not everyone will agree, but we find that the design decisions will h
 - [Dot Voting from 18F Guides](https://guides.18f.gov/methods/discover/dot-voting/)
 - [Luma Institute Visualize the Vote](https://www.luma-institute.com/visualize-the-vote/)
 - [Dot Voting: A Simple Decision-Making and Prioritization Method in UX from NN/g](https://www.nngroup.com/articles/dot-voting/)
+- [Dot Voting from Google Design Sprints](https://designsprintkit.withgoogle.com/methodology/phase4-decide/dot-vote)
 
  
 
