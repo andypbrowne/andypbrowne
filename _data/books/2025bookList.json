@@ -8,7 +8,7 @@
     "author": "Jenny Odell",
     "type": "library, eBook",
     "tags": ["technology", "culture"],
-    "currentlyReading": "true",
+    "currentlyReading": "false",
     "description": "Written by an artist who draws from history to understand how we can live a more purposeful life. The provocative title actually implies a balance we need to achieve and the necessity of missing out."
   },
   {
@@ -22,5 +22,29 @@
     "tags": ["fantacy", "fiction"],
     "currentlyReading": "false",
     "description": "Adding some books that I am reading to my child. This is one that I was very excited to share with her."
+  },
+  {
+    "cover": "https://m.media-amazon.com/images/I/71VM7BbHS5L._SY522_.jpg",
+    "coverAlt": "An illustration of a man dressed in a suit and 2 limurs are sitting around him",
+    "link": "https://www.penguin.co.uk/books/441254/creativity-by-cleese-john/9781529157529",
+    "title": "Creativity",
+    "subTitle": "A Short and Cheerful Guide",
+    "author": "John Cleese",
+    "type": "library",
+    "tags": ["creativity", "self-help"],
+    "currentlyReading": "true",
+    "description": "Creativity is not a skill or a talent… it is simply ability to play and get into a mindset where we trust our own ideas and instincts."
+  },
+  {
+    "cover": "/assets/images/cover-you-got-this-0.5x.jpg",
+    "coverAlt": "Large blog letters that say you got this with a cat running around causing trouble",
+    "link": "https://store.nytimes.com/collections/babies-kids/products/for-kids-the-independence-issue-june-2024?variant=41891628548166",
+    "title": "The Independence Issue",
+    "subTitle": "June 2024",
+    "author": "Various",
+    "type": "newsprint",
+    "tags": ["kids", "self-help"],
+    "currentlyReading": "false",
+    "description": "Super excited to share something newsprint with my daughter. This fun gift also has a lot of helpful advise that parents are not supposed to read."
   }
 ]
