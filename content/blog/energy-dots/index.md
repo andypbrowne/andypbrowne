@@ -16,7 +16,7 @@ css: /assets/css/favorite-things.css
 <figcaption>A voted on group of abstract symbols from the book Symbol by Angus Hyland and Steven Bateman. The shapes above are selections from that book and drawn in Figma.</figcaption>
 </figure>
 
-There is a user experience facilitation method called dot voting. I don’t think it gets enough use and its benefits are glorious and mysterious. There are only a few simple things we need to do to make it work.
+There is a user experience facilitation method called dot voting. I don’t think it gets enough use and its benefits are glorious and mysterious. There are only a few simple things we will do to make it work.
 
 ## Make it work
 
@@ -48,6 +48,10 @@ There is a user experience facilitation method called dot voting. I don’t thin
 Using crafts and art supplies to solve business problems can seem a little strange. Sometimes people need some help understanding or some encouragement to get started. Tell then that we are going to “visualize the vote” and it is going to provide confidence in our decision making. Also know that there are no right or wrong answers. The voting helps us pick a direction to go in and then we can easily pivot later if needed. 
 
 Of course, not everyone will agree, but we find that the design decisions will have much more support when more people are involved in the process early. Voices get heard. 
+
+## One more thing
+
+As a companion to this post I authored a little [Figjam community file](https://www.figma.com/community/file/1467983698718385979/energy-dots) with some of my favorite tips and tricks. It includes some of my favorite workshop activities: Hi five zone, voting, and other facilitation tips. With a little bit of preparation the work can be more collaborative and creative.  Have fun!
 
 ## More about that 
 - [Dot Voting from 18F Guides](https://guides.18f.gov/methods/discover/dot-voting/)

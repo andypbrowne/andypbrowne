@@ -32,8 +32,8 @@
     "author": "John Cleese",
     "type": "library",
     "tags": ["creativity", "self-help"],
-    "currentlyReading": "true",
-    "description": "Creativity is not a skill or a talent… it is simply ability to play and get into a mindset where we trust our own ideas and instincts."
+    "currentlyReading": "false",
+    "description": "Creativity is not a skill or a talent… it is simply an ability to play and get into a mindset where we trust our own ideas and instincts."
   },
   {
     "cover": "/assets/images/cover-you-got-this-0.5x.jpg",
@@ -46,5 +46,17 @@
     "tags": ["kids", "self-help"],
     "currentlyReading": "false",
     "description": "Super excited to share something newsprint with my daughter. This fun gift also has a lot of helpful advise that parents are not supposed to read."
+  },
+  {
+    "cover": "https://m.media-amazon.com/images/I/71R47C5CdML._SY522_.jpg",
+    "coverAlt": "Large geometric letters and a small pixel character falling down a screen",
+    "link": "https://store.nytimes.com/collections/babies-kids/products/for-kids-the-independence-issue-june-2024?variant=41891628548166",
+    "title": "Ready Player Two",
+    "subTitle": "A Novel",
+    "author": "Ernest Cline",
+    "type": "",
+    "tags": ["sci-fi", "technology"],
+    "currentlyReading": "true",
+    "description": "Accessible science fiction. Full of nostalgia for the 1980s. Don't listen to harsh reviews. This is a fun rewarding read like its predecessor."
   }
 ]
