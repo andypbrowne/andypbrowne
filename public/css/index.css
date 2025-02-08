@@ -950,7 +950,7 @@ h2 + .header-anchor {
 .social ul {
 	display: flex;
 	flex-wrap: wrap;
-	gap: 2rem;
+	gap: 3rem;
 	margin: 0;
 	padding: 0;
 }
@@ -961,7 +961,7 @@ h2 + .header-anchor {
 .social svg {
 	fill: var(--color-gray-80);
 	opacity: 1;
-	width: 36px;
+	width: 24px;
 	height: 100%;
 	vertical-align: middle;
 }
