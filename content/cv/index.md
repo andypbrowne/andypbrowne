@@ -1,5 +1,5 @@
 ---
-Title: CV
+title: CV
 layout: layouts/base.njk
 description: The Exhibitions, Speaking Engagements and Education of Andy Garber-Browne
 ---
