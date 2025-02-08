@@ -18,13 +18,14 @@ css: /assets/css/favorite-things.css
 
 There is a user experience facilitation method called dot voting. I don’t think it gets enough use and its benefits are glorious and mysterious. There are only a few simple things we will do to make it work.
 
-## Make it work
-
-### You will need
+**You will need**:
 
 - Sharpie or [Paper Mate Flair Felt Tip Pens](https://www.papermate.com/pens/felt-tip-pens/paper-mate-flair-felt-tip-pens-medium-point-0.7mm/SAP_8430152.html)
 - [Post-it Super Sticky Notes](https://www.officedepot.com/a/products/336977/Post-it-Notes-Super-Sticky-Notes/#Reviews)
 - [See-Thru™ Removable Color Dots](https://www.officedepot.com/a/products/760227/Office-Depot-Brand-See-Thru-Removable/?region_id=005910&gQT=1#Reviews)
+- A digital whiteboard like [Figjam](https://www.figma.com/figjam/) or [Miro](https://miro.com/)
+
+## Make it work
 
 ### Setup
 
