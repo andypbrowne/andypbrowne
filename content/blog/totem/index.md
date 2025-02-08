@@ -11,7 +11,7 @@ tags:
 draft: false
 css: /assets/css/favorite-things.css
 ---
-<figure>
+<figure class="sketch">
   {% image "./totem.png", "{{ thumbailAlt }}" %}
 <figcaption>This is the Totem character from Monument Valley 2 that includes the magic door</figcaption>
 </figure>
