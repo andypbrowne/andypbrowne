@@ -10,7 +10,18 @@ tags:
   - post
   - featured
 draft: false
+summary: A community-driven project designed to help researchers and research operations specialists find, evaluate, and compare research tools across industries and team sizes. By offering tool audits and data-driven analyses, the project streamlines the selection process, saving researchers valuable time.
+responsibilities:
+  - Interaction Design
+  - Data Analysis
+  - Web development
+key_outcomes:
+  - Created an interactive resource to help researchers and ReOps specialists evaluate and select research tools.
+  - Improved research note-taking and analysis processes for better organization and insights.
+  - Delivered a more efficient, shorter survey and created visualizations for better data representation.
 ---
+
+{% include "_includes/components/case-study-metadata.njk" %}
 
 <figure class="stamp">
   {% image "./toolbox-dev.png", "An emojii style illustration of a toolbox that is black instead of the customary red covered with various stickers of tools like airtable github figma and Research Operations Community logo" %}
