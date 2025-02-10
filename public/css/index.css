@@ -237,6 +237,11 @@ aside.case-study-metadata h2 {
 	color: var(--color-midnight-60);
 }
 
+aside.case-study-metadata div p {
+	margin: 0;
+	text-wrap: pretty;
+}
+
 h1,
 h2,
 h3 {
