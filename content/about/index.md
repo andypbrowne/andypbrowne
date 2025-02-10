@@ -31,12 +31,12 @@ eleventyNavigation:
 
 <section class="filter-grid-item" data-category="one">
 
-Andy is a User Experience Designer. He specializes in employee experience and design systems. He believes that collaboration leads to the best results. 
+Andy is a User Experience Designer. He specializes in employee experience and design systems. He likes to say that he brings good order and discipline to the field of design. 
 
 </section>
 <section class="filter-grid-item" data-category="two">
 
-Andy is a User Experience Designer in JPMorgan Chase’s Employee Experience department. He specializes in production kits and systems that help scale design, product, and engineering efforts. Over the past decade, he has worked for the firm’s Corporate and Investment Bank, Cybersecurity department, and Design Operations team in creative roles. He has a passion for Interaction Design, User Experience Research, and Web Development.
+Andy is a User Experience Designer in JPMorgan Chase’s Employee Experience department. He specializes in production kits and systems that help scale design, product, and engineering efforts. Over the past decade, he has worked for the firm’s Corporate and Investment Bank, Cybersecurity department, and Design Operations team in creative roles. He has a passion for Interaction Design, User Experience Research, and Web Development. He likes to say that he brings good order and discipline to the field of design. 
 
 A former US Army Captain, Andy served in the Infantry for seven years. He was assigned to a variety of positions, including platoon leader, civil military officer, operations officer, and liaison officer. Andy served in a one year-long assignment to Korea and two deployments to Iraq during Operation Iraqi Freedom.
 
