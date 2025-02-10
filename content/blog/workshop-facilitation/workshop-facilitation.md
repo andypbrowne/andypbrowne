@@ -1,6 +1,6 @@
 ---
 title: Workshop Facilitation
-description: LEGOs® can put corporate colleagues on the therapy couch
+description: LEGO® can put corporate colleagues on the therapy couch
 thumbnail: assets/images/thumb-lsp.jpg
 thumbnailAlt: A pile of LEGO bricks
 date: 2018-12-23
@@ -10,7 +10,18 @@ tags:
   - ux
   - featured
 draft: false
+summary: A writeup about workshops to help corporate teams build vision statements and generate product ideas. Participants shared insights through creative storytelling with LEGO® bricks.
+responsibilities:
+  - Workshop facilitation
+  - Design thinking
+key_outcomes:
+  - Practical use of LEGO® models to explore and solve business challenges
+  - Creation of team vision, mission statements, and new product ideas
+  - Improved connection and collaboration among team members
 ---
+
+{% include "_includes/components/case-study-metadata.njk" %}
+
 <figure>
   {% image "./lsp04.jpg", "Alternative text" %}
 <figcaption>LEGO® SERIOUSPLAY® uses special sets of neutral bricks because themed bricks may carry too much meaning</figcaption>
@@ -24,7 +35,7 @@ It was September 2018, and we had a 2-day onsite <sup>[1]</sup> on the calendar.
 
 I quickly discovered that this kind of sharing could be a great way to connect with colleagues, but I decided to use sets of questions and challenges prescribed by the book that were less personal in the actual sessions. For example, we used "difficult/nightmare client" instead of "personal/professional goals," and "dream vacation" instead of "build myself." 
 
-> #### Whatever the questions and challenges, these builds end up being very memorable. I'm always surprised by how fast participants get into the flow of using the legos to tell stories and explore concepts.
+> #### Whatever the questions and challenges, these builds end up being very memorable. I'm always surprised by how fast participants get into the flow of using the lego to tell stories and explore concepts.
 
 <figure>
   {% image "./lsp06.jpg", "Alternative text" %}

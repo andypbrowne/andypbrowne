@@ -7,7 +7,16 @@ date: 2012-05-01
 tags:
   - case study
   - post
+summary: Editorial design for an academic project covering editorial design and typography
+responsibilities:
+  - Graphic Design
+  - Illustration
+key_outcomes:
+  - Featured project in school 50 year review
+  - International Design award
 ---
+
+{% include "_includes/components/case-study-metadata.njk" %}
 
 <figure>
   {% image "../../assets/images/cosmos_thumb.jpg", "Man holding a strange star-gazing object to the sky" %}

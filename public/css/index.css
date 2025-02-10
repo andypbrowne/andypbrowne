@@ -223,6 +223,20 @@ aside.currently-reading .featured-book .info {
 	}
 }
 
+aside.case-study-metadata {
+	display: flex;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	justify-content: space-between;
+	gap: 1rem;
+	font-size: var(--font-size-sm);
+}
+
+aside.case-study-metadata h2 {
+	font-size: var(--font-size-md);
+	color: var(--color-midnight-60);
+}
+
 h1,
 h2,
 h3 {

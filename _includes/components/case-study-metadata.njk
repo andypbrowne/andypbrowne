@@ -1,0 +1,18 @@
+<aside class="case-study-metadata">
+  <div>
+    <h2 class="small-caps">Summary</h2>
+    <p>{{ summary }}</p>
+  </div>
+  <div>
+    <h2 class="small-caps">Responsibilities</h2>
+    <ul>
+      {% for responsibility in responsibilities %}<li>{{ responsibility }}</li>{% endfor %}
+    </ul>
+  </div>
+  <div>
+    <h2 class="small-caps">Key Outcomes</h2>
+    <ul>
+      {% for outcome in key_outcomes %}<li>{{ outcome }}</li>{% endfor %}
+    </ul>
+  </div>
+</aside>
