@@ -9,7 +9,17 @@ tags:
   - post
   - web
 draft: false
+summary: A collaboration to develop an installation for an event with audience interaction.
+responsibilities:
+  - Web development
+  - Environmental design
+key_outcomes:
+  - Fun with friends, old and new
+  - Used for two additional events to help raise funds for the Civic Art Lab
 ---
+
+{% include "_includes/components/case-study-metadata.njk" %}
+
 <figure>
   {% image "../../assets/images/instagram_2lifeRemix.jpg", "Man working in a maker space" %}
   <figcaption>Scene from an event called 2nd Life Remix</figcaption>
