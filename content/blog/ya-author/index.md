@@ -1,7 +1,7 @@
 ---
 title: Young Adult Author’s Website
 description: A case study in sanity
-thumbnail: assets/images/thumb-fpo.png
+thumbnail: assets/images/thumb-ya-author.jpg
 thumbnailAlt: Just a placeholder image that says FPO which means for  
 date: 2025-02-08
 tags:
@@ -112,5 +112,6 @@ This project was an exciting mix of research, design, and technical problem-solv
 ## Notes:
 
 - I didn’t get a chance to talk about some other cool features of the site like like the email template and the Netlify Forms integration that makes it easy for people to [subscribe to Romina’s newsletter.](https://rominagarber.com/newsletter/) I will save that for a future post. 
+- Some other fun work related to this project was the creation of some social media graphics, Zoom backgrounds, and printed post cards. I probably will not write about that.
 - This project was featured on the [Sanity Community Digest](https://www.sanity.io/blog/community-digest-summer-edition-part-1#12074da22be1).
 
