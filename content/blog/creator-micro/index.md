@@ -37,17 +37,17 @@ The Creator Micro Keyboard actually has 3 layers. That means you can have a whol
 
 | Key| Desired Action | Keyboard Shortcut | QMK Keycode|
 |----------|------------|-----------|-----------|
-| Large nob| Volume Down| <kbd>F11</kbd>| G(KC_VOLD)|
-| Large nob| Volume Up  | <kbd>F12</kbd>| G(KC_VOLU)|
-| Large nob| Play/Pause | <kbd>F8</kbd> | KC_MPLY   |
-| Keycap 1 | Create Component | <kbd><kbd>OPN</kbd> + <kbd>CMD</kbd> + <kbd>K</kbd></kbd> |LAG(KC_K)   |
-| Keycap 2 | Pen Tool (because the icon looks cool) | <kbd>P</kbd> | P   |
-| Keycap 3 | Align Left |<kbd><kbd>OPN</kbd> + <kbd>A</kbd></kbd> | A(KC_A)   |
-| Keycap 4 | Align Horizontal Centers | <kbd><kbd>OPN</kbd> + <kbd>H</kbd> | A(KC_H)   |
-| Keycap 5 | Align Right |  <kbd><kbd>OPN</kbd> + <kbd>D</kbd></kbd> | A(KC_D)   |
-| Keycap 6 | Align Top |  <kbd><kbd>OPN</kbd> + <kbd>W</kbd></kbd> | A(KC_W)   |
-| Keycap 9 | Select Matching Layers | <kbd><kbd>OPN</kbd> + <kbd>CMD</kbd> + <kbd>A</kbd></kbd> | LCA(KC_H)   |
-| Keycap 10| Launch Figma | -   | WIP*|
+| Large nob| Volume Down| <kbd>F11</kbd>| <code>G(KC_VOLD)</code>|
+| Large nob| Volume Up  | <kbd>F12</kbd>| <code>G(KC_VOLU)</code>|
+| Large nob| Play/Pause | <kbd>F8</kbd> | <code>KC_MPLY</code>   |
+| Keycap 1 | Create Component | <kbd><kbd>OPN</kbd> + <kbd>CMD</kbd> + <kbd>K</kbd></kbd> | <code>LAG(KC_K)</code>   |
+| Keycap 2 | Pen Tool (because the icon looks cool) | <kbd>P</kbd> | <code>P</code>   |
+| Keycap 3 | Align Left |<kbd><kbd>OPN</kbd> + <kbd>A</kbd></kbd> | <code>A(KC_A) </code>  |
+| Keycap 4 | Align Horizontal Centers | <kbd><kbd>OPN</kbd> + <kbd>H</kbd> | <code>A(KC_H)</code>   |
+| Keycap 5 | Align Right |  <kbd><kbd>OPN</kbd> + <kbd>D</kbd></kbd> | <code>A(KC_D)</code>   |
+| Keycap 6 | Align Top |  <kbd><kbd>OPN</kbd> + <kbd>W</kbd></kbd> | <code>A(KC_W)</code>   |
+| Keycap 9 | Select Matching Layers | <kbd><kbd>OPN</kbd> + <kbd>CMD</kbd> + <kbd>A</kbd></kbd> | <code>LCA(KC_H)</code>   |
+| Keycap 10| Launch Figma | <kbd><kbd>CAPS LOCK</kbd> + <kbd>F</kbd>   | WIP*|
 
 [*] This is a little harder to accomplish. I think I'm going to have to [configure a custom keyboard shortcut](https://support.apple.com/guide/mac-help/create-keyboard-shortcuts-for-apps-mchlp2271/mac) in the Mac settings and then map that to the macropad.
 
