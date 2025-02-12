@@ -25,7 +25,7 @@ key_outcomes:
 
 <figure>
   {% image "./hero-light.jpg", "A hero image of a female character with glowing star shaped eyes, detail of book information, and a grid of colors" %}
-  <figcaption>Romina's website takes advantage of beatiful book cover illustrations</figcaption>
+  <figcaption>Romina's website takes advantage of beautiful book cover illustrations</figcaption>
 </figure>
 
 Author Romina Garber needed a new website to support the launch of her new book series, *Wolves of No World*. Her existing WordPress site was outdated and made content updates difficult. Romina had a clear vision: she needed a more intuitive platform and a more professional website to promote her work effectively. 
