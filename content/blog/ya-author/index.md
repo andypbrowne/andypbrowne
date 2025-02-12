@@ -9,7 +9,7 @@ tags:
   - post
   - featured
 draft: false
-summary: Redesign of a website and improved editing experience for an author of Young Adult books..
+summary: Redesign of a website and improved editing experience for an author of Young Adult books.
 responsibilities:
   - User Research
   - Interaction Design

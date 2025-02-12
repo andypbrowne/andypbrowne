@@ -322,7 +322,7 @@ figcaption,
 	text-align: center;
     margin-top: 1.2rem;
 	hyphens: auto;
-	word-break: break-all;
+	text-wrap: pretty;
 }
 figure img,
 img.thumbnail,
@@ -750,6 +750,28 @@ pre:not([class*="language-"]) {
 code {
 	word-break: break-all;
 }
+
+kbd:not(:has(kbd, samp)) {
+	color: var(--color-midnight-60);
+	font-size: smaller;
+	background: var(--color-midnight-20);
+	border: 1px solid var(--color-midnight-40);
+	border-radius: 4px;
+	padding-inline: 4px;
+	box-shadow: 2px 2px 0px 2px var(--color-midnight-40);
+	margin-inline-end: 0.48ch;
+  }
+  
+  samp {
+	padding: 1rem;
+	border: 1px solid currentColor;
+	background: hsl(from currentColor h s l / 0.1);
+  }
+  
+  kbd > samp {
+	border-radius: 0.5rem;
+	padding: 0.25em;
+  }
 
 /* Header and footer styles */
 header {
