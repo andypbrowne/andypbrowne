@@ -758,7 +758,8 @@ kbd:not(:has(kbd, samp)) {
 	border: 1px solid var(--color-midnight-40);
 	border-radius: 4px;
 	padding-inline: 4px;
-	box-shadow: 2px 2px 0px 2px var(--color-midnight-40);
+	/* box-shadow: 2px 2px 0px 2px var(--color-midnight-40); */
+	border-bottom: 4px solid var(--color-midnight-40);
 	margin-inline-end: 0.48ch;
   }
   
