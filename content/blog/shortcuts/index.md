@@ -8,7 +8,7 @@ tags:
   - post
   - tips
   - keyboards
-draft: true
+draft: false
 resources:
   - category: Productivity
     result: ⌨️
