@@ -753,7 +753,7 @@ code {
 
 kbd:not(:has(kbd, samp)) {
 	color: var(--color-midnight-60);
-	font-size: smaller;
+	font-size: var(--font-size-base);
 	background: var(--color-midnight-20);
 	border: 1px solid var(--color-midnight-40);
 	border-radius: 4px;
@@ -762,6 +762,10 @@ kbd:not(:has(kbd, samp)) {
 	border-bottom: 4px solid var(--color-midnight-40);
 	margin-inline-end: 0.48ch;
   }
+
+p kbd:not(:has(kbd, samp)) {
+	font-size: var(--font-size-sm);
+}
   
   samp {
 	padding: 1rem;
