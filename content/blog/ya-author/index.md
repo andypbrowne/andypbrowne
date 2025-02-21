@@ -34,13 +34,13 @@ The primary goal was to improve the website’s editing workflow. During the ini
 
 <aside>
 
-  **Website Goals**:
+<h2 style="font-size: var(--font-size-base);">Goals</h2>
 
-  - 10K+ add on Goodreads (5x increase)
-  - 7K+ instagram followers (2x increase)
-  - Lobizona top 10K on bn.com
-  - Review by major publication
-  - 500 total newsletter subscribers
+- 10K+ add on Goodreads (5x increase)
+- 7K+ instagram followers (2x increase)
+- Lobizona top 10K on bn.com
+- Review by major publication
+- 500 total newsletter subscribers
 
 </aside>
 
