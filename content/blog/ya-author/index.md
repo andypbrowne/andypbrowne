@@ -108,7 +108,7 @@ To complement Manuale, we incorporated [IBM Plex Mono](https://www.ibm.com/plex/
 
 ### Color System
 
-The site’s color palette is dynamic, automatically generating schemes based on book covers. These colors are named after thematic elements like moons, blood, earth, and zodiac signs, adding a rich, narrative-driven layer to the design.. 
+The site’s color palette is dynamic, automatically generating schemes based on book covers. These colors are named after thematic elements like moons, blood, earth, and zodiac signs, adding a rich, narrative-driven layer to the design. 
 
 ### Wireframes and Mockups
 
