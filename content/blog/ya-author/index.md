@@ -30,7 +30,7 @@ key_outcomes:
 
 Author Romina Garber needed a new website to support the launch of her new book series, *Wolves of No World*. Her existing WordPress site was outdated and made content updates difficult. Romina had a clear vision: she needed a more intuitive platform and a more professional website to promote her work effectively. 
 
-The primary goal was to improve the website’s editing workflow. During the initial design discovery we also identified an opportunity to reach additional audiences like publicists, literary agents, bookstagrammers, and video bloggers. By focusing on these groups, we could refine the website’s content strategy to better align with their needs. Measuring progress on these goals was essential. While finding perfect metrics isn’t always easy, taking the time to define them helped us clarify what truly mattered.
+The primary goal was to improve the website’s editing workflow. During the initial design discovery we also identified an opportunity to reach additional audiences like publicists, literary agents, bookstagrammers, and video bloggers. By focusing on these groups, we could refine the website’s content strategy to better align with their needs and Romina’s business goals. Measuring progress on these goals was essential. While finding perfect metrics isn’t always easy, taking the time to define them helped us clarify what truly mattered.
 
 <aside>
 
@@ -39,7 +39,7 @@ The primary goal was to improve the website’s editing workflow. During the ini
 - 10K+ add on Goodreads (5x increase)
 - 7K+ instagram followers (2x increase)
 - Lobizona top 10K on bn.com
-- Review by major publication
+- Starred review by major publication
 - 500 total newsletter subscribers
 
 </aside>
@@ -82,6 +82,49 @@ I won’t dive too deep into the technical detail of Sanity. Its a specialized p
 4. **Flexible content reuse** – Content only needs to be entered once but can appear in multiple places across the site. For example, a book’s description can show up on its individual page, in a press kit, and in a featured section without needing to be copied manually.
 5. **Future-proof scalability** – As Romina’s needs grow, the website can easily expand. Whether she wants to add new book series, integrate multimedia content, or build out an events calendar, Sanity provides a solid foundation for future updates without requiring major overhauls.
 
+## Design decisions
+
+The look and feel of Romina’s site was designed to be professional, highly usable, and accessible while reflecting her unique style. We aimed for a balance between simplicity, strong typography, and making the book covers the visual focus point.
+
+<figure>
+  {% image "./screenshot-moodboard.jpg", "A screenshot of a big grid of visual references" %}
+  <figcaption>A graphics and typography moodboard. Also included are some marketing assets.</figcaption>
+</figure>
+
+### Moodboard and Competitive Analysis
+
+To explore the visual direction, we created moodboards and conducted a competitive analysis. This helped us identify key elements like book blurbs, hero sections, and author events. Romina gravitated toward clean, easy-to-navigate layouts, which guided our design choices.
+
+### Typography
+
+We chose [Manuale](https://www.omnibus-type.com/fonts/manuale/), a typeface from Omnibus Type in Buenos Aires, designed for editorial use and long-form reading. It’s blend of contemporary and classic feel aligned with Romina’s sensibilities. The details of Manuale work great for body text and its distinctive elements add character to headlines. A fun coincidence—her *Wolves of No World* series features a main character named Manuela Azul, making this type choice even more fitting!
+
+<figure>
+  {% image "./colors-and-type.jpg", "A screenshot of color chips named and described along with examples of the fonts" %}
+  <figcaption>Colors and typography represented as a style tile.</figcaption>
+</figure>
+
+To complement Manuale, we incorporated [IBM Plex Mono](https://www.ibm.com/plex/) for UI elements like navigation and downloads. Its monospaced structure provides contrast, improving clarity and usability. We used a variable version for faster load times, styled it with small-caps, and added the dynamic color schemes.  
+
+### Color System
+
+The site’s color palette is dynamic, automatically generating schemes based on book covers. These colors are named after thematic elements like moons, blood, earth, and zodiac signs, adding a rich, narrative-driven layer to the design.. 
+
+### Wireframes and Mockups
+
+Following a structured design process, we first created grayscale wireframes to map out usability and content hierarchy before refining the visual details. This ensured a solid foundation before introducing full-color mockups.
+
+<figure>
+  {% image "./screenshot-block-wires.jpg", "A screenshot of many gray boxes and blue curvy lines connecting them" %}
+  <figcaption>Block-level wireframes help work out usability and flows without being distracted by aesthetic choices.</figcaption>
+</figure>
+
+Figma played a crucial role in managing the color themes efficiently. By updating color codes in a few key places, we maintained the color system and accessible consistent contrast ratios throughout the site.
+
+<figure>
+  {% image "./screenshot-prototype.jpg", "A screenshot of many gray boxes and blue curvy lines connecting them" %}
+  <figcaption>Block-level wireframes help work out usability and flows without being distracted by aesthetic choices.</figcaption>
+</figure>
 
 ## Collaboration
 
@@ -107,11 +150,11 @@ I don’t like to brag often, but when I do its about project management. We acc
 4. **The value of community and collaboration** – Reaching out to the Sanity developer community made a huge difference in the success of this project. Finding the right collaborator not only helped me learn but also accelerated our progress. It reinforced the idea that even in technical projects, building relationships and asking for help can be just as important as technical skills.
 5. **Content strategy is just as important as design** – At the start, it was tempting to focus on visual elements and the technical build. However, what truly made this website effective was structuring content in a way that supported Romina’s goals helping her audiences quickly find what they needed. A well-thought-out content strategy is what gives a website long-term value. 
 
-This project was an exciting mix of research, design, and technical problem-solving. The result is a flexible, scalable website that continues to serve Romina’s needs years later. Looking ahead, I’m excited to apply these lessons—especially around structured content and collaborative development—to future projects.
+This project was an exciting mix of research, design, and technical problem-solving. The result is a flexible, scalable website that continues to serve Romina’s needs years later. Looking ahead, I’m excited to apply these lessons—especially around structured content and collaborative development to future projects.
 
 ## Notes:
 
 - I didn’t get a chance to talk about some other cool features of the site like like the email template and the Netlify Forms integration that makes it easy for people to [subscribe to Romina’s newsletter.](https://rominagarber.com/newsletter/) I will save that for a future post. 
-- Some other fun work related to this project was the creation of some social media graphics, Zoom backgrounds, and printed post cards. I probably will not write about that.
-- This project was featured on the [Sanity Community Digest](https://www.sanity.io/blog/community-digest-summer-edition-part-1#12074da22be1).
+- [Sanity Community Digest](https://www.sanity.io/blog/community-digest-summer-edition-part-1#12074da22be1) - The site was a featured project in one of the first editions.
+- [Research questions are not interview questions](https://www.muledesign.com/blog/research-questions-are-not-interview-questions) from Mule Design Blog. This is an article helps explain how to get the most benefit out of user research.
 
