@@ -39,14 +39,29 @@
     src: url("/public/fonts/Newsreader-Italic.woff2") format("woff2");
   }
 
+  @font-face {
+	font-family: 'Cedar';
+	src: url('/public/fonts/Cedar_v0_3_Italics_VF.woff2') format('woff2-variations'), url('/public/fonts/Cedar_v0_3-Italics_VF.woff') format('woff-variations');
+	font-weight: 100 900;
+	font-style: italic;
+  }  
+
+  @font-face {
+	font-family: 'Cedar';
+	src: url('/public/fonts/Cedar_v0_3_Romans_VF.woff2') format('woff2-variations'), url('/public/fonts/Cedar_v0_3_Romans_VF.woff') format('woff-variations');
+	font-weight: 100 900;
+	font-style: normal;
+  }
+
 /* Defaults */
 :root {
 	/* --font-family: 'Inter var', system-ui, sans-serif; */
 	--font-family: 'Inter V', system-ui, "Segoe UI", 'Inter var', Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 	--font-family-display-serif: 'Newsreader Display Italic', serif;
+	--font-family-cedar: 'Cedar', sans-serif;
 	--font-family-serif: 'Newsreader', serif;
 	/* --font-headings: 'Inter var', system-ui, sans-serif; */
-	--font-headings: 'Inter V', system-ui, "Segoe UI", 'Inter var', Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	--font-family-headings: Impact, 'Cedar', 'Inter V', system-ui, "Segoe UI", 'Inter var', Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
 }
 
@@ -201,11 +216,13 @@ aside.currently-reading .featured-book {
 }
 aside.currently-reading .featured-book .info h3 {
 		margin: 0;
-		font-family: var(--font-family-display-serif);
+		font-family: var(--font-family-cedar);
 		font-size: var(--font-size-lg);
-		font-weight: 900;
+		font-weight: 800;
+		font-variation-settings: "wght" 750;
 		margin-block: 0 1rem;
 		font-style: italic;
+		margin-bottom: .6rem;
 }
 
 aside.currently-reading .featured-book .info {
@@ -245,20 +262,23 @@ aside.case-study-metadata div p {
 h1,
 h2,
 h3 {
-	font-family: var(--font-headings);
+	font-family: var(--font-family-cedar);
 	font-weight: 900;
-	font-variation-settings: "wght" 900;
+	font-style: normal;
+	font-variation-settings: "wght" 850;
 	line-height: 1.12;
 	text-wrap: balance;
 }
 
 h1 {
-	font-size: var(--font-size-xl);
+	font-size: var(--font-size-xxl);
 	/* margin-block-start: .4em; */
 }
 
 h2 {
 	font-size: var(--font-size-lg);
+	font-weight: 800;
+	font-variation-settings: "wght" 750;
 }
 
 h2, h3 {
@@ -279,9 +299,10 @@ strong {
 }
 
 blockquote {
-	font-family: var(--font-family-serif);
+	font-family: var(--font-family-cedar);
 	font-variation-settings: "wght" 500;
 	font-size: var(--font-size-xl);
+	font-style: italic;
 	line-height: 1.12;
 	text-align: center;
 	margin: 2rem;
@@ -440,15 +461,16 @@ section.hero h2,
 h2.post-deck {
 	margin-top: 0px;
 	max-width: 48ch;
-	/* font-size: var(--font-size-xl); */
+	font-size: var(--font-size-xl);
 	font-style: italic;
-	font-family: var(--font-family-display-serif);
+	font-family: var(--font-family-cedar);
 }
-.image-thumbnail-grid,
-.image-gallery-grid  {
-	display:grid;
-	grid-template-columns: repeat(2, 1fr);
-	margin-bottom: 2rem;
+
+@media screen and (min-width: 900px) {
+	section.hero h2,
+	h2.post-deck {
+		font-size: var(--font-size-xxl)
+	}
 }
 
 .image-gallery-grid {
@@ -503,8 +525,8 @@ ul.post-tags li {
 	}
 	section.hero h2,
 	article h2.post-deck {
-		font-size: var(--font-size-lg);
-		margin-block-end: 16vh;
+		font-size: var(--font-size-xl);
+		/* margin-block-end: 16vh; */
 	}
 	.about-page section.bio-details {
 		display: grid;
