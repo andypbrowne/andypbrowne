@@ -67,26 +67,29 @@ css: /assets/css/bookshelf.css
     {% endif %}
     <div class="case-study-metadata">
     <div>
-      <h2 class="small-caps">Summary</h2>
+      <h3 class="small-caps">Summary</h3>
       <p>{{ post.data.summary }}</p>
     </div>
     <div>
-      <h2 class="small-caps">Responsibilities</h2>
+      <h3 class="small-caps">Responsibilities</h3>
       <ul>
         {% for responsibility in post.data.responsibilities %}<li>{{ responsibility }}</li>{% endfor %}
       </ul>
     </div>
     <div>
-      <h2 class="small-caps">Key Outcomes</h2>
+      <h3 class="small-caps">Key Outcomes</h3>
       <ul>
         {% for outcome in post.data.key_outcomes %}<li>{{ outcome }}</li>{% endfor %}
       </ul>
     </div>
     </div>
+  <p style="margin-top: 1em; display: flex; justify-content: flex-end;"><a href="{{ post.url }}">Read the full writeup &rarr;</a></p>
   </div>
   {% endif %}
 {% endfor %}
 </div>
+
+
 
 </section>
 
@@ -124,6 +127,6 @@ css: /assets/css/bookshelf.css
 {% endif %}
 {% endfor -%}
 
-<p style="margin-top: 1em;">More reading on <a href="/bookshelf/">the bookshelf &rarr;</a></p>
+<p style="margin-top: 1em;"><a href="/bookshelf/">More reading on the bookshelf &rarr;</a></p>
 
 </aside>

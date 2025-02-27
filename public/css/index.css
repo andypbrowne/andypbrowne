@@ -261,6 +261,7 @@ aside.case-study-metadata h2,
 	font-size: var(--font-size-md);
 	color: var(--color-midnight-60);
 	margin-block-start: 0px;
+	padding-block-start: 0px;
 }
 
 aside.case-study-metadata div p,
@@ -514,6 +515,12 @@ section.featured-case-study .featured-case-study-image img {
 	margin-block-start: 2rem;
 }
 
+.featured-case-study-content h3 {
+	margin-block-start: 0px;
+	font-size: var(--font-size-md);
+	color: var(--color-midnight-60)
+}
+
 @media screen and (min-width: 650px) {
 	section.featured-case-study {
 		display: grid;
@@ -526,7 +533,8 @@ section.featured-case-study .featured-case-study-image img {
 		border-radius: var(--border-radius) 0 0 var(--border-radius);
 	}
 	.featured-case-study-content {
-		padding-inline: 0px;
+		padding-inline: 0px 2rem;
+	
 	}
 }
 

@@ -24,7 +24,7 @@ key_outcomes:
 
 <figure>
   {% image "./hero-light.jpg", "A hero image of a female character with glowing star shaped eyes, detail of book information, and a grid of colors" %}
-  <figcaption>Romina's website takes advantage of beautiful book cover illustrations</figcaption>
+  <figcaption>Romina's website takes advantage of beautiful book cover illustrations. The book Lobizona features art by Daria Hlazatova.</figcaption>
 </figure>
 
 Author Romina Garber needed a new website to support the launch of her new book series, *Wolves of No World*. Her existing WordPress site was outdated and made content updates difficult. Romina had a clear vision: she needed a more intuitive platform and a more professional website to promote her work effectively. 
@@ -79,7 +79,7 @@ I won’t dive too deep into the technical detail of Sanity. Its a specialized p
 2. **Customizable features** – We can implement unique, editable elements. For example, Romina’s site automatically applies color themes sampled from her book covers, ensuring a cohesive visual identity across the site.
 3. **Scalability** – The website hosts over 37 reviews and 89 press entries, all easily managed. Romina can control how many appear on the site and where they’re displayed, making the website a true content hub.
 4. **Flexible content reuse** – Content only needs to be entered once but can appear in multiple places across the site. For example, a book’s description can show up on its individual page, in a press kit, and in a featured section without needing to be copied manually.
-5. **Future-proof scalability** – As Romina’s needs grow, the website can easily expand. Whether she wants to add new book series, integrate multimedia content, or build out an events calendar, Sanity provides a solid foundation for future updates without requiring major overhauls.
+5. **Future-proof** – As Romina’s needs grow, the website can easily expand. Whether she wants to add new book series, integrate multimedia content, or build out an events calendar, Sanity provides a solid foundation for future updates without requiring major overhauls.
 
 ## Design decisions
 
