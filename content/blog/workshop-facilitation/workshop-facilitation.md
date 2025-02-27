@@ -8,7 +8,6 @@ tags:
   - case study
   - post
   - ux
-  - featured
 draft: false
 summary: A writeup about workshops to help corporate teams build vision statements and generate product ideas. Participants shared insights through creative storytelling with LEGO® bricks.
 responsibilities:
