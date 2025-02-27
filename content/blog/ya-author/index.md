@@ -7,7 +7,6 @@ date: 2025-02-08
 tags:
   - case study
   - post
-  - featured
 draft: false
 summary: Redesign of a website and improved editing experience for an author of Young Adult books.
 responsibilities:

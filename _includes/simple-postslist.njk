@@ -2,7 +2,7 @@
 {% for post in postslist | reverse %}
   {% if not post.data.rss_only %}
 	<li class="postlist-item {% if post.url == url %} postlist-item-active{% endif %}">
-		{% if 'featured' in post.data.tags %}
+		{% if 'featured' in post.data.tags or 'case study' in post.data.tags %}
 		{% if post.data.thumbnail %}
 		<a href="{{ post.url }}">
 			{% image post.data.thumbnail, post.data.thumbnailAlt %}
