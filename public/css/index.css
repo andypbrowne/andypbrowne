@@ -208,12 +208,16 @@ aside h3 {
 	margin-top: 0px;
 }
 
+aside.currently-reading h2 {
+	font-size: var(--font-size-md);
+}
+
 aside.currently-reading .featured-book {
 	display: flex;
 	flex-direction: column;
 	gap: 1rem;
 	margin-block-start: 1.6rem;
-	font-family: var(--font-family-serif);
+	font-family: var(--font-family-sans-serif);
 }
 aside.currently-reading .featured-book .info h3 {
 		margin: 0;
@@ -228,7 +232,8 @@ aside.currently-reading .featured-book .info h3 {
 
 aside.currently-reading .featured-book .info {
 	max-width: 50ch;
-	font-family: var(--font-family-serif);
+	text-wrap: pretty;
+	/* font-family: var(--font-family-serif); */
 }
 
 @media screen and (min-width: 650px) {
