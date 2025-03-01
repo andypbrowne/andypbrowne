@@ -8,7 +8,6 @@ tags:
   - case study
   - ux
   - post
-  - featured
 draft: false
 summary: A community-driven project designed to help researchers and research operations specialists find, evaluate, and compare research tools across industries and team sizes. By offering tool audits and data-driven analyses, the project streamlines the selection process, saving researchers valuable time.
 responsibilities:

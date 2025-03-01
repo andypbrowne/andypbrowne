@@ -13,12 +13,12 @@ eleventyExcludeFromCollection.posts: true
 css: /assets/css/favorite-things.css
 ---
 
+I have a Duolingo streak of 1,036 days (at time of writing) and I am not learning Spanish. This feels like a bit of a personal failure because I have been studying for about 30 years! I am even married to a native Spanish speaker. Perhaps writing about this will give me the resolve to finally become fluent.
+
 <figure class="sketch">
   {% image "./duo.png", "{{thumbnailAlt}}" %}
 <figcaption></figcaption>
 </figure>
-
-I have a Duolingo streak of 1,036 days (at time of writing) and I am not learning Spanish. This feels like a bit of a personal failure because I have been studying for about 30 years! I am even married to a native Spanish speaker. Perhaps writing about this will give me the resolve to finally become fluent.
 
 There is a lot of criticism online that Duolingo is not actually that great for language learning. This is about over-gamification, limited control over lesson content, and limited speaking practice. Personally I’m really addicted to that gamified experience. My vocabulary and listening skills are better because of the consistent daily practice. I just have a lot of trouble verbalizing the things I want to say in conversation. 
 

@@ -8,7 +8,6 @@ tags:
   - case study
   - post
   - ux
-  - featured
 draft: false
 summary: A writeup about workshops to help corporate teams build vision statements and generate product ideas. Participants shared insights through creative storytelling with LEGO® bricks.
 responsibilities:
@@ -21,11 +20,6 @@ key_outcomes:
 ---
 
 {% include "_includes/components/case-study-metadata.njk" %}
-
-<figure>
-  {% image "./lsp04.jpg", "Alternative text" %}
-<figcaption>LEGO® SERIOUSPLAY® uses special sets of neutral bricks because themed bricks may carry too much meaning</figcaption>
-</figure>
 
 In the second half of 2018, my colleagues and I played with LEGO® bricks in a corporate setting for a total of 16 hours. Many were open to the idea because they thought it would be fun and make for good team building. What they did not expect was to come out of the sessions with a team vision, mission statements, and new product ideas.  
 
@@ -53,13 +47,13 @@ These cards have proved so productive that we have started using them in all typ
 
 There are 3 LSP skills and 4 fundamentals that a facilitator must instill in the workshop. Even if participants have done LSP before, it is important to review this etiquette.
 
-### Skills
+## Skills
 
 - **Technical** - being physically comfortable manipulating the bricks
 - **Metaphor** - assigning meaning to every brick in the models
 - **Storytelling** - telling the story of the model from beginning to end
 
-### Fundamentals
+## Fundamentals
 
 1. **Enable the 3 modes of communication** - Basically these are steps 2-4 of this list. These modes are frequently called Interpersonal, Interpretive, and Presentational. Speakers can communicate more fully and uncover unexpected parts of their ideas. They do this by articulating the models and describing them from different perspectives. 
 2. **Telling the story of the model** - Everyone is curious about each other’s models and what they mean. This fosters shared understanding. Storytelling is a sought-after proficiency in the business world, LSP makes it accessible.
@@ -77,13 +71,13 @@ A really well facilitated LSP workshop will seem effortless to the participants.
 The builds last between 30 seconds to 5 minutes and go really well when upbeat music is playing. I did not want to be responsible for the playlist choices during a 4 hour plus workshop, so we found a [Spotify playlist](https://open.spotify.com/playlist/1bzQjDPyqp7VI7HtwtSJjN) with a prescribed set of in-offensive and upbeat music with just enough personality to inspire the builds. Providing for-warning that the playlist was pre-selected by LSP professionals stops most discussion about the music choices. 
 
 
-### For further information:
+## For further information:
 
 [https://www.lego.com/hu-hu/seriousplay](https://www.lego.com/hu-hu/seriousplay) 
 
 [https://serious.global](https://serious.global) <sup>[3]</sup> 
 
-### Footnotes:
+## Footnotes:
 
 [1]: An onsite as apposed to an offsite is similar in that it is full days of strategy and team activities, but in this case it is just held in a corporate conference room. The advantage is that it is easy to coordinate. The dissadvantage is that participants are more likely to be distracted or take the session less seriously.
 

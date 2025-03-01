@@ -22,7 +22,7 @@ css: /assets/css/bookshelf.css
 </div>
 </section>
 
-<section>
+<section class="featured-posts">
 
 {% set postsCount = collections.posts | length %}
 {% set latestPostsCount = postsCount | min(6) %}
@@ -39,6 +39,57 @@ css: /assets/css/bookshelf.css
 {% endif %}
 
 </div>
+
+</section>
+
+<section class="featured-case-study">
+
+  {% set postslist = collections.posts | head(-5) %}
+  {% set postslistCounter = postsCount %}
+  {% for post in postslist | reverse %}
+  {% if 'case study' in post.data.tags %}
+	<div class="featured-case-study-image">
+    {% if post.data.thumbnail %}
+		<a href="{{ post.url }}">
+			{% image post.data.thumbnail, post.data.thumbnailAlt %}
+		</a>
+		{% endif %}
+  </div>
+  <div class="featured-case-study-content">
+		<a href="{{ post.url }}" class="postlist-link">
+			{% if post.data.title %}
+			<h2>{{ post.data.title }}</h2>
+			{% else %}
+			<code>{{ post.url }}</code>
+			{% endif %}</a>
+		{% if post.data.description %}
+			<p style="font-size: var(--font-size-md); font-family: var(--font-family-cedar); font-style: italic; font-weight: 650;">{{ post.data.description }}</p>
+    {% endif %}
+    <div class="case-study-metadata">
+    <div>
+      <h3 class="small-caps">Summary</h3>
+      <p>{{ post.data.summary }}</p>
+    </div>
+    <div>
+      <h3 class="small-caps">Responsibilities</h3>
+      <ul>
+        {% for responsibility in post.data.responsibilities %}<li>{{ responsibility }}</li>{% endfor %}
+      </ul>
+    </div>
+    <div>
+      <h3 class="small-caps">Key Outcomes</h3>
+      <ul>
+        {% for outcome in post.data.key_outcomes %}<li>{{ outcome }}</li>{% endfor %}
+      </ul>
+    </div>
+    </div>
+  <p style="margin-top: 1em; display: flex; justify-content: flex-end;"><a href="{{ post.url }}">Read the full writeup &rarr;</a></p>
+  </div>
+  {% endif %}
+{% endfor %}
+</div>
+
+
 
 </section>
 
@@ -76,6 +127,6 @@ css: /assets/css/bookshelf.css
 {% endif %}
 {% endfor -%}
 
-<p style="margin-top: 1em;">More reading on <a href="/bookshelf/">the bookshelf &rarr;</a></p>
+<p style="margin-top: 1em;"><a href="/bookshelf/">More reading on the bookshelf &rarr;</a></p>
 
 </aside>

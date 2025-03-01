@@ -9,14 +9,15 @@ tags:
   - featured
 draft: false
 ---
-<figure>
-  {% image "./cm-nametags.jpg", "4 nametags that answer various icebreaker questions like what I'm looking for with an answer: Art Box" %}
-<figcaption>My nametage icebreaker answers are a little cringe</figcaption>
-</figure>
 
 Ask me my favorite thing to do in the city. I will tell you to come with me to Creative Mornings (CM). This is a monthly breakfast meetup and a community for creative people. It's also for everyone; [read their manifesto](https://creativemornings.com/pages/manifesto). As of the time of writing, CM has over 244 global chapters and has been running since 2008.
 
 Personally, I’ve attended 15 talks since my first one in 2015. Their top-class website keeps track for you! I regret that I’ve never attended one outside my own city. I just never seem to be visiting places like Miami at exactly the right time of the month. I will say, that CM is something worth getting up early for – even when on vacation! So I still plan on visiting in more cities.
+
+<figure>
+  {% image "./cm-nametags.jpg", "4 nametags that answer various icebreaker questions like what I'm looking for with an answer: Art Box" %}
+<figcaption>My nametage icebreaker answers are a little cringe</figcaption>
+</figure>
 
 ## Memorable Talks
 

@@ -39,14 +39,29 @@
     src: url("/public/fonts/Newsreader-Italic.woff2") format("woff2");
   }
 
+  @font-face {
+	font-family: 'Cedar';
+	src: url('/public/fonts/Cedar_v0_3_Italics_VF.woff2') format('woff2-variations'), url('/public/fonts/Cedar_v0_3-Italics_VF.woff') format('woff-variations');
+	font-weight: 100 900;
+	font-style: italic;
+  }  
+
+  @font-face {
+	font-family: 'Cedar';
+	src: url('/public/fonts/Cedar_v0_3_Romans_VF.woff2') format('woff2-variations'), url('/public/fonts/Cedar_v0_3_Romans_VF.woff') format('woff-variations');
+	font-weight: 100 900;
+	font-style: normal;
+  }
+
 /* Defaults */
 :root {
 	/* --font-family: 'Inter var', system-ui, sans-serif; */
 	--font-family: 'Inter V', system-ui, "Segoe UI", 'Inter var', Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 	--font-family-display-serif: 'Newsreader Display Italic', serif;
+	--font-family-cedar: 'Cedar', sans-serif;
 	--font-family-serif: 'Newsreader', serif;
 	/* --font-headings: 'Inter var', system-ui, sans-serif; */
-	--font-headings: 'Inter V', system-ui, "Segoe UI", 'Inter var', Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	--font-family-headings: Impact, 'Cedar', 'Inter V', system-ui, "Segoe UI", 'Inter var', Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
 }
 
@@ -127,6 +142,10 @@
 	box-sizing: border-box;
 }
 
+@view-transition {
+	navigation: auto;
+}
+
 html,
 body {
 	padding: 0;
@@ -156,7 +175,8 @@ article {
 
 article p:first-of-type::first-letter {
 	float: left;
-	font-size: 6.4rem;
+	font-family: var(--font-family-cedar);
+	font-size: 6.2rem;
 	font-weight: 900;
 	line-height: 0.65;
 	margin: 0.1em 0.1em 0.1em 0;
@@ -173,6 +193,11 @@ article aside p:first-of-type::first-letter {
 article h1 {
 	text-align:center;
 	font-size: var(--font-size-xxxl);
+	margin-block: 0px;
+}
+
+article h2 {
+	margin-block-start: 4rem;
 }
 
 div.end-mark {
@@ -192,25 +217,32 @@ aside h3 {
 	margin-top: 0px;
 }
 
+aside.currently-reading h2 {
+	font-size: var(--font-size-md);
+}
+
 aside.currently-reading .featured-book {
 	display: flex;
 	flex-direction: column;
 	gap: 1rem;
 	margin-block-start: 1.6rem;
-	font-family: var(--font-family-serif);
+	font-family: var(--font-family-sans-serif);
 }
 aside.currently-reading .featured-book .info h3 {
 		margin: 0;
-		font-family: var(--font-family-display-serif);
+		font-family: var(--font-family-cedar);
 		font-size: var(--font-size-lg);
-		font-weight: 900;
+		font-weight: 800;
+		font-variation-settings: "wght" 750;
 		margin-block: 0 1rem;
 		font-style: italic;
+		margin-bottom: .6rem;
 }
 
 aside.currently-reading .featured-book .info {
 	max-width: 50ch;
-	font-family: var(--font-family-serif);
+	text-wrap: pretty;
+	/* font-family: var(--font-family-serif); */
 }
 
 @media screen and (min-width: 650px) {
@@ -223,42 +255,55 @@ aside.currently-reading .featured-book .info {
 	}
 }
 
-aside.case-study-metadata {
+aside.case-study-metadata,
+.case-study-metadata {
 	display: flex;
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 	justify-content: space-between;
 	gap: 1rem;
 	font-size: var(--font-size-sm);
+	margin-bottom: 6rem;
 }
 
-aside.case-study-metadata h2 {
+aside.case-study-metadata h2,
+.case-study-metadata h2 {
 	font-size: var(--font-size-md);
 	color: var(--color-midnight-60);
+	margin-block-start: 0px;
+	padding-block-start: 0px;
 }
 
-aside.case-study-metadata div p {
+aside.case-study-metadata div p,
+.case-study-metadata div p {
 	margin: 0;
 	text-wrap: pretty;
+}
+
+.case-study-metadata div ul {
+	margin-bottom: 0px;
 }
 
 h1,
 h2,
 h3 {
-	font-family: var(--font-headings);
+	font-family: var(--font-family-cedar);
 	font-weight: 900;
-	font-variation-settings: "wght" 900;
+	font-style: normal;
+	font-variation-settings: "wght" 850;
 	line-height: 1.12;
 	text-wrap: balance;
 }
 
 h1 {
-	font-size: var(--font-size-xl);
+	font-size: var(--font-size-xxl);
 	/* margin-block-start: .4em; */
 }
 
 h2 {
 	font-size: var(--font-size-lg);
+	font-weight: 800;
+	font-variation-settings: "wght" 750;
 }
 
 h2, h3 {
@@ -279,9 +324,10 @@ strong {
 }
 
 blockquote {
-	font-family: var(--font-family-serif);
+	font-family: var(--font-family-cedar);
 	font-variation-settings: "wght" 500;
 	font-size: var(--font-size-xl);
+	font-style: italic;
 	line-height: 1.12;
 	text-align: center;
 	margin: 2rem;
@@ -405,7 +451,7 @@ article h2.post-deck {
 	color: #989898;
 	text-align: center;
 	margin: 2.4rem auto 2.2rem;
-	margin-block-end: 16vh;
+	/* margin-block-end: 16vh; */
 }
 
 span.text-italic {
@@ -440,15 +486,70 @@ section.hero h2,
 h2.post-deck {
 	margin-top: 0px;
 	max-width: 48ch;
-	/* font-size: var(--font-size-xl); */
+	font-size: var(--font-size-xl);
 	font-style: italic;
-	font-family: var(--font-family-display-serif);
+	font-family: var(--font-family-cedar);
 }
-.image-thumbnail-grid,
-.image-gallery-grid  {
-	display:grid;
-	grid-template-columns: repeat(2, 1fr);
-	margin-bottom: 2rem;
+
+@media screen and (min-width: 900px) {
+	section.hero h2,
+	h2.post-deck {
+		font-size: var(--font-size-xxl)
+	}
+}
+
+section.hero,
+section.featured-posts,
+section.featured-case-study {
+	margin-block-end: 6rem;
+}
+
+section.featured-case-study {
+	display: flex;
+	flex-direction: column;
+	border-radius: var(--border-radius);
+}
+
+section.featured-case-study .featured-case-study-image img {
+	object-fit: cover;
+	height: 12rem;
+	border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+.featured-case-study-content {
+	padding-block-end: 2rem;
+	padding-inline: 1rem;
+}
+
+.featured-case-study-content h2:first-of-type {
+	margin-block-start: 2rem;
+}
+
+.featured-case-study-content h3 {
+	margin-block-start: 0px;
+	font-size: var(--font-size-md);
+	color: var(--color-midnight-60)
+}
+
+@media screen and (min-width: 650px) {
+	section.featured-case-study {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 2rem;
+	}
+	section.featured-case-study .featured-case-study-image img {
+		height: 100%;
+		width: 100%;
+		border-radius: var(--border-radius) 0 0 var(--border-radius);
+	}
+	.featured-case-study-content {
+		padding-inline: 0px 2rem;
+	
+	}
+}
+
+section.featured-case-study {
+	background-color: var(--color-aside)
 }
 
 .image-gallery-grid {
@@ -465,6 +566,44 @@ section.hero .hero-details {
 
 section.hero .hero-details {
 	max-width: 60ch;
+}
+
+article header.post-header {
+	margin-block-end: 6rem;
+}
+
+
+
+article header.post-header {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 2rem;
+}
+
+article header.post-titles {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+@media screen and (min-width: 900px) {
+	article header.post-header {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media screen and (min-width: 1380px) {
+	article header.post-header,
+	article.case-study-metadata {
+		margin-inline: -8rem;
+	}
+}
+
+/* view transitions */
+
+@media not (prefers-reduced-motion: reduce) {
+	article header.post-header { view-transition-name: post-header;}
+	.featured-case-study { view-transition-name: post-header;}
 }
 
 .postlist-container {
@@ -503,8 +642,8 @@ ul.post-tags li {
 	}
 	section.hero h2,
 	article h2.post-deck {
-		font-size: var(--font-size-lg);
-		margin-block-end: 16vh;
+		font-size: var(--font-size-xl);
+		/* margin-block-end: 16vh; */
 	}
 	.about-page section.bio-details {
 		display: grid;
@@ -644,6 +783,7 @@ section.archive {
 	.featured-post-grid ol li.postlist-item {
 		min-width: auto;
 		scroll-snap-align: none;
+		padding-inline-start: 0px;
 	}
 	.featured-post-grid ol li.postlist-item:last-child {
 		margin-inline-end: 0px;
@@ -899,6 +1039,7 @@ footer .footer-links {
 .postlist-item:before,
 .post-number {
 	font-size: var(--font-size-base);
+	font-family: var(--font-family-cedar);
 	color: var(--text-color);
 	font-weight: 650;
 	opacity: .8;
@@ -915,7 +1056,8 @@ article time.postlist-date,
 	line-height: inherit;
 	display: block;
 	text-align: center;
-	margin-top: 16vh;
+	margin-top: 8vh;
+	margin-bottom: 1rem;
 }
 
 .post-number {
