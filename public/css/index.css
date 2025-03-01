@@ -196,6 +196,10 @@ article h1 {
 	margin-block: 0px;
 }
 
+article h2 {
+	margin-block-start: 4rem;
+}
+
 div.end-mark {
 	text-align: center;
 }
@@ -259,6 +263,7 @@ aside.case-study-metadata,
 	justify-content: space-between;
 	gap: 1rem;
 	font-size: var(--font-size-sm);
+	margin-bottom: 6rem;
 }
 
 aside.case-study-metadata h2,
@@ -588,7 +593,8 @@ article header.post-titles {
 }
 
 @media screen and (min-width: 1380px) {
-	article header.post-header {
+	article header.post-header,
+	article.case-study-metadata {
 		margin-inline: -8rem;
 	}
 }

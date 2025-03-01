@@ -8,14 +8,15 @@ tags:
   - post
   - featured
 ---
+
+In no particular order here are some descriptions of the stickers on my laptop. I enjoy the aesthetics of the stickers – but what I enjoy mostly is the reminder of what they represent. Here is some of that background listed from left to right and top-to-bottom. Show us your stickers too and as the great designer Aaron Draplin would say &ldquo;Don&rsquo;t be precious about your stickers, if you have a sticker, stick it!&rdquo;
+
 <figure>
   {% image "./Personal-2018-Present.jpg", "{{ thumbnailAlt }}" %}
   <figcaption>
     This is the current surface of a laptop I bought in 2018
   </figcaption>
 </figure>
-
-In no particular order here are some descriptions of the stickers on my laptop. I enjoy the aesthetics of the stickers – but what I enjoy mostly is the reminder of what they represent. Here is some of that background listed from left to right and top-to-bottom. Show us your stickers too and as the great designer Aaron Draplin would say &ldquo;Don&rsquo;t be precious about your stickers, if you have a sticker, stick it!&rdquo;
 
 <figure class="stamp">
   {% image "./Personal-2018-Present-minimap.png", "A number map of the first image in a sequence that goes from left to right and top to bottom" %}

@@ -9,12 +9,12 @@ tags:
   - featured
 ---
 
+In early 2006 the Army stationed me in the Mojave Desert. I worked at Fort Irwin and lived in Barstow(1), California. For those folks who never lived out west, you have to know that everything is bigger out there. I’m writing about the couple of years I spent there because I want to share what it felt like to drive through those big spaces, go rock climbing in the desert, and to share how those extremes shaped who I am.
+
 <figure>
   {% image "./njc-rocks.jpg", "Alternative text" %}
 <figcaption>Photo of New Jack City by blmcalifornia https://www.flickr.com/photos/blmcalifornia/33079464825 </figcaption>
 </figure>
-
-In early 2006 the Army stationed me in the Mojave Desert. I worked at Fort Irwin and lived in Barstow(1), California. For those folks who never lived out west, you have to know that everything is bigger out there. I’m writing about the couple of years I spent there because I want to share what it felt like to drive through those big spaces, go rock climbing in the desert, and to share how those extremes shaped who I am.
 
 ## The Drive
 

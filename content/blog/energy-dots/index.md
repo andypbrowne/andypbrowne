@@ -11,12 +11,13 @@ tags:
 draft: false
 css: /assets/css/favorite-things.css
 ---
+
+There is a user experience facilitation method called dot voting. I don’t think it gets enough use and its benefits are glorious and mysterious. There are only a few simple things we will do to make it work.
+
 <figure class="sketch">
   {% image "./energy-dot.png", "Alternative text" %}
 <figcaption>A voted on group of abstract symbols from the book Symbol by Angus Hyland and Steven Bateman. The shapes above are selections from that book and drawn in Figma.</figcaption>
 </figure>
-
-There is a user experience facilitation method called dot voting. I don’t think it gets enough use and its benefits are glorious and mysterious. There are only a few simple things we will do to make it work.
 
 **You will need**:
 

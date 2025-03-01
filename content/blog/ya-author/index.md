@@ -22,14 +22,14 @@ key_outcomes:
 
 {% include "_includes/components/case-study-metadata.njk" %}
 
+Author Romina Garber needed a new website to support the launch of her new book series, *Wolves of No World*. Her existing WordPress site was outdated and made content updates difficult. Romina had a clear vision: she needed a more intuitive platform and a more professional website to promote her work effectively. 
+
+The primary goal was to improve the website’s editing workflow. During the initial design discovery we also identified an opportunity to reach additional audiences like publicists, literary agents, bookstagrammers, and video bloggers. By focusing on these groups, we could refine the website’s content strategy to better align with their needs and Romina’s business goals. Measuring progress on these goals was essential. While finding perfect metrics isn’t always easy, taking the time to define them helped us clarify what truly mattered.
+
 <figure>
   {% image "./hero-light.jpg", "A hero image of a female character with glowing star shaped eyes, detail of book information, and a grid of colors" %}
   <figcaption>Romina's website takes advantage of beautiful book cover illustrations. The book Lobizona features art by Daria Hlazatova.</figcaption>
 </figure>
-
-Author Romina Garber needed a new website to support the launch of her new book series, *Wolves of No World*. Her existing WordPress site was outdated and made content updates difficult. Romina had a clear vision: she needed a more intuitive platform and a more professional website to promote her work effectively. 
-
-The primary goal was to improve the website’s editing workflow. During the initial design discovery we also identified an opportunity to reach additional audiences like publicists, literary agents, bookstagrammers, and video bloggers. By focusing on these groups, we could refine the website’s content strategy to better align with their needs and Romina’s business goals. Measuring progress on these goals was essential. While finding perfect metrics isn’t always easy, taking the time to define them helped us clarify what truly mattered.
 
 <aside>
 
