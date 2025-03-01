@@ -142,6 +142,10 @@
 	box-sizing: border-box;
 }
 
+@view-transition {
+	navigation: auto;
+}
+
 html,
 body {
 	padding: 0;
@@ -189,6 +193,7 @@ article aside p:first-of-type::first-letter {
 article h1 {
 	text-align:center;
 	font-size: var(--font-size-xxxl);
+	margin-block: 0px;
 }
 
 div.end-mark {
@@ -441,7 +446,7 @@ article h2.post-deck {
 	color: #989898;
 	text-align: center;
 	margin: 2.4rem auto 2.2rem;
-	margin-block-end: 16vh;
+	/* margin-block-end: 16vh; */
 }
 
 span.text-italic {
@@ -556,6 +561,43 @@ section.hero .hero-details {
 
 section.hero .hero-details {
 	max-width: 60ch;
+}
+
+article header.post-header {
+	margin-block-end: 6rem;
+}
+
+
+
+article header.post-header {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 2rem;
+}
+
+article header.post-titles {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+@media screen and (min-width: 900px) {
+	article header.post-header {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media screen and (min-width: 1380px) {
+	article header.post-header {
+		margin-inline: -8rem;
+	}
+}
+
+/* view transitions */
+
+@media not (prefers-reduced-motion: reduce) {
+	article header.post-header { view-transition-name: post-header;}
+	.featured-case-study { view-transition-name: post-header;}
 }
 
 .postlist-container {
@@ -1008,7 +1050,8 @@ article time.postlist-date,
 	line-height: inherit;
 	display: block;
 	text-align: center;
-	margin-top: 16vh;
+	margin-top: 8vh;
+	margin-bottom: 1rem;
 }
 
 .post-number {

@@ -16,8 +16,8 @@ responsibilities:
   - Project Management
 key_outcomes:
   - Enhanced editor workflow
-  - Positive user feedback
-  - Measured website goals
+  - Engaged key audiences
+  - Support future growth
 ---
 
 {% include "_includes/components/case-study-metadata.njk" %}

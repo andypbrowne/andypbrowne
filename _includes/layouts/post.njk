@@ -10,9 +10,19 @@ layout: layouts/base.njk
 <div class="post-number">Favorite thing № {{ number }}</div>
 {% endif %}
 
-<h1>{{ title }}</h1>
+<header class="post-header">
+<figure>
+	<img src="../../{{ thumbnail }}", alt="{{ thumbnailAlt }}"/>
+</figure>
 
-<h2 class="post-deck text-gradient">{{description}}</h2>
+<div class="post-titles">
+	<h1>{{ title }}</h1>
+	<h2 class="post-deck text-gradient">{{description}}</h2>
+</div>
+
+</header>
+
+
 
 {# <ul class="post-metadata">
 	<li><time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time></li>
