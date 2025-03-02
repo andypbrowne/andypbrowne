@@ -1,5 +1,4 @@
-img,
-figure {
+img.custom-size-image {
 	width: auto;
 	height: 5rem;
 	/* max-width: 100%; */
