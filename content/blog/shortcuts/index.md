@@ -58,6 +58,10 @@ resources:
     result: …
     action: Ellipsis
     shortcut: '<kbd><kbd>Option</kbd> + <kbd>;</kbd></kbd>'
+  - category: Typography
+    result: é
+    action: Enter character with accent marks
+    shortcut: '<kbd><kbd>Option</kbd> + <kbd>e</kbd> then <kbd>e</kbd></kbd>'
   - category: Accessibility
     result: ♿
     action: Open VoiceOver [^1]
@@ -196,6 +200,7 @@ margin-block-end: 3rem;"> {% for resource in resources %}
 - [Raycast Quicklinks](https://www.raycast.com/core-features/quicklinks) - Open frequently used paths, files, and URLs
 - [Arc Browser Keyboard Shortcuts](https://resources.arc.net/hc/en-us/articles/20595231349911-Keyboard-Shortcuts)
 - [Figma Keyboard Shortcuts](https://help.figma.com/hc/en-us/articles/360040328653-Keyboard-shortcuts-in-Figma)
+- [Enter character with accent marks on a Mac](https://support.apple.com/guide/mac-help/enter-characters-with-accent-marks-on-mac-mh27474/mac)
 - Todo: Add VS Code shortcuts
 
 
