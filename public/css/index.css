@@ -1155,7 +1155,7 @@ h2 + .header-anchor {
 	text-align: center; 
 }
 
-/* recipie styles */
+/* recipe styles that are very specific to recipes*/
 
 ul.ingredients-list {
 	list-style-type: none;

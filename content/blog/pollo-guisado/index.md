@@ -27,7 +27,7 @@ ingredients:
 
 {% include "_includes/components/ingredient-list.njk" %}
 
-Pollo Guisado is a flavorful braised chicken stew popular in the Caribbean, Central, and South America. It’s a one-pot dish that simmers slowly, allowing the chicken to become tender while absorbing the rich, seasoned broth. Perfect for a comforting weeknight meal, this dish is best prepared in a cast iron or heavy-bottomed pot to lock in heat and deepen the flavors. 
+Pollo Guisado is a flavorful braised chicken stew popular in the Caribbean, Central, and South America. It’s a one-pot dish that simmers slowly, allowing the chicken to become tender while absorbing the rich, seasoned broth. Perfect for a comforting weeknight meal, this dish is best prepared in a cast iron or heavy-bottomed pot to lock in heat and deepen the flavors.
 
 This recipe serves about 4–6 people and pairs perfectly with rice to soak up the savory sauce. If you’re short on time, marinate the chicken earlier in the day or even overnight to enhance the flavor. 
 
