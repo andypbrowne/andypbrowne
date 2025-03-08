@@ -210,6 +210,7 @@ aside {
 	margin-bottom: 2rem;
 	padding: 1.2rem 1rem 1.8rem;
 	border-radius: var(--border-radius);
+	height: fit-content;
 }
 
 aside h2,
@@ -1157,3 +1158,112 @@ h2 + .header-anchor {
 	display: block;
 	text-align: center; 
 }
+
+/* recipie styles */
+
+ul.ingredients-list {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+  
+  /* Custom checkbox style */
+  ul.ingredients-list li input[type="checkbox"] {
+	width: 20px;
+	height: 20px;
+	border: 2px solid var(--color-primary);
+	border-radius: 4px;
+	margin-right: 0.5rem;
+	position: relative;
+	cursor: pointer;
+  }
+  
+  ul.ingredients-list li input[type="checkbox"]:checked {
+	background-color: var(--color-midnight-80);
+	border-color: var(--color-midnight-60);
+  }
+  
+  ul.ingredients-list li input[type="checkbox"]:checked::after {
+	content: '';
+	position: absolute;
+	top: 2px;
+	left: 6px;
+	width: 6px;
+	height: 12px;
+	border: solid white;
+	border-width: 0 2px 2px 0;
+	transform: rotate(45deg);
+  }
+
+  /* Style for the preparation steps */
+.preparation-list {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 1rem;
+}
+.preparation-list aside {
+	height: fit-content;
+	margin-bottom: 0px;
+}
+
+.preparation-list ol {
+	margin-block-start: 2rem;
+  }
+  
+  .preparation-list ol li {
+	margin-bottom: 1.8rem;
+	counter-increment: step-counter;
+	position: relative;
+	padding-left: 0px;
+  }
+  
+  .preparation-list ol li::before {
+	content: counter(step-counter);
+	color: var(--color-primary);
+  }
+
+@media screen and (min-width: 650px) {
+	.preparation-list {
+		grid-template-columns: 1fr 1fr;
+	} 
+	.preparation-list aside {
+		grid-column: 2 / 3;
+		grid-row: 1;
+	}
+	.preparation-list ol {
+		grid-column: 1 / 2;
+		grid-row: 1;
+		margin-block-start: 0px;
+	}
+}
+
+.preparation-list aside ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+div.preparation-list ol{
+	margin-block-start: 2rem;
+	margin-block-end: 4rem;
+	padding-left: 0px;
+	list-style-type: none;
+	counter-reset: step-counter;
+	max-width: 48ch;
+	border-bottom: 1px solid var(--subtle-border);
+  }
+  
+  .preparation-list ol li {
+	margin-bottom: 1.8rem;
+	counter-increment: step-counter;
+	position: relative;
+	padding-left: 0px;
+  }
+  
+  .preparation-list ol li::before {
+	content: "Step " counter(step-counter);
+	font-weight: bold;
+	display: block;
+	margin-bottom: 0.2rem;
+	color: var(--color-primary);
+  }
