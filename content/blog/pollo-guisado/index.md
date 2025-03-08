@@ -2,8 +2,8 @@
 title: Pollo Guisado
 description: A one-pot comfort dish
 thumbnail: assets/images/thumb-puerto-Rican-Chicken-and-Rice-square2.jpg
-thumbnailAlt: Just a placeholder image that says FPO which means for  
-date: 2025-03-09
+thumbnailAlt: A plate of rice, chicken, green olives are visible 
+date: 2025-03-08
 tags:
   - recipe
   - post

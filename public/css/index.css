@@ -1204,6 +1204,7 @@ ul.ingredients-list {
 .preparation-list aside {
 	height: fit-content;
 	margin-bottom: 0px;
+	font-size: smaller;
 }
 
 .preparation-list ol {
@@ -1215,6 +1216,7 @@ ul.ingredients-list {
 	counter-increment: step-counter;
 	position: relative;
 	padding-left: 0px;
+	text-wrap: pretty;
   }
   
   .preparation-list ol li::before {
@@ -1224,7 +1226,7 @@ ul.ingredients-list {
 
 @media screen and (min-width: 650px) {
 	.preparation-list {
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: 60% 40%;
 	} 
 	.preparation-list aside {
 		grid-column: 2 / 3;
