@@ -8,7 +8,7 @@ tags:
   - recipe
   - post
   - featured
-draft: true
+draft: false
 ingredients:
   - 4 skinless chicken drumsticks, on the bone, 14 oz total
   - 4 skinless chicken thighs, on the bone, trimmed, 20 ounces
