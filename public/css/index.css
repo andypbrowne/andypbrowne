@@ -518,8 +518,7 @@ section.featured-case-study .featured-case-study-image img {
 }
 
 .featured-case-study-content {
-	padding-block-end: 2rem;
-	padding-inline: 1rem;
+	padding: 3.2rem 1rem 3.8rem;
 }
 
 .featured-case-study-content h2:first-of-type {
