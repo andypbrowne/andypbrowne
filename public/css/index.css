@@ -241,7 +241,7 @@ aside.currently-reading .featured-book .info h3 {
 }
 
 aside.currently-reading .featured-book .info {
-	max-width: 50ch;
+	max-width: 36ch;
 	text-wrap: pretty;
 	/* font-family: var(--font-family-serif); */
 }
