@@ -56,7 +56,19 @@
     "author": "Ernest Cline",
     "type": "",
     "tags": ["sci-fi", "technology"],
-    "currentlyReading": "true",
+    "currentlyReading": "false",
     "description": "Accessible science fiction. Full of nostalgia for the 1980s. Don't listen to harsh reviews. This is a fun rewarding read like its predecessor."
+  },
+  {
+    "cover": "https://m.media-amazon.com/images/I/51AUI2RIxeL.jpg",
+    "coverAlt": "Cover that mentions 4 million copies sold and #1 NYT bestselling author",
+    "link": "https://www.gallup.com/cliftonstrengths/en/254033/strengthsfinder.aspx",
+    "title": "Strengths Finder 2.0",
+    "subTitle": "",
+    "author": "Tom Rath",
+    "type": "",
+    "tags": ["business", "self-help"],
+    "currentlyReading": "true",
+    "description": "\"<em>You cannot be anything you want to be – but you can be a lot more of who you already are</em>.\" This resonates with me, especially in the culture of the company where I work. The book’s approach feels practical and motivating. The language it provides is a useful framework  for personal growth and for creating an effective team environment."
   }
 ]
