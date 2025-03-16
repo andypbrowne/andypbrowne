@@ -1265,3 +1265,29 @@ div.preparation-list ol{
 	margin-bottom: 0.2rem;
 	color: var(--color-primary);
   }
+
+  /* anchor positioning footnotes
+  https://codepen.io/jamessw/pen/gOJMyjN */
+
+ @media screen and (min-width: 1700px) { 
+ 
+  article {
+	anchor-name: --my-article;
+  }
+
+  .footnote-anchor {
+	anchor-name: --my-anchor;
+	/* color: var(--color-midnight-20);
+	background: var(--color-midnight-60); */
+  }
+
+  .sidenote {
+	position: absolute;
+	position-anchor: --my-anchor;
+	top: anchor(top);
+	left: calc(anchor(--my-article right) + 2em);
+	position-visibility: anchors-visible;
+	font-size: var(--font-size-sm);
+	max-width: 30ch;
+  }
+ }

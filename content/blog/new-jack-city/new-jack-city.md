@@ -9,11 +9,11 @@ tags:
   - featured
 ---
 
-In early 2006 the Army stationed me in the Mojave Desert. I worked at Fort Irwin and lived in Barstow(1), California. For those folks who never lived out west, you have to know that everything is bigger out there. I’m writing about the couple of years I spent there because I want to share what it felt like to drive through those big spaces, go rock climbing in the desert, and to share how those extremes shaped who I am.
+In early 2006 the Army stationed me in the Mojave Desert. I worked at Fort Irwin and lived in <span class="footnote-anchor">Barstow</span>, California. For those folks who never lived out west, you have to know that everything is bigger out there. I’m writing about the couple of years I spent there because I want to share what it felt like to drive through those big spaces, go rock climbing in the desert, and to share how those extremes shaped who I am.
 
 <figure>
-  {% image "./njc-rocks.jpg", "Alternative text" %}
-<figcaption>Photo of New Jack City by blmcalifornia https://www.flickr.com/photos/blmcalifornia/33079464825 </figcaption>
+  {% image "./new-jack-city-view.jpeg", "Alternative text" %}
+<figcaption>Photo of New Jack City by She Dreams of Alpine </figcaption>
 </figure>
 
 ## The Drive
@@ -28,7 +28,7 @@ It is rare that I could escape, drive 2-3 hours in both directions, and then pre
 
 Then, I found out that only 15 min south of my house there is a world-class rock climbing spot called New Jack City. This is the kind of destination that other people would drive hours to visit, and I had it right in my backyard. There were a couple of really good Army friends (call them A & J) I would go with. Very quickly, I was starting to appreciate the culture and camaraderie that comes along with climbing. Of course, there is the connection to nature, but I think my favorite part of learning to climb was the confidence it gave me. When you are trying harder and harder routes you quickly build technique and strength. Something that was scary or intimidating, can be overcome with practice and encouragement. I honestly think that, learning to climb during that year, made me less afraid of the significant emotional event that would become my first deployment to Iraq.
 
-Climbing spots frequently have pop-culture names. New Jack City refers to a 1991 film about the crack epidemic in New York City.(3) As you might imagine, some of the routes have inventive names inspired by the movie.
+Climbing spots frequently have pop-culture names. New Jack City refers to a 1991 film (3) about the crack epidemic in New York City.(3) As you might imagine, some of the routes have inventive names inspired by the movie.
 
 **New Jack City climbing route names:**
 
@@ -73,14 +73,15 @@ There is also strange phenomenon when I drove over a Ridgeline towards New Jack 
 I see now, how It was during this time and space, that I was able to form my future self.
 
 ## Notes:
-(1) Barstow California is famous because it is exactly half way between Los Angeles and Vegas. It is the second most popular to stop for gas behind the worlds tallest thermometer in Baker, California. My other favorite fun fact about Barstow is a scene in the 2 Fast and 2 Furious movie where Roman Pearce (Actor Tyrese Gibson) delivers the memorable line “I’m not going back to Barstow.” 
 
-(2) One time I got my car up to 145 mph on that first curvy part of that road. 
+<div class="sidenote">Barstow California is famous because it is exactly half way between Los Angeles and Vegas. It is the second most popular to stop for gas behind the worlds tallest thermometer in Baker, California. My other favorite fun fact about Barstow is a scene in the 2 Fast and 2 Furious movie where Roman Pearce (Actor Tyrese Gibson) delivers the memorable line “I’m not going back to Barstow.” </div>
 
-(3) [New Jack City (1991) - IMDb](https://www.imdb.com/title/tt0102526/)
+(1) One time I got my car up to 145 mph on that first curvy part of that road.
 
-(4) [The Highway Vibe, KHYZ 99.7 FM, Las Vegas, NV | Free Internet Radio | TuneIn](https://tunein.com/radio/The-Highway-Vibe-997-s33063/)
+(2) [New Jack City (1991) - IMDb](https://www.imdb.com/title/tt0102526/)
 
-(5) [Nevada Public Radio](https://knpr.org/)
+(3) [The Highway Vibe, KHYZ 99.7 FM, Las Vegas, NV | Free Internet Radio | TuneIn](https://tunein.com/radio/The-Highway-Vibe-997-s33063/)
 
-(6) [KCRW 89.9FM | Music, NPR News, Culture Los Angeles | KCRW](https://www.kcrw.com/)
+(4) [Nevada Public Radio](https://knpr.org/)
+
+(5) [KCRW 89.9FM | Music, NPR News, Culture Los Angeles | KCRW](https://www.kcrw.com/)
