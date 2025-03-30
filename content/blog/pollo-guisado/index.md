@@ -39,8 +39,9 @@ This recipe serves about 4–6 people and pairs perfectly with rice to soak up t
 
 - 🔥 Slow-simmered, deeply flavorful braised chicken
 - 🍛 Perfect over rice to soak up the rich sauce
-- ⏳ Meal-prep friendly—marinate ahead for even better flavor
+- ⏳ 2 hours to cook, marinate ahead for even better flavor
 - 🍽️ Serves 4–6, great for weeknight dinners or leftovers
+
 </aside>
 
 1. Season chicken with adobo seasoning salt (marinate the chicken earlier in the day or even overnight to enhance the flavor).
