@@ -11,9 +11,11 @@ layout: layouts/base.njk
 {% endif %}
 
 <header class="post-header">
-<figure>
-	<img src="../../{{ thumbnail }}", alt="{{ thumbnailAlt }}"/>
-</figure>
+	{% if tags and 'featured' in tags %}
+	<figure>
+		<img src="../../{{ thumbnail }}" alt="{{ thumbnailAlt }}"/>
+	</figure>
+	{% endif %}
 
 <div class="post-titles">
 	<h1>{{ title }}</h1>

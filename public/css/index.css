@@ -591,6 +591,9 @@ article header.post-titles {
 	article header.post-header {
 		grid-template-columns: 1fr 1fr;
 	}
+	article header.post-header div:only-child {
+		grid-column: span 2;
+	}
 }
 
 @media screen and (min-width: 1380px) {
