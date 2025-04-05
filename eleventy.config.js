@@ -17,6 +17,7 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addPassthroughCopy('./content/assets');
 	eleventyConfig.addPassthroughCopy('./public/css/webfonts.css');
 	eleventyConfig.addPassthroughCopy("public/fonts");
+	eleventyConfig.addPassthroughCopy("assets/js");
 	eleventyConfig.addPlugin(readingTime);
 	eleventyConfig.addShortcode("youtube", (videoURL, title) => {
 		const url = new URL(videoURL);

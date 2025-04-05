@@ -73,7 +73,7 @@ img.custom-size-image {
     margin-top: 0px;
 }
 
-  .card .resource-tag {
+.card .resource-tag {
     display: inline;
     font-size: smaller;
     border: 1px solid var(--color-midnight-40);
@@ -81,11 +81,21 @@ img.custom-size-image {
     padding: .2em .6rem;
   }
 
-  .card hr {
+.card hr {
     opacity: .4;
   }
 
-  code {
+/* pre {
+    background-color: none;
+}
+
+pre code {
     word-break: break-all;
     text-wrap: wrap;
-}
+    font-family: var(--font-family-monospace);
+	border-radius: 4px;
+    padding: 3px 6px;
+    background-color: var(--color-aside);
+    background-color: none;
+    transition: color 0.25s, background-color 0.5s;
+} */
