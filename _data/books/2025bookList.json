@@ -68,7 +68,19 @@
     "author": "Tom Rath",
     "type": "",
     "tags": ["business", "self-help"],
-    "currentlyReading": "true",
+    "currentlyReading": "false",
     "description": "&ldquo;<em>You cannot be anything you want to be – but you can be a lot more of who you already are</em>.&rdquo; Are you the personality that enjoy&rsquo;s personality tests? This one is a cool and positive perspective and great to complete as a team."
+  },
+  {
+    "cover": "https://m.media-amazon.com/images/I/41JbcuFK3+L._SY445_SX342_.jpg",
+    "coverAlt": "A bold book cover that lists the title and and illustration of a knight saying NYT Bestseller",
+    "link": "https://www.penguinrandomhouse.com/books/734476/martyr-by-kaveh-akbar/",
+    "title": "Martyr",
+    "subTitle": "A Novel",
+    "author": "Kaveh Akbar",
+    "type": "library, eBook",
+    "tags": ["fiction"],
+    "currentlyReading": "true",
+    "description": "I am reading this book because it has a very good looking cover and it was included in the recent NY Times <em>100 Best Books of the 21st Century</em>"
   }
 ]
