@@ -11,7 +11,7 @@ layout: layouts/base.njk
 {% endif %}
 
 <header class="post-header">
-	{% if tags and 'featured' in tags %}
+	{% if tags and 'featured' in tags or 'recipe' in tags %}
 	<figure>
 		<img src="../../{{ thumbnail }}" alt="{{ thumbnailAlt }}"/>
 	</figure>
