@@ -6,6 +6,7 @@ thumbnailAlt: Just a placeholder image that says FPO which means for
 date: 2025-02-08
 tags:
   - case study
+  - featured case study
   - post
 draft: false
 summary: Redesign of a website and improved editing experience for an author of Young Adult books.

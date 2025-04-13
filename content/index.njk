@@ -44,10 +44,10 @@ css: /assets/css/bookshelf.css
 
 <section class="featured-case-study">
 
-  {% set postslist = collections.posts | head(-5) %}
+  {% set postslist = collections.posts | head(-8) %}
   {% set postslistCounter = postsCount %}
   {% for post in postslist | reverse %}
-  {% if 'case study' in post.data.tags %}
+  {% if 'featured case study' in post.data.tags %}
 	<div class="featured-case-study-image">
     {% if post.data.thumbnail %}
 		<a href="{{ post.url }}">
