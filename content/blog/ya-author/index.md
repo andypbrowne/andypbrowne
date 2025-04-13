@@ -18,6 +18,7 @@ key_outcomes:
   - Enhanced editor workflow
   - Engaged key audiences
   - Support future growth
+project_link: https://rominagarber.com
 ---
 
 {% include "_includes/components/case-study-metadata.njk" %}

@@ -15,4 +15,8 @@
       {% for outcome in key_outcomes %}<li>{{ outcome }}</li>{% endfor %}
     </ul>
   </div>
+  {% if project_link %}<div>
+      <h2 class="small-caps">Project Link</h2>
+      <p><a href="{{ project_link }}" target="_blank" rel="noopener noreferrer">{{ project_link }}</a></p>
+    </div>{% endif %}
 </aside>
