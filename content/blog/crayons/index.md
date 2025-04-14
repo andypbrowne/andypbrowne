@@ -31,7 +31,7 @@ Let me give you a couple of examples. On this [author’s website](https://andyp
 
 My own website does not have a good color story. So I went searching and found inspiration in Crayola crayons. Over 200 colors[1] have been produced by Crayola and they have great names.
 
-But, how to explore them? Why not make [a little website](https://crayons.andypbrowne.com/) to automagically display, sort, and filter all the colors. I’ll try not to bore you with too many technical details – plus, full disclusure, I vibe coded most of it.
+But, how to explore them? Why not make [a little website](https://crayons.andypbrowne.com/) to automagically display, sort, and filter all the colors. I’ll try not to bore you with too many technical details – plus, full disclosure, I vibe coded most of it.
 
 <figure>
   {% image "./crayons-website.png", "A screenshot of a website that shows user interface for filtering and sorting crayons" %}
@@ -49,18 +49,18 @@ But, how to explore them? Why not make [a little website](https://crayons.andypb
 
 </aside>
 
-Eleventy was a natural choice for me – I know it well, and it’s global data file support made it easy to display the crayons.  For the trickier parts, like filtering and sorting, I leaned on GitHub Copilot and the general vibe coding approach. 
+Eleventy was a natural choice for me – I know it well, and its global data file support made it easy to display the crayons.  For the trickier parts, like filtering and sorting, I leaned on GitHub Copilot and the general vibe coding approach. 
 
 <figure>
   {% image "./screenshot-github-copilot.png", "A screenshot of a chat with github copilot" %}
   <figcaption>What do you tell GitHub Copilot to get good responses</figcaption>
 </figure>
 
-I’ve used AI tools in the past for small things, but this is the first time I’ve used then this extensively. The filtering feature didn’t work right away, but Copilot helped me dubug the JavaScript.  It fixed some of the logic issues, and I handled a seperate bug involving an incorrect ID reference. One thing the AI did perfectly? Converting the hex codes to RGB and HSL color formats. This allows for better results when sorting by hue, brightness, or saturation.
+I’ve used AI tools in the past for small things, but this is the first time I’ve used them this extensively. The filtering feature didn’t work right away, but Copilot helped me debug the JavaScript.  It fixed some of the logic issues, and I handled a separate bug involving an incorrect ID reference. One thing the AI did perfectly? Converting the hex codes to RGB and HSL color formats. This allows for better results when sorting by hue, brightness, or saturation.
 
-Of course, AI tools have their quirks. I noticed a few classic hallucinations: like referencing a crayon color that didn’t exist in the dataset, or mislabeling IDs. But thats the nature of working with large language models – you still need to keep an eye out.
+Of course, AI tools have their quirks. I noticed a few classic hallucinations: like referencing a crayon color that didn’t exist in the dataset, or mislabeling IDs. But that‘s the nature of working with large language models – you still need to keep an eye out.
 
-I also experimented with using multiple AI models. I turned to ChatGPT to help generate color palettes based on names and hex values. This is where things got fun. LLMs are suprisingly good at creative associations, and together we can up with names like *Mid-mod mood*, *Celestial haze*, and *Eldrich archives.*
+I also experimented with using multiple AI models. I turned to ChatGPT to help generate color palettes based on names and hex values. This is where things got fun. LLMs are surprisingly good at creative associations, and together we came up with names like *Mid-mod mood*, *Celestial haze*, and *Eldrich archives.*
 
 In the end, the project was more than a color picker – it was a design exploration powered by crayons, curiosity, and a little help from AI.
 
