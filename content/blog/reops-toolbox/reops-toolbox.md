@@ -18,6 +18,7 @@ key_outcomes:
   - Created an interactive resource to help researchers and ReOps specialists evaluate and select research tools.
   - Improved research note-taking and analysis processes for better organization and insights.
   - Delivered a more efficient, shorter survey and created visualizations for better data representation.
+project_link: https://toolbox.researchops.community/
 ---
 
 {% include "_includes/components/case-study-metadata.njk" %}
