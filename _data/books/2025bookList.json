@@ -80,7 +80,19 @@
     "author": "Kaveh Akbar",
     "type": "library, eBook",
     "tags": ["fiction"],
-    "currentlyReading": "true",
+    "currentlyReading": "false",
     "description": "I am reading this book because it has a very good looking cover and it was included in the recent NY Times <em>100 Best Books of the 21st Century</em>. Also, the book title has a bang!"
+  },
+  {
+    "cover": "https://m.media-amazon.com/images/I/71SLeCwMlWL._SY522_.jpg", 
+    "coverAlt": "A minimalist cover with the title 'James' and the author's name 'Percival Everett'",
+    "link": "https://www.example.com/james-by-percival-everett",
+    "title": "James",
+    "subTitle": "A Novel",
+    "author": "Percival Everett",
+    "type": "",
+    "tags": ["fiction", "literature"],
+    "currentlyReading": "true",
+    "description": "A retelling of Huckleberry Finn. My partner, who just finished it for her book club, warned me that it's an intense read."
   }
 ]
