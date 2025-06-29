@@ -2,6 +2,17 @@ document.addEventListener('DOMContentLoaded', function() {
   const filterRadios = document.querySelectorAll('input[name="filter"]');
   const bookCards = document.querySelectorAll('.book-card, .filter-grid-item');
   const headers = document.querySelectorAll('.bookshelf-header');
+  const bookLists = document.querySelectorAll('ol.bookshelf.filter-grid');
+
+  function updateBookCounts() {
+    bookLists.forEach((list, i) => {
+      const visibleBooks = list.querySelectorAll('li:not([style*="display: none"])').length;
+      const countSpan = headers[i]?.querySelector('.bookcount');
+      if (countSpan) {
+        countSpan.textContent = `${visibleBooks} total books`;
+      }
+    });
+  }
 
   filterRadios.forEach(radio => {
     radio.addEventListener('change', function() {
@@ -16,10 +27,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       });
 
-      // Hide or show bookshelf headers
-      // headers.forEach(header => {
-      //   header.style.display = (value === 'all') ? '' : 'none';
-      // });
+      updateBookCounts();
     });
   });
+
+  // Initial count update
+  updateBookCounts();
 });
