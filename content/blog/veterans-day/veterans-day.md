@@ -26,4 +26,4 @@ One of my friends Michael Kim, L PsyA. has written a much more elegant and acade
 
 On a lighter note, I would like to share my favorite piece of Veterans Day Media,[Operation got your 6 With the Penguins of Madagascar (video)](https://www.youtube.com/watch?v=WmRHhdVGHMI)>   with the First Lady Michelle Obama.
 
-photo credit: By U.S. Navy photo by Mass Communication Specialist 3rd Class Kleynia R. McKnight [Public domain], via Wikimedia Commons
+photo credit: By U.S. Navy photo by Mass Communication Specialist 3rd Class Kleynia R. McKnight [Public domain], via Wikimedia Commons 

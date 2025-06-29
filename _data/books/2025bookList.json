@@ -92,7 +92,43 @@
     "author": "Percival Everett",
     "type": "",
     "tags": ["fiction", "literature"],
-    "currentlyReading": "true",
+    "currentlyReading": "false",
     "description": "A retelling of Huckleberry Finn. My partner, who just finished it for her book club, warned me that it's an intense read."
+  },
+  {
+    "cover": "/assets/images/book-jer.jpg",
+    "coverAlt": "A collage illustration a vintage robot and creepy upsideown eyes",
+    "link": "https://www.mulebooks.com/just-enough-research-shitty-pulp",
+    "title": "Just Enough Research",
+    "subTitle": "Pulp trash special edition",
+    "author": "Erika K. Hall",
+    "type": "",
+    "tags": ["research", "design", "ux"],
+    "currentlyReading": "true",
+    "description": "I've found an opportunity to read new editions of old favorites. This is probably the best book about UX research for practitioners and curious about design and product research."
+  },
+  {
+    "cover": "https://m.media-amazon.com/images/I/81+w1Xn9BHL._SY522_.jpg",
+    "coverAlt": "The book title and other information aligned on a grid with the anatomy of the type labeled",
+    "link": "https://ellenlupton.com/Thinking-with-Type",
+    "title": "Thinking with Type 3rd Edition",
+    "subTitle": "A Critical Guide for Designers, Writers, Editors, & Students",
+    "author": "Ellen Lupton",
+    "type": "",
+    "tags": ["design", "typography"],
+    "currentlyReading": "false",
+    "description": ""
+  },
+  {
+    "cover": "https://m.media-amazon.com/images/I/516fZJhJOaL._SY445_SX342_.jpg",
+    "coverAlt": "An illustration of a fish with a tag on the tail, apparently the book is a best seller",
+    "link": "https://www.booksaremagic.net/item/ULpFLNJxI5bjVGMD46s5MA",
+    "title": "Why Fish Don't Exist",
+    "subTitle": "A Story of Loss, Love, and the Hidden Order of Life",
+    "author": "Lulu Miller",
+    "type": "",
+    "tags": ["science", "nature"],
+    "currentlyReading": "false",
+    "description": ""
   }
 ]
