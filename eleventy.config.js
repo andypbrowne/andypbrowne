@@ -108,6 +108,28 @@ module.exports = function(eleventyConfig) {
 		});
 	});
 
+	// extract all the tags from the book data
+	eleventyConfig.addFilter("allTagsSorted", function(collection) {
+    let tags = collection
+      .map(book => book.tags || [])
+      .flat()
+      .map(tag => tag.trim().toLowerCase())
+      .filter(tag => tag);
+
+    let uniqueTags = Array.from(new Set(tags));
+
+    // Build array of {tag, count}
+    let tagObjs = uniqueTags.map(tag => ({
+      tag,
+      count: tags.filter(t => t === tag).length
+    }));
+
+    // Sort by count descending, then alphabetically
+    tagObjs.sort((a, b) => b.count - a.count || a.tag.localeCompare(b.tag));
+
+    return tagObjs;
+  });
+
 	// Features to make your build faster (when you need them)
 
 	// If your passthrough copy gets heavy and cumbersome, add this line

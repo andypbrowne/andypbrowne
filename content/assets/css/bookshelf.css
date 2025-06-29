@@ -124,61 +124,60 @@ details > summary {
   transition: opacity 0.2s ease-out, display 0.2s ease-out, height 0.2s ease-out;
 }
 
-
-
-/* Special filtering for the bookshelf */
-
-/* input[type="radio"] {
-    position: absolute;
-    left: -9999px;
-  }
-
-ol.filters {
+/* Filter group styles */
+fieldset.filtering {
+  border: none;
   margin-bottom: 2rem;
-  list-style: none;
-  padding-inline-start: 0;
+  padding: 0;
 }
-.filters * {
+
+fieldset.filtering legend {
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  font-variation-settings: "wght" 650;
+  margin-bottom: 0.5rem;
+}
+
+.filtering .overflow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.filtering input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.filtering label {
   display: inline-block;
-}
-.filters label {
   padding: 0.5rem 1rem;
-  margin-bottom: 0.25rem;
   border-radius: 2rem;
   min-width: 50px;
-  line-height: normal;
+  text-align: center;
+  font-size: var(--font-size-sm);
+  font-family: var(--font-family);
+  font-variation-settings: "wght" 650;
+  line-height: 1.2;
+  margin: 0;
+  background: var(--color-midnight-20, #f0f0f0);
+  color: var(--color-midnight-60, #222);
+  font-weight: 600;
   cursor: pointer;
-  transition: all 0.1s;
+  border: 1px solid var(--color-midnight-20, #ccc);
+  /* transition: background 0.2s, color 0.2s, border 0.2s; */
 }
-.filters label:hover {
-  background: var(--color-gray-80);
-  color: var(--color-gray-20);
-} */
 
-/* Filtering style for bookshelf*/
+.filtering input[type="radio"]:checked + label {
+  background: var(--color-midnight-80, #222);
+  color: var(--color-midnight-20, #fff);
+  border-color: var(--color-midnight-60, #222);
+}
 
-/* [value="0"]:checked ~ .filter-grid [data-tag] {
-    display: block;
-  }
-  
-  [value="1"]:checked ~ .filter-grid .filter-grid-item:not([data-tags~="design"]),
-  [value="2"]:checked ~ .filter-grid .filter-grid-item:not([data-tags~="business"]),
-  [value="3"]:checked ~ .filter-grid .filter-grid-item:not([data-tags~="technology"]),
-  [value="4"]:checked ~ .filter-grid .filter-grid-item:not([data-tags~="health"]),
-  [value="5"]:checked ~ .filter-grid .filter-grid-item:not([data-tags~="creativity"]),
-  [value="6"]:checked ~ .filter-grid .filter-grid-item:not([data-tags~="fiction"]),
-  [value="7"]:checked ~ .filter-grid .filter-grid-item:not([data-tags~="scifi"]) {
-    display: none;
-  }
-  
-  [value="0"]:checked ~ .filters [for="showAll"],
-  [value="1"]:checked ~ .filters [for="design"],
-  [value="2"]:checked ~ .filters [for="business"],
-  [value="3"]:checked ~ .filters [for="technology"],
-  [value="4"]:checked ~ .filters [for="health"],
-  [value="5"]:checked ~ .filters [for="creativty"],
-  [value="6"]:checked ~ .filters [for="fiction"],
-  [value="7"]:checked ~ .filters [for="scifi"] {
-    background: var(--color-gray-60);
-    color: var(--color-gray-20);
-  } */
+.filtering label:hover {
+  background: var(--color-midnight-60);
+  color: var(--color-midnight-20, #fff);
+}

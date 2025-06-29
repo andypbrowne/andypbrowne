@@ -7,6 +7,13 @@ js: /assets/js/bookshelf.js
 
 <h1>{{ title }}</h1>
 
+{# {% set allBooks = books.2025bookList.concat(books.2024bookList, books.2023bookList, books.2022bookList, books.2019bookList, books.2016bookList, books.0000bookList) %}
+<ul>
+  {% for tagObj in allBooks | allTagsSorted %}
+    <li>{{ tagObj.tag }} ({{ tagObj.count }})</li>
+  {% endfor %}
+</ul> #}
+
 <fieldset class="filtering">
   <legend>Filter:</legend>
   <div class="overflow">
@@ -19,12 +26,20 @@ js: /assets/js/bookshelf.js
       <label for="business">Business</label>
     </div>
     <div>
+      <input name="filter" id="culture" type="radio" value="culture">
+      <label for="culture">Culture</label>
+    </div>
+    <div>
       <input name="filter" id="design" type="radio" value="design">
       <label for="design">Design</label>
     </div>
     <div>
       <input name="filter" id="fiction" type="radio" value="fiction">
       <label for="fiction">Fiction</label>
+    </div>
+    <div>
+      <input name="filter" id="technology" type="radio" value="technology">
+      <label for="technology">Technology</label>
     </div>
   </div>
 </fieldset>
@@ -34,7 +49,7 @@ js: /assets/js/bookshelf.js
     {% set booksData = books.2025bookList -%}
     {% set bookList2025 = booksData %}
     {% set bookCount2025 = bookList2025 | length %}
-    <span class="bookcount">{{ bookCount2025 }} total books</span>
+    <span class="bookcount">{{ bookCount2025 }} books</span>
 </header>
 <ol class="bookshelf filter-grid">  
 {% for book in books.2025bookList -%}
@@ -47,7 +62,7 @@ js: /assets/js/bookshelf.js
     {% set booksData = books.2024bookList -%}
     {% set bookList2024 = booksData %}
     {% set bookCount2024 = bookList2024 | length  %}
-    <span class="bookcount">{{ bookCount2024 }} total books</span>
+    <span class="bookcount">{{ bookCount2024 }} books</span>
 </header>
 <ol class="bookshelf filter-grid">  
 {% for book in books.2024bookList -%}
@@ -58,7 +73,7 @@ js: /assets/js/bookshelf.js
 <header class="bookshelf-header">
     <h2>2023</h2>
     {% set booksData = books.2023bookList -%}{% set bookList2023 = booksData %}{% set bookCount2023 = bookList2023 | length %}
-    <span class="bookcount">{{ bookCount2023 }} total books</span>
+    <span class="bookcount">{{ bookCount2023 }} books</span>
 </header>
 <ol class="bookshelf filter-grid">
     {% for book in books.2023bookList -%}
@@ -69,7 +84,7 @@ js: /assets/js/bookshelf.js
 <header class="bookshelf-header">
     <h2>2022</h2>
     {% set booksData = books.2022bookList -%}{% set bookList2022 = booksData %}{% set bookCount2022 = bookList2022 | length %}
-    <span class="bookcount">{{ bookCount2022 }} total books</span>
+    <span class="bookcount">{{ bookCount2022 }} books</span>
 </header>
 <ol class="bookshelf filter-grid">
     {% for book in books.2022bookList -%}
@@ -80,7 +95,7 @@ js: /assets/js/bookshelf.js
 <header class="bookshelf-header">
     <h2>2019 to 2021</h2>
     {% set booksData = books.2019bookList -%}{% set bookList2019 = booksData %}{% set bookCount2019 = bookList2019 | length %}
-    <span class="bookcount">{{ bookCount2019 }} total books</span>
+    <span class="bookcount">{{ bookCount2019 }} books</span>
 </header>
 <ol class="bookshelf filter-grid">
     {% for book in books.2019bookList -%}
@@ -91,7 +106,7 @@ js: /assets/js/bookshelf.js
 <header class="bookshelf-header">
     <h2>2016 to 2018</h2>
     {% set booksData = books.2016bookList -%}{% set bookList2016 = booksData %}{% set bookCount2016 = bookList2016 | length %}
-    <span class="bookcount">{{ bookCount2016 }} total books</span>
+    <span class="bookcount">{{ bookCount2016 }} books</span>
 </header>
 <ol class="bookshelf filter-grid">
     {% for book in books.2016bookList -%}
@@ -102,7 +117,7 @@ js: /assets/js/bookshelf.js
 <header class="bookshelf-header">
     <h2>Older Notable Reads</h2>
     {% set booksData = books.0000bookList -%}{% set bookList0000 = booksData %}{% set bookCount0000 = bookList0000 | length %}
-    <span class="bookcount">{{ bookCount0000 }} total books</span>
+    <span class="bookcount">{{ bookCount0000 }} books</span>
 </header>
 <ol class="bookshelf filter-grid">
     {% for book in books.0000bookList -%}
