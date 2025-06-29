@@ -16,12 +16,13 @@ span.bookcount {
 ol.bookshelf {
     display: grid;
     grid-template-columns: 1fr;
-    border-bottom: 1px solid var(--color-midnight-60);
+    border-bottom: 1px solid var(--color-midnight-20);
     gap: 2rem;
     list-style: none;
     margin: 0px;
     padding: 0px;
     align-items: start;
+    padding-inline: 2px;
 }
 
 ol.bookshelf li {
@@ -131,7 +132,7 @@ fieldset.filtering {
   top: 0;
   z-index: 10;
   background: var(--color-base-bg);
-  border: none;
+  border: 1px solid var(--color-base-bg);
   border-bottom: 1px solid var(--color-midnight-20);
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -149,7 +150,7 @@ fieldset.filtering legend {
   font-variation-settings: "wght" 650;
   margin: 0;
   padding: 0;
-  padding-block: 0.5rem;
+  padding-block: 0.8rem;
   width: 100%;
   background: var(--color-base-bg);
   /* margin-bottom: 0.5rem; */
