@@ -14,13 +14,36 @@ js: /assets/js/bookshelf.js
   {% endfor %}
 </ul> #}
 
+{# {% set allBooks = books.2025bookList.concat(books.2024bookList, books.2023bookList, books.2022bookList, books.2019bookList, books.2016bookList, books.0000bookList) %}
+{% set tagObjs = allBooks | allTagsSorted %} #}
+
 <fieldset class="filtering">
   <legend>Filter:</legend>
   <div class="overflow">
     <div>
       <input name="filter" id="all" type="radio" value="all" checked>
+      {# <label for="all">All ({{ allBooks.length }})</label> #}
       <label for="all">All</label>
     </div>
+
+    {# {% for tagObj in tagObjs if tagObj.count >= 8 %}
+    <div>
+      <input name="filter" id="tag-{{ tagObj.tag | replace(' ', '-') }}" type="radio" value="{{ tagObj.tag }}">
+      <label for="tag-{{ tagObj.tag | replace(' ', '-') }}">{{ tagObj.tag | title }} ({{ tagObj.count }})</label>
+    </div>
+    {% endfor %}
+
+    <div id="more-filters" style="display: none;">
+      {% for tagObj in tagObjs if tagObj.count < 8 %}
+      <div>
+        <input name="filter" id="tag-{{ tagObj.tag | replace(' ', '-') }}" type="radio" value="{{ tagObj.tag }}">
+        <label for="tag-{{ tagObj.tag | replace(' ', '-') }}">{{ tagObj.tag | title }} ({{ tagObj.count }})</label>
+      </div>
+      {% endfor %}
+    </div>
+    <button type="button" id="toggle-filters" class="show-more-btn">Show more filters</button>
+  </div> #}
+
     <div>
       <input name="filter" id="business" type="radio" value="business">
       <label for="business">Business</label>

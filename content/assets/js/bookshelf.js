@@ -31,6 +31,17 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
+  // Show/hide more filters
+  const toggleBtn = document.getElementById('toggle-filters');
+  const moreFilters = document.getElementById('more-filters');
+  if (toggleBtn && moreFilters) {
+    toggleBtn.addEventListener('click', function() {
+      const isHidden = moreFilters.style.display === 'none';
+      moreFilters.style.display = isHidden ? '' : 'none';
+      toggleBtn.textContent = isHidden ? 'Hide more filters' : 'Show more filters';
+    });
+  }
+
   // Initial count update
   updateBookCounts();
 });
