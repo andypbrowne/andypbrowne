@@ -2,31 +2,32 @@
 title: Bookshelf
 layout: layouts/home.njk
 css: /assets/css/bookshelf.css
+js: /assets/js/bookshelf.js
 ---
 
 <h1>{{ title }}</h1>
-{# 
-<input type="radio" id="showAll" name="tag" value="0" checked>
-<input type="radio" id="design" name="tag" value="1">
-<input type="radio" id="business" name="tag" value="2">
-<input type="radio" id="technology" name="tag" value="3">
-<input type="radio" id="health" name="tag" value="4">
-<input type="radio" id="creativity" name="tag" value="5">
-<input type="radio" id="fiction" name="tag" value="6">
-<input type="radio" id="scifi" name="tag" value="7">
 
-<ol class="filters">
-  <li><label for="showAll">Show all</label></li>
-  <li><label for="design">Design</label></li>
-  <li><label for="business">Business</label></li>
-  <li><label for="technology">Technology</label></li>
-  <li><label for="health">Health</label></li>
-  <li><label for="creativity">Creativity</label></li>
-  <li><label for="fiction">Fiction</label></li>
-  <li><label for="scifi">Sci-fi</label></li>
-</ol> #}
-
-{# | filter(book => book.type != 'magazine' && book.type != 'other') #}
+<fieldset class="filtering">
+  <legend>Filter:</legend>
+  <div class="overflow">
+    <div>
+      <input name="filter" id="all" type="radio" value="all" checked>
+      <label for="all">All</label>
+    </div>
+    <div>
+      <input name="filter" id="business" type="radio" value="business">
+      <label for="business">Business</label>
+    </div>
+    <div>
+      <input name="filter" id="design" type="radio" value="design">
+      <label for="design">Design</label>
+    </div>
+    <div>
+      <input name="filter" id="fiction" type="radio" value="fiction">
+      <label for="fiction">Fiction</label>
+    </div>
+  </div>
+</fieldset>
 
 <header class="bookshelf-header">
     <h2>2025</h2>
