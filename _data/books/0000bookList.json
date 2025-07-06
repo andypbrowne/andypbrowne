@@ -60,6 +60,16 @@
       "description": "Sometimes I want to put books on here because the cover looks cool. Interestingly I also have the record soundtrack that this one comes with. It's weird too."
     },
     {
+      "cover": "../assets/images/cover-2015spec-thumb_crop.jpg",
+      "coverAlt": "A graphic cover with a collage of numbers and angled typography",
+      "link": "https://commercialtype.com/goods/2015_north_american_tour_poster",
+      "title": "Commercial Specimen of Typefaces",
+      "subTitle": "",
+      "author": "",
+      "tags": ["design", "typography"],
+      "description": "I have used Dala Prisma in a previous design project for a wine label. I should use more of these typefaces."
+    },
+    {
       "cover": "https://m.media-amazon.com/images/I/91lZ6jbwVdL._SY522_.jpg",
       "coverAlt": "A photograph of a woman recliing and looking up",
       "link": "https://shop.thegreatdiscontent.com/collections/issues/products/the-great-discontent-issue-one",

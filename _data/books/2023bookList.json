@@ -30,6 +30,16 @@
     "description": ""
   },
   {
+    "cover": "https://m.media-amazon.com/images/I/61rPwMXDiCL._SY522_.jpg",
+    "coverAlt": "A plain cover with the book title, a message about this being the third year after leap year, contents, and a special note about being sold by the Center for Fiction",
+    "link": "https://bookstore.centerforfiction.org/item/7uwHovGk0TgQ7m_yHG-nKg",
+    "title": "An Almanac of New York City",
+    "subTitle": "For the Year 2023",
+    "author": "Various",
+    "tags": ["history", "new york", "culture"],
+    "description": ""
+  },
+  {
     "cover": "https://learning.oreilly.com/covers/urn:orm:book:9781647821098/400w/",
     "coverAlt": "A grid of squares with some hand drawn ones randomly included",
     "link": "https://learning.oreilly.com/library/view/radically-human/9781647821098/",

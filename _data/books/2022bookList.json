@@ -78,5 +78,15 @@
         "author": "Various",
         "tags": ["travel", "adventure", "magazine"],
         "description": "Please don't tell my hipster barber shop that I like to steal these issues, they have multiple copies."
+      },
+      {
+        "cover": "../assets/images/cover-emigre.png",
+        "coverAlt": "Collage of big blockey letters and speach bubbles that advertize a collection and a url",
+        "link": "https://www.emigre.com/TypeSpecimens/The-Collection",
+        "title": "Emigre Type Library",
+        "subTitle": "Type Specimen",
+        "author": "Emigre",
+        "tags": ["typography", "design"],
+        "description": ""
       }
 ]

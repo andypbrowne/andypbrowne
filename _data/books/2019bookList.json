@@ -60,6 +60,26 @@
         "description": ""
       },
       {
+        "cover": "../assets/images/cover-magic.jpg",
+        "coverAlt": "A diagram depicting a food pyramid and some other mythical and cultish figures",
+        "link": "https://www.printedmatter.org/catalog/57093/",
+        "title": "Everyday in Magic",
+        "subTitle": "",
+        "author": "Raybin and King",
+        "tags": ["magic", "design"],
+        "description": "A birthday present from my good friend Sophie."
+      },
+      {
+          "cover": "../assets/images/hoefler-catalog-11.jpg",
+          "coverAlt": "A colorful grid of type samples from various typefaces",
+          "link": "https://www.typography.com/books/new-and-recent-typefaces-eleventh-edition",
+          "title": "New and Recent Typefaces by Hoefler & Co.",
+          "subTitle": "Eleventh Edition",
+          "author": "",
+          "tags": ["typography", "design"],
+          "description": "I am very fond of the Hoefler & Co. type capsule that I purchased to get Operator Mono."
+      },
+      {
         "cover": "https://m.media-amazon.com/images/I/61zHkb6UlXL._SY522_.jpg",
         "coverAlt": "Three dimentional and pixelated block letters surrounded by human characters",
         "link": "https://www.lspmethod.com/lsp-method-book/",
