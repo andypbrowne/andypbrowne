@@ -104,7 +104,7 @@
     "author": "Erika K. Hall",
     "type": "",
     "tags": ["research", "design", "ux"],
-    "currentlyReading": "true",
+    "currentlyReading": "false",
     "description": "I've found an opportunity to read new editions of old favorites. This is probably the best book about UX research for practitioners and curious about design and product research."
   },
   {
@@ -130,5 +130,41 @@
     "tags": ["science", "nature"],
     "currentlyReading": "false",
     "description": ""
+  },
+  {
+    "cover": "https://m.media-amazon.com/images/I/61aHNb8-l6L._SY522_.jpg",
+    "coverAlt": "Cover of The Infinite Game by Simon Sinek with bold repeating text of the title",
+    "link": "https://simonsinek.com/books/the-infinite-game/?gad_campaignid=22203735358&gbraid=0AAAAAojL0Xtz_fFGkZje4HXEhm7X3Ikk9",
+    "title": "The Infinite Game",
+    "subTitle": "",
+    "author": "Simon Sinek",
+    "type": "",
+    "tags": ["business", "culture", "leadership"],
+    "currentlyReading": "false",
+    "description": "The joke is that I read the wrong book at book club. Turns out that this one is a good complement to his other novels. It also has my favorite diagram about performance and trust."
+  },
+  {
+      "cover": "https://m.media-amazon.com/images/I/81yx0rw3MaL._SY522_.jpg",
+      "coverAlt": "A lone astronaut floating in space with a bright light in the background",
+      "link": "https://www.penguinrandomhouse.com/books/612062/project-hail-mary-by-andy-weir/",
+      "title": "Project Hail Mary",
+      "subTitle": "",
+      "author": "Andy Weir",
+      "type": "library, eBook",
+      "tags": ["sci-fi", "fiction", "space"],
+      "currentlyReading": "false",
+      "description": "Best experience is reading the book and then finding out that the movie is going to come out!"
+  },
+  {
+    "cover": "https://m.media-amazon.com/images/I/71RRqISbncL._SY522_.jpg",
+    "coverAlt": "Cover of Leaders Eat Last by Simon Sinek with bold text and a circular design",
+    "link": "https://simonsinek.com/books/leaders-eat-last/",
+    "title": "Leaders Eat Last",
+    "subTitle": "Why Some Teams Pull Together and Others Don’t",
+    "author": "Simon Sinek",
+    "type": "",
+    "tags": ["business", "leadership", "culture"],
+    "currentlyReading": "true",
+    "description": "A book club selection at work. I find that it is great to read along side watching the videos."
   }
 ]
