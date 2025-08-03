@@ -2,9 +2,6 @@
 	publish = "_site"
 	command = "npm run build"
 
-[build.environment]
-	NODE_VERSION = "18"
-
 [[plugins]]
 
 	# Opt-in to the Netlify Lighthouse plugin (choose one):
