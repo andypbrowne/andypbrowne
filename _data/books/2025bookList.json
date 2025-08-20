@@ -33,7 +33,7 @@
     "type": "library",
     "tags": ["creativity", "self-help"],
     "currentlyReading": "false",
-    "description": "Creativity is not a skill or a talent… it is simply an ability to play and get into a mindset where we trust our own ideas and instincts."
+    "description": "Creativity is not a skill or a talent… it is simply an ability to play and get into a mindset where we trust our own ideas and instincts. Note to self: also read the audiobook because the author reads it."
   },
   {
     "cover": "/assets/images/cover-you-got-this-0.5x.jpg",
@@ -164,7 +164,19 @@
     "author": "Simon Sinek",
     "type": "",
     "tags": ["business", "leadership", "culture"],
-    "currentlyReading": "true",
+    "currentlyReading": "false",
     "description": "A book club selection at work. I find that it is great to read along side watching the videos."
+  },
+  {
+    "cover": "https://m.media-amazon.com/images/I/81m8GKXp5IL._SY522_.jpg",
+    "coverAlt": "A collage of abstract patterns the book title and text that reads national best sellter and forward by Janelle Monáe",
+    "link": "https://www.penguinrandomhouse.com/books/625964/kindred-by-octavia-e-butler/",
+    "title": "Kindred",
+    "subTitle": "",
+    "author": "Octavia E. Butler",
+    "type": "library, eBook",
+    "tags": ["fiction", "sci-fi", "literature"],
+    "currentlyReading": "true",
+    "description": "A great continuation of this year's reading themes of sci-fi and historical fiction."
   }
 ]
