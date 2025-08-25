@@ -12,7 +12,7 @@ draft: false
 ---
 ## There are 2 things
 
-I always look for an opportunity to build trust with the client/collaborator/team member that goes beyond pleasant introductions. I like to use an icebreaker exercise[^1] to find out some unexpected info about the other people on the end of a Zoom call. Without fail we end up treating each other better throughout a project. 
+I always look for an opportunity to build trust with the client/collaborator/team member that goes beyond pleasant introductions. I like to use an <span class="footnote-anchor">icebreaker exercise</span> to find out some unexpected info about the other people on the end of a Zoom call. Without fail we end up treating each other better throughout a project. 
 
 With a good icebreaker, you can find out about: communication styles; personalities; and shared interests. Also, it happens almost every time, we will find some unexpected inspiration for the project. For example we might use an icebreaker like What would you put on your custom license plate. My custom license plate might say <span style="text-transform: uppercase;"><em>LEGO® DAD</em></span>. This is because I love building things and spending time with my daughter. I could tell a story about how we built the Disney Castle and then went to go see it recently at Magic Kingdom. When telling this story, I am actually letting people know that building and making things is part of my identity. That client has also been given a meaningful and memorable story that connects things.
 
@@ -47,4 +47,4 @@ This interview is no substitute for some real user research – but it is a grea
 
 That’s it, the most important things I think about when starting a new project. I’d like to thank the graphic design students at [Hostos](https://www.hostos.cuny.edu/About-Hostos/) who recently asked me this question during a class visit. 
 
-[^1] note to self: create a new blog post with a list of great icebreakers  
+<div class="sidenote">Note to self: create a new blog post with a list of great icebreakers</div>
