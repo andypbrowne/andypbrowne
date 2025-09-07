@@ -103,7 +103,7 @@
     "subTitle": "Pulp trash special edition",
     "author": "Erika K. Hall",
     "type": "",
-    "tags": ["research", "design", "ux"],
+    "tags": ["research", "design"],
     "currentlyReading": "false",
     "description": "I've found an opportunity to read new editions of old favorites. This is probably the best book about UX research for practitioners and curious about design and product research."
   },
@@ -162,7 +162,7 @@
     "title": "Leaders Eat Last",
     "subTitle": "Why Some Teams Pull Together and Others Don’t",
     "author": "Simon Sinek",
-    "type": "",
+    "type": "book club",
     "tags": ["business", "leadership", "culture"],
     "currentlyReading": "false",
     "description": "A book club selection at work. I find that it is great to read along side watching the videos."

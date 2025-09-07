@@ -6,6 +6,7 @@
     "title": "Surviving Change at Work",
     "subTitle": "Find clarity as you drive toward the next step in your tech career.",
     "author": "Vanessa Gennarelli",
+    "type": "book club",
     "tags": ["business", "technology", "Career Development"],      
     "description": "Great because it also has some practical exercises to complete. I frequently recommmend this title."
   },
@@ -16,6 +17,7 @@
     "title": "The Storytelling Hero",
     "subTitle": "Speaking for Powerful Communication",
     "author": "Steward Bewley",
+    "type": "book club",
     "tags": ["business", "communication"],
     "description": "Another title with practical exercises. Its also a very quick and quality read."
   },
@@ -56,7 +58,7 @@
     "title": "Annabel Scheme",
     "subTitle": "And the Adventure of the New Golden Gate",
     "author": "Robin Sloan",
-    "tags": ["fiction"],
+    "tags": ["fiction", "sci-fi"],
     "description": ""
   }, 
   {
@@ -97,6 +99,7 @@
       "title": "Smart Brevity",
       "subTitle": "The Power of Saying More with Less",
       "author": "Jim VandeHei, Mike Allen, Roy Schwartz",
+      "type": "book club",
       "tags": ["business"],
       "description": "I have mixed feelings. It’s important to communicate this way, but I very much miss good prose. So I plan to take what I need and leave the rest"
   },
@@ -171,7 +174,7 @@
     "subTitle": "",
     "author": "J.K. Rowling",
     "type": "audio",
-    "tags": ["fantasy", "young adult", "adventure"],
+    "tags": ["fantacy", "young adult", "adventure"],
     "description": ""
   },
   {
@@ -181,7 +184,7 @@
     "title": "Shadow of the Wind",
     "subTitle": "",
     "author": "Carlos Ruiz Zafón",
-    "tags": ["fiction", "gothic", "historical"],
+    "tags": ["fiction", "historical fiction"],
     "description": "" 
   },
   {
@@ -191,7 +194,8 @@
     "title": "Filterworld",
     "subTitle": "How Algorithms Flattened Culture",
     "author": "Kyle Chayka",
-    "tags": ["business", "technology"],
+    "type": "book club",
+    "tags": ["business", "technology", "AI"],
     "description": "I skipped the middle part of this book. I think the best take-aways were found in the conclusion which covered the importance of curation and taste." 
   },
   {
@@ -211,7 +215,7 @@
     "title": "Supercommunicators",
     "subTitle": "How to Unlock the Secret Language of Connection",
     "author": "Charles Duhigg",
-    "type": "",
+    "type": "book club",
     "tags": ["business", "culture"],
     "currentlyReading": "true",
     "description": "A selection from bookclub and the summer reading list. This title gives advice on how to have better conversations and be that person that others want to connect with."

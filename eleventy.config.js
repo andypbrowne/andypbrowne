@@ -108,6 +108,49 @@ module.exports = function(eleventyConfig) {
 		});
 	});
 
+	// Merge all arrays found under the `books` data object into one array.
+  eleventyConfig.addFilter("mergeBookLists", function(booksObj) {
+    if (!booksObj || typeof booksObj !== 'object') return [];
+    let all = [];
+    Object.values(booksObj).forEach(v => {
+      if (Array.isArray(v)) all = all.concat(v);
+      else if (v && typeof v === 'object') {
+        // handle nested objects that may contain arrays
+        Object.values(v).forEach(inner => { if (Array.isArray(inner)) all = all.concat(inner); });
+      }
+    });
+    return all;
+  });
+
+  eleventyConfig.addFilter("titlesForTag", function(bookArray, tag) {
+    if (!Array.isArray(bookArray)) return [];
+    const key = String(tag || '').trim().toLowerCase();
+    return bookArray
+      .filter(book => {
+        const tags = Array.isArray(book.tags) ? book.tags.map(t => String(t).trim().toLowerCase()) : [];
+        return tags.includes(key);
+      })
+      .map(book => book.title || '')
+      .filter(Boolean);
+  });
+
+  // Return an array of { tag, count } sorted alphabetically by tag.
+  eleventyConfig.addFilter("allTagsSorted", function(bookArray) {
+    if (!Array.isArray(bookArray)) return [];
+    const counts = new Map();
+    bookArray.forEach(book => {
+      const tags = Array.isArray(book.tags) ? book.tags : [];
+      tags.forEach(t => {
+        const tag = String(t).trim().toLowerCase();
+        if (!tag) return;
+        counts.set(tag, (counts.get(tag) || 0) + 1);
+      });
+    });
+    const tagObjs = Array.from(counts.entries()).map(([tag, count]) => ({ tag, count }));
+    tagObjs.sort((a, b) => a.tag.localeCompare(b.tag));
+    return tagObjs;
+  });
+
 	// extract all the tags from the book data
 	eleventyConfig.addFilter("allTagsSorted", function(collection) {
     let tags = collection
@@ -128,6 +171,8 @@ module.exports = function(eleventyConfig) {
     tagObjs.sort((a, b) => b.count - a.count || a.tag.localeCompare(b.tag));
 
     return tagObjs;
+
+	
   });
 
 	// Features to make your build faster (when you need them)

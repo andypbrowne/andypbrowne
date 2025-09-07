@@ -36,7 +36,7 @@
     "title": "An Almanac of New York City",
     "subTitle": "For the Year 2023",
     "author": "Various",
-    "tags": ["history", "new york", "culture"],
+    "tags": ["history", "new york city", "culture"],
     "description": ""
   },
   {
@@ -46,7 +46,8 @@
     "title": "Radically Human",
     "subTitle": "How New Technology Is Transofrming Business and Shaping our Future",
     "author": "Paul Daugherty, H. James Wilson",
-    "tags": ["business", "technology", "ai"],
+    "type": "book club",
+    "tags": ["business", "technology", "AI"],
     "description": "I was not able to get much past the first chapter of this book. I do hear that Chapter 8 is worth reading. So I will likely go back and read that."
   },
   {
@@ -107,7 +108,8 @@
     "title": "AI and UX",
     "subTitle": "Why Artificial Intelligence Needs User Experience",
     "author": "Gavin Lew, Robert M. Schumacher Jr.",
-    "tags": ["ai", "design", "technology"],
+    "type": "book club",
+    "tags": ["AI", "design", "technology"],
     "description": ""
   },
   {
@@ -117,6 +119,7 @@
     "title": "The Design of Everyday Things",
     "subTitle": "",
     "author": "Gavin Lew, Robert M. Schumacher Jr.",
+    "type": "book club",
     "tags": ["design", "psychology"],
     "description": ""
   },
@@ -127,6 +130,7 @@
     "title": "Inclusive Design for a Digital World",
     "subTitle": "Designing with Accessibility in Mind",
     "author": "Regine M. Gilbert",
+    "type": "book club",
     "tags": ["accessibility", "design"],
     "description": ""
   },

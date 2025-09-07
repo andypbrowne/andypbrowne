@@ -1,0 +1,32 @@
+---
+title: Book Tags
+layout: layouts/home.njk
+css: /assets/css/bookshelf.css
+---
+
+<h1>{{ title }}</h1>
+
+<h2>Tagging taxonomy</h2>
+
+- Primary genre: Fiction, Nonfiction, Magazine.
+- Genre subtypes: Science Fiction, Fantasy, Historical Fiction, Gothic Fiction, Literary Fiction, Humor, Memoir.
+- Topics: Design, Typography, Information Architecture, UX Research, Accessibility, Product Management, Leadership, Communication, DevOps, Game Development, Cybersecurity, Urbanism, Community, Culture, Science, Space, Breathwork.
+- Audience/age: Young Adult, Middle Grade, Children’s.
+- Place: New York City, New Orleans, Barcelona.
+- Format/meta: Audiobook, Series, Book Club, Magazine, Zine.
+
+{% set allBooks = books | mergeBookLists %}
+{% set tagObjs = allBooks | allTagsSorted %}
+
+<section class="tag-index">
+  <p>Total books: {{ allBooks | length }}</p>
+  <ul>
+    {% for t in tagObjs %}
+      {% set titles = allBooks | titlesForTag(t.tag) %}
+      <li>
+        <strong>{{ t.tag | title }} — {{ t.count }}:</strong>
+        {{ titles | join(', ') }}
+      </li>
+    {% endfor %}
+  </ul>
+</section>

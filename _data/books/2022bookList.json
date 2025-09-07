@@ -13,7 +13,7 @@
         "cover": "https://m.media-amazon.com/images/I/21s5BcFE7aL._SY445_SX342_.jpg",
         "coverAlt": "A book cover that looks like a warm glowing fire",
         "link": "https://press.stripe.com/get-together",
-        "title": "Cultivating a Creative Culture",
+        "title": "Get Together",
         "subTitle": "How to Build a Community With Your People",
         "author": "Bailey Richardson, Kevin Huynh, and Kai Elmer Sotto",
         "tags": ["business", "culture", "community"],
@@ -66,8 +66,8 @@
         "title": "The Fable of the User-centered Designer",
         "subTitle": "The Small Book That Has Big Results",
         "author": "David Travis",
-        "tags": ["design", "free"],
-        "description": ""
+        "tags": ["design"],
+        "description": "This is a quick and free title to read. The allegory style is not for everyone, but this one is alright by me."
       },
       {
         "cover": "../assets/images/cover-the-explorers-journal.jpg",

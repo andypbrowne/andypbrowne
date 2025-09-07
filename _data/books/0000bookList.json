@@ -6,7 +6,7 @@
       "title": "Snow Crash",
       "subTitle": "A Novel",
       "author": "Neal Stephenson",
-      "tags": ["scifi"],
+      "tags": ["sci-fi"],
       "description": ""
     },
     {
@@ -46,7 +46,7 @@
       "title": "Ready Player One",
       "subTitle": "",
       "author": "Ernest Cline",
-      "tags": ["scifi"],
+      "tags": ["sci-fi"],
       "description": ""
     },
     {
@@ -96,7 +96,7 @@
       "title": "100 New Yorkers",
       "subTitle": "A guide to the Illustrious Lives & Locations",
       "author": "Julia Holmes",
-      "tags": ["New York City History"],
+      "tags": ["History", "New York City"],
       "description": "When I first moved to NYC I read a lot of local history. There is so many great titles in the genre. You should have seen the evening that our local pub trivia had a round on NYC History. My teammates lost their mind with what I knew. They did not know how many books a podcasts I had consumed."
     },
     {
@@ -155,7 +155,7 @@
       "title": "Zodiac Series",
       "subTitle": "Beware the 13th Sign",
       "author": "Romina Garber",
-      "tags": ["scifi", "fantacy", "fiction"],
+      "tags": ["sci-fi", "fantacy", "fiction"],
       "description": ""
     },  
     {
@@ -235,7 +235,7 @@
       "title": "Diamonds Are Forever",
       "subTitle": "A James Bond Novel",
       "author": "Ian Fleming",
-      "tags": ["fiction", "james-bond"],
+      "tags": ["fiction"],
       "description": ""
     },
     {
