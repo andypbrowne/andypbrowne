@@ -176,7 +176,31 @@
     "author": "Octavia E. Butler",
     "type": "library, eBook",
     "tags": ["fiction", "sci-fi", "literature"],
-    "currentlyReading": "true",
+    "currentlyReading": "false",
     "description": "A great continuation of this year's reading themes of sci-fi and historical fiction."
+  },
+  {
+    "cover": "https://m.media-amazon.com/images/I/61iQW5TTZCL._UF1000,1000_QL80_.jpg",
+    "coverAlt": "Cover of 1Q84 by Haruki Murakami featuring minimalist design and bold numbers",
+    "link": "https://www.penguinrandomhouse.com/books/206484/1q84-by-haruki-murakami/",
+    "title": "1Q84",
+    "subTitle": "A Novel",
+    "author": "Haruki Murakami",
+    "type": "library, eBook",
+    "tags": ["fiction", "literature"],
+    "currentlyReading": "true",
+    "description": "A Strand Books find from years ago. Glad to be reading it now though this hardcover is very heavy!"
+  },
+  {
+    "cover": "https://m.media-amazon.com/images/I/71EnMCMcO5L._SY522_.jpg",
+    "coverAlt": "Cover of Meeting Design by Kevin M. Hoffman with bold text and geometric shapes",
+    "link": "https://abookapart.com/products/meeting-design",
+    "title": "Meeting Design",
+    "subTitle": "For Managers, Makers, and Everyone",
+    "author": "Kevin M. Hoffman",
+    "type": "",
+    "tags": ["business", "design"],
+    "currentlyReading": "false",
+    "description": ""
   }
 ]

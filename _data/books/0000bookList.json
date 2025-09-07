@@ -217,5 +217,45 @@
       "author": "Robin Sloan",
       "tags": ["fiction"],
       "description": ""
+    },
+    {
+      "cover": "../assets/images/cover-city-cycle-barca.jpg",
+      "coverAlt": "A simple abstract illustration of a wheel",
+      "link": "https://www.rapha.cc/gb/en/shop/city-cycling-guide-barcelona/product/CCG01BAR",
+      "title": "City Cycling Barcelona",
+      "subTitle": "",
+      "author": "Rapha & Thames & Hudson",
+      "tags": ["travel", "cycling"],
+      "description": ""
+    },
+    {
+      "cover": "https://m.media-amazon.com/images/I/61+R9PYv7FL._SY522_.jpg",
+      "coverAlt": "A woman wearing diamonds, and men carrying guns",
+      "link": "https://www.goodreads.com/book/show/3760.Diamonds_Are_Forever",
+      "title": "Diamonds Are Forever",
+      "subTitle": "A James Bond Novel",
+      "author": "Ian Fleming",
+      "tags": ["fiction", "james-bond"],
+      "description": ""
+    },
+    {
+      "cover": "https://m.media-amazon.com/images/I/81OxcL9OjvL._SY522_.jpg",
+      "coverAlt": "Photograph of a city waterfront at dusk and on a Hazy day",
+      "link": "https://en.wikipedia.org/wiki/Phillip_Lopate",
+      "title": "Waterfront",
+      "subTitle": "A walk around Manhattan",
+      "author": "Phillip Lopate",
+      "tags": ["history"],
+      "description": "A reflective collection of essays exploring memory, place, and life along the urban shoreline."
+    },
+    {
+      "cover": "https://m.media-amazon.com/images/I/81dd2X5z8GL._SY522_.jpg",
+      "coverAlt": "A high perspective map of the island of Manhattan that looks like a rat",
+      "link": "https://www.goodreads.com/book/show/9824.Rats",
+      "title": "Rats",
+      "subTitle": "Observations on the History and Habitat of the City's Most Unwanted Inhabitants",
+      "author": "Robert Sullivan",
+      "tags": ["urbanism", "history"],
+      "description": "A thoughtful, often surprising exploration of urban rats — their history, behavior, and the uneasy relationship between humans and these resilient city dwellers."
     }
 ]
