@@ -221,3 +221,13 @@ fieldset.filtering legend {
 ol#filtered-results {
   margin-top: 2rem;
 }
+
+.filter-count {
+  font-weight: 300; /* lighter than label text */
+  font-variation-settings: "wght" 450;
+  margin-left: .25rem;
+  /* color: var(--color-midnight-60); */
+  font-variant-caps: normal;
+  font-family: monospace;
+  font-size: smaller;
+}

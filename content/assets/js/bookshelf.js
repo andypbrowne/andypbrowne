@@ -68,21 +68,26 @@ document.addEventListener('DOMContentLoaded', function() {
     filterRadios.forEach(input => {
       const label = document.querySelector(`label[for="${input.id}"]`);
       if (!label) return;
-      // preserve base text in data attribute to avoid stacking counts
       if (!label.dataset.baseText) {
-        // strip any existing "(n)" from current text
         label.dataset.baseText = label.textContent.replace(/\s*\(\d+\)$/, '').trim();
       }
       const base = label.dataset.baseText;
       const value = input.value.toLowerCase();
+
+      // clear and rebuild label content to safely include a styled count <span>
+      label.textContent = base + ' ';
+      const countSpan = document.createElement('span');
+      countSpan.className = 'filter-count';
+
       if (value === 'all') {
-        // total (visible or all)
         const total = visibleOnly ? bookCards.filter(c => c.style.display !== 'none').length : bookCards.length;
-        label.textContent = `${base} (${total})`;
+        countSpan.textContent = `(${total})`;
       } else {
         const cnt = counts.get(value) || 0;
-        label.textContent = `${base} (${cnt})`;
+        countSpan.textContent = `(${cnt})`;
       }
+
+      label.appendChild(countSpan);
     });
   }
 
