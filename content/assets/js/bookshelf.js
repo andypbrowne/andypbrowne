@@ -50,11 +50,50 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
+  // compute tag counts (optionally only counting visible cards)
+  function computeTagCounts(visibleOnly = false) {
+    const counts = new Map();
+    bookCards.forEach(card => {
+      if (visibleOnly && card.style.display === 'none') return;
+      const raw = card.getAttribute('data-tags') || '';
+      const tags = raw.split(/[\s,]+/).map(t => t.trim().toLowerCase()).filter(Boolean);
+      tags.forEach(tag => counts.set(tag, (counts.get(tag) || 0) + 1));
+    });
+    return counts;
+  }
+
+  // update all filter labels to include counts
+  function updateFilterLabels(visibleOnly = false) {
+    const counts = computeTagCounts(visibleOnly);
+    filterRadios.forEach(input => {
+      const label = document.querySelector(`label[for="${input.id}"]`);
+      if (!label) return;
+      // preserve base text in data attribute to avoid stacking counts
+      if (!label.dataset.baseText) {
+        // strip any existing "(n)" from current text
+        label.dataset.baseText = label.textContent.replace(/\s*\(\d+\)$/, '').trim();
+      }
+      const base = label.dataset.baseText;
+      const value = input.value.toLowerCase();
+      if (value === 'all') {
+        // total (visible or all)
+        const total = visibleOnly ? bookCards.filter(c => c.style.display !== 'none').length : bookCards.length;
+        label.textContent = `${base} (${total})`;
+      } else {
+        const cnt = counts.get(value) || 0;
+        label.textContent = `${base} (${cnt})`;
+      }
+    });
+  }
+
+  // call once on load to show totals
+  updateFilterLabels(false);
+
   filterRadios.forEach(radio => {
     radio.addEventListener('change', function() {
       const value = this.value.toLowerCase();
 
-      // show/hide individual book cards based on tag match
+      // show/hide matching cards
       bookCards.forEach(card => {
         const raw = card.getAttribute('data-tags') || '';
         const tags = raw.split(/[\s,]+/).map(t => t.trim().toLowerCase()).filter(Boolean);
@@ -82,7 +121,10 @@ document.addEventListener('DOMContentLoaded', function() {
         bookLists.forEach(l => l.style.display = 'none');
       }
 
-      // update counts if you keep that behaviour
+      // update labels to reflect visible counts after filter applied
+      // updateFilterLabels(true);
+
+      // update counts in headers if you have that function
       if (typeof updateBookCounts === 'function') updateBookCounts();
     });
   });
