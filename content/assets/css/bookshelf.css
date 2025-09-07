@@ -213,7 +213,7 @@ fieldset.filtering legend {
 /* ensure cards behave as tiles in the row */
 .filtered-row .filter-grid-item,
 .filtered-row .book-card {
-  display: block;         /* override list-grid display if any */
+  /* display: block;         override list-grid display if any */
   flex: 0 0 auto;
   /* width: min(220px, 30%); */
 }
