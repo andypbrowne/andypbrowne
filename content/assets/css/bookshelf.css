@@ -4,6 +4,7 @@ header.bookshelf-header {
     align-items: baseline;
     gap: 2rem;
     margin: 0 0 1rem;
+    padding: 0px;
 }
 
 span.bookcount {
@@ -197,4 +198,26 @@ fieldset.filtering legend {
 .filtering label:hover {
   background: var(--color-midnight-60);
   color: var(--color-midnight-20, #fff);
+}
+
+/* do something fancy */
+.filtered-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 1rem 0;
+  padding: 2rem;
+}
+
+/* ensure cards behave as tiles in the row */
+.filtered-row .filter-grid-item,
+.filtered-row .book-card {
+  display: block;         /* override list-grid display if any */
+  flex: 0 0 auto;
+  /* width: min(220px, 30%); */
+}
+
+ol#filtered-results {
+  margin-top: 2rem;
 }
