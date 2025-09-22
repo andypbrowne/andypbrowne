@@ -231,3 +231,58 @@ ol#filtered-results {
   font-family: monospace;
   font-size: smaller;
 }
+
+/* accessible visually-hidden helper used for select label */
+.visually-hidden {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+  border: 0; padding: 0; margin: -1px;
+}
+
+/* Style the status dropdown to match the pill radios */
+#status-select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  padding: 0.45rem 1.1rem 0.45rem 1rem; /* room for caret on right */
+  border-radius: 2rem;
+  min-width: 10rem;
+  background: var(--color-midnight-20, #f0f0f0);
+  color: var(--color-midnight-60, #222);
+  border: 1px solid var(--color-midnight-20, #ccc);
+  font-size: var(--font-size-sm);
+  font-family: var(--font-family);
+  line-height: 1.2;
+  cursor: pointer;
+  text-align: left;
+  box-sizing: border-box;
+  /* transition: background 0.12s, color 0.12s, border-color 0.12s; */
+  /* add space for a caret icon */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath fill='var(--color-midnight-60)' d='M0 0l5 6 5-6z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.6rem center;
+  background-size: .6rem auto;
+  padding-right: 2rem;
+}
+
+/* Hover + focus styles to match radio interactions */
+#status-select:hover {
+  background: var(--color-midnight-60);
+  color: var(--color-midnight-20);
+  border-color: var(--color-midnight-60);
+}
+
+#status-select:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(23,67,103,0.12);
+  border-color: var(--color-midnight-80);
+}
+
+/* Smaller screens: full width optional */
+@media screen and (max-width: 420px) {
+  #status-select { min-width: 8rem; }
+}

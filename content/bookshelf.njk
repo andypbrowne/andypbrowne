@@ -20,29 +20,20 @@ js: /assets/js/bookshelf.js
 <fieldset class="filtering">
   <legend>Filter:</legend>
   <div class="overflow">
+
+    <div>
+      <label for="status-select" class="visually-hidden">Status</label>
+      <select id="status-select" name="status">
+        <option value="read">Read</option>
+        <option value="want-to-read">Want to read</option>
+        <option value="currently-reading">Currently reading</option>
+      </select>
+    </div>
+
     <div>
       <input name="filter" id="all" type="radio" value="all" checked>
-      {# <label for="all">All ({{ allBooks.length }})</label> #}
       <label for="all">All</label>
     </div>
-
-    {# {% for tagObj in tagObjs if tagObj.count >= 8 %}
-    <div>
-      <input name="filter" id="tag-{{ tagObj.tag | replace(' ', '-') }}" type="radio" value="{{ tagObj.tag }}">
-      <label for="tag-{{ tagObj.tag | replace(' ', '-') }}">{{ tagObj.tag | title }} ({{ tagObj.count }})</label>
-    </div>
-    {% endfor %}
-
-    <div id="more-filters" style="display: none;">
-      {% for tagObj in tagObjs if tagObj.count < 8 %}
-      <div>
-        <input name="filter" id="tag-{{ tagObj.tag | replace(' ', '-') }}" type="radio" value="{{ tagObj.tag }}">
-        <label for="tag-{{ tagObj.tag | replace(' ', '-') }}">{{ tagObj.tag | title }} ({{ tagObj.count }})</label>
-      </div>
-      {% endfor %}
-    </div>
-    <button type="button" id="toggle-filters" class="show-more-btn">Show more filters</button>
-  </div> #}
 
     <div>
       <input name="filter" id="business" type="radio" value="business">

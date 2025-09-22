@@ -1,8 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
-  const filterRadios = document.querySelectorAll('input[name="filter"]');
+  const filterRadios = document.querySelectorAll('input[name="filter"]'); // tag radios
+  const statusSelect = document.getElementById('status-select'); // the status dropdown
   const bookCards = Array.from(document.querySelectorAll('.book-card, .filter-grid-item'));
   const headers = document.querySelectorAll('.bookshelf-header');
   const bookLists = document.querySelectorAll('ol.bookshelf.filter-grid');
+
+  // track current selections (persist status across tag changes)
+  let currentStatus = (statusSelect && statusSelect.value) ? statusSelect.value.toLowerCase() : 'all';
+  let currentTag = 'all';
 
   // store original positions so we can restore later
   const originalPos = new Map();
@@ -17,7 +22,6 @@ document.addEventListener('DOMContentLoaded', function() {
     filteredContainer = document.createElement('ol');
     filteredContainer.id = 'filtered-results';
     filteredContainer.className = 'bookshelf filter-grid filtered-row';
-    // hide by default
     filteredContainer.style.display = 'none';
     if (fieldset && fieldset.parentNode) {
       fieldset.parentNode.insertBefore(filteredContainer, fieldset.nextSibling);
@@ -27,7 +31,6 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   function moveToFiltered(cards) {
-    // ensure container is empty
     while (filteredContainer.firstChild) filteredContainer.removeChild(filteredContainer.firstChild);
     cards.forEach(c => filteredContainer.appendChild(c));
     filteredContainer.style.display = cards.length ? '' : 'none';
@@ -37,24 +40,17 @@ document.addEventListener('DOMContentLoaded', function() {
     bookCards.forEach(card => {
       const pos = originalPos.get(card);
       if (!pos) return;
-      // if already in correct parent and nextSibling, skip (or always insert to be safe)
       pos.parent.insertBefore(card, pos.next);
     });
     filteredContainer.style.display = 'none';
   }
 
-  function collapseEmptyLists(value) {
-    bookLists.forEach(list => {
-      const visibleChildren = list.querySelectorAll('li:not([style*="display: none"])').length;
-      list.style.display = (visibleChildren === 0 && value !== 'all') ? 'none' : '';
-    });
-  }
-
-  // compute tag counts (optionally only counting visible cards)
-  function computeTagCounts(visibleOnly = false) {
+  // counts of tags restricted by a status (status = 'all' means no restriction)
+  function computeTagCountsForStatus(status) {
     const counts = new Map();
     bookCards.forEach(card => {
-      if (visibleOnly && card.style.display === 'none') return;
+      const cardStatus = (card.getAttribute('data-status') || '').toLowerCase();
+      if (status !== 'all' && cardStatus !== status) return;
       const raw = card.getAttribute('data-tags') || '';
       const tags = raw.split(/[\s,]+/).map(t => t.trim().toLowerCase()).filter(Boolean);
       tags.forEach(tag => counts.set(tag, (counts.get(tag) || 0) + 1));
@@ -62,9 +58,15 @@ document.addEventListener('DOMContentLoaded', function() {
     return counts;
   }
 
-  // update all filter labels to include counts
-  function updateFilterLabels(visibleOnly = false) {
-    const counts = computeTagCounts(visibleOnly);
+  // total number of books for a given status
+  function countForStatus(status) {
+    if (status === 'all') return bookCards.length;
+    return bookCards.filter(c => (c.getAttribute('data-status') || '').toLowerCase() === status).length;
+  }
+
+  // update tag radio labels so counts reflect the currently selected status
+  function updateFilterLabels() {
+    const counts = computeTagCountsForStatus(currentStatus);
     filterRadios.forEach(input => {
       const label = document.querySelector(`label[for="${input.id}"]`);
       if (!label) return;
@@ -74,67 +76,73 @@ document.addEventListener('DOMContentLoaded', function() {
       const base = label.dataset.baseText;
       const value = input.value.toLowerCase();
 
-      // clear and rebuild label content to safely include a styled count <span>
+      // rebuild safe label content
       label.textContent = base + ' ';
       const countSpan = document.createElement('span');
       countSpan.className = 'filter-count';
 
       if (value === 'all') {
-        const total = visibleOnly ? bookCards.filter(c => c.style.display !== 'none').length : bookCards.length;
-        countSpan.textContent = `(${total})`;
+        countSpan.textContent = `(${countForStatus(currentStatus)})`;
       } else {
-        const cnt = counts.get(value) || 0;
-        countSpan.textContent = `(${cnt})`;
+        countSpan.textContent = `(${counts.get(value) || 0})`;
       }
 
       label.appendChild(countSpan);
     });
   }
 
-  // call once on load to show totals
-  updateFilterLabels(false);
+  // apply both currentTag and currentStatus to show matching cards
+  function applyFilters() {
+    const statusKey = currentStatus;
+    const tagKey = currentTag;
 
+    bookCards.forEach(card => {
+      const cardStatus = (card.getAttribute('data-status') || '').toLowerCase();
+      const rawTags = card.getAttribute('data-tags') || '';
+      const tags = rawTags.split(/[\s,]+/).map(t => t.trim().toLowerCase()).filter(Boolean);
+
+      const statusMatches = (statusKey === 'all') || (cardStatus === statusKey);
+      const tagMatches = (tagKey === 'all') || (tags.includes(tagKey));
+
+      // visible only if both match
+      card.style.display = (statusMatches && tagMatches) ? '' : 'none';
+    });
+
+    // layout: if any filter is active (not both 'all'), hide year headers and show filtered row
+    const filterActive = (statusKey !== 'all') || (tagKey !== 'all');
+    if (!filterActive) {
+      restoreOriginalPositions();
+      headers.forEach(h => h.style.display = '');
+      bookLists.forEach(l => l.style.display = '');
+    } else {
+      headers.forEach(h => h.style.display = 'none');
+      const visible = bookCards.filter(c => c.style.display !== 'none');
+      moveToFiltered(visible);
+      bookLists.forEach(l => l.style.display = 'none');
+    }
+
+    updateFilterLabels();
+    if (typeof updateBookCounts === 'function') updateBookCounts();
+  }
+
+  // wire tag radios: selecting a tag should NOT reset status; it filters within the current status
   filterRadios.forEach(radio => {
     radio.addEventListener('change', function() {
-      const value = this.value.toLowerCase();
-
-      // show/hide matching cards
-      bookCards.forEach(card => {
-        const raw = card.getAttribute('data-tags') || '';
-        const tags = raw.split(/[\s,]+/).map(t => t.trim().toLowerCase()).filter(Boolean);
-        if (value === 'all') {
-          card.style.display = '';
-        } else {
-          card.style.display = tags.includes(value) ? '' : 'none';
-        }
-      });
-
-      // If filtering, move all visible cards into the single filtered row
-      if (value === 'all') {
-        // restore original layout
-        restoreOriginalPositions();
-        // show headers and lists
-        headers.forEach(h => h.style.display = '');
-        bookLists.forEach(l => l.style.display = '');
-      } else {
-        // hide headers
-        headers.forEach(h => h.style.display = 'none');
-        // collect visible cards
-        const visible = bookCards.filter(c => c.style.display !== 'none');
-        moveToFiltered(visible);
-        // hide empty lists to avoid gaps
-        bookLists.forEach(l => l.style.display = 'none');
-      }
-
-      // update labels to reflect visible counts after filter applied
-      // updateFilterLabels(true);
-
-      // update counts in headers if you have that function
-      if (typeof updateBookCounts === 'function') updateBookCounts();
+      currentTag = (this.value || 'all').toLowerCase();
+      applyFilters();
     });
   });
 
-  // Show/hide more filters (existing logic)
+  // wire status select: status persists and updates radio counts; selecting a status keeps the radio selection
+  if (statusSelect) {
+    statusSelect.addEventListener('change', function() {
+      currentStatus = (this.value || 'all').toLowerCase();
+      // apply filters with the same selected tag (don't reset radios)
+      applyFilters();
+    });
+  }
+
+  // Show/hide more filters (if present)
   const toggleBtn = document.getElementById('toggle-filters');
   const moreFilters = document.getElementById('more-filters');
   if (toggleBtn && moreFilters) {
@@ -148,5 +156,12 @@ document.addEventListener('DOMContentLoaded', function() {
   // Initial state
   headers.forEach(h => h.style.display = '');
   bookLists.forEach(l => l.style.display = '');
+  // initialize currentStatus from select if present
+  currentStatus = (statusSelect && statusSelect.value) ? statusSelect.value.toLowerCase() : 'all';
+  // ensure the "all" tag radio is the default currentTag if one is checked, otherwise 'all'
+  const checkedTag = Array.from(filterRadios).find(r => r.checked);
+  currentTag = checkedTag ? checkedTag.value.toLowerCase() : 'all';
+
+  updateFilterLabels();
   if (typeof updateBookCounts === 'function') updateBookCounts();
 });
