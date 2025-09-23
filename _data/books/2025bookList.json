@@ -214,5 +214,17 @@
     "tags": ["sci-fi"],
     "status": "want-to-read",
     "description": ""
+  },
+  {
+    "cover": "https://m.media-amazon.com/images/I/510LCOmEAUL._SY445_SX342_FMwebp_.jpg",
+    "coverAlt": "Cover of Designing for Behavior Change with bold title text",
+    "link": "https://www.oreilly.com/library/view/designing-for-behavior/9781449370156/",
+    "title": "Designing for Behavior Change",
+    "subTitle": "Applying Psychology and Behavioral Economics",
+    "author": "Stephen Wendel",
+    "type": "book",
+    "tags": ["design"],
+    "status": "want-to-read",
+    "description": "Practical methods for applying behavioral science to product and service design."
   }
 ]
