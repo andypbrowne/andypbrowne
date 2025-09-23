@@ -10,7 +10,7 @@ header.bookshelf-header {
 span.bookcount {
     font-family: var(--font-family);
     font-variant-caps: all-small-caps;
-    font-weights: 600;
+    font-weight: 600;
     font-variation-settings: "wght" 650;
 }
 
@@ -244,9 +244,6 @@ ol#filtered-results {
 
 /* Style the status dropdown to match the pill radios */
 #status-select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
   display: inline-block;
   padding: 0.45rem 1.1rem 0.45rem 1rem; /* room for caret on right */
   border-radius: 2rem;
@@ -256,15 +253,11 @@ ol#filtered-results {
   border: 1px solid var(--color-midnight-20, #ccc);
   font-size: var(--font-size-sm);
   font-family: var(--font-family);
+  font-weight: 600;
   line-height: 1.2;
   cursor: pointer;
   text-align: left;
   box-sizing: border-box;
-  /* transition: background 0.12s, color 0.12s, border-color 0.12s; */
-  /* add space for a caret icon */
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath fill='var(--color-midnight-60)' d='M0 0l5 6 5-6z'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 0.6rem center;
   background-size: .6rem auto;
   padding-right: 2rem;
 }
