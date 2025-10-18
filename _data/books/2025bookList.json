@@ -192,6 +192,18 @@
     "description": "A Strand Books find from years ago. Glad to be reading it now though this hardcover is very heavy!"
   },
   {
+      "cover": "/assets/images/cover-bonsai-pocket-guide.jpg",
+      "coverAlt": "A cascading juniper bonsai tree in a large pot",
+      "link": "https://www.example.com/bonsai-pocket-guide",
+      "title": "Bonsai Pocket Guide",
+      "subTitle": "A Beginner's Journey",
+      "author": "Jason Chan",
+      "type": "",
+      "tags": [""],
+      "currentlyReading": "false",
+      "description": "For our anniversary my partner got me a bonsai tree. I am super excited about the project to trim and shape it."
+  },
+  {
     "cover": "https://m.media-amazon.com/images/I/71EnMCMcO5L._SY522_.jpg",
     "coverAlt": "Cover of Meeting Design by Kevin M. Hoffman with bold text and geometric shapes",
     "link": "https://abookapart.com/products/meeting-design",
