@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
-  const filterRadios = document.querySelectorAll('input[name="filter"]'); // tag radios
+  const filterRadios = Array.from(document.querySelectorAll('input[name="filter"]')); // tag radios
   const statusSelect = document.getElementById('status-select'); // the status dropdown
+  const groupToggle = document.getElementById('group-by-years'); // new grouping checkbox
   const bookCards = Array.from(document.querySelectorAll('.book-card, .filter-grid-item'));
   const headers = document.querySelectorAll('.bookshelf-header');
   const bookLists = document.querySelectorAll('ol.bookshelf.filter-grid');
@@ -8,6 +9,15 @@ document.addEventListener('DOMContentLoaded', function() {
   // track current selections (persist status across tag changes)
   let currentStatus = (statusSelect && statusSelect.value) ? statusSelect.value.toLowerCase() : 'all';
   let currentTag = 'all';
+
+  // keep grouping state (true = show grouped headers / keep items in their lists)
+  let groupByYears = groupToggle ? !!groupToggle.checked : true;
+  if (groupToggle) {
+    groupToggle.addEventListener('change', () => {
+      groupByYears = !!groupToggle.checked;
+      applyFilters();
+    });
+  }
 
   // store original positions so we can restore later
   const originalPos = new Map();
@@ -104,21 +114,31 @@ document.addEventListener('DOMContentLoaded', function() {
       const statusMatches = (statusKey === 'all') || (cardStatus === statusKey);
       const tagMatches = (tagKey === 'all') || (tags.includes(tagKey));
 
-      // visible only if both match
       card.style.display = (statusMatches && tagMatches) ? '' : 'none';
     });
 
-    // layout: if any filter is active (not both 'all'), hide year headers and show filtered row
     const filterActive = (statusKey !== 'all') || (tagKey !== 'all');
-    if (!filterActive) {
+
+    // If grouping is enabled, keep year headers and lists visible and do not flatten
+    if (groupByYears) {
+      // ensure items are in their original lists and headers shown
       restoreOriginalPositions();
       headers.forEach(h => h.style.display = '');
       bookLists.forEach(l => l.style.display = '');
+      // hide the flattened container
+      if (filteredContainer) filteredContainer.style.display = 'none';
     } else {
-      headers.forEach(h => h.style.display = 'none');
-      const visible = bookCards.filter(c => c.style.display !== 'none');
-      moveToFiltered(visible);
-      bookLists.forEach(l => l.style.display = 'none');
+      // previous behavior: flatten when a filter is active
+      if (!filterActive) {
+        restoreOriginalPositions();
+        headers.forEach(h => h.style.display = '');
+        bookLists.forEach(l => l.style.display = '');
+      } else {
+        headers.forEach(h => h.style.display = 'none');
+        const visible = bookCards.filter(c => c.style.display !== 'none');
+        moveToFiltered(visible);
+        bookLists.forEach(l => l.style.display = 'none');
+      }
     }
 
     updateFilterLabels();
@@ -159,9 +179,14 @@ document.addEventListener('DOMContentLoaded', function() {
   // initialize currentStatus from select if present
   currentStatus = (statusSelect && statusSelect.value) ? statusSelect.value.toLowerCase() : 'all';
   // ensure the "all" tag radio is the default currentTag if one is checked, otherwise 'all'
-  const checkedTag = Array.from(filterRadios).find(r => r.checked);
+  const checkedTag = filterRadios.find(r => r.checked);
   currentTag = checkedTag ? checkedTag.value.toLowerCase() : 'all';
 
+  // ensure checkbox and JS state are in sync on load
+  if (groupToggle) {
+    groupByYears = !!groupToggle.checked;
+  }
+
   updateFilterLabels();
-  if (typeof updateBookCounts === 'function') updateBookCounts();
+  applyFilters();
 });
