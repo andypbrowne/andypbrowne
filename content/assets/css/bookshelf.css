@@ -200,6 +200,15 @@ fieldset.filtering legend {
   color: var(--color-midnight-20, #fff);
 }
 
+.group-toggle label,
+.group-toggle label:hover {
+  background: none;
+  border: none;
+  color: var(--text-color);
+  font-weight: 600;
+  padding: 0.5rem 0;
+}
+
 /* do something fancy */
 .filtered-row {
   display: flex;

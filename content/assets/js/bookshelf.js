@@ -157,6 +157,16 @@ document.addEventListener('DOMContentLoaded', function() {
   if (statusSelect) {
     statusSelect.addEventListener('change', function() {
       currentStatus = (this.value || 'all').toLowerCase();
+
+      // force grouping off for "want-to-read" and "currently-reading"
+      if (currentStatus === 'want-to-read' || currentStatus === 'currently-reading') {
+        groupByYears = false;
+        if (groupToggle) groupToggle.checked = false;
+      } else {
+        // otherwise respect the checkbox (leave grouping as user-set)
+        groupByYears = groupToggle ? !!groupToggle.checked : groupByYears;
+      }
+
       // apply filters with the same selected tag (don't reset radios)
       applyFilters();
     });
@@ -184,7 +194,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // ensure checkbox and JS state are in sync on load
   if (groupToggle) {
-    groupByYears = !!groupToggle.checked;
+    // if initial status is want-to-read/currently-reading, override grouping to off
+    if (currentStatus === 'want-to-read' || currentStatus === 'currently-reading') {
+      groupByYears = false;
+      groupToggle.checked = false;
+    } else {
+      groupByYears = !!groupToggle.checked;
+    }
   }
 
   updateFilterLabels();
