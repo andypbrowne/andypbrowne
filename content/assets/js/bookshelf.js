@@ -101,6 +101,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
+  const emptyStateEl = document.getElementById('empty-state');
+
   // apply both currentTag and currentStatus to show matching cards
   function applyFilters() {
     const statusKey = currentStatus;
@@ -121,14 +123,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // If grouping is enabled, keep year headers and lists visible and do not flatten
     if (groupByYears) {
-      // ensure items are in their original lists and headers shown
       restoreOriginalPositions();
       headers.forEach(h => h.style.display = '');
       bookLists.forEach(l => l.style.display = '');
-      // hide the flattened container
       if (filteredContainer) filteredContainer.style.display = 'none';
     } else {
-      // previous behavior: flatten when a filter is active
       if (!filterActive) {
         restoreOriginalPositions();
         headers.forEach(h => h.style.display = '');
@@ -139,6 +138,12 @@ document.addEventListener('DOMContentLoaded', function() {
         moveToFiltered(visible);
         bookLists.forEach(l => l.style.display = 'none');
       }
+    }
+
+    // show empty state when no visible cards
+    const visibleCount = bookCards.filter(c => c.style.display !== 'none').length;
+    if (emptyStateEl) {
+      emptyStateEl.hidden = visibleCount > 0;
     }
 
     updateFilterLabels();

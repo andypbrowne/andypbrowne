@@ -22,15 +22,6 @@ js: /assets/js/bookshelf.js
   <div class="overflow">
 
     <div>
-      <label for="status-select" class="visually-hidden">Status</label>
-      <select id="status-select" name="status">
-        <option value="read">Read</option>
-        <option value="want-to-read">Want to read</option>
-        <option value="currently-reading">Currently reading</option>
-      </select>
-    </div>
-
-    <div>
       <input name="filter" id="all" type="radio" value="all" checked>
       <label for="all">All</label>
     </div>
@@ -68,12 +59,27 @@ js: /assets/js/bookshelf.js
       <label for="travel">Travel</label>
     </div>
   </div>
-  <!-- Toggle grouping by year (accessible checkbox) -->
+  <div class="status-controls" role="group" aria-label="Status controls">
+    <div class="select-wrap">
+      <label for="status-select" class="visually-hidden">Status</label>
+      <select id="status-select" name="status">
+        <option value="read">Read</option>
+        <option value="want-to-read">Want to read</option>
+        <option value="currently-reading">Currently reading</option>
+      </select>
+    </div>
+
     <div class="group-toggle">
       <input id="group-by-years" type="checkbox" checked>
       <label for="group-by-years">Group by year</label>
     </div>
+  </div>
 </fieldset>
+
+<!-- Empty state shown when no books match current filters -->
+<div id="empty-state" class="empty-state" role="status" aria-live="polite" hidden>
+  <p>No books match your filters. Try clearing the filters or selecting a different status.</p>
+</div>
 
 <header class="bookshelf-header">
     <h2>2025</h2>

@@ -257,9 +257,9 @@ ol#filtered-results {
   padding: 0.45rem 1.1rem 0.45rem 1rem; /* room for caret on right */
   border-radius: 2rem;
   min-width: 10rem;
-  background: var(--color-midnight-20, #f0f0f0);
+  background: var(--color-base-bg);
   color: var(--color-midnight-60, #222);
-  border: 1px solid var(--color-midnight-20, #ccc);
+  border: 1px solid var(--color-midnight-80, #ccc);
   font-size: var(--font-size-sm);
   font-family: var(--font-family);
   font-weight: 600;
@@ -273,18 +273,98 @@ ol#filtered-results {
 
 /* Hover + focus styles to match radio interactions */
 #status-select:hover {
-  background: var(--color-midnight-60);
-  color: var(--color-midnight-20);
-  border-color: var(--color-midnight-60);
+  /* background: var(--color-midnight-60);
+  color: var(--color-midnight-20); */
+  /* border-color: var(--color-midnight-60); */
 }
 
 #status-select:focus {
   outline: none;
-  box-shadow: 0 0 0 3px rgba(23,67,103,0.12);
-  border-color: var(--color-midnight-80);
+  /* box-shadow: 0 0 0 3px rgba(23,67,103,0.12); */
+  /* border-color: var(--color-midnight-80); */
 }
 
 /* Smaller screens: full width optional */
 @media screen and (max-width: 420px) {
   #status-select { min-width: 8rem; }
+}
+
+/* nicer styled status dropdown (uses a wrapper .select-wrap) */
+.select-wrap {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* make the native select visually match the pill radios */
+.select-wrap #status-select,
+#status-select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: none; /* ensure no background SVG remains */
+  padding-right: 3.2rem; /* room for custom chevron + extra right padding */
+}
+
+/* custom chevron placed inside wrapper; "right" controls distance from edge.
+   Increase right value to move chevron left (i.e. add more padding to its right). */
+.select-wrap::after {
+  content: "⌄"; /* U+2304 */
+  position: absolute;
+  right: 1.0rem;       /* change this to move chevron left/right */
+  top: 35%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: var(--color-midnight-60, #333);
+  font-size: 0.95rem;
+  line-height: 1;
+  opacity: 0.95;
+}
+
+/* if you want extra space to the right of the chevron itself, increase right above
+   (e.g. right: 1.6rem) and keep padding-right on the select >= (chevron width + right spacing) */
+
+/* empty state styling */
+.empty-state {
+  margin: 1.25rem 0;
+  padding: 0.85rem 1rem;
+  border-radius: 0.5rem;
+  background: rgba(17,24,39,0.025);
+  color: var(--color-midnight-80, #111);
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+/* keep message unobtrusive on small screens */
+@media (max-width: 480px) {
+  .empty-state { font-size: 0.9rem; padding: 0.65rem 0.75rem; }
+}
+
+/* Layout for status select + group toggle: inline on wide screens, stacked on small screens */
+.status-controls {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  padding-top: 0.6rem; /* separation from genre radio group */
+}
+
+/* small wrapper used earlier for select visuals */
+.select-wrap { margin: 0; }
+
+/* keep the toggle compact and aligned */
+.group-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 600;
+}
+
+/* responsive: stack controls on narrow viewports */
+@media (max-width: 520px) {
+  .status-controls {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.45rem;
+    padding-top: 0.5rem;
+  }
 }
