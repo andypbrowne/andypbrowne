@@ -200,7 +200,7 @@
       "author": "Jason Chan",
       "type": "",
       "tags": [""],
-      "currentlyReading": "false",
+      "status": "read",
       "description": "For our anniversary my partner got me a bonsai tree. I am super excited about the project to trim and shape it."
   },
   {
@@ -238,5 +238,17 @@
     "tags": ["design"],
     "status": "want-to-read",
     "description": "Practical methods for applying behavioral science to product and service design."
+  },
+  {
+    "cover": "https://m.media-amazon.com/images/I/71JfoXve-HL._SY522_.jpg",
+    "coverAlt": "Bold typographic cover with the title 'CAPS LOCK' in uppercase",
+    "link": "https://valiz.nl/en/publications/caps-lock",
+    "title": "Caps Lock",
+    "subTitle": "",
+    "author": "Ruben Pater",
+    "type": "book",
+    "tags": ["design", "typography", "culture"],
+    "status": "want-to-read",
+    "description": ""
   }
 ]
