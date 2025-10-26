@@ -7,6 +7,7 @@
         "subTitle": "Human-Centered Interaction, Design, & Inspirationl",
         "author": "Justin Dauer",
         "tags": ["design", "business", "culture"],
+        "status": "read",
         "description": "This one talks about the new day one experience and how we can apply a human-centered design process to ourselves."
       },
       {
@@ -17,6 +18,7 @@
         "subTitle": "How to Build a Community With Your People",
         "author": "Bailey Richardson, Kevin Huynh, and Kai Elmer Sotto",
         "tags": ["business", "culture", "community"],
+        "status": "read",
         "description": "Packed with case studies about special communities and how they got their start."
       },
       {
@@ -27,6 +29,7 @@
         "subTitle": "Communicate with Stakeholders, Keep Your Sanity, and Deliver the Best User Experience",
         "author": "Tom Greever",
         "tags": ["business", "design"],
+        "status": "read",
         "description": ""
       },
       {
@@ -37,6 +40,7 @@
         "subTitle": "How We Meet and Why It Matters",
         "author": "Priya Parker",
         "tags": ["culture", "community"],
+        "status": "read",
         "description": "This book shows you how to intentionally design gatherings that will make your friends and loved ones feel special and taken care of."
       },
       {
@@ -47,6 +51,7 @@
         "subTitle": "A Novel",
         "author": "Gabrielle Zevin",
         "tags": ["fiction"],
+        "status": "read",
         "description": ""
       },
       {
@@ -57,6 +62,7 @@
         "subTitle": "Rivers, waves, and coffee",
         "author": "Various",
         "tags": ["magazine", "coffee"],
+        "status": "read",
         "description": ""
       },
       {
@@ -67,6 +73,7 @@
         "subTitle": "The Small Book That Has Big Results",
         "author": "David Travis",
         "tags": ["design"],
+        "status": "read",
         "description": "This is a quick and free title to read. The allegory style is not for everyone, but this one is alright by me."
       },
       {
@@ -77,6 +84,7 @@
         "subTitle": "Close Encounters",
         "author": "Various",
         "tags": ["travel", "adventure", "magazine"],
+        "status": "read",
         "description": "Please don't tell my hipster barber shop that I like to steal these issues, they have multiple copies."
       },
       {
@@ -87,6 +95,7 @@
         "subTitle": "Type Specimen",
         "author": "Emigre",
         "tags": ["typography", "design"],
+        "status": "read",
         "description": ""
       }
 ]

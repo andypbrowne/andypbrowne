@@ -8,6 +8,7 @@
     "author": "Vanessa Gennarelli",
     "type": "book club",
     "tags": ["business", "technology", "Career Development"],      
+    "status": "read",
     "description": "Great because it also has some practical exercises to complete. I frequently recommmend this title."
   },
   {
@@ -19,6 +20,7 @@
     "author": "Steward Bewley",
     "type": "book club",
     "tags": ["business", "communication"],
+    "status": "read",
     "description": "Another title with practical exercises. Its also a very quick and quality read."
   },
   {
@@ -29,6 +31,7 @@
     "subTitle": "The New Science of a Lost Art",
     "author": "James Nestor",
     "tags": ["meditation", "health", "wellness"],
+    "status": "read",
     "description": "One of those Malcom Gladwell style books. Probably the best parts is how the reader can't help but practice breathing exercises while reading. It's like it has its own built-in"
   }, 
   {
@@ -39,6 +42,7 @@
     "subTitle": "A Practical Guide",
     "author": "Swami Rama",
     "tags": ["meditation", "health", "wellness"],
+    "status": "read",
     "description": ""
   },
   {
@@ -49,6 +53,7 @@
     "subTitle": "A Way of Being",
     "author": "Rick Rubin",
     "tags": ["creativity", "self-help"],
+    "status": "read",
     "description": ""
   },
   {
@@ -59,6 +64,7 @@
     "subTitle": "And the Adventure of the New Golden Gate",
     "author": "Robin Sloan",
     "tags": ["fiction", "sci-fi"],
+    "status": "read",
     "description": ""
   }, 
   {
@@ -69,6 +75,7 @@
     "subTitle": "Understand the logic powering human bias and learn to start designing more consciously",
     "author": "David Dylan Thomas",
     "tags": ["design"],
+    "status": "read",
     "description": "I highlighted this one so much. Will be worthy of it’s own culture moment or blog post."
   },
   {
@@ -79,6 +86,7 @@
     "subTitle": "By standing together, we can build a better version of the tech industry",
     "author": "Ethan Marcotte",
     "tags": ["design"],
+    "status": "read",
     "description": "I enjoy this title because it really reinforces the themes of ethics and fairness that needs to be a part of all our work."
   },
   {
@@ -90,6 +98,7 @@
       "author": "Various",
       "type": "magazine",
       "tags": ["magazine", "travel", "cycling"],
+      "status": "read",
       "description": ""
   },
   {
@@ -101,6 +110,7 @@
       "author": "Jim VandeHei, Mike Allen, Roy Schwartz",
       "type": "book club",
       "tags": ["business"],
+      "status": "read",
       "description": "I have mixed feelings. It’s important to communicate this way, but I very much miss good prose. So I plan to take what I need and leave the rest"
   },
   {
@@ -112,6 +122,7 @@
       "author": "Various",
       "type": "magazine",
       "tags": ["magazine", "design"],
+      "status": "read",
       "description": ""
   },
   {
@@ -122,6 +133,7 @@
       "subTitle": "A Novel",
       "author": "Robin Sloan",
       "tags": ["sci-fi", "fantacy"],
+      "status": "read",
       "description": "The best part of Sloan’s books is all the extras you get with them. A pre-order means you get printed matter and the author website contains all kinds of hidden gems. All of the deep story makes you want to be part of the world."
   },
   {
@@ -133,6 +145,7 @@
     "author": "Multiple",
     "type": "magazine",
     "tags": ["magazine", "design"],
+    "status": "read",
     "description": "The physical copy is very difficult to read because of very small text and transparent pages. Totally read the online version of these articles."
   },
   {
@@ -143,6 +156,7 @@
       "subTitle": "Wildsam Field Guides",
       "author": "Multiple",
       "tags": ["travel"],
+      "status": "read",
       "description": "This series is better than other guides. There are particular histories like cultural movements, timelines, and illustrated maps. Also fun, the cover is in International Orange, the same as the Golden Gate Bridge."
   },
   {
@@ -153,6 +167,7 @@
     "subTitle": "",
     "author": "Junot Díaz",
     "tags": ["fiction", "latino"],
+    "status": "read",
     "description": "This was the ultimate beach read when visiting the main protagonist of this novel, the Dominican Republic. I could have sworn that I had read this before, and I can't remember what book it reminded me so much of. Perhaps that is why I liked it so much."
   },
   {
@@ -164,6 +179,7 @@
     "author": "Anonymous",
     "type": "other",
     "tags": ["fiction"],
+    "status": "read",
     "description": "Like reading a mini episode of the popular show. Toteally excited for the second season because sometimes I feel like I need to be severed from my corporate job."
   },
   {
@@ -175,6 +191,7 @@
     "author": "J.K. Rowling",
     "type": "audio",
     "tags": ["fantacy", "young adult", "adventure"],
+    "status": "read",
     "description": ""
   },
   {
@@ -185,6 +202,7 @@
     "subTitle": "",
     "author": "Carlos Ruiz Zafón",
     "tags": ["fiction", "historical fiction"],
+    "status": "read",
     "description": "" 
   },
   {
@@ -196,6 +214,7 @@
     "author": "Kyle Chayka",
     "type": "book club",
     "tags": ["business", "technology", "AI"],
+    "status": "read",
     "description": "I skipped the middle part of this book. I think the best take-aways were found in the conclusion which covered the importance of curation and taste." 
   },
   {
@@ -206,6 +225,7 @@
     "subTitle": "A Novel",
     "author": "Kira Jane Buxton",
     "tags": ["fiction", "humor"],
+    "status": "read",
     "description": ""
   },
   {
@@ -217,7 +237,7 @@
     "author": "Charles Duhigg",
     "type": "book club",
     "tags": ["business", "culture"],
-    "currentlyReading": "true",
+    "status": "read",
     "description": "A selection from bookclub and the summer reading list. This title gives advice on how to have better conversations and be that person that others want to connect with."
   }
 ]

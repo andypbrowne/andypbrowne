@@ -7,6 +7,7 @@
     "subTitle": "How to Be a Graphic Designer Without Losing Your Soul",
     "author": "Mike Monteiro",
     "tags": ["design", "business", "creativity"],
+    "status": "read",
     "description": "This now has to be purchased in Zine form and that is a really fun format. I have both editions."
   },
   {
@@ -17,6 +18,7 @@
     "subTitle": "How to Build a Future-Ready Workforce",
     "author": "Shelly Osborne",
     "tags": ["Career Development"],
+    "status": "read",
     "description": ""
   },
   {
@@ -27,6 +29,7 @@
     "subTitle": "Build the Design Industry You Want to See",
     "author": "Sameera Kapila",
     "tags": ["business", "culture", "community"],
+    "status": "read",
     "description": ""
   },
   {
@@ -37,6 +40,7 @@
     "subTitle": "For the Year 2023",
     "author": "Various",
     "tags": ["history", "new york city", "culture"],
+    "status": "read",
     "description": ""
   },
   {
@@ -48,6 +52,7 @@
     "author": "Paul Daugherty, H. James Wilson",
     "type": "book club",
     "tags": ["business", "technology", "AI"],
+    "status": "read",
     "description": "I was not able to get much past the first chapter of this book. I do hear that Chapter 8 is worth reading. So I will likely go back and read that."
   },
   {
@@ -58,6 +63,7 @@
     "subTitle": "50 Ways to Create Engagment, Shared Purpose and a Culture that Can Adapt to Change",
     "author": "Kursat Ozenc, Margaret Hagan",
     "tags": ["culture", "community"],
+    "status": "read",
     "description": ""
   },
   {
@@ -68,6 +74,7 @@
     "subTitle": "",
     "author": "Emily St. John Mandel",
     "tags": ["fiction", "sci-fi"],
+    "status": "read",
     "description": ""
   },
   {
@@ -78,6 +85,7 @@
     "subTitle": "The House is Always Haunted",
     "author": "Romina Garber",
     "tags": ["fiction"],
+    "status": "read",
     "description": ""
   },
   {
@@ -89,6 +97,7 @@
     "author": "Tom Kelley, David Kelley",
     "type": "audio",
     "tags": ["design"],
+    "status": "read",
     "description": ""
   },
   {
@@ -99,6 +108,7 @@
     "subTitle": "Building and Managing In-House Teams",
     "author": "Peter Merholz, Kristin Skinner",
     "tags": ["business", "design"],
+    "status": "read",
     "description": ""
   },
   {
@@ -110,6 +120,7 @@
     "author": "Gavin Lew, Robert M. Schumacher Jr.",
     "type": "book club",
     "tags": ["AI", "design", "technology"],
+    "status": "read",
     "description": ""
   },
   {
@@ -121,6 +132,7 @@
     "author": "Gavin Lew, Robert M. Schumacher Jr.",
     "type": "book club",
     "tags": ["design", "psychology"],
+    "status": "read",
     "description": ""
   },
   {
@@ -132,6 +144,7 @@
     "author": "Regine M. Gilbert",
     "type": "book club",
     "tags": ["accessibility", "design"],
+    "status": "read",
     "description": ""
   },
   {
@@ -142,6 +155,7 @@
     "subTitle": "",
     "author": "Stephen R. Covey",
     "tags": ["business", "psychology"],
+    "status": "read",
     "description": ""
   },
   {
@@ -152,6 +166,7 @@
     "subTitle": "How to Build Inclusion and Collaboration in Your Communities",
     "author": "Susie Wise",
     "tags": ["culture", "community"],
+    "status": "read",
     "description": ""
   },
   {
@@ -162,6 +177,7 @@
     "subTitle": "Turning Everyday Activities into Soulful Practices",
     "author": "Casper ter Kuile",
     "tags": ["culture", "community"],
+    "status": "read",
     "description": ""
   },
   {
@@ -172,6 +188,7 @@
     "subTitle": "Creative Ways to Engage People and Strengthen Relationships",
     "author": "Kursat Ozenc, Glenn Fajardo ",
     "tags": ["culture", "community"],
+    "status": "read",
     "description": ""
   },
   {
@@ -182,6 +199,7 @@
     "subTitle": "A Novel",
     "author": " Marie Benedict, Victoria Christopher Murray",
     "tags": ["historical fiction", "history"],
+    "status": "read",
     "description": "Don't visit the Morgan Libary and Museum without reading this book. You won't learn much about J.P. Morgan but you do get a great perspective on New York City, race, and feminism"
   }
 ]

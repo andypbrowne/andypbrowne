@@ -7,6 +7,7 @@
       "subTitle": "How to Succeed at Work and at Home",
       "author": "Scott Behson, PhD",
       "tags": ["parenting"],
+      "status": "read",
       "description": "This is a title that I received as a gift from a new parent networking group at work. I found this book and that group equally useful when navigating a big life change."
     },
     {
@@ -17,6 +18,7 @@
       "subTitle": "The Human Side of Technology",
       "author": "Scott Behson, PhD",
       "tags": ["magazine", "design"],
+      "status": "read",
       "description": "I first found several issues of Offscreen left out on the sidewalk. What a find because it is an elegant mixture of print design and stories about building digital products – which are not available in digital form."
     },
     {
@@ -27,6 +29,7 @@
       "subTitle": "Information Architecture for Everybody",
       "author": "Abbyy Covert",
       "tags": ["design"],
+      "status": "read",
       "description": ""
     },
     {
@@ -37,6 +40,7 @@
       "subTitle": "How to Solve Big Problems and Test New Ideas in Just Five Days",
       "author": "Jake Knapp, John Zeratsky, Braden Kowitz",
       "tags": ["design"],
+      "status": "read",
       "description": ""
     },
     {
@@ -47,6 +51,7 @@
       "subTitle": "A Practical & Theoretical Treatise on the Artisanal Craft of Pencil Sharpening for Writers, Artists, Contractors, Flange Turners, Anglesmiths, & Civil Servants",
       "author": "David Rees",
       "tags": ["humor"],
+      "status": "read",
       "description": "I bought this as a gift and I had to get the kindle version for myself"
     },
     {
@@ -57,6 +62,7 @@
       "subTitle": "True Stories from Painful Beaches",
       "author": "John Hodgman",
       "tags": ["humor"],
+      "status": "read",
       "description": ""
     },
     {
@@ -67,6 +73,7 @@
       "subTitle": "The Triumphant, Turbulent Stories Behind How Video Games Are Made",
       "author": "Jason Schreier",
       "tags": ["technology", "design"],
+      "status": "read",
       "description": ""
     },
     {
@@ -77,6 +84,7 @@
       "subTitle": "The connective power of how simple questions lead to great conversations",
       "author": "Jeffrey T Cook",
       "tags": ["culture"],
+      "status": "read",
       "description": ""
     },
     {
@@ -87,6 +95,7 @@
       "subTitle": "A Novel",
       "author": "Robin Sloan",
       "tags": ["fiction"],
+      "status": "read",
       "description": ""
     },
     {
@@ -97,6 +106,7 @@
       "subTitle": "A New York City Atlas",
       "author": "Rebecca Solnit, Joshua Jelly-Schapiro",
       "tags": ["history", "maps"],
+      "status": "read",
       "description": ""
     }
 ]

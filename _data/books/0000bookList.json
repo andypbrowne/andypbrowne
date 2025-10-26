@@ -7,6 +7,7 @@
       "subTitle": "A Novel",
       "author": "Neal Stephenson",
       "tags": ["sci-fi"],
+      "status": "read",
       "description": ""
     },
     {
@@ -17,6 +18,7 @@
       "subTitle": "",
       "author": "John Kennedy Toole",
       "tags": ["fiction"],
+      "status": "read",
       "description": "Picked this up on my University Bookstore shelf. Its a reward for all that academic reading. It was a good choice because I love new orleans and it is laugh-till-you-hurt funny."
     },
     {
@@ -27,6 +29,7 @@
       "subTitle": "Crafting Rich Experiences with Progressive Enhancement",
       "author": "Aaron Gustafson",
       "tags": ["design"],
+      "status": "read",
       "description": ""
     },
     {
@@ -37,6 +40,7 @@
       "subTitle": "",
       "author": "Aziz Ansari with Eric Klinenberg",
       "tags": ["humor"],
+      "status": "read",
       "description": ""
     },
     {
@@ -47,6 +51,7 @@
       "subTitle": "",
       "author": "Ernest Cline",
       "tags": ["sci-fi"],
+      "status": "read",
       "description": ""
     },
     {
@@ -57,6 +62,7 @@
       "subTitle": "McLuhan/Agel/Fiore and the Experimental Paperback",
       "author": "Jeffrey Schnapp, Adam Michaels ",
       "tags": ["design"],
+      "status": "read",
       "description": "Sometimes I want to put books on here because the cover looks cool. Interestingly I also have the record soundtrack that this one comes with. It's weird too."
     },
     {
@@ -67,6 +73,7 @@
       "subTitle": "",
       "author": "",
       "tags": ["design", "typography"],
+      "status": "read",
       "description": "I have used Dala Prisma in a previous design project for a wine label. I should use more of these typefaces."
     },
     {
@@ -77,6 +84,7 @@
       "subTitle": "Issue 1",
       "author": "Various Authors",
       "tags": ["design"],
+      "status": "read",
       "description": ""
     },
     {
@@ -87,6 +95,7 @@
       "subTitle": "Inside the Hacker World of LulzSec, Anonymous, and the Global Cyber Insurgency",
       "author": "Parmy Olson",
       "tags": ["cybersecurity"],
+      "status": "read",
       "description": "This was on the top of my reading list when I started in the cybersecurity department. It really helped me undestand a lot of the lingo. So something that sounded silly, like script kiddie or DDoS, actually made scense. its also a really good narative – why isn't it a movie yet?"
     },
     {
@@ -97,6 +106,7 @@
       "subTitle": "A guide to the Illustrious Lives & Locations",
       "author": "Julia Holmes",
       "tags": ["History", "New York City"],
+      "status": "read",
       "description": "When I first moved to NYC I read a lot of local history. There is so many great titles in the genre. You should have seen the evening that our local pub trivia had a round on NYC History. My teammates lost their mind with what I knew. They did not know how many books a podcasts I had consumed."
     },
     {
@@ -107,6 +117,7 @@
       "subTitle": "A Journey Through The Historical Underbelly of Europe",
       "author": "Ian Thomson",
       "tags": ["travel"],
+      "status": "read",
       "description": "I used to go to this travel writer meetup called Restless Legs. A friend of mine, Josh, and I would watch the website and meet up in the basement of a bar. These writers would read from their novel. The best ones wouldn't read but just tell us one of the stories of travel. I really miss that series and I'm going to google it now to see if it is ever coming back. This is another great example of how meeting the author "
     },
     {
@@ -117,6 +128,7 @@
       "subTitle": "",
       "author": "H. Keith Melton, Robert Wallace",
       "tags": ["none"],
+      "status": "read",
       "description": ""
     },
     {
@@ -127,6 +139,7 @@
       "subTitle": "A Hidden Tribe, Superathletes, and the Greatest Race the World Ha  Never Seen",
       "author": "Christopher McDougall",
       "tags": ["running"],
+      "status": "read",
       "description": "I once did a meetup with the author and ran barefoot around prospect park. It wasn't that bad!"
     },
     {
@@ -137,6 +150,7 @@
       "subTitle": "Interviews with Digital Designers About Their Career Journeys",
       "author": "Khoi Vinh",
       "tags": ["design"],
+      "status": "read",
       "description": ""
     },  
     {
@@ -146,6 +160,7 @@
       "title": "The Situationist City",
       "author": "Simon Sadler",
       "tags": ["urbanism"],
+      "status": "read",
       "description": "I was gifted this book, or more like long-term borrowed, when I was doing an art show called Caught Mapping. A lot of the elements of that show like navigation and mapping of urban landscapes."
     }, 
     {
@@ -156,6 +171,7 @@
       "subTitle": "Beware the 13th Sign",
       "author": "Romina Garber",
       "tags": ["sci-fi", "fantacy", "fiction"],
+      "status": "read",
       "description": ""
     },  
     {
@@ -166,6 +182,7 @@
       "subTitle": "",
       "author": "Brad Frost",
       "tags": ["design"],
+      "status": "read",
       "description": "I picked up my signed copy of this book at an event with the author. When I had him sign it I asked for him to mention that my copy would be for corporate libary use only and he got a really big kick out of that."
     },   
     {
@@ -176,6 +193,7 @@
       "subTitle": "",
       "author": "Mike Monteiro",
       "tags": ["design"],
+      "status": "read",
       "description": ""
     },   
     {
@@ -186,6 +204,7 @@
       "subTitle": "",
       "author": "Karen McGrane",
       "tags": ["design"],
+      "status": "read",
       "description": ""
     },  
     {
@@ -196,6 +215,7 @@
       "subTitle": "",
       "author": "Dan Brown",
       "tags": ["design"],
+      "status": "read",
       "description": ""
     },   
     {
@@ -206,6 +226,7 @@
       "subTitle": "A Perspective on Film Editing",
       "author": "Walter Murch",
       "tags": ["film", "editing"],
+      "status": "read",
       "description": ""
     },   
     {
@@ -216,6 +237,7 @@
       "subTitle": "A Novel",
       "author": "Robin Sloan",
       "tags": ["fiction"],
+      "status": "read",
       "description": ""
     },
     {
@@ -226,6 +248,7 @@
       "subTitle": "",
       "author": "Rapha & Thames & Hudson",
       "tags": ["travel", "cycling"],
+      "status": "read",
       "description": ""
     },
     {
@@ -236,6 +259,7 @@
       "subTitle": "A James Bond Novel",
       "author": "Ian Fleming",
       "tags": ["fiction"],
+      "status": "read",
       "description": ""
     },
     {
@@ -246,6 +270,7 @@
       "subTitle": "A walk around Manhattan",
       "author": "Phillip Lopate",
       "tags": ["history"],
+      "status": "read",
       "description": "A reflective collection of essays exploring memory, place, and life along the urban shoreline."
     },
     {
@@ -256,6 +281,7 @@
       "subTitle": "Observations on the History and Habitat of the City's Most Unwanted Inhabitants",
       "author": "Robert Sullivan",
       "tags": ["urbanism", "history"],
+      "status": "read",
       "description": "A thoughtful, often surprising exploration of urban rats — their history, behavior, and the uneasy relationship between humans and these resilient city dwellers."
     }
 ]
