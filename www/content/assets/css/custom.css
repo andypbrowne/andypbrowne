@@ -1,0 +1,12 @@
+.custom-size-images img,
+.cutom-size-images figure {
+	width: auto;
+	height: 5rem;
+	/* max-width: 100%; */
+}
+
+.custom-size-images figure figcaption {
+	text-align: start;
+	/* max-width: 60ch; */
+	overflow-wrap: break-word;
+}
