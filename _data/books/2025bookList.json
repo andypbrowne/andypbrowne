@@ -250,5 +250,29 @@
     "tags": ["design", "typography", "culture"],
     "status": "want-to-read",
     "description": ""
+  },
+  {
+    "cover": "https://m.media-amazon.com/images/I/91H734+UiuL._SY522_.jpg",
+    "coverAlt": "Collage of British landscapes and mythic figures",
+    "link": "https://www.example.com/storyland-amy-jeffs",
+    "title": "Storyland",
+    "subTitle": "A New Mythology of Britain",
+    "author": "Amy Jeffs",
+    "type": "book",
+    "tags": ["history"],
+    "status": "want-to-read",
+    "description": ""
+  },
+  {
+    "cover": "https://m.media-amazon.com/images/I/71ZLgz1U1lL._SY522_.jpg",
+    "coverAlt": "Illustration of a woman floating and text that says winner of the MacArthur genious grant",
+    "link": "https://www.octaviabutler.com/parableseries",
+    "title": "Parable of the Sower",
+    "subTitle": "",
+    "author": "Octavia E. Butler",
+    "type": "",
+    "tags": ["sci-fi", "literature"],
+    "status": "want-to-read",
+    "description": ""
   }
 ]
