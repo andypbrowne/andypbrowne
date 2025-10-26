@@ -55,12 +55,21 @@ document.addEventListener('DOMContentLoaded', function() {
     filteredContainer.style.display = 'none';
   }
 
-  // counts of tags restricted by a status (status = 'all' means no restriction)
-  function computeTagCountsForStatus(status) {
+  // Helper: treat "read" filter as including both "read" and "currently-reading"
+  function statusMatchesKey(bookStatus, statusKey) {
+    if (!statusKey || statusKey === 'all') return true;
+    if (statusKey === 'read') {
+      return bookStatus === 'read' || bookStatus === 'currently-reading';
+    }
+    return bookStatus === statusKey;
+  }
+
+  // counts (use this helper so counts include currently-reading when statusKey === 'read')
+  function computeTagCountsForStatus(statusKey) {
     const counts = new Map();
     bookCards.forEach(card => {
       const cardStatus = (card.getAttribute('data-status') || '').toLowerCase();
-      if (status !== 'all' && cardStatus !== status) return;
+      if (!statusMatchesKey(cardStatus, statusKey)) return;
       const raw = card.getAttribute('data-tags') || '';
       const tags = raw.split(/[\s,]+/).map(t => t.trim().toLowerCase()).filter(Boolean);
       tags.forEach(tag => counts.set(tag, (counts.get(tag) || 0) + 1));
@@ -68,10 +77,9 @@ document.addEventListener('DOMContentLoaded', function() {
     return counts;
   }
 
-  // total number of books for a given status
-  function countForStatus(status) {
-    if (status === 'all') return bookCards.length;
-    return bookCards.filter(c => (c.getAttribute('data-status') || '').toLowerCase() === status).length;
+  function countForStatus(statusKey) {
+    if (!statusKey || statusKey === 'all') return bookCards.length;
+    return bookCards.filter(c => statusMatchesKey((c.getAttribute('data-status') || '').toLowerCase(), statusKey)).length;
   }
 
   // update tag radio labels so counts reflect the currently selected status
@@ -113,7 +121,7 @@ document.addEventListener('DOMContentLoaded', function() {
       const rawTags = card.getAttribute('data-tags') || '';
       const tags = rawTags.split(/[\s,]+/).map(t => t.trim().toLowerCase()).filter(Boolean);
 
-      const statusMatches = (statusKey === 'all') || (cardStatus === statusKey);
+      const statusMatches = statusMatchesKey(cardStatus, statusKey);
       const tagMatches = (tagKey === 'all') || (tags.includes(tagKey));
 
       card.style.display = (statusMatches && tagMatches) ? '' : 'none';
