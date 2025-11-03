@@ -80,7 +80,7 @@ resources:
   - brand: Yafa
     name: Huehuetenango
     origin:
-      - Guatema
+      - Guatemala
     process: Washed
     roast: Medium
     flavors: 
@@ -90,6 +90,47 @@ resources:
     link: https://www.yafabrooklyn.com/shop/p/huehuetenango
     image: ./yafa.jpg
     alt: A coffee bag with large vertial lettering
+  - brand: La Flower
+    name: Tradicional
+    origin:
+      - Columbia
+    process: Washed
+    roast: Medium
+    flavors: 
+      - Chocolate
+      - Almonds
+      - Citrus
+    link: https://www.facebook.com/profile.php?id=100071510420975&sk=about
+    image: ./la-flower.jpg
+    alt: A coffee bag with large vertial lettering
+  - brand: Flying Bean
+    name: Negus
+    origin:
+      - Ethiopia
+    process: Washed
+    roast: Light
+    flavors: 
+      - Figs
+      - Black Tea
+      - Lemon
+      - Cardomon
+    link: https://flyingbeancoffee.com/product/negus/
+    image: ./flying-bean.webp
+    alt: Close-up of a label that describes the characteristics of the coffee and the region which is Yirgacheffe
+  - brand: Oslo
+    name: Golden Tree Blend
+    origin:
+      - Sumatra
+      - Ethiopia
+    process: 
+    roast: 
+    flavors: 
+      - Apricot
+      - Chocolate
+      - Honey
+    link: https://oslocoffee.com/collections/coffee/products/golden-tree-blend?variant=28780367413296
+    image: ./oslo.jpg
+    alt: A very plain looking coffee bag made of craft paper
 ---
 
 <div class="grid"> {% for resource in resources %}
@@ -100,9 +141,16 @@ resources:
             {%- if resource.origin %}
               <i>{{ resource.origin | join(', ') }}</i>
             {%- endif %}
+            {%- if resource.process %}
+              <span class="vh">{{ resource.process }}, </span>
+            {%- endif %}
+            {%- if resource.roast %}
+              <span class="vh">{{ resource.roast }}</span>
+            {%- endif %}
         </div>
         <div class="card-footer">
             {%- if resource.flavors %}
+            <span class="vh">Flavors:</span>
                 {%- for f in resource.flavors %}
                   <span class="resource-tag">{{ f }}</span>
                 {%- endfor %}
