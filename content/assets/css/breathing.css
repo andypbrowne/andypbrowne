@@ -62,7 +62,8 @@ img.custom-size-image {
 }
 
 .card .card-footer {
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .card .card-body h2 a {
