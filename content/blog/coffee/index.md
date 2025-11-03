@@ -1,6 +1,6 @@
 ---
 title: Coffee
-description: A list of local coffee for reference
+description: A list of favorite coffee for reference
 thumbnail: assets/images/thumb-coffee.jpg
 thumbnailAlt: for placeholder only
 date: 2025-11-01
@@ -158,3 +158,21 @@ resources:
         </div>
         <hr>
     </div>{% endfor %}</div>
+
+<div class="vh">
+
+Coffee to try based on these favorites (AI recomendations)
+
+- [JBC](https://jbccoffeeroasters.com/product/mengeche-derso-natural/)
+- [Browny Ethiopia Medium Roast](https://brownycoffee.com/products/ethiopia-medium-roast-coffee)
+- [Coffee Man Honduras + Brasil Rise From the Ashes Blend](https://drinkcoffeeman.com/products/honduras-brazil-rise-from-the-ashes-blend-copy)  - This is too dark
+- [La Cabra Coffee](https://us.lacabra.com/collections/coffee)
+- [Sey El Diviso](https://www.seycoffee.com/products/el-diviso-gesha)
+- [Onyx Coffee Lab Ethiopia Chelbessa](https://onyxcoffeelab.com/products/ethiopia-chelbessa)
+- [Tim Wendelboe Finca Tamana Variedad Colombia](https://timwendelboe.no/product/finca-tamana-colombian-filter-coffe-2/)
+- [Coffee Collective – Guatemala Finca Vista Hermosa](https://coffeecollective.dk/collections/filter-coffee)
+
+</div>
+
+
+￼
