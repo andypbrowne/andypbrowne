@@ -39,7 +39,7 @@ resources:
   - brand: Superlost
     name: Supernatural
     origin:
-      - Columbia
+      - Colombia
     process: Carbonic Maceration Natural
     roast: Light
     flavors: 
