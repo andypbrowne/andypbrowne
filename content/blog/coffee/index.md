@@ -131,6 +131,19 @@ resources:
     link: https://oslocoffee.com/collections/coffee/products/golden-tree-blend?variant=28780367413296
     image: ./oslo.jpg
     alt: A very plain looking coffee bag made of craft paper
+  - brand: Counter Culture
+    name: Apollo
+    origin: 
+     - Ethiopia
+    process:
+    roast: Medium
+    flavors:
+     - Citrus
+     - Floral
+     - Silk
+    link: https://counterculturecoffee.com/products/apollo
+    image: ./apollo.jpg
+    alt: a sunny gradient printing on coffee bag
 ---
 
 <div class="grid"> {% for resource in resources %}
