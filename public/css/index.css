@@ -224,11 +224,28 @@ aside.currently-reading h2 {
 
 aside.currently-reading .featured-book {
 	display: flex;
-	flex-direction: column;
+	flex-direction: column-reverse;
 	gap: 1rem;
 	margin-block-start: 1.6rem;
 	font-family: var(--font-family-sans-serif);
 }
+
+aside.currently-reading .featured-book .featured-book-cover {
+	width: 100%;
+	display:flex;
+}
+
+aside.currently-reading .featured-book .featured-book-cover a {
+	width: 100%;
+	display:flex;
+}
+
+aside.currently-reading .featured-book .featured-book-cover a img {
+	max-width: 400px;
+	margin-inline: auto;
+	justify-self: center;
+}
+
 aside.currently-reading .featured-book .info h3 {
 		margin: 0;
 		font-family: var(--font-family-cedar);
@@ -264,7 +281,7 @@ aside.case-study-metadata,
 	justify-content: space-between;
 	gap: 1rem;
 	font-size: var(--font-size-sm);
-	margin-bottom: 6rem;
+	margin-bottom: 1rem;
 }
 
 aside.case-study-metadata h2,

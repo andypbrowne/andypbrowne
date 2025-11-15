@@ -8,7 +8,7 @@
     "author": "Jenny Odell",
     "type": "library, eBook",
     "tags": ["technology", "culture"],
-    "currentlyReading": "false",
+    "status": "read",
     "description": "Written by an artist who draws from history to understand how we can live a more purposeful life. The provocative title actually implies a balance we need to achieve and the necessity of missing out."
   },
   {
@@ -20,7 +20,7 @@
     "author": "Robert C. O'Brien",
     "type": "library, eBook",
     "tags": ["fantacy", "fiction"],
-    "currentlyReading": "false",
+    "status": "read",
     "description": "Adding some books that I am reading to my child. This is one that I was very excited to share with her."
   },
   {
@@ -32,7 +32,7 @@
     "author": "John Cleese",
     "type": "library",
     "tags": ["creativity", "self-help"],
-    "currentlyReading": "false",
+    "status": "read",
     "description": "Creativity is not a skill or a talent… it is simply an ability to play and get into a mindset where we trust our own ideas and instincts. Note to self: also read the audiobook because the author reads it."
   },
   {
@@ -44,7 +44,7 @@
     "author": "Various",
     "type": "newsprint",
     "tags": ["kids", "self-help"],
-    "currentlyReading": "false",
+    "status": "read",
     "description": "Super excited to share something newsprint with my daughter. This fun gift also has a lot of helpful advise that parents are not supposed to read."
   },
   {
@@ -56,7 +56,7 @@
     "author": "Ernest Cline",
     "type": "",
     "tags": ["sci-fi", "technology"],
-    "currentlyReading": "false",
+    "status": "read",
     "description": "Accessible science fiction. Full of nostalgia for the 1980s. Don't listen to harsh reviews. This is a fun rewarding read like its predecessor."
   },
   {
@@ -68,7 +68,7 @@
     "author": "Tom Rath",
     "type": "",
     "tags": ["business", "self-help"],
-    "currentlyReading": "false",
+    "status": "read",
     "description": "&ldquo;<em>You cannot be anything you want to be – but you can be a lot more of who you already are</em>.&rdquo; Are you the personality that enjoy&rsquo;s personality tests? This one is a cool and positive perspective and great to complete as a team."
   },
   {
@@ -80,7 +80,7 @@
     "author": "Kaveh Akbar",
     "type": "library, eBook",
     "tags": ["fiction"],
-    "currentlyReading": "false",
+    "status": "read",
     "description": "I am reading this book because it has a very good looking cover and it was included in the recent NY Times <em>100 Best Books of the 21st Century</em>. Also, the book title has a bang!"
   },
   {
@@ -92,7 +92,7 @@
     "author": "Percival Everett",
     "type": "",
     "tags": ["fiction", "literature"],
-    "currentlyReading": "false",
+    "status": "read",
     "description": "A retelling of Huckleberry Finn. My partner, who just finished it for her book club, warned me that it's an intense read."
   },
   {
@@ -104,7 +104,7 @@
     "author": "Erika K. Hall",
     "type": "",
     "tags": ["research", "design"],
-    "currentlyReading": "false",
+    "status": "read",
     "description": "I've found an opportunity to read new editions of old favorites. This is probably the best book about UX research for practitioners and curious about design and product research."
   },
   {
@@ -116,7 +116,7 @@
     "author": "Ellen Lupton",
     "type": "",
     "tags": ["design", "typography"],
-    "currentlyReading": "false",
+    "status": "read",
     "description": ""
   },
   {
@@ -128,7 +128,7 @@
     "author": "Lulu Miller",
     "type": "",
     "tags": ["science", "nature"],
-    "currentlyReading": "false",
+    "status": "read",
     "description": ""
   },
   {
@@ -140,7 +140,7 @@
     "author": "Simon Sinek",
     "type": "",
     "tags": ["business", "culture", "leadership"],
-    "currentlyReading": "false",
+    "status": "read",
     "description": "The joke is that I read the wrong book at book club. Turns out that this one is a good complement to his other novels. It also has my favorite diagram about performance and trust."
   },
   {
@@ -152,7 +152,7 @@
       "author": "Andy Weir",
       "type": "library, eBook",
       "tags": ["sci-fi", "fiction", "space"],
-      "currentlyReading": "false",
+      "status": "read",
       "description": "Best experience is reading the book and then finding out that the movie is going to come out!"
   },
   {
@@ -164,7 +164,7 @@
     "author": "Simon Sinek",
     "type": "book club",
     "tags": ["business", "leadership", "culture"],
-    "currentlyReading": "false",
+    "status": "read",
     "description": "A book club selection at work. I find that it is great to read along side watching the videos."
   },
   {
@@ -176,7 +176,7 @@
     "author": "Octavia E. Butler",
     "type": "library, eBook",
     "tags": ["fiction", "sci-fi", "literature"],
-    "currentlyReading": "false",
+    "status": "read",
     "description": "A great continuation of this year's reading themes of sci-fi and historical fiction."
   },
   {
@@ -188,7 +188,7 @@
     "author": "Haruki Murakami",
     "type": "library, eBook",
     "tags": ["fiction", "literature"],
-    "currentlyReading": "true",
+    "status": "currently-reading",
     "description": "A Strand Books find from years ago. Glad to be reading it now though this hardcover is very heavy!"
   },
   {
@@ -200,7 +200,7 @@
       "author": "Jason Chan",
       "type": "",
       "tags": [""],
-      "currentlyReading": "false",
+      "status": "read",
       "description": "For our anniversary my partner got me a bonsai tree. I am super excited about the project to trim and shape it."
   },
   {
@@ -212,7 +212,67 @@
     "author": "Kevin M. Hoffman",
     "type": "",
     "tags": ["business", "design"],
-    "currentlyReading": "false",
+    "status": "read",
+    "description": ""
+  },
+  {
+    "cover": "https://m.media-amazon.com/images/I/71YEAnV8XTL._SY522_.jpg",
+    "coverAlt": "Cover art for The Left Hand of Darkness featuring an abstract icy landscape",
+    "link": "https://www.ursulakleguin.com/left-hand-darkness",
+    "title": "The Left Hand of Darkness",
+    "subTitle": "",
+    "author": "Ursula K. Le Guin",
+    "type": "",
+    "tags": ["sci-fi"],
+    "status": "want-to-read",
+    "description": ""
+  },
+  {
+    "cover": "https://m.media-amazon.com/images/I/510LCOmEAUL._SY445_SX342_FMwebp_.jpg",
+    "coverAlt": "Cover of Designing for Behavior Change with bold title text",
+    "link": "https://www.oreilly.com/library/view/designing-for-behavior/9781449370156/",
+    "title": "Designing for Behavior Change",
+    "subTitle": "Applying Psychology and Behavioral Economics",
+    "author": "Stephen Wendel",
+    "type": "book",
+    "tags": ["design"],
+    "status": "want-to-read",
+    "description": "Practical methods for applying behavioral science to product and service design."
+  },
+  {
+    "cover": "https://m.media-amazon.com/images/I/71JfoXve-HL._SY522_.jpg",
+    "coverAlt": "Bold typographic cover with the title 'CAPS LOCK' in uppercase",
+    "link": "https://valiz.nl/en/publications/caps-lock",
+    "title": "Caps Lock",
+    "subTitle": "",
+    "author": "Ruben Pater",
+    "type": "book",
+    "tags": ["design", "typography", "culture"],
+    "status": "want-to-read",
+    "description": ""
+  },
+  {
+    "cover": "https://m.media-amazon.com/images/I/91H734+UiuL._SY522_.jpg",
+    "coverAlt": "Collage of British landscapes and mythic figures",
+    "link": "https://www.example.com/storyland-amy-jeffs",
+    "title": "Storyland",
+    "subTitle": "A New Mythology of Britain",
+    "author": "Amy Jeffs",
+    "type": "book",
+    "tags": ["history"],
+    "status": "want-to-read",
+    "description": ""
+  },
+  {
+    "cover": "https://m.media-amazon.com/images/I/71ZLgz1U1lL._SY522_.jpg",
+    "coverAlt": "Illustration of a woman floating and text that says winner of the MacArthur genious grant",
+    "link": "https://www.octaviabutler.com/parableseries",
+    "title": "Parable of the Sower",
+    "subTitle": "",
+    "author": "Octavia E. Butler",
+    "type": "",
+    "tags": ["sci-fi", "literature"],
+    "status": "want-to-read",
     "description": ""
   }
 ]

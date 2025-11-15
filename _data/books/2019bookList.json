@@ -7,6 +7,7 @@
         "subTitle": "How to Observe Users, Influence Design, and Shape Business Strategy",
         "author": "David Travis, Philip Hodgson",
         "tags": ["research", "business"],
+        "status": "read",
         "description": ""
       },
       {
@@ -17,6 +18,7 @@
         "subTitle": "",
         "author": "Peter Mendelsund",
         "tags": ["design"],
+        "status": "read",
         "description": "This is in the style of an experimental paperback. The illustrations are very clever and its nice to have around."
       },
       {
@@ -27,6 +29,7 @@
         "subTitle": "The Resurgence of New Orleans and the Future of Urban America",
         "author": "Scott Cowen with Betsy Seifter",
         "tags": ["urbanism"],
+        "status": "read",
         "description": "I went to school in New Orleans. The topic of designing a city and supporting its history is always a good read for me. In particular the generosity of New Orleans itself is shared in this read."
       },
       {
@@ -37,6 +40,7 @@
         "subTitle": "A toolkit for visual literacy in the 21st century",
         "author": "David Reinfurt",
         "tags": ["design", "education"],    
+        "status": "read",
         "description": ""
       },
       {
@@ -47,6 +51,7 @@
         "subTitle": "",
         "author": "Simon Critchley",
         "tags": ["sports", "philosophy"],    
+        "status": "read",
         "description": "A super nerdy take on the sport and its history"
       },
       {
@@ -57,6 +62,7 @@
         "subTitle": "How the Best Parents Learn to Let Go So Their Children Can Succeed",
         "author": "Jessica Lahey",
         "tags": ["parenting"],    
+        "status": "read",
         "description": ""
       },
       {
@@ -67,6 +73,7 @@
         "subTitle": "",
         "author": "Raybin and King",
         "tags": ["magic", "design"],
+        "status": "read",
         "description": "A birthday present from my good friend Sophie."
       },
       {
@@ -77,6 +84,7 @@
           "subTitle": "Eleventh Edition",
           "author": "",
           "tags": ["typography", "design"],
+          "status": "read",
           "description": "I am very fond of the Hoefler & Co. type capsule that I purchased to get Operator Mono."
       },
       {
@@ -87,6 +95,7 @@
         "subTitle": "How to Engage People and Spark Insights Using the LEGO® Serious Play® Method",
         "author": "Michael Fearne",
         "tags": ["design"],
+        "status": "read",
         "description": ""
       },
       {
@@ -97,6 +106,7 @@
         "subTitle": "A Novel about IT, DevOps, and Helping Your Business Win",
         "author": " Gene Kim, Kevin Behr, George Spafford",
         "tags": ["technology", "business"],    
+        "status": "read",
         "description": ""
       },
       {
@@ -107,6 +117,7 @@
         "subTitle": "How to Create Tech Products Customers Love (Silicon Valley Product Group)",
         "author": "Marty Cagan",
         "tags": ["business"],    
+        "status": "read",
         "description": ""
       },
       {
@@ -117,6 +128,7 @@
         "subTitle": "A Game-Changing Solution for When You Have Too Much to Do (and More Life to Live)",
         "author": "Eve Rodsky",
         "tags": ["parenting"],    
+        "status": "read",
         "description": ""
       },
       {
@@ -127,6 +139,7 @@
         "subTitle": "Undocumented. Unprotected. Unbreakable",
         "author": "Romina Garber",
         "tags": ["fantacy", "fiction"],    
+        "status": "read",
         "description": ""
       },
       {
@@ -137,6 +150,7 @@
         "subTitle": "",
         "author": "Various",
         "tags": ["magazine", "culture"],    
+        "status": "read",
         "description": "Late in the pandemic I was buying masks at a dry cleaning place. There was this whole stack of Brooklyn Magazines that she was just willing to give me. Its very cool that the relaunch issue had about 4 different covers and I got all of them."
       }
 ]

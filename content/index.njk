@@ -83,7 +83,7 @@ css: /assets/css/bookshelf.css
       </ul>
     </div>
     </div>
-    <div style="display: flex; justify-content: flex-end;">
+    <div style="display: flex; justify-content: flex-end; margin-block-end: 2rem;">
       <a href="{{ post.url }}" class="postlist-link">Read more &rarr;</a>
     </div>
   </div>
@@ -95,40 +95,29 @@ css: /assets/css/bookshelf.css
 
 {% set booksData = books.2025bookList -%}
 {% set bookList2024 = booksData %}
+{% set shown_current = false %}
 {% for book in books.2025bookList -%}
-{% if book.currentlyReading == "true" %}
-
+  {% if not shown_current and (book.status == 'currently-reading' or book.currentlyReading == true or book.currentlyReading == 'true') %}
 <aside class="currently-reading">
-
-<h2>Currently Reading</h2>
-    
-<div class="featured-book">
-<div>
-	<a href="{{ book.link }}"><img loading="lazy" width="180" height="270" src="{{ book.cover }}" alt="{{ book.coverAlt }}" /></a>
-</div>
-<div class="info">
-  <h3>{{ book.title }} 
-    {% if book.type == 'audio' %}
-    🎧  
-    {% endif %} 
-  </h3>
-  <p class="sub-title">{{ book.subTitle }}</p>
-  <p class="author">{{ book.author }}</p>
-  {% if book.description %}
-  <p>{{ book.description | safe }}</p>
-  {# <details>
-    <summary><strong>Notes</strong></summary>
-    <div class="notes">
-      <p>{{ book.description }}</p>
+  <h2>Currently Reading</h2>
+  <div class="featured-book">
+    <div class="featured-book-cover">
+      {% if book.link %}<a href="{{ book.link }}">{% endif %}
+        {% if book.cover %}<img loading="lazy" width="180" height="270" src="{{ book.cover }}" alt="{{ book.coverAlt }}" />{% endif %}
+      {% if book.link %}</a>{% endif %}
     </div>
-  </details> #}
-</div>
-</div>
+    <div class="info">
+      <h3>{{ book.title }} {% if book.type == 'audio' %}🎧{% endif %}</h3>
+      {% if book.subTitle %}<p class="sub-title">{{ book.subTitle }}</p>{% endif %}
+      {% if book.author %}<p class="author">{{ book.author }}</p>{% endif %}
+      {% if book.description %}<p>{{ book.description | safe }}</p>{% endif %}
+    </div>
+  </div>
+</aside>
+    {% set shown_current = true %}
   {% endif %}
-
-{% endif %}
 {% endfor -%}
 
-<p style="margin-top: 1em;">More reading on <a href="/bookshelf/">the bookshelf &rarr;</a></p>
+<p style="margin-block: 1em;">More reading on <a href="/bookshelf/">the bookshelf &rarr;</a></p>
 
 </aside>

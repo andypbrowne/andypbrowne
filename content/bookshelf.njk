@@ -20,29 +20,11 @@ js: /assets/js/bookshelf.js
 <fieldset class="filtering">
   <legend>Filter:</legend>
   <div class="overflow">
+
     <div>
       <input name="filter" id="all" type="radio" value="all" checked>
-      {# <label for="all">All ({{ allBooks.length }})</label> #}
       <label for="all">All</label>
     </div>
-
-    {# {% for tagObj in tagObjs if tagObj.count >= 8 %}
-    <div>
-      <input name="filter" id="tag-{{ tagObj.tag | replace(' ', '-') }}" type="radio" value="{{ tagObj.tag }}">
-      <label for="tag-{{ tagObj.tag | replace(' ', '-') }}">{{ tagObj.tag | title }} ({{ tagObj.count }})</label>
-    </div>
-    {% endfor %}
-
-    <div id="more-filters" style="display: none;">
-      {% for tagObj in tagObjs if tagObj.count < 8 %}
-      <div>
-        <input name="filter" id="tag-{{ tagObj.tag | replace(' ', '-') }}" type="radio" value="{{ tagObj.tag }}">
-        <label for="tag-{{ tagObj.tag | replace(' ', '-') }}">{{ tagObj.tag | title }} ({{ tagObj.count }})</label>
-      </div>
-      {% endfor %}
-    </div>
-    <button type="button" id="toggle-filters" class="show-more-btn">Show more filters</button>
-  </div> #}
 
     <div>
       <input name="filter" id="business" type="radio" value="business">
@@ -77,7 +59,27 @@ js: /assets/js/bookshelf.js
       <label for="travel">Travel</label>
     </div>
   </div>
+  <div class="status-controls" role="group" aria-label="Status controls">
+    <div class="select-wrap">
+      <label for="status-select" class="visually-hidden">Status</label>
+      <select id="status-select" name="status">
+        <option value="read">Read</option>
+        <option value="want-to-read">Want to read</option>
+        <option value="currently-reading">Currently reading</option>
+      </select>
+    </div>
+
+    <div class="group-toggle">
+      <input id="group-by-years" type="checkbox" checked>
+      <label for="group-by-years">Group by year</label>
+    </div>
+  </div>
 </fieldset>
+
+<!-- Empty state shown when no books match current filters -->
+<div id="empty-state" class="empty-state" role="status" aria-live="polite" hidden>
+  <p>No books match your filters. Try clearing the filters or selecting a different status.</p>
+</div>
 
 <header class="bookshelf-header">
     <h2>2025</h2>
