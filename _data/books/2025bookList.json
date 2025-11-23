@@ -188,7 +188,7 @@
     "author": "Haruki Murakami",
     "type": "library, eBook",
     "tags": ["fiction", "literature"],
-    "status": "currently-reading",
+    "status": "read",
     "description": "A Strand Books find from years ago. Glad to be reading it now though this hardcover is very heavy!"
   },
   {
@@ -212,7 +212,7 @@
     "author": "Kevin M. Hoffman",
     "type": "",
     "tags": ["business", "design"],
-    "status": "read",
+    "status": "want-to-read",
     "description": ""
   },
   {
@@ -248,8 +248,8 @@
     "author": "Ruben Pater",
     "type": "book",
     "tags": ["design", "typography", "culture"],
-    "status": "want-to-read",
-    "description": ""
+    "status": "currently-reading",
+    "description": "I’m interested in how those new to the field of design will make a creative career. This little bit of history and critique on the role of creative professionsals might have answers."
   },
   {
     "cover": "https://m.media-amazon.com/images/I/91H734+UiuL._SY522_.jpg",
@@ -272,6 +272,30 @@
     "author": "Octavia E. Butler",
     "type": "",
     "tags": ["sci-fi", "literature"],
+    "status": "want-to-read",
+    "description": ""
+  },
+  {
+    "cover": "https://m.media-amazon.com/images/I/91cE1AigdcL._SY522_.jpg",
+    "coverAlt": "Stylized cover with a nature motif and coffee cherries",
+    "link": "https://laurenceking.com/product/the-world-atlas-of-coffee-third-edition/",
+    "title": "The World Atlas of Coffee 3rd Edition",
+    "subTitle": "From Beans to Brewing - Coffees Explored, Explained and Enjoyed",
+    "author": "James Hoffmann",
+    "type": "book",
+    "tags": ["coffee", "reference", "non-fiction"],
+    "status": "want-to-read",
+    "description": ""
+  },
+  {
+    "cover": "https://m.media-amazon.com/images/I/81VKriJgRVL._SY522_.jpg",
+    "coverAlt": "Book cover for Cryptonomicon by Neal Stephenson featuring stylized typography and a geometric pattern",
+    "link": "https://en.wikipedia.org/wiki/Cryptonomicon",
+    "title": "Cryptonomicon",
+    "subTitle": "A Novel",
+    "author": "Neal Stephenson",
+    "type": "book",
+    "tags": ["fiction", "historical", "technology", "sci-fi"],
     "status": "want-to-read",
     "description": ""
   }

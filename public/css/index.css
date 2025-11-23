@@ -231,7 +231,7 @@ aside.currently-reading .featured-book {
 }
 
 aside.currently-reading .featured-book .featured-book-cover {
-	width: 100%;
+	/* width: 100%; */
 	display:flex;
 }
 
@@ -242,8 +242,8 @@ aside.currently-reading .featured-book .featured-book-cover a {
 
 aside.currently-reading .featured-book .featured-book-cover a img {
 	max-width: 400px;
-	margin-inline: auto;
-	justify-self: center;
+	/* margin-inline: auto;
+	justify-self: center; */
 }
 
 aside.currently-reading .featured-book .info h3 {
