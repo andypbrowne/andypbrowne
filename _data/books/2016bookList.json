@@ -108,5 +108,27 @@
       "tags": ["history", "maps"],
       "status": "read",
       "description": ""
+    },
+    {
+      "cover": "https://m.media-amazon.com/images/I/41odfWEZDaL._SY445_SX342_QL70_FMwebp_.jpg",
+      "coverAlt": "Book cover for Seinfeldia with the show's logo",
+      "link": "https://en.wikipedia.org/wiki/Seinfeldia",
+      "title": "Seinfeldia",
+      "subTitle": "How a Show About Nothing Changed Everything",
+      "author": "Jennifer Keishin Armstrong",
+      "tags": ["television", "pop culture", "history"],
+      "status": "read",
+      "description": ""
+    },
+    {
+      "cover": "https://m.media-amazon.com/images/I/412htoq2vvL._SY445_SX342_FMwebp_.jpg",
+      "coverAlt": "Just My Type book cover",
+      "link": "https://en.wikipedia.org/wiki/Just_My_Type",
+      "title": "Just My Type",
+      "subTitle": "A Book About Fonts",
+      "author": "Simon Garfield",
+      "tags": ["design", "typography"],
+      "status": "read",
+      "description": ""
     }
 ]

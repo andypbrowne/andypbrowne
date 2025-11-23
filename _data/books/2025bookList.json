@@ -265,7 +265,7 @@
   },
   {
     "cover": "https://m.media-amazon.com/images/I/71ZLgz1U1lL._SY522_.jpg",
-    "coverAlt": "Illustration of a woman floating and text that says winner of the MacArthur genious grant",
+    "coverAlt": "Illustration of a woman floating and text that says winner of the MacArthur genius grant",
     "link": "https://www.octaviabutler.com/parableseries",
     "title": "Parable of the Sower",
     "subTitle": "",
@@ -286,6 +286,30 @@
     "tags": ["coffee", "reference", "non-fiction"],
     "status": "want-to-read",
     "description": ""
+  },
+  {
+    "cover": "https://m.media-amazon.com/images/I/41PQUhGPtXL._SY445_SX342_FMwebp_.jpg",
+    "coverAlt": "Cover for Emotional Design by Don Norman",
+    "link": "https://www.nngroup.com/books/emotional-design/",
+    "title": "Emotional Design",
+    "subTitle": "Why We Love (or Hate) Everyday Things",
+    "author": "Don Norman",
+    "type": "book",
+    "tags": ["design", "psychology"],
+    "status": "want-to-read",
+    "description": ""
+  },
+  {
+    "cover": "https://m.media-amazon.com/images/I/71aDCupxDdL._SY522_.jpg",
+    "coverAlt": "Cover for Engaged by Amy Bucher",
+    "link": "https://www.oreilly.com/library/view/engaged/9781491978696/",
+    "title": "Engaged",
+    "subTitle": "Designing for Behavior Change",
+    "author": "Amy Bucher",
+    "type": "book",
+    "tags": ["design", "psychology"],
+    "status": "want-to-read",
+    "description": "I wanted to read this because I met the dude who wrote the foreword, Jeff Kreister."
   },
   {
     "cover": "https://m.media-amazon.com/images/I/81VKriJgRVL._SY522_.jpg",
