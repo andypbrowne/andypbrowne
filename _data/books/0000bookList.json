@@ -283,5 +283,27 @@
       "tags": ["urbanism", "history"],
       "status": "read",
       "description": "A thoughtful, often surprising exploration of urban rats — their history, behavior, and the uneasy relationship between humans and these resilient city dwellers."
+    },
+    {
+      "cover": "https://m.media-amazon.com/images/I/814FgZzi5sL._SY522_.jpg",
+      "coverAlt": "Stylized letters that evoke 1950s nostalgia",
+      "link": "https://www.eyrolles.com/Arts-Loisirs/Livre/la-carte-des-meilleurs-burgers-de-paris-100-adresses-incontournbles-pour-vous-regaler-9791030100501/",
+      "title": "Carte des meilleures Burger De Paris",
+      "subTitle": "",
+      "author": "Collectif",
+      "tags": ["food", "map", "travel"],
+      "status": "read",
+      "description": "Can you really get a great burger in Paris, yes. But yes I'm more in-love with the idea of this an the making of maps than french burgers."
+    },
+    {
+      "cover": "../assets/images/cover-la-carte-des-vins.jpg",
+      "coverAlt": "A minimalist one-page wine map of Bordeaux",
+      "link": "https://www.lacartedesvins-svp.com/products/fr-la-carte-des-vins-sil-vous-plait-edition-bordeaux",
+      "title": "La Carte des Vins s'il vous plait Bordeaux",
+      "subTitle": "A one-page guide",
+      "author": "Imprimé en France",
+      "tags": ["wine", "map", "travel"],
+      "status": "read",
+      "description": "A compact, one-page guide to Bordeaux wines and notable appellations."
     }
 ]

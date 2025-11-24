@@ -130,5 +130,16 @@
       "tags": ["design", "typography"],
       "status": "read",
       "description": ""
+    },
+    {
+      "cover": "https://ediblebrooklyn.com/wp-content/uploads/2016/10/AllYouCanEatPress_NYRamenMap.jpeg",
+      "coverAlt": "A stylized map showing ramen shops across New York City",
+      "link": "https://www.allyoucaneatpress.com/shop/vol3-new-york-ramen-map",
+      "title": "New York Ramen Map",
+      "subTitle": "A guide to happy noodle slurping in NYC",
+      "author": "All-You-Can-Eat New York",
+      "tags": ["food", "map", "nyc", "travel"],
+      "status": "read",
+      "description": ""
     }
 ]
