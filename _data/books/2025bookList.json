@@ -322,5 +322,17 @@
     "tags": ["fiction", "historical", "technology", "sci-fi"],
     "status": "want-to-read",
     "description": ""
+  },
+  {
+    "cover": "https://m.media-amazon.com/images/I/51ZKAAqQVJL._SY445_SX342_FMwebp_.jpg",
+    "coverAlt": "A stylized astronomial illustration with 2 characters floating in the stars",
+    "link": "https://bookshop.org/p/books/the-wayfinder-a-novel-adam-johnson/07b6c2c266f1777f?ean=9780374619572&next=t&next=t&affiliate=541",
+    "title": "The Wayfinder",
+    "subTitle": "A Novel",
+    "author": "Adam Johnson",
+    "type": "",
+    "tags": ["fiction", "literature"],
+    "status": "want-to-read",
+    "description": ""
   }
 ]
