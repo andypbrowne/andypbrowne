@@ -141,5 +141,16 @@
       "tags": ["food", "map", "nyc", "travel"],
       "status": "read",
       "description": ""
+    },
+    {
+      "cover": "../assets/images/cover-shape-of-design.svg",
+      "coverAlt": "Cover for The Shape of Design by Frank Chimero",
+      "link": "https://shapeofdesignbook.com/",
+      "title": "The Shape of Design",
+      "subTitle": "",
+      "author": "Frank Chimero",
+      "tags": ["design"],
+      "status": "read",
+      "description": ""
     }
 ]
