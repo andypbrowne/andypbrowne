@@ -334,5 +334,17 @@
     "tags": ["fiction", "literature"],
     "status": "want-to-read",
     "description": ""
+  },
+  {
+    "cover": "https://m.media-amazon.com/images/I/71kuPFdgqwL._SY522_.jpg",
+    "coverAlt": "A simple cover with a stopwatch with a testimonial that also says one of Barak Obama's favorite books of the year.",
+    "link": "https://www.kimstanleyrobinson.info/content/ministry-future",
+    "title": "The Ministry for the Future",
+    "subTitle": "A Novel",
+    "author": "Kim Stanley Robinson",
+    "type": "",
+    "tags": ["sci-fi", "fiction"],
+    "status": "want-to-read",
+    "description": ""
   }
 ]
