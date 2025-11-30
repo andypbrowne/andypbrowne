@@ -346,5 +346,17 @@
     "tags": ["sci-fi", "fiction"],
     "status": "want-to-read",
     "description": ""
+  },
+  {
+    "cover": "/assets/images/field-ethos.jpg",
+    "coverAlt": "Magazine cover featuring people and a desert landscape illustration",
+    "link": "https://fieldethos.org/vol-3-2025",
+    "title": "Field Ethos",
+    "subTitle": "Volume 3, 2025",
+    "author": "Various",
+    "type": "magazine",
+    "tags": ["ecology", "culture"],
+    "status": "read",
+    "description": ""
   }
 ]
