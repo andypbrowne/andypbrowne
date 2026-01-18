@@ -1,7 +1,7 @@
 ---
 title: Breakfast Burrito
 description: Hearty California-style breakfast burrito with homefries, chorizo, scrambled eggs, avocado, and salsa.
-thumbnail: assets/images/thumb-breakfast-burrito.jpg
+thumbnail: assets/images/thumb-burrito.jpg
 thumbnailAlt: A California-style breakfast burrito cut in half with homefries on the side
 date: 2025-12-04
 tags:

@@ -281,7 +281,7 @@ aside.case-study-metadata,
 	justify-content: space-between;
 	gap: 1rem;
 	font-size: var(--font-size-sm);
-	margin-bottom: 1rem;
+	margin-bottom: 4rem;
 }
 
 aside.case-study-metadata h2,
@@ -528,7 +528,7 @@ section.featured-case-study {
 	flex-direction: column;
 	border-radius: var(--border-radius);
 	margin-top: 6rem;
-	gap: 2rem;
+	gap: 4rem;
 }
 
 .case-study-wrapper {

@@ -20,37 +20,55 @@ key_outcomes:
   - Smart content cross-referencing
   - Professional presentation for key audiences
   - Scalable system for future growth
-project_link: https://simonaprives.netlify.app
+project_link: Coming soon!
 ---
 
 {% include "_includes/components/case-study-metadata.njk" %}
 
-Simona needed her website to do serious work. As an artist seeking prestigious residencies and high-profile gallery shows, she needed a platform that would impress curators, gallerists, and residency juries—audiences who make quick judgments and need to find information fast.
+Simona needs her website to do serious work. As an artist seeking prestigious residencies and high-profile gallery shows, she wants a platform that would impress curators, gallerists, and residency juries—audiences who make careful judgments and need to find information easily.
 
-Her existing website was 10 years old. While she loved the aesthetic, updating it had become tedious enough that she simply... didn't. Social media promotion felt disconnected. The site wasn't reflecting her current work or supporting her professional goals.
+Her existing website was 10 years old. While she loved the aesthetic, updating it had become tedious enough that she simply… didn't. Social media promotion felt disconnected. The site wasn't reflecting her current work or supporting her professional goals.
+
+<figure>
+  {% image "./screenshot-index.jpg", "A screenshot of a browser window with a full bleed screenshot of swirling clouds and ink." %}
+  <figcaption>Simona’s new site features full-screen video on the homepage.</figcaption>
+</figure>
 
 ## What needed to change
 
 **The problem wasn't just an old website—it was a missed opportunity.** 
 
-When a curator discovers your work on Instagram and clicks through to your website, you have seconds to make an impression. When a residency jury is reviewing applications, they need to quickly understand your practice, see your exhibitions, and access high-quality documentation.
+When a curator discovers your work on Instagram and clicks through to your website, you have seconds to make an impression. When a residency jury is reviewing applications, they need to quickly understand your practice, see your exhibitions, and access high-quality images and content.
 
-Simona's site needed to:
+<aside>
+
+<h2 style="font-size: var(--font-size-base);">Simona's site needs to</h2>
+
 - Make it effortless to keep content current (so she'd actually do it)
 - Present her work in a way that feels prestigious and international
-- Connect all the pieces—exhibitions could reference specific video works, CV entries could link to exhibit pages
+- Connect all the pieces so exhibitions can reference specific video works, CV entries link to exhibit pages
 - Stand out with something memorable (enter: full-screen video background)
+
+</aside>
 
 ## Understanding the audience
 
-We identified five key audiences, each with different needs:
+We identified 3 key audiences, each with different needs:
 - **Curators and gallerists** need to quickly assess artistic practice and exhibition history
 - **Residency juries** look for innovation, site-specific work, and professional presentation
 - **Other artists** want to see the work itself and how it's documented
 
-All of these audiences prefer email contact and visual information over lengthy text. They're often discovering Simona through Instagram and need the website to be a professional home base that reinforces what drew them in.
+All of these audiences prefer email contact and visual information over lengthy text. They’re often discovering Simona through Instagram and need the website to be a professional home base that reinforces what drew them in.
+
+<hr>
 
 ## Making updates effortless
+
+<figure>
+  {% image "./screenshot-studio-dark.jpg", "A screenshot of of a content management system that shows the site structure and editable fields for a gallery exhibit." %}
+  <figcaption>The sanity studio makes entering content as simple a filling a form.</figcaption>
+</figure>
+
 The biggest barrier to keeping the site current was the content management system. We migrated to [Sanity.io](https://sanity.io), which treats content as structured data—like filling out a form rather than wrestling with layouts.
 
 Now Simona can:
@@ -59,13 +77,13 @@ Now Simona can:
 - Update her CV with automatic cross-referencing to exhibit pages
 - Reorder content by dragging and dropping
 
-The site went from "I should update this" to "Oh, that only takes 30 seconds."
+The site went from “I should update this” to “Oh, that only takes 30 seconds.”
 
 ## Smart connections between content
 
 Art careers are interconnected—a piece shown at one exhibition might appear in another context, a video work might be part of multiple shows. We built a system where content references other content:
 
-- **CV exhibitions automatically link to exhibit pages** when a curator wants to dig deeper
+- **CV exhibitions optionally link to exhibit pages** when a curator wants to dig deeper
 - **Exhibit pages reference related video works** from the In Motion gallery
 - **Smart back navigation** means if someone arrives at a video from an exhibit page, the back button returns them to that specific exhibit (not just a generic gallery)
 
@@ -75,7 +93,7 @@ These connections mirror how curators and gallerists actually explore an artist'
 
 Sometimes you need one bold move. The homepage features Simona's work as a full-screen video background—immediately immersive, impossible to ignore. It sets a tone: this artist works with time-based media, thinks cinematically, and isn't afraid to be direct.
 
-For audiences scrolling through dozens of artist portfolios, it's a moment of "oh, this is different."
+For audiences scrolling through dozens of artist portfolios, it's a moment of “oh, this is different.”
 
 ## Progressive enhancement and web standards
 
