@@ -44,80 +44,49 @@ css: /assets/css/bookshelf.css
 
 <section class="featured-case-study">
 
-  {% set postslist = collections.posts | head(-8) %}
-  {% set postslistCounter = postsCount %}
-  {% for post in postslist | reverse %}
-  {% if 'featured case study' in post.data.tags %}
-	<div class="featured-case-study-image">
-    {% if post.data.thumbnail %}
-		<a href="{{ post.url }}">
-			{% image post.data.thumbnail, post.data.thumbnailAlt %}
-		</a>
-		{% endif %}
-  </div>
-  <div class="featured-case-study-content">
-		<a href="{{ post.url }}" class="postlist-link">
-			{% if post.data.title %}
-			<h2>{{ post.data.title }}</h2>
-			{% else %}
-			<code>{{ post.url }}</code>
-			{% endif %}</a>
-		{% if post.data.description %}
-			<p style="font-size: var(--font-size-md); font-family: var(--font-family-cedar); font-style: italic; font-weight: 650;">{{ post.data.description }}</p>
+  {% set caseStudies = [] %}
+  {% for post in collections.posts | reverse %}
+    {% if 'featured case study' in post.data.tags %}
+      {% set caseStudies = (caseStudies.push(post), caseStudies) %}
     {% endif %}
-    <div class="case-study-metadata">
-    <div>
-      <h2 class="small-caps">Summary</h2>
-      <p>{{ post.data.summary }}</p>
+  {% endfor %}
+  
+  {% for post in caseStudies | head(2) %}
+    {% if loop.index % 2 == 1 %}
+      <div class="featured-case-study-image">
+        {% if post.data.thumbnail %}
+          <a href="{{ post.url }}">
+            {% image post.data.thumbnail, post.data.thumbnailAlt %}
+          </a>
+        {% endif %}
+      </div>
+    {% endif %}
+    
+    <div class="featured-case-study-content">
+      <a href="{{ post.url }}" class="postlist-link">
+        {% if post.data.title %}
+        <h2>{{ post.data.title }}</h2>
+        {% else %}
+        <code>{{ post.url }}</code>
+        {% endif %}
+      </a>
+      {% if post.data.description %}
+        <p style="font-size: var(--font-size-md); font-family: var(--font-family-cedar); font-style: italic; font-weight: 650;">{{ post.data.description }}</p>
+      {% endif %}
+      <div style="display: flex; justify-content: flex-end; margin-block-end: 2rem;">
+        <a href="{{ post.url }}" class="postlist-link">Read more &rarr;</a>
+      </div>
     </div>
-    <div>
-      <h2 class="small-caps">Responsibilities</h2>
-      <ul>
-        {% for responsibility in post.data.responsibilities %}<li>{{ responsibility }}</li>{% endfor %}
-      </ul>
-    </div>
-    <div>
-      <h2 class="small-caps">Key Outcomes</h2>
-      <ul>
-        {% for outcome in post.data.key_outcomes %}<li>{{ outcome }}</li>{% endfor %}
-      </ul>
-    </div>
-    </div>
-    <div style="display: flex; justify-content: flex-end; margin-block-end: 2rem;">
-      <a href="{{ post.url }}" class="postlist-link">Read more &rarr;</a>
-    </div>
-  </div>
-  {% endif %}
-{% endfor %}
-</div>
+    
+    {% if loop.index % 2 == 0 %}
+      <div class="featured-case-study-image">
+        {% if post.data.thumbnail %}
+          <a href="{{ post.url }}">
+            {% image post.data.thumbnail, post.data.thumbnailAlt %}
+          </a>
+        {% endif %}
+      </div>
+    {% endif %}
+  {% endfor %}
 
 </section>
-
-{% set booksData = books.2025bookList -%}
-{% set bookList2024 = booksData %}
-{% set shown_current = false %}
-{% for book in books.2025bookList -%}
-  {% if not shown_current and (book.status == 'currently-reading' or book.currentlyReading == true or book.currentlyReading == 'true') %}
-<aside class="currently-reading">
-  <h2>Currently Reading</h2>
-  <div class="featured-book">
-    <div class="featured-book-cover">
-      {% if book.link %}<a href="{{ book.link }}">{% endif %}
-        {% if book.cover %}<img loading="lazy" width="180" height="270" src="{{ book.cover }}" alt="{{ book.coverAlt }}" />{% endif %}
-      {% if book.link %}</a>{% endif %}
-    </div>
-    <div class="info">
-      <h3>{{ book.title }} {% if book.type == 'audio' %}🎧{% endif %}</h3>
-      {% if book.subTitle %}<p class="sub-title">{{ book.subTitle }}</p>{% endif %}
-      {% if book.author %}<p class="author">{{ book.author }}</p>{% endif %}
-      {% if book.description %}<p>{{ book.description | safe }}</p>{% endif %}
-    </div>
-  </div>
-</aside>
-    {% set shown_current = true %}
-  {% endif %}
-{% endfor -%}
-
-<p style="margin-block: 1em;">More reading on <a href="/bookshelf/">the bookshelf &rarr;</a></p>
-
-</aside>
