@@ -4,7 +4,7 @@ css: /assets/css/bookshelf.css
 ---
 
 <section class="hero">
-<h2>I’m a User Experience professional with over a decade of know-how. In my current role I specialize in <span class="text-italic text-gradient">employee experience and design systems</span></h2>
+<h2>I’m a User Experience professional with over a decade of know-how. In my current role I specialize in <span class="text-italic text-gradient">employee experience and design operations</span></h2>
 
 <div class="hero-details">
 <p>This site is for writing blog posts about my interests and for summarizing concepts that I don't want to explain over and over again at dinner parties. You can find out more about me on the <a href="/about/">About page</a>. I prefer to be contacted on the following social platforms.</p>
@@ -52,41 +52,44 @@ css: /assets/css/bookshelf.css
   {% endfor %}
   
   {% for post in caseStudies | head(2) %}
-    {% if loop.index % 2 == 1 %}
-      <div class="featured-case-study-image">
-        {% if post.data.thumbnail %}
-          <a href="{{ post.url }}">
-            {% image post.data.thumbnail, post.data.thumbnailAlt %}
-          </a>
-        {% endif %}
-      </div>
-    {% endif %}
-    
-    <div class="featured-case-study-content">
-      <a href="{{ post.url }}" class="postlist-link">
-        {% if post.data.title %}
-        <h2>{{ post.data.title }}</h2>
-        {% else %}
-        <code>{{ post.url }}</code>
-        {% endif %}
-      </a>
-      {% if post.data.description %}
-        <p style="font-size: var(--font-size-md); font-family: var(--font-family-cedar); font-style: italic; font-weight: 650;">{{ post.data.description }}</p>
+    <div class="case-study-wrapper">
+      {% if loop.index % 2 == 1 %}
+        <div class="featured-case-study-image">
+          {% if post.data.thumbnail %}
+            <a href="{{ post.url }}">
+              {% image post.data.thumbnail, post.data.thumbnailAlt %}
+            </a>
+          {% endif %}
+        </div>
       {% endif %}
-      <div style="display: flex; justify-content: flex-end; margin-block-end: 2rem;">
-        <a href="{{ post.url }}" class="postlist-link">Read more &rarr;</a>
-      </div>
-    </div>
-    
-    {% if loop.index % 2 == 0 %}
-      <div class="featured-case-study-image">
-        {% if post.data.thumbnail %}
-          <a href="{{ post.url }}">
-            {% image post.data.thumbnail, post.data.thumbnailAlt %}
-          </a>
+      
+      <div class="featured-case-study-content">
+        <p class="postlist-date">Case study</p>
+        <a href="{{ post.url }}" class="postlist-link">
+          {% if post.data.title %}
+          <h2>{{ post.data.title }}</h2>
+          {% else %}
+          <code>{{ post.url }}</code>
+          {% endif %}
+        </a>
+        {% if post.data.description %}
+          <p style="font-size: var(--font-size-md); font-family: var(--font-family-cedar); font-style: italic; font-weight: 650;">{{ post.data.description }}</p>
         {% endif %}
+        <div style="display: flex; justify-content: flex-end; margin-block-end: 2rem;">
+          <a href="{{ post.url }}" class="postlist-link">Read more &rarr;</a>
+        </div>
       </div>
-    {% endif %}
+      
+      {% if loop.index % 2 == 0 %}
+        <div class="featured-case-study-image">
+          {% if post.data.thumbnail %}
+            <a href="{{ post.url }}">
+              {% image post.data.thumbnail, post.data.thumbnailAlt %}
+            </a>
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
   {% endfor %}
 
 </section>
