@@ -544,22 +544,25 @@ section.featured-case-study .featured-case-study-image img {
 	height: 12rem;
 }
 
-.case-study-wrapper:nth-child(odd) .featured-case-study-image img,
-.case-study-wrapper:nth-child(even) .featured-case-study-content {
+.featured-case-study-image img {
 	object-fit: cover;
-	border-radius: var(--border-radius) 0 0 var(--border-radius);
+	border-radius: var(--border-radius) var(--border-radius) 0 0;
 }
 
-.case-study-wrapper:nth-child(even) .featured-case-study-image img,
-.case-study-wrapper:nth-child(odd) .featured-case-study-content {
-	object-fit: cover;
-	border-radius: 0 var(--border-radius) 0 var(--border-radius);
+.case-study-wrapper:nth-child(odd) .featured-case-study-content,
+.case-study-wrapper:nth-child(even) .featured-case-study-content {
+	border-radius: 0 0 var(--border-radius) var(--border-radius);
 }
 
 .featured-case-study-content {
 	padding-inline: 0px 2rem;
 	padding: 0px 1rem;
+	background-color: var(--color-aside);
 }
+
+.featured-case-study-content h2:first-of-type {
+		margin-block-start: .2rem;
+	}
 
 .featured-case-study-content h3 {
 	margin-block-start: 0px;
@@ -579,12 +582,20 @@ section.featured-case-study .featured-case-study-image img {
 		height: 100%;
 		border-radius: var(--border-radius) 0 0 var(--border-radius);
 	}
-	.case-study-wrapper:nth-child(even) .featured-case-study-image img {
-		border-radius: 0 var(--border-radius) var(--border-radius) 0;
-	}
+	.case-study-wrapper:nth-child(odd) .featured-case-study-image img,
+    .case-study-wrapper:nth-child(even) .featured-case-study-content {
+	  object-fit: cover;
+	  border-radius: var(--border-radius) 0 0 var(--border-radius);
+}
+
+    .case-study-wrapper:nth-child(even) .featured-case-study-image img,
+    .case-study-wrapper:nth-child(odd) .featured-case-study-content {
+	  object-fit: cover;
+	  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
 	.featured-case-study-content {
 		padding: 3.2rem 1rem 3.8rem;
-		background-color: var(--color-aside);
+		/* background-color: var(--color-aside); */
 	}
 	.featured-case-study-content h2:first-of-type {
 		margin-block-start: 2rem;
