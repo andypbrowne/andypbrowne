@@ -7,7 +7,7 @@ date: 2025-12-04
 tags:
   - recipe
   - post
-draft: true
+draft: false
 ingredients:
   - 1 lb Yukon Gold or russet potatoes, scrubbed and diced small
   - 1 yellow onion, diced

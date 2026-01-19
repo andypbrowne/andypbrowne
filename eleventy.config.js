@@ -91,6 +91,31 @@ module.exports = function(eleventyConfig) {
 		return (tags || []).filter(tag => ["all", "nav", "post", "posts"].indexOf(tag) === -1);
 	});
 
+	// Get related posts based on shared tags
+	eleventyConfig.addFilter("getRelatedPosts", function(collection, currentUrl, currentTags, limit = 3) {
+		// Filter out the current post and posts without tags
+		const otherPosts = collection.filter(post => {
+			return post.url !== currentUrl && post.data.tags && post.data.tags.length > 0;
+		});
+
+		// Calculate relevance score based on shared tags
+		const postsWithScores = otherPosts.map(post => {
+			const postTags = post.data.tags || [];
+			const sharedTags = currentTags.filter(tag => postTags.includes(tag));
+			return {
+				post: post,
+				score: sharedTags.length
+			};
+		});
+
+		// Sort by score (highest first) and return limited number
+		return postsWithScores
+			.filter(item => item.score > 0)
+			.sort((a, b) => b.score - a.score)
+			.slice(0, limit)
+			.map(item => item.post);
+	});
+
 	eleventyConfig.addCollection("favoriteThings", function(collectionApi) {
 		return collectionApi.getFilteredByTags("favorite-thing");
 	});

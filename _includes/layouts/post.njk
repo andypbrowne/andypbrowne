@@ -38,35 +38,29 @@ layout: layouts/base.njk
 
 <div class="end-mark">🧐</div>
 
-<div class="nextprev">
+<h2>Related</h2>
 
-<h2 class="visually-hidden">Read more posts</h2>
+<div class="featured-post-grid">
 
 {%- if collections.posts %}
-{%- set previousPost = collections.posts | getPreviousCollectionItem %}
-{%- set nextPost = collections.posts | getNextCollectionItem %}
-{%- if nextPost or previousPost %}
-<ul class="links-nextprev">
-	{%- if previousPost %}
-	{%- if not previousPost.data.rss_only %}
-		<li><strong>Previous:</strong>
-			<a href="{{ previousPost.url }}">
-				<img class="thumbnail-nextprev" src="/{{ previousPost.data.thumbnail }}" alt="{{ previousPost.data.thumbnailAlt }}">
+{%- set relatedPosts = collections.posts | getRelatedPosts(page.url, tags, 3) %}
+{%- if relatedPosts.length > 0 %}
+<ol class="postlist">
+	{%- for post in relatedPosts %}
+	{%- if not post.data.rss_only %}
+		<li class="postlist-item">
+			<a href="{{ post.url }}">
+				<img class="thumbnail-nextprev" src="/{{ post.data.thumbnail }}" alt="{{ post.data.thumbnailAlt }}">
 			</a>
-			<a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a></li>
+			<a href="{{ post.url }}"><strong>{{ post.data.title }}</strong></a><br> <time class="" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("LLLL yyyy") }}</time>
+		</li>
 	{% endif %}
-	{% endif %}
-	{%- if not nextPost.data.rss_only %}
-	{%- if nextPost %}
-		<li><strong>Next:</strong> 
-			<a href="{{ nextPost.url }}">
-				<img class="thumbnail-nextprev" src="/{{ nextPost.data.thumbnail }}" alt="{{ nextPost.data.thumbnailAlt }}">
-			</a>
-			<a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></li>
-	{% endif %}
-	{% endif %}
-</ul>
+	{%- endfor %}
+</ol>
+{%- else %}
+<p>No related posts found.</p>
+{%- endif %}
+{%- endif %}
+<div>More posts can be found in <a href="/blog/">the archive &rarr;</a>.</div>
 </div>
 </article>
-{%- endif %}
-{%- endif %}
