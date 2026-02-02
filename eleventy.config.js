@@ -91,6 +91,12 @@ module.exports = function(eleventyConfig) {
 		return (tags || []).filter(tag => ["all", "nav", "post", "posts"].indexOf(tag) === -1);
 	});
 
+	// Filter books to exclude want-to-read status
+	eleventyConfig.addFilter("readBooks", (books) => {
+		if (!Array.isArray(books)) return [];
+		return books.filter(book => book.status !== 'want-to-read');
+	});
+
 	// Extract domain from URL
 	eleventyConfig.addFilter("getDomain", (url) => {
 		try {

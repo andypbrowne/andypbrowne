@@ -1363,10 +1363,21 @@ div.preparation-list ol{
 	color: var(--color-primary);
   }
 
-  /* likes page */
+/* likes page */
  ul.likes-list {
 	padding: 0px;
+	column-count: 1;
  } 
+ @media screen and (min-width: 650px) {
+	ul.likes-list {
+		column-count: 2;
+	}
+ }
+ @media screen and (min-width: 950px) {
+	ul.likes-list {
+		column-count: 3;
+	}
+ }
  
   li.like-item {
 	list-style: none;

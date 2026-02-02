@@ -204,150 +204,6 @@
       "description": "For our anniversary my partner got me a bonsai tree. I am super excited about the project to trim and shape it."
   },
   {
-    "cover": "https://m.media-amazon.com/images/I/71EnMCMcO5L._SY522_.jpg",
-    "coverAlt": "Cover of Meeting Design by Kevin M. Hoffman with bold text and geometric shapes",
-    "link": "https://abookapart.com/products/meeting-design",
-    "title": "Meeting Design",
-    "subTitle": "For Managers, Makers, and Everyone",
-    "author": "Kevin M. Hoffman",
-    "type": "",
-    "tags": ["business", "design"],
-    "status": "want-to-read",
-    "description": ""
-  },
-  {
-    "cover": "https://m.media-amazon.com/images/I/71YEAnV8XTL._SY522_.jpg",
-    "coverAlt": "Cover art for The Left Hand of Darkness featuring an abstract icy landscape",
-    "link": "https://www.ursulakleguin.com/left-hand-darkness",
-    "title": "The Left Hand of Darkness",
-    "subTitle": "",
-    "author": "Ursula K. Le Guin",
-    "type": "",
-    "tags": ["sci-fi"],
-    "status": "want-to-read",
-    "description": ""
-  },
-  {
-    "cover": "https://m.media-amazon.com/images/I/510LCOmEAUL._SY445_SX342_FMwebp_.jpg",
-    "coverAlt": "Cover of Designing for Behavior Change with bold title text",
-    "link": "https://www.oreilly.com/library/view/designing-for-behavior/9781449370156/",
-    "title": "Designing for Behavior Change",
-    "subTitle": "Applying Psychology and Behavioral Economics",
-    "author": "Stephen Wendel",
-    "type": "book",
-    "tags": ["design"],
-    "status": "want-to-read",
-    "description": "Practical methods for applying behavioral science to product and service design."
-  },
-  {
-    "cover": "https://m.media-amazon.com/images/I/71JfoXve-HL._SY522_.jpg",
-    "coverAlt": "Bold typographic cover with the title 'CAPS LOCK' in uppercase",
-    "link": "https://valiz.nl/en/publications/caps-lock",
-    "title": "Caps Lock",
-    "subTitle": "",
-    "author": "Ruben Pater",
-    "type": "book",
-    "tags": ["design", "typography", "culture"],
-    "status": "currently-reading",
-    "description": "I’m interested in how those new to the field of design will make a creative career. This little bit of history and critique on the role of creative professionsals might have answers."
-  },
-  {
-    "cover": "https://m.media-amazon.com/images/I/91H734+UiuL._SY522_.jpg",
-    "coverAlt": "Collage of British landscapes and mythic figures",
-    "link": "https://www.example.com/storyland-amy-jeffs",
-    "title": "Storyland",
-    "subTitle": "A New Mythology of Britain",
-    "author": "Amy Jeffs",
-    "type": "book",
-    "tags": ["history"],
-    "status": "want-to-read",
-    "description": ""
-  },
-  {
-    "cover": "https://m.media-amazon.com/images/I/71ZLgz1U1lL._SY522_.jpg",
-    "coverAlt": "Illustration of a woman floating and text that says winner of the MacArthur genius grant",
-    "link": "https://www.octaviabutler.com/parableseries",
-    "title": "Parable of the Sower",
-    "subTitle": "",
-    "author": "Octavia E. Butler",
-    "type": "",
-    "tags": ["sci-fi", "literature"],
-    "status": "want-to-read",
-    "description": ""
-  },
-  {
-    "cover": "https://m.media-amazon.com/images/I/91cE1AigdcL._SY522_.jpg",
-    "coverAlt": "Stylized cover with a nature motif and coffee cherries",
-    "link": "https://laurenceking.com/product/the-world-atlas-of-coffee-third-edition/",
-    "title": "The World Atlas of Coffee 3rd Edition",
-    "subTitle": "From Beans to Brewing - Coffees Explored, Explained and Enjoyed",
-    "author": "James Hoffmann",
-    "type": "book",
-    "tags": ["coffee", "reference", "non-fiction"],
-    "status": "want-to-read",
-    "description": ""
-  },
-  {
-    "cover": "https://m.media-amazon.com/images/I/41PQUhGPtXL._SY445_SX342_FMwebp_.jpg",
-    "coverAlt": "Cover for Emotional Design by Don Norman",
-    "link": "https://www.nngroup.com/books/emotional-design/",
-    "title": "Emotional Design",
-    "subTitle": "Why We Love (or Hate) Everyday Things",
-    "author": "Don Norman",
-    "type": "book",
-    "tags": ["design", "psychology"],
-    "status": "want-to-read",
-    "description": ""
-  },
-  {
-    "cover": "https://m.media-amazon.com/images/I/71aDCupxDdL._SY522_.jpg",
-    "coverAlt": "Cover for Engaged by Amy Bucher",
-    "link": "https://www.oreilly.com/library/view/engaged/9781491978696/",
-    "title": "Engaged",
-    "subTitle": "Designing for Behavior Change",
-    "author": "Amy Bucher",
-    "type": "book",
-    "tags": ["design", "psychology"],
-    "status": "want-to-read",
-    "description": "I wanted to read this because I met the dude who wrote the foreword, Jeff Kreister."
-  },
-  {
-    "cover": "https://m.media-amazon.com/images/I/81VKriJgRVL._SY522_.jpg",
-    "coverAlt": "Book cover for Cryptonomicon by Neal Stephenson featuring stylized typography and a geometric pattern",
-    "link": "https://en.wikipedia.org/wiki/Cryptonomicon",
-    "title": "Cryptonomicon",
-    "subTitle": "A Novel",
-    "author": "Neal Stephenson",
-    "type": "book",
-    "tags": ["fiction", "historical", "technology", "sci-fi"],
-    "status": "want-to-read",
-    "description": ""
-  },
-  {
-    "cover": "https://m.media-amazon.com/images/I/51ZKAAqQVJL._SY445_SX342_FMwebp_.jpg",
-    "coverAlt": "A stylized astronomial illustration with 2 characters floating in the stars",
-    "link": "https://bookshop.org/p/books/the-wayfinder-a-novel-adam-johnson/07b6c2c266f1777f?ean=9780374619572&next=t&next=t&affiliate=541",
-    "title": "The Wayfinder",
-    "subTitle": "A Novel",
-    "author": "Adam Johnson",
-    "type": "",
-    "tags": ["fiction", "literature"],
-    "status": "want-to-read",
-    "description": ""
-  },
-  {
-    "cover": "https://m.media-amazon.com/images/I/71kuPFdgqwL._SY522_.jpg",
-    "coverAlt": "A simple cover with a stopwatch with a testimonial that also says one of Barak Obama's favorite books of the year.",
-    "link": "https://www.kimstanleyrobinson.info/content/ministry-future",
-    "title": "The Ministry for the Future",
-    "subTitle": "A Novel",
-    "author": "Kim Stanley Robinson",
-    "type": "",
-    "tags": ["sci-fi", "fiction"],
-    "status": "want-to-read",
-    "description": ""
-  },
-  {
     "cover": "/assets/images/field-ethos.jpg",
     "coverAlt": "Magazine cover featuring people and a desert landscape illustration",
     "link": "https://fieldethos.org/vol-3-2025",
@@ -358,5 +214,17 @@
     "tags": ["ecology", "culture"],
     "status": "read",
     "description": ""
+  },
+  {
+    "cover": "https://m.media-amazon.com/images/I/71JfoXve-HL._SY522_.jpg",
+    "coverAlt": "Bold typographic cover with the title 'CAPS LOCK' in uppercase",
+    "link": "https://valiz.nl/en/publications/caps-lock",
+    "title": "Caps Lock",
+    "subTitle": "",
+    "author": "Ruben Pater",
+    "type": "book",
+    "tags": ["design", "typography", "culture"],
+    "status": "read",
+    "description": "I’m interested in how those new to the field of design will make a creative career. This little bit of history and critique on the role of creative professionsals might have answers."
   }
 ]
