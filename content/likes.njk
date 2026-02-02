@@ -1,0 +1,22 @@
+---
+title: Likes
+layout: layouts/home.njk
+description: Articles I've saved and hearted on Instapaper
+---
+
+<article>
+
+<h1 class="vh">{{ title }}</h1>
+
+<div style="margin-block: 1rem;">Articles I've liked/hearted on <a href="https://www.instapaper.com/u">Instapaper</a>.</div>
+
+<ul class="likes-list">
+{% for article in likes %}
+  <li class="like-item">
+    <a href="{{ article.link }}">{{ article.title }}</a><br>
+    <span class="source">{{ article.link | getDomain }}</span>
+  </li>
+{% endfor %}
+</ul>
+
+</article>

@@ -91,6 +91,16 @@ module.exports = function(eleventyConfig) {
 		return (tags || []).filter(tag => ["all", "nav", "post", "posts"].indexOf(tag) === -1);
 	});
 
+	// Extract domain from URL
+	eleventyConfig.addFilter("getDomain", (url) => {
+		try {
+			const urlObj = new URL(url);
+			return urlObj.hostname.replace('www.', '');
+		} catch (e) {
+			return '';
+		}
+	});
+
 	// Get related posts based on shared tags
 	eleventyConfig.addFilter("getRelatedPosts", function(collection, currentUrl, currentTags, limit = 3) {
 		// Filter out the current post and posts without tags

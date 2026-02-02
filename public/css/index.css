@@ -190,6 +190,15 @@ article aside p:first-of-type::first-letter {
 	margin: inherit;
 }
 
+article p.no-drop-cap::first-letter {
+	float: none;
+	font-size: inherit;
+	font-weight: normal;
+	line-height: inherit;
+	margin: inherit;
+	font-family: inherit;
+}
+
 article h1 {
 	text-align:center;
 	font-size: var(--font-size-xxxl);
@@ -1351,4 +1360,25 @@ div.preparation-list ol{
 	display: block;
 	margin-bottom: 0.2rem;
 	color: var(--color-primary);
+  }
+
+  /* likes page */
+ ul.likes-list {
+	padding: 0px;
+ } 
+ 
+  li.like-item {
+	list-style: none;
+	margin-bottom: 1rem;
+  }
+
+  li.like-item .source {
+	font-size: var(--font-size-sm);
+	/* color: #999;
+	margin-left: 0.5rem; */
+  }
+
+  li.like-item .source::before {
+	content: "–";
+	margin-right: 0.25rem;
   }

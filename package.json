@@ -38,7 +38,8 @@
 		"@11ty/eleventy-plugin-rss": "^1.2.0",
 		"@11ty/eleventy-plugin-syntaxhighlight": "^4.2.0",
 		"luxon": "^3.2.1",
-		"markdown-it-anchor": "^8.6.6"
+		"markdown-it-anchor": "^8.6.6",
+		"rss-parser": "^3.13.0"
 	},
 	"dependencies": {
 		"eleventy-plugin-reading-time": "^0.0.1"
