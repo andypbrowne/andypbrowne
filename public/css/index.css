@@ -800,6 +800,7 @@ section.bio img {
 	width: 16rem;
 	height: auto;
 	border-radius: 500px;
+	border-radius: 56% 44% 73% 27% / 45% 68% 32% 55%;
 }
 
 .featured-post-grid,
