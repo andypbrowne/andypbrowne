@@ -211,6 +211,8 @@ article h2 {
 
 div.end-mark {
 	text-align: center;
+	line-height: 1;
+	margin: 1rem 0;
 }
 
 aside {
@@ -334,7 +336,7 @@ h2 {
 }
 
 h2, h3 {
-	margin: 2.4rem 0 .8rem;
+	margin: 2.4rem 0 1.4rem;
 }
 
 p, ul, ol {
@@ -456,8 +458,11 @@ li {
 	line-height: 1.5;
 }
 
+/* links */
+
 a[href] {
 	color: var(--text-color-link);
+	text-underline-offset: 0.2em;
 }
 a[href]:visited {
 	color: var(--text-color-link-visited);
@@ -603,7 +608,7 @@ section.featured-case-study .featured-case-study-image img {
 	  border-radius: 0 var(--border-radius) var(--border-radius) 0;
 }
 	.featured-case-study-content {
-		padding: 3.2rem 1rem 3.8rem;
+		padding: 3.2rem 2rem 3.8rem;
 		/* background-color: var(--color-aside); */
 	}
 	.featured-case-study-content h2:first-of-type {
@@ -823,6 +828,11 @@ section.related-posts ol li {
 	min-width: 80vw;
 	scroll-snap-align: start;
 	padding-inline-start: 1rem;
+}
+
+.related-posts {
+	max-width: 48em;
+    margin: 0 auto;
 }
 
 /* .featured-post-grid ol li.postlist-item:first-child {
@@ -1161,7 +1171,8 @@ article time.postlist-date,
 	margin-top: 8vh;
 }
 
-li.postlist-item a h2 {
+li.postlist-item a h2,
+li.postlist-item a h3 {
 	margin-top: 0px;
 	font-size: var(--font-size-md);
 	font-weight: 700;

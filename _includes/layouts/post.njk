@@ -16,34 +16,19 @@ layout: layouts/base.njk
 		<img src="../../{{ thumbnail }}" alt="{{ thumbnailAlt }}"/>
 	</figure>
 	{% endif %}
-
 <div class="post-titles">
 	<h1>{{ title }}</h1>
 	<h2 class="post-deck text-gradient">{{description}}</h2>
 </div>
-
 </header>
 
-
-
-{# <ul class="post-metadata">
-	<li><time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time></li>
-	{%- for tag in tags | filterTagList %}
-	{%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
-	<li><a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a>{%- if not loop.last %}, {% endif %}</li>
-	{%- endfor %}
-</ul> #}
-
 {{ content | safe }}
-
 <div class="end-mark">🧐</div>
-
+</article>
+<div class="featured-post-grid related-posts">
 <h2>Related</h2>
-
-<div class="featured-post-grid">
-
 {%- if collections.posts %}
-{%- set relatedPosts = collections.posts | getRelatedPosts(page.url, tags, 3) %}
+{%- set relatedPosts = collections.posts | getRelatedPosts(page.url, tags, 6) %}
 {%- if relatedPosts.length > 0 %}
 <ol class="postlist">
 	{%- for post in relatedPosts %}
@@ -52,7 +37,8 @@ layout: layouts/base.njk
 			<a href="{{ post.url }}">
 				<img class="thumbnail-nextprev" src="/{{ post.data.thumbnail }}" alt="{{ post.data.thumbnailAlt }}">
 			</a>
-			<a href="{{ post.url }}"><strong>{{ post.data.title }}</strong></a><br> <time class="" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("LLLL yyyy") }}</time>
+			<time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("LLLL yyyy") }}</time><br>
+			<a class="postlist-link" href="{{ post.url }}"><h3>{{ post.data.title }}</h3></a>
 		</li>
 	{% endif %}
 	{%- endfor %}
@@ -61,6 +47,6 @@ layout: layouts/base.njk
 <p>No related posts found.</p>
 {%- endif %}
 {%- endif %}
-<div>More posts can be found in <a href="/blog/">the archive &rarr;</a>.</div>
+<div>More posts can be found in <a href="/blog/">the archive &rarr;</a></div>
 </div>
-</article>
+
