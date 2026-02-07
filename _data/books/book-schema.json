@@ -1,0 +1,86 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Book List",
+  "description": "Schema for andypbrowne bookshelf data",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["cover", "coverAlt", "link", "title", "author", "tags", "status"],
+    "properties": {
+      "cover": {
+        "type": "string",
+        "description": "URL to book cover image",
+        "format": "uri"
+      },
+      "coverAlt": {
+        "type": "string",
+        "description": "Alt text describing the book cover"
+      },
+      "link": {
+        "type": "string",
+        "description": "URL to book's official site or purchase page",
+        "format": "uri"
+      },
+      "title": {
+        "type": "string",
+        "description": "Book title"
+      },
+      "subTitle": {
+        "type": "string",
+        "description": "Book subtitle (can be empty)"
+      },
+      "author": {
+        "type": "string",
+        "description": "Book author name"
+      },
+      "type": {
+        "type": "string",
+        "description": "Media type (book, audiobook, etc.)",
+        "enum": ["", "book", "audiobook", "ebook"]
+      },
+      "tags": {
+        "type": "array",
+        "description": "Categories/genres for filtering",
+        "items": {
+          "type": "string",
+          "enum": [
+            "design",
+            "accessibility",
+            "business",
+            "sci-fi",
+            "fiction",
+            "literature",
+            "history",
+            "coffee",
+            "reference",
+            "non-fiction",
+            "psychology",
+            "historical",
+            "technology",
+            "biography",
+            "memoir",
+            "fantasy",
+            "mystery",
+            "graphic-novel",
+            "poetry",
+            "philosophy",
+            "science",
+            "art",
+            "cooking",
+            "travel"
+          ]
+        },
+        "minItems": 1
+      },
+      "status": {
+        "type": "string",
+        "description": "Reading status",
+        "enum": ["want-to-read", "currently-reading", "read", "dnf"]
+      },
+      "description": {
+        "type": "string",
+        "description": "Personal notes or summary about the book"
+      }
+    }
+  }
+}

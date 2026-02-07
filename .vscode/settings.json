@@ -1,0 +1,8 @@
+{
+  "json.schemas": [
+    {
+      "fileMatch": ["_data/books/*bookList.json"],
+      "url": "./_data/books/book-schema.json"
+    }
+  ]
+}
