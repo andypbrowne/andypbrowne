@@ -1176,6 +1176,7 @@ li.postlist-item a h3 {
 	margin-top: 0px;
 	font-size: var(--font-size-md);
 	font-weight: 700;
+	line-height: normal;
 	flex-basis: calc(100% - 1.5rem);
 	/* padding-left: .25em;
 	padding-right: .5em; */

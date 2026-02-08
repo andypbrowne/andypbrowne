@@ -1,7 +1,7 @@
 ---
 title: Simona Prives’ Artist Portfolio
 description: Building a professional portfolio website for a visual artist
-thumbnail: assets/images/thumb-sp-portfolio.jpg
+thumbnail: assets/images/thumb-simona-prives-portfolio.avif
 thumbnailAlt: Simona Prives artist portfolio website
 date: 2026-01-18
 tags:

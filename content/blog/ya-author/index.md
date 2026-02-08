@@ -1,7 +1,7 @@
 ---
 title: Young Adult Author’s Website
 description: A case study in sanity
-thumbnail: assets/images/thumb-ya-author-16x9.jpg
+thumbnail: assets/images/thumb-ya-author-16x9.avif
 thumbnailAlt: Just a placeholder image that says FPO which means for  
 date: 2025-02-08
 tags:

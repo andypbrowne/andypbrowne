@@ -26,6 +26,9 @@
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
 		<link rel="alternate" href="/feed/feed.json" type="application/json" title="{{ metadata.title }}">
 
+		{#- Preload critical fonts #}
+		<link rel="preload" href="/public/fonts/Inter-roman.var.woff2" as="font" type="font/woff2" crossorigin>
+
 		
 		{# <meta property="og:title" content={ title or renderData.title or metadata.title }/>
 		<meta property="og:url" content={ page.url } />
@@ -55,7 +58,8 @@
 		{% include "public/css/prism-diff.css" %}
 		</style> 
 		{% if css %}
-      		<link rel="stylesheet" href="{{css}}" />
+      		<link rel="stylesheet" href="{{css}}" media="print" onload="this.media='all'; this.onload=null;" />
+			<noscript><link rel="stylesheet" href="{{css}}" /></noscript>
     	{% endif %}
 {#
 		3. You could even swap between the two methods above using {% if eleventy.env.runMode === "serve" %}
