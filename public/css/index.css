@@ -44,6 +44,7 @@
 	src: url('/public/fonts/Cedar_v0_3_Italics_VF.woff2') format('woff2-variations'), url('/public/fonts/Cedar_v0_3-Italics_VF.woff') format('woff-variations');
 	font-weight: 100 900;
 	font-style: italic;
+	font-display: swap;
   }  
 
   @font-face {
@@ -51,6 +52,7 @@
 	src: url('/public/fonts/Cedar_v0_3_Romans_VF.woff2') format('woff2-variations'), url('/public/fonts/Cedar_v0_3_Romans_VF.woff') format('woff-variations');
 	font-weight: 100 900;
 	font-style: normal;
+	font-display: swap;
   }
 
 /* Defaults */
