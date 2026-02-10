@@ -814,6 +814,7 @@ section.bio img {
 .featured-post-grid,
 section.archive {
 	margin-bottom: 2rem;
+	padding-bottom: 2rem;
 }
 
 .featured-post-grid ol.postlist,
@@ -1132,7 +1133,7 @@ footer .footer-links {
 	/* counter-increment: start-from -1; */
 	margin-bottom: 1em;
 	padding-bottom: 1em;
-	border-bottom: 1px solid var(--subtle-border);
+	/* border-bottom: 1px solid var(--subtle-border); */
 }
 .postlist-item:before {
 	display: inline-block;
