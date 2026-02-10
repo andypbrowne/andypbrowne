@@ -550,6 +550,7 @@ section.featured-case-study {
 .case-study-wrapper {
 	display: flex;
 	flex-direction: column;
+    background-color: var(--color-aside);
 }
 
 .case-study-wrapper:nth-child(even) {
@@ -1144,7 +1145,7 @@ footer .footer-links {
 .postlist-date,
 .postlist-item:before,
 .post-number {
-	font-size: var(--font-size-base);
+	font-size: var(--font-size-md);
 	font-family: var(--font-family-cedar);
 	color: var(--text-color);
 	font-weight: 650;
@@ -1156,6 +1157,7 @@ footer .footer-links {
 	word-spacing: -0.5px;
 	letter-spacing: .08rem;
 	line-height: 1.5;
+	margin: 0 0 .4em;
 }
 article time.postlist-date,
 .post-number {
