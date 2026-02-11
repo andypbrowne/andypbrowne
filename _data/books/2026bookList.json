@@ -142,5 +142,17 @@
     "tags": ["sci-fi", "fiction"],
     "status": "want-to-read",
     "description": ""
+  },
+  {
+    "cover": "https://m.media-amazon.com/images/I/81BFKHdvyfL._SY522_.jpg",
+    "coverAlt": "Cover of The Color of Magic featuring a disc-shaped world on the back of elephants standing on a turtle",
+    "link": "https://www.terrypratchettbooks.com/books/the-colour-of-magic/",
+    "title": "The Color of Magic",
+    "subTitle": "",
+    "author": "Terry Pratchett",
+    "type": "book",
+    "tags": ["fantasy", "fiction", "humor"],
+    "status": "want-to-read",
+    "description": "In what order should the Discworld series be read? Lots of advice online… personally still deciding."
   }
 ]
