@@ -17,9 +17,19 @@ js: /assets/js/bookshelf.js
 {# {% set allBooks = books.2025bookList.concat(books.2024bookList, books.2023bookList, books.2022bookList, books.2019bookList, books.2016bookList, books.0000bookList) %}
 {% set tagObjs = allBooks | allTagsSorted %} #}
 
-<fieldset class="filtering">
-  <legend>Filter:</legend>
-  <div class="overflow">
+<details class="filtering-details">
+  <summary class="filtering-summary">
+    <span class="filtering-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="18" height="18" focusable="false" aria-hidden="true">
+        <path d="M3 5h18l-7 8v5l-4 1v-6L3 5z" fill="currentColor" />
+      </svg>
+    </span>
+    <span>Filters</span>
+  </summary>
+
+  <fieldset class="filtering">
+    <legend class="vh">Filter:</legend>
+    <div class="overflow">
 
     <div>
       <input name="filter" id="all" type="radio" value="all" checked>
@@ -59,22 +69,23 @@ js: /assets/js/bookshelf.js
       <label for="travel">Travel</label>
     </div>
   </div>
-  <div class="status-controls" role="group" aria-label="Status controls">
-    <div class="select-wrap">
-      <label for="status-select" class="visually-hidden">Status</label>
-      <select id="status-select" name="status">
-        <option value="read">Read</option>
-        <option value="want-to-read">Want to read</option>
-        <option value="currently-reading">Currently reading</option>
-      </select>
-    </div>
+    <div class="status-controls" role="group" aria-label="Status controls">
+      <div class="select-wrap">
+        <label for="status-select" class="visually-hidden">Status</label>
+        <select id="status-select" name="status">
+          <option value="read">Read</option>
+          <option value="want-to-read">Want to read</option>
+          <option value="currently-reading">Currently reading</option>
+        </select>
+      </div>
 
-    <div class="group-toggle">
-      <input id="group-by-years" type="checkbox" checked>
-      <label for="group-by-years">Group by year</label>
+      <div class="group-toggle">
+        <input id="group-by-years" type="checkbox" checked>
+        <label for="group-by-years">Group by year</label>
+      </div>
     </div>
-  </div>
-</fieldset>
+  </fieldset>
+</details>
 
 <!-- Empty state shown when no books match current filters -->
 <div id="empty-state" class="empty-state" role="status" aria-live="polite" hidden>

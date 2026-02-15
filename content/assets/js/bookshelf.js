@@ -80,12 +80,13 @@ document.addEventListener('DOMContentLoaded', function() {
   let filteredContainer = document.getElementById('filtered-results');
   if (!filteredContainer) {
     const fieldset = document.querySelector('fieldset.filtering');
+    const filterWrapper = document.querySelector('.filtering-details') || fieldset;
     filteredContainer = document.createElement('ol');
     filteredContainer.id = 'filtered-results';
     filteredContainer.className = 'bookshelf filter-grid filtered-row';
     filteredContainer.style.display = 'none';
-    if (fieldset && fieldset.parentNode) {
-      fieldset.parentNode.insertBefore(filteredContainer, fieldset.nextSibling);
+    if (filterWrapper && filterWrapper.parentNode) {
+      filterWrapper.parentNode.insertBefore(filteredContainer, filterWrapper.nextSibling);
     } else {
       document.body.insertBefore(filteredContainer, document.body.firstChild);
     }
