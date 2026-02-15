@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+  const STORAGE_KEY = 'bookshelfFilters';
   const filterRadios = Array.from(document.querySelectorAll('input[name="filter"]')); // tag radios
   const statusSelect = document.getElementById('status-select'); // the status dropdown
   const groupToggle = document.getElementById('group-by-years'); // new grouping checkbox
@@ -12,9 +13,59 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // keep grouping state (true = show grouped headers / keep items in their lists)
   let groupByYears = groupToggle ? !!groupToggle.checked : true;
+
+  function parseStoredState() {
+    try {
+      const raw = window.localStorage.getItem(STORAGE_KEY);
+      if (!raw) return null;
+      return JSON.parse(raw);
+    } catch (err) {
+      return null;
+    }
+  }
+
+  function normalizeGroupValue(value) {
+    if (value === '1' || value === 'true') return true;
+    if (value === '0' || value === 'false') return false;
+    return null;
+  }
+
+  function getUrlState() {
+    const params = new URLSearchParams(window.location.search);
+    const tag = params.get('tag');
+    const status = params.get('status');
+    const groupRaw = params.get('group');
+    const group = normalizeGroupValue(groupRaw);
+    if (!tag && !status && group === null) return null;
+    return {
+      tag: tag || null,
+      status: status || null,
+      groupByYears: group
+    };
+  }
+
+  function persistState() {
+    const payload = {
+      tag: currentTag,
+      status: currentStatus,
+      groupByYears: groupByYears
+    };
+    try {
+      window.localStorage.setItem(STORAGE_KEY, JSON.stringify(payload));
+    } catch (err) {
+      // ignore storage failures (private mode, disabled, etc.)
+    }
+
+    const url = new URL(window.location.href);
+    url.searchParams.set('tag', currentTag);
+    url.searchParams.set('status', currentStatus);
+    url.searchParams.set('group', groupByYears ? '1' : '0');
+    window.history.replaceState({}, '', url);
+  }
   if (groupToggle) {
     groupToggle.addEventListener('change', () => {
       groupByYears = !!groupToggle.checked;
+      persistState();
       applyFilters();
     });
   }
@@ -162,6 +213,7 @@ document.addEventListener('DOMContentLoaded', function() {
   filterRadios.forEach(radio => {
     radio.addEventListener('change', function() {
       currentTag = (this.value || 'all').toLowerCase();
+      persistState();
       applyFilters();
     });
   });
@@ -181,6 +233,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
 
       // apply filters with the same selected tag (don't reset radios)
+      persistState();
       applyFilters();
     });
   }
@@ -205,6 +258,17 @@ document.addEventListener('DOMContentLoaded', function() {
   const checkedTag = filterRadios.find(r => r.checked);
   currentTag = checkedTag ? checkedTag.value.toLowerCase() : 'all';
 
+  const urlState = getUrlState();
+  const storedState = parseStoredState();
+  const seedState = urlState || storedState;
+  if (seedState) {
+    if (seedState.status && statusSelect) currentStatus = seedState.status.toLowerCase();
+    if (seedState.tag) currentTag = seedState.tag.toLowerCase();
+    if (seedState.groupByYears !== null && seedState.groupByYears !== undefined) {
+      groupByYears = !!seedState.groupByYears;
+    }
+  }
+
   // ensure checkbox and JS state are in sync on load
   if (groupToggle) {
     // if initial status is want-to-read/currently-reading, override grouping to off
@@ -212,9 +276,15 @@ document.addEventListener('DOMContentLoaded', function() {
       groupByYears = false;
       groupToggle.checked = false;
     } else {
-      groupByYears = !!groupToggle.checked;
+      groupToggle.checked = !!groupByYears;
     }
   }
+
+  if (statusSelect) statusSelect.value = currentStatus;
+  const desiredTag = filterRadios.find(r => r.value.toLowerCase() === currentTag);
+  if (desiredTag) desiredTag.checked = true;
+
+  persistState();
 
   updateFilterLabels();
   applyFilters();
