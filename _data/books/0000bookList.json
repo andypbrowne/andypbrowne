@@ -305,5 +305,38 @@
       "tags": ["wine", "map", "travel"],
       "status": "read",
       "description": "A compact, one-page guide to Bordeaux wines and notable appellations."
+    },
+    {
+      "cover": "https://m.media-amazon.com/images/I/91vVTsLa9xL._SL1500_.jpg",
+      "coverAlt": "The iconic Dune book cover with a desert landscape and futuristic elements",
+      "link": "https://www.frankherbert.org/",
+      "title": "Dune",
+      "subTitle": "A novel",
+      "author": "Frank Herbert",
+      "tags": ["sci-fi"],
+      "status": "read",
+      "description": ""
+    },
+    {
+      "cover": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1615949643i/526270.jpg",
+      "coverAlt": "Cover featuring dinosaurs and amber-colored design elements",
+      "link": "https://www.michaelcrichton.com/",
+      "title": "Jurassic Park",
+      "subTitle": "A novel",
+      "author": "Michael Crichton",
+      "tags": ["sci-fi", "fiction"],
+      "status": "read",
+      "description": ""
+    },
+    {
+      "cover": "/assets/images/cover-sphere.jpg",
+      "coverAlt": "Cover with abstract geometric and oceanic elements",
+      "link": "https://www.michaelcrichton.com/",
+      "title": "Sphere",
+      "subTitle": "A novel",
+      "author": "Michael Crichton",
+      "tags": ["sci-fi", "fiction"],
+      "status": "read",
+      "description": "Super fond memories of these embossed and shiny letters of the 90s. There is something very satisfying about the texture and the building mystery of stories like this."
     }
 ]

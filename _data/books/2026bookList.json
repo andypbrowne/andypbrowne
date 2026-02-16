@@ -12,6 +12,18 @@
     "description": "Many of these A Book Apart books have become free to read. I want to read this one so I can work on an accessiblity tool of my own."
   },
   {
+    "cover": "https://m.media-amazon.com/images/I/71Y7u9nU+qS._SL1500_.jpg",
+    "coverAlt": "Cover of 12 Principles for Raising a Child with ADHD",
+    "link": "https://www.oreilly.com/library/view/12-principles-for/9781492235935/",
+    "title": "12 Principles for Raising a Child with ADHD",
+    "subTitle": "",
+    "author": "William Dodson & Laurie Dodson",
+    "type": "book",
+    "tags": ["parenting", "psychology"],
+    "status": "currently-reading",
+    "description": ""
+  },
+  {
     "cover": "https://m.media-amazon.com/images/I/71EnMCMcO5L._SY522_.jpg",
     "coverAlt": "Cover of Meeting Design by Kevin M. Hoffman with bold text and geometric shapes",
     "link": "https://abookapart.com/products/meeting-design",
