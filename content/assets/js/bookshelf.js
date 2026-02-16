@@ -1,5 +1,20 @@
 document.addEventListener('DOMContentLoaded', function() {
   const STORAGE_KEY = 'bookshelfFilters';
+
+  // Open details on large screens, close on small screens
+  const filterDetails = document.querySelector('.filtering-details');
+  function syncDetailsWithScreenSize() {
+    if (filterDetails) {
+      if (window.innerWidth >= 676) {
+        filterDetails.setAttribute('open', '');
+      } else {
+        filterDetails.removeAttribute('open');
+      }
+    }
+  }
+  syncDetailsWithScreenSize();
+  window.addEventListener('resize', syncDetailsWithScreenSize);
+
   const filterRadios = Array.from(document.querySelectorAll('input[name="filter"]')); // tag radios
   const statusSelect = document.getElementById('status-select'); // the status dropdown
   const groupToggle = document.getElementById('group-by-years'); // new grouping checkbox
