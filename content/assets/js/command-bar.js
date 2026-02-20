@@ -130,20 +130,36 @@ class CommandBar {
 			<div class="command-bar-overlay"></div>
 			<div class="command-bar-container">
 				<div class="command-bar-header">
-					<input
-						type="text"
-						class="command-bar-input"
-						placeholder="Search pages and posts…"
-						aria-label="Search command palette"
-					/>
+					<span class="command-bar-icon search-icon">🔍</span>
+					<div class="command-bar-input-wrapper">
+						<input
+							type="text"
+							class="command-bar-input"
+							placeholder="Search pages and posts…"
+							aria-label="Search command palette"
+						/>
+						<button class="command-bar-clear" aria-label="Clear search" title="Clear">
+							<span>✕</span>
+						</button>
+					</div>
+					<button class="command-bar-close" aria-label="Close command palette" title="Close">
+						<span>Close</span>
+					</button>
 				</div>
 				<div class="command-bar-results"></div>
+				<div class="command-bar-hints">
+					<span>↑↓ Navigate</span>
+					<span>↵ Select</span>
+					<span>ESC Close</span>
+				</div>
 			</div>
 		`;
 		document.body.appendChild(this.modalElement);
 
 		this.inputElement = this.modalElement.querySelector('.command-bar-input');
 		this.resultsContainer = this.modalElement.querySelector('.command-bar-results');
+		this.clearButton = this.modalElement.querySelector('.command-bar-clear');
+		this.closeButton = this.modalElement.querySelector('.command-bar-close');
 	}
 
 	/**
@@ -191,6 +207,7 @@ class CommandBar {
 		this.modalElement.classList.remove('open');
 		this.inputElement.value = '';
 		this.filteredCommands = [...this.commands];
+		this.clearButton.classList.remove('visible');
 	}
 
 	/**
@@ -264,7 +281,25 @@ class CommandBar {
 		this.inputElement.addEventListener('input', (e) => {
 			this.fuzzySearch(e.target.value);
 			this.renderResults();
+			// Show/hide clear button based on input
+			if (e.target.value.length > 0) {
+				this.clearButton.classList.add('visible');
+			} else {
+				this.clearButton.classList.remove('visible');
+			}
 		});
+
+		// Clear button
+		this.clearButton.addEventListener('click', () => {
+			this.inputElement.value = '';
+			this.fuzzySearch('');
+			this.renderResults();
+			this.clearButton.classList.remove('visible');
+			this.inputElement.focus();
+		});
+
+		// Close button
+		this.closeButton.addEventListener('click', () => this.close());
 
 		// Close when clicking backdrop
 		const overlay = this.modalElement.querySelector('.command-bar-overlay');
