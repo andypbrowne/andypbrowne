@@ -1,0 +1,332 @@
+/**
+ * Command Bar - Global keyboard-driven command palette
+ * Trigger with Cmd+K (Mac) or Ctrl+K (Windows/Linux)
+ * 
+ * Extensible architecture:
+ * - Navigation commands (pages, blog posts)
+ * - Future: theme toggle, search, custom actions
+ */
+
+class CommandBar {
+	constructor() {
+		this.isOpen = false;
+		this.selectedIndex = 0;
+		this.commands = [];
+		this.filteredCommands = [];
+		this.inputElement = null;
+		this.resultsContainer = null;
+		this.modalElement = null;
+		
+		this.init();
+	}
+
+	init() {
+		this.registerDefaultCommands();
+		this.createModal();
+		this.attachEventListeners();
+	}
+
+	/**
+	 * Register core navigation commands + dynamically discover blog posts
+	 */
+	registerDefaultCommands() {
+		// Core pages
+		const corePages = [
+			{ name: 'Home', description: 'Go to home page', action: () => this.navigate('/') },
+			{ name: 'Archive', description: 'View all blog posts', action: () => this.navigate('/blog/') },
+			{ name: 'Bookshelf', description: 'Browse your book collection', action: () => this.navigate('/bookshelf/') },
+			{ name: 'About', description: 'Learn more about Andy', action: () => this.navigate('/about/') },
+			{ name: 'Tags', description: 'Explore posts by tag', action: () => this.navigate('/tags/') },
+			{ name: 'Likes', description: 'Saved articles and links', action: () => this.navigate('/likes/') },
+			{ name: 'Book Tags', description: 'Browse books by category', action: () => this.navigate('/book-tags/') },
+			{ name: 'CV', description: 'View resume/CV', action: () => this.navigate('/cv/') },
+		];
+
+		this.commands = [...corePages];
+
+		// Dynamically discover blog posts from the DOM
+		const blogLinks = document.querySelectorAll('a[href^="/blog/"][href$="/"]');
+		const discoveredPosts = Array.from(blogLinks)
+			.filter(link => {
+				const href = link.getAttribute('href');
+				// Exclude /blog/ itself and /blog/bookshelf
+				return href !== '/blog/' && !href.includes('/bookshelf');
+			})
+			.map(link => {
+				const title = link.textContent.trim() || link.getAttribute('href');
+				const href = link.getAttribute('href');
+				return {
+					name: title,
+					description: 'Blog post',
+					href: href,
+					action: () => this.navigate(href)
+				};
+			});
+
+		// Deduplicate by href, preferring entries with formatted titles (no slashes)
+		const seenHrefs = new Map();
+		discoveredPosts.forEach(post => {
+			const existing = seenHrefs.get(post.href);
+			if (!existing) {
+				seenHrefs.set(post.href, post);
+			} else {
+				// Keep the version with a better name (no slashes = formatted title)
+				const currentHasSlashes = post.name.includes('/');
+				const existingHasSlashes = existing.name.includes('/');
+				if (currentHasSlashes && !existingHasSlashes) {
+					// Keep existing (already has better name)
+				} else if (!currentHasSlashes && existingHasSlashes) {
+					// Replace with better name
+					seenHrefs.set(post.href, post);
+				}
+			}
+		});
+
+		// Add discovered posts to commands, removing the helper href property
+		if (seenHrefs.size > 0) {
+			const uniquePosts = Array.from(seenHrefs.values()).map(post => {
+				const { href, ...cmd } = post;
+				return cmd;
+			});
+			this.commands.push(...uniquePosts);
+		}
+
+		this.filteredCommands = [...this.commands];
+	}
+
+	/**
+	 * Smarter fuzzy search with word boundary awareness
+	 * Prioritizes:
+	 * 1. Exact substring matches
+	 * 2. Matches at word starts (capital letters, after spaces)
+	 * 3. Consecutive character matches
+	 * 4. Scattered matches (lowest priority)
+	 * 
+	 * Examples:
+	 * "book" → "Bookshelf" (score: 1000, substring)
+	 * "a" → "About" (score: 90, word boundary)
+	 * "a" → "Tags" (score: 10, scattered)
+	 */
+	fuzzySearch(query) {
+		if (!query) {
+			this.filteredCommands = [...this.commands];
+			return;
+		}
+
+		const lowerQuery = query.toLowerCase();
+		
+		// Score each command and filter by minimum threshold
+		const scored = this.commands.map(cmd => ({
+			cmd,
+			score: this.calculateFuzzyScore(cmd.name, lowerQuery)
+		})).filter(item => item.score > 0);
+
+		// Sort by score (highest first)
+		scored.sort((a, b) => b.score - a.score);
+		this.filteredCommands = scored.map(item => item.cmd);
+		this.selectedIndex = 0;
+	}
+
+	/**
+	 * Calculate fuzzy match score
+	 * Higher score = better match
+	 */
+	calculateFuzzyScore(name, query) {
+		const lowerName = name.toLowerCase();
+		let queryIdx = 0;
+		let score = 0;
+		let consecutiveMatches = 0;
+
+		// Check if query exists as a substring (highest priority)
+		if (lowerName.includes(query)) {
+			return 1000;
+		}
+
+		// Try to match characters in order with scoring
+		for (let i = 0; i < lowerName.length && queryIdx < query.length; i++) {
+			if (lowerName[i] === query[queryIdx]) {
+				queryIdx++;
+				consecutiveMatches++;
+
+				// Bonus for matching at word boundaries (capitals or after space)
+				const isWordBoundary = i === 0 || lowerName[i - 1] === ' ';
+				if (isWordBoundary) {
+					score += 100;
+				} else if (consecutiveMatches > 1) {
+					// Bonus for consecutive matches
+					score += 50;
+				} else {
+					// Smaller bonus for scattered matches
+					score += 10;
+				}
+			} else {
+				consecutiveMatches = 0;
+			}
+		}
+
+		// Only return a score if all query characters were matched
+		return queryIdx === query.length ? score : 0;
+	}
+
+	/**
+	 * Create the modal, input field, and results container
+	 */
+	createModal() {
+		// Modal backdrop
+		this.modalElement = document.createElement('div');
+		this.modalElement.className = 'command-bar-modal';
+		this.modalElement.innerHTML = `
+			<div class="command-bar-overlay"></div>
+			<div class="command-bar-container">
+				<div class="command-bar-header">
+					<input
+						type="text"
+						class="command-bar-input"
+						placeholder="Search pages and posts…"
+						aria-label="Search command palette"
+					/>
+				</div>
+				<div class="command-bar-results"></div>
+				<div class="command-bar-hints">
+					<span>↑↓ Navigate</span>
+					<span>↵ Select</span>
+					<span>ESC Close</span>
+				</div>
+			</div>
+		`;
+		document.body.appendChild(this.modalElement);
+
+		this.inputElement = this.modalElement.querySelector('.command-bar-input');
+		this.resultsContainer = this.modalElement.querySelector('.command-bar-results');
+	}
+
+	/**
+	 * Render filtered results list
+	 */
+	renderResults() {
+		this.resultsContainer.innerHTML = '';
+
+		if (this.filteredCommands.length === 0) {
+			this.resultsContainer.innerHTML = '<div class="command-bar-empty">No results found</div>';
+			return;
+		}
+
+		this.filteredCommands.forEach((cmd, idx) => {
+			const item = document.createElement('div');
+			item.className = `command-bar-item ${idx === this.selectedIndex ? 'selected' : ''}`;
+			item.innerHTML = `
+				<div class="command-bar-item-name">${this.escapeHtml(cmd.name)}</div>
+				<div class="command-bar-item-description">${this.escapeHtml(cmd.description)}</div>
+			`;
+			item.addEventListener('click', () => {
+				this.selectedIndex = idx;
+				this.selectCurrent();
+			});
+			this.resultsContainer.appendChild(item);
+		});
+	}
+
+	/**
+	 * Open the command palette
+	 */
+	open() {
+		this.isOpen = true;
+		this.modalElement.classList.add('open');
+		this.inputElement.focus();
+		this.selectedIndex = 0;
+		this.renderResults();
+	}
+
+	/**
+	 * Close the command palette
+	 */
+	close() {
+		this.isOpen = false;
+		this.modalElement.classList.remove('open');
+		this.inputElement.value = '';
+		this.filteredCommands = [...this.commands];
+	}
+
+	/**
+	 * Execute the selected command
+	 */
+	selectCurrent() {
+		if (this.filteredCommands[this.selectedIndex]) {
+			const cmd = this.filteredCommands[this.selectedIndex];
+			this.close();
+			cmd.action();
+		}
+	}
+
+	/**
+	 * Navigate to a page/post
+	 */
+	navigate(url) {
+		window.location.href = url;
+	}
+
+	/**
+	 * HTML escape for safe rendering
+	 */
+	escapeHtml(text) {
+		const div = document.createElement('div');
+		div.textContent = text;
+		return div.innerHTML;
+	}
+
+	/**
+	 * Attach keyboard and UI event listeners
+	 */
+	attachEventListeners() {
+		// Global keyboard shortcut: Cmd+K or Ctrl+K
+		document.addEventListener('keydown', (e) => {
+			if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+				e.preventDefault();
+				if (this.isOpen) {
+					this.close();
+				} else {
+					this.open();
+				}
+			}
+		});
+
+		// Keyboard navigation within the modal
+		this.inputElement.addEventListener('keydown', (e) => {
+			switch (e.key) {
+				case 'ArrowDown':
+					e.preventDefault();
+					this.selectedIndex = Math.min(this.selectedIndex + 1, this.filteredCommands.length - 1);
+					this.renderResults();
+					break;
+				case 'ArrowUp':
+					e.preventDefault();
+					this.selectedIndex = Math.max(this.selectedIndex - 1, 0);
+					this.renderResults();
+					break;
+				case 'Enter':
+					e.preventDefault();
+					this.selectCurrent();
+					break;
+				case 'Escape':
+					e.preventDefault();
+					this.close();
+					break;
+			}
+		});
+
+		// Search/filter as user types
+		this.inputElement.addEventListener('input', (e) => {
+			this.fuzzySearch(e.target.value);
+			this.renderResults();
+		});
+
+		// Close when clicking backdrop
+		const overlay = this.modalElement.querySelector('.command-bar-overlay');
+		overlay.addEventListener('click', () => this.close());
+	}
+}
+
+// Initialize command bar when DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+	new CommandBar();
+});

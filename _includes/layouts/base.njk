@@ -54,6 +54,7 @@
 		<style>
 		{% include "public/css/index.css" %}
 		{% include "public/css/message-box.css" %}
+		{% include "public/css/command-bar.css" %}
 		{% include "node_modules/prismjs/themes/prism-okaidia.css" %}
 		{% include "public/css/prism-diff.css" %}
 		</style> 
@@ -129,6 +130,7 @@
 		{% if js %}
     		<script type="module" src="{{ js }}"></script>
 		{% endif %}
+		<script type="module" src="/assets/js/command-bar.js"></script>
 		{# Current page: {{ page.url | htmlBaseUrl }}  #}
 	</body>
 </html>

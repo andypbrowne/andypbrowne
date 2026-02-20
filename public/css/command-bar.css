@@ -1,0 +1,221 @@
+/**
+ * Command Bar Styles
+ * Matches andypbrowne.com aesthetic
+ * Responsive modal with smooth animations
+ */
+
+/* Modal backdrop and container */
+.command-bar-modal {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 10000;
+	align-items: flex-start;
+	justify-content: center;
+	padding-top: max(80px, 15vh);
+	pointer-events: none;
+}
+
+.command-bar-modal.open {
+	display: flex;
+	pointer-events: auto;
+}
+
+.command-bar-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.4);
+	backdrop-filter: blur(2px);
+	cursor: pointer;
+	z-index: -1;
+}
+
+/* Modal container */
+.command-bar-container {
+	display: flex;
+	flex-direction: column;
+	width: 90%;
+	max-width: 600px;
+	max-height: 60vh;
+	border-radius: var(--border-radius);
+	background: var(--color-base-bg);
+	border: 1px solid var(--subtle-border);
+	box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+	animation: cmdBarSlideIn 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+	overflow: hidden;
+}
+
+@keyframes cmdBarSlideIn {
+	from {
+		opacity: 0;
+		transform: translateY(-10px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* Header with input */
+.command-bar-header {
+	padding: 16px;
+	border-bottom: 1px solid var(--subtle-border);
+	flex-shrink: 0;
+}
+
+.command-bar-input {
+	width: 100%;
+	padding: 12px 16px;
+	font-size: var(--font-size-base);
+	font-family: var(--font-family);
+	color: var(--text-color);
+	background: transparent;
+	border: none;
+	outline: none;
+	caret-color: var(--text-color-link);
+}
+
+.command-bar-input::placeholder {
+	color: var(--color-gray-60);
+}
+
+/* Results container */
+.command-bar-results {
+	flex: 1;
+	overflow-y: auto;
+	overscroll-behavior: contain;
+	padding: 8px 0;
+}
+
+.command-bar-item {
+	padding: 12px 16px;
+	cursor: pointer;
+	transition: background-color 0.15s ease;
+	border: none;
+	background: transparent;
+}
+
+.command-bar-item:hover {
+	background: var(--color-midnight-40);
+	background: rgba(122, 146, 169, 0.15);
+}
+
+.command-bar-item.selected {
+	background: var(--color-midnight-40);
+	background: rgba(122, 146, 169, 0.25);
+}
+
+@media (prefers-color-scheme: dark) {
+	.command-bar-item:hover {
+		background: rgba(122, 146, 169, 0.2);
+	}
+
+	.command-bar-item.selected {
+		background: rgba(122, 146, 169, 0.35);
+	}
+}
+
+.command-bar-item-name {
+	font-size: var(--font-size-base);
+	font-weight: 500;
+	color: var(--text-color);
+	margin-bottom: 4px;
+}
+
+.command-bar-item-description {
+	font-size: var(--font-size-sm);
+	color: var(--color-gray-60);
+}
+
+/* Empty state */
+.command-bar-empty {
+	padding: 40px 16px;
+	text-align: center;
+	color: var(--color-gray-60);
+	font-size: var(--font-size-base);
+}
+
+/* Keyboard hints footer */
+.command-bar-hints {
+	display: flex;
+	gap: 16px;
+	padding: 12px 16px;
+	border-top: 1px solid var(--subtle-border);
+	background: rgba(0, 0, 0, 0.02);
+	font-size: var(--font-size-sm);
+	color: var(--color-gray-60);
+	justify-content: center;
+	flex-wrap: wrap;
+	flex-shrink: 0;
+}
+
+.command-bar-hints span::before {
+	content: '';
+	display: inline-block;
+	width: 2px;
+	height: 2px;
+	background: var(--color-gray-60);
+	border-radius: 50%;
+	margin-right: 8px;
+}
+
+.command-bar-hints span:first-child::before {
+	content: '';
+	display: none;
+}
+
+/* Scrollbar styling */
+.command-bar-results::-webkit-scrollbar {
+	width: 6px;
+}
+
+.command-bar-results::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+.command-bar-results::-webkit-scrollbar-thumb {
+	background: var(--color-gray-40);
+	border-radius: 3px;
+}
+
+.command-bar-results::-webkit-scrollbar-thumb:hover {
+	background: var(--color-gray-60);
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+	.command-bar-modal {
+		padding-top: 10vh;
+	}
+
+	.command-bar-container {
+		width: 95%;
+		max-height: 70vh;
+		border-radius: 8px;
+	}
+
+	.command-bar-hints {
+		gap: 10px;
+		padding: 10px 12px;
+		font-size: var(--font-size-xs);
+	}
+
+	.command-bar-item {
+		padding: 10px 12px;
+	}
+
+	.command-bar-header {
+		padding: 12px;
+	}
+
+	.command-bar-input {
+		padding: 10px 12px;
+		font-size: var(--font-size-sm);
+	}
+}
