@@ -27,69 +27,20 @@ class CommandBar {
 	}
 
 	/**
-	 * Register core navigation commands + dynamically discover blog posts
+	 * Register commands from pre-indexed data (exhaustive index)
+	 * Data is inlined at build time via base.njk: window.COMMAND_INDEX
+	 * Includes all pages and blog posts, excluding drafts
 	 */
 	registerDefaultCommands() {
-		// Core pages
-		const corePages = [
-			{ name: 'Home', description: 'Go to home page', action: () => this.navigate('/') },
-			{ name: 'Archive', description: 'View all blog posts', action: () => this.navigate('/blog/') },
-			{ name: 'Bookshelf', description: 'Browse your book collection', action: () => this.navigate('/bookshelf/') },
-			{ name: 'About', description: 'Learn more about Andy', action: () => this.navigate('/about/') },
-			{ name: 'Tags', description: 'Explore posts by tag', action: () => this.navigate('/tags/') },
-			{ name: 'Likes', description: 'Saved articles and links', action: () => this.navigate('/likes/') },
-			{ name: 'Book Tags', description: 'Browse books by category', action: () => this.navigate('/book-tags/') },
-			{ name: 'CV', description: 'View resume/CV', action: () => this.navigate('/cv/') },
-		];
+		// Get command index from global data inlined at build time
+		const commandsData = window.COMMAND_INDEX || [];
 
-		this.commands = [...corePages];
-
-		// Dynamically discover blog posts from the DOM
-		const blogLinks = document.querySelectorAll('a[href^="/blog/"][href$="/"]');
-		const discoveredPosts = Array.from(blogLinks)
-			.filter(link => {
-				const href = link.getAttribute('href');
-				// Exclude /blog/ itself and /blog/bookshelf
-				return href !== '/blog/' && !href.includes('/bookshelf');
-			})
-			.map(link => {
-				const title = link.textContent.trim() || link.getAttribute('href');
-				const href = link.getAttribute('href');
-				return {
-					name: title,
-					description: 'Blog post',
-					href: href,
-					action: () => this.navigate(href)
-				};
-			});
-
-		// Deduplicate by href, preferring entries with formatted titles (no slashes)
-		const seenHrefs = new Map();
-		discoveredPosts.forEach(post => {
-			const existing = seenHrefs.get(post.href);
-			if (!existing) {
-				seenHrefs.set(post.href, post);
-			} else {
-				// Keep the version with a better name (no slashes = formatted title)
-				const currentHasSlashes = post.name.includes('/');
-				const existingHasSlashes = existing.name.includes('/');
-				if (currentHasSlashes && !existingHasSlashes) {
-					// Keep existing (already has better name)
-				} else if (!currentHasSlashes && existingHasSlashes) {
-					// Replace with better name
-					seenHrefs.set(post.href, post);
-				}
-			}
-		});
-
-		// Add discovered posts to commands, removing the helper href property
-		if (seenHrefs.size > 0) {
-			const uniquePosts = Array.from(seenHrefs.values()).map(post => {
-				const { href, ...cmd } = post;
-				return cmd;
-			});
-			this.commands.push(...uniquePosts);
-		}
+		// Convert data objects to commands with action methods
+		this.commands = commandsData.map(cmd => ({
+			name: cmd.name,
+			description: cmd.description,
+			action: () => this.navigate(cmd.url)
+		}));
 
 		this.filteredCommands = [...this.commands];
 	}
@@ -187,11 +138,6 @@ class CommandBar {
 					/>
 				</div>
 				<div class="command-bar-results"></div>
-				<div class="command-bar-hints">
-					<span>↑↓ Navigate</span>
-					<span>↵ Select</span>
-					<span>ESC Close</span>
-				</div>
 			</div>
 		`;
 		document.body.appendChild(this.modalElement);

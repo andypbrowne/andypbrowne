@@ -127,6 +127,10 @@
 			</div>
 			</div>
 		</footer>
+		{# Inline command index for Cmd+K palette #}
+		<script>
+			window.COMMAND_INDEX = {{ commandIndex | dump | safe }};
+		</script>
 		{% if js %}
     		<script type="module" src="{{ js }}"></script>
 		{% endif %}
