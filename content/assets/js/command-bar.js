@@ -148,9 +148,9 @@ class CommandBar {
 				</div>
 				<div class="command-bar-results"></div>
 				<div class="command-bar-hints">
-					<span>↑↓ Navigate</span>
-					<span>↵ Select</span>
-					<span>ESC Close</span>
+					<span><kbd>↑↓</kbd> Navigate</span>
+					<span><kbd>↵</kbd> Select</span>
+					<span><kbd>ESC</kbd> Close</span>
 				</div>
 			</div>
 		`;
