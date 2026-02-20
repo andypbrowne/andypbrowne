@@ -1114,14 +1114,14 @@ footer .footer-links {
 /* Nav */
 .nav {
 	display: flex;
-	gap: 1.6rem;
+	gap: 1.8rem;
 	padding: 0;
 	margin: 0;
 	list-style: none;
 }
 .nav-item {
 	display: inline-block;
-	margin-right: 1em;
+	/* margin-right: 1em; */
 	margin-bottom: 0px;
 }
 .nav-item a[href]:not(:hover) {

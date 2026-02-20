@@ -253,6 +253,15 @@ class CommandBar {
 			}
 		});
 
+		// Nav trigger button
+		const navTrigger = document.getElementById('command-bar-trigger');
+		if (navTrigger) {
+			navTrigger.addEventListener('click', (e) => {
+				e.preventDefault();
+				this.open();
+			});
+		}
+
 		// Keyboard navigation within the modal
 		this.inputElement.addEventListener('keydown', (e) => {
 			switch (e.key) {
