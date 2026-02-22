@@ -359,13 +359,14 @@
 /* Responsive adjustments */
 @media (max-width: 640px) {
 	.command-bar-modal {
-		padding-top: 10vh;
+		padding-top: 0px;
+
 	}
 
 	.command-bar-container {
-		width: 95%;
-		max-height: 70vh;
-		border-radius: 8px;
+		width: 100%;
+		max-height: 100%;;
+		border-radius: 0px;
 	}
 
 	.command-bar-hints {
