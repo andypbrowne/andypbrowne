@@ -65,12 +65,18 @@ module.exports = async function() {
 					       lowercaseTag === 'featured case study';
 				});
 
+				// Convert relative thumbnail paths to absolute paths
+				let thumbnailPath = data.thumbnail || null;
+				if (thumbnailPath && !thumbnailPath.startsWith('/')) {
+					thumbnailPath = '/' + thumbnailPath;
+				}
+
 				blogPosts.push({
 					name: data.title || slug,
 					description: data.description || 'Blog post',
 					url: url,
 					date: data.date ? new Date(data.date).toISOString() : null,
-					thumbnail: data.thumbnail || null,
+					thumbnail: thumbnailPath,
 					thumbnailAlt: data.thumbnailAlt || data.title || '',
 					tags: tags,
 					isCaseStudy: isCaseStudy,
