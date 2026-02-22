@@ -99,7 +99,7 @@ module.exports = async function() {
 
 	// Get latest posts and case studies for featured content
 	const latestPosts = blogPosts.filter(p => !p.isCaseStudy).slice(0, 3);
-	const latestCaseStudies = blogPosts.filter(p => p.isCaseStudy).slice(0, 2);
+	const latestCaseStudies = blogPosts.filter(p => p.isCaseStudy).slice(0, 3);
 
 	// Return both the full command list and featured content
 	return {
