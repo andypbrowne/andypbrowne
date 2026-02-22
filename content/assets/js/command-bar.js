@@ -183,6 +183,7 @@ class CommandBar {
 					</button>
 				</div>
 				<div class="command-bar-results"></div>
+				<div class="command-bar-live" aria-live="polite" aria-atomic="true"></div>
 				<div class="command-bar-hints">
 					<span><kbd>↑↓</kbd> Navigate</span>
 					<span><kbd>↵</kbd> Select</span>
@@ -198,6 +199,7 @@ class CommandBar {
 
 		this.inputElement = this.modalElement.querySelector('.command-bar-input');
 		this.resultsContainer = this.modalElement.querySelector('.command-bar-results');
+		this.liveRegion = this.modalElement.querySelector('.command-bar-live');
 		this.clearButton = this.modalElement.querySelector('.command-bar-clear');
 		this.closeButton = this.modalElement.querySelector('.command-bar-close');
 	}
@@ -211,6 +213,7 @@ class CommandBar {
 
 		// Show featured content when there's no search query
 		if (!query) {
+			this.liveRegion.textContent = 'Featured content: Latest posts, case studies, and useful pages';
 			this.renderFeaturedContent();
 			return;
 		}
@@ -218,8 +221,11 @@ class CommandBar {
 		// Show search results
 		if (this.filteredCommands.length === 0) {
 			this.resultsContainer.innerHTML = '<div class="command-bar-empty">No results found</div>';
+			this.liveRegion.textContent = `No results found for "${query}"`;
 			return;
 		}
+
+		this.liveRegion.textContent = `${this.filteredCommands.length} result${this.filteredCommands.length !== 1 ? 's' : ''} found for "${query}"`;
 
 		this.filteredCommands.forEach((cmd, idx) => {
 			const item = document.createElement('div');
