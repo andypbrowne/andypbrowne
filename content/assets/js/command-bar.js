@@ -229,6 +229,8 @@ class CommandBar {
 			});
 			this.resultsContainer.appendChild(item);
 		});
+
+		this.scrollSelectedIntoView();
 	}
 
 	/**
@@ -314,6 +316,17 @@ class CommandBar {
 
 		// Update total selectable items for keyboard navigation
 		this.filteredCommands = [...this.featuredPosts, ...this.featuredCaseStudies, ...this.corePages];
+		this.scrollSelectedIntoView();
+	}
+
+	/**
+	 * Ensure the selected item is visible in the scroll viewport
+	 */
+	scrollSelectedIntoView() {
+		const selected = this.resultsContainer.querySelector('.command-bar-item.selected');
+		if (selected) {
+			selected.scrollIntoView({ block: 'nearest' });
+		}
 	}
 
 	/**
