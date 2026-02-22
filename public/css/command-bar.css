@@ -234,6 +234,7 @@
 	padding: 8px 16px 12px 16px;
 	font-size: var(--font-size-base);
 	color: var(--color-gray-60);
+	text-align: center;
 }
 
 .command-bar-section-link:hover {

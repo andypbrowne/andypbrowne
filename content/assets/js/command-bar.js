@@ -253,7 +253,7 @@ class CommandBar {
 			const postsLink = document.createElement('a');
 			postsLink.className = 'command-bar-section-link';
 			postsLink.href = '/blog/';
-			postsLink.textContent = 'View all posts';
+			postsLink.textContent = 'View all posts →';
 			postsSection.appendChild(postsLink);
 
 			this.resultsContainer.appendChild(postsSection);
@@ -278,7 +278,7 @@ class CommandBar {
 			const caseStudiesLink = document.createElement('a');
 			caseStudiesLink.className = 'command-bar-section-link';
 			caseStudiesLink.href = '/tags/case-study/';
-			caseStudiesLink.textContent = 'View all case studies';
+			caseStudiesLink.textContent = 'View all case studies →';
 			csSection.appendChild(caseStudiesLink);
 
 			this.resultsContainer.appendChild(csSection);
