@@ -13,12 +13,11 @@ module.exports = async function() {
 	const corePages = [
 		{ name: 'Home', description: 'Go to home page', url: '/' },
 		{ name: 'Archive', description: 'View all blog posts', url: '/blog/' },
-		{ name: 'Bookshelf', description: 'Browse your book collection', url: '/bookshelf/' },
-		{ name: 'About', description: 'Learn more about Andy', url: '/about/' },
 		{ name: 'Tags', description: 'Explore posts by tag', url: '/tags/' },
-		{ name: 'Likes', description: 'Saved articles and links', url: '/likes/' },
-		{ name: 'Book Tags', description: 'Browse books by category', url: '/book-tags/' },
+		{ name: 'Bookshelf', description: 'Browse book collection', url: '/bookshelf/' },
+		{ name: 'About', description: 'Learn more about Andy', url: '/about/' },
 		{ name: 'CV', description: 'View resume/CV', url: '/cv/' },
+		{ name: 'Likes', description: 'Saved articles and links', url: '/likes/' },
 	];
 
 	// Read blog posts from filesystem

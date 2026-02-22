@@ -213,7 +213,7 @@ class CommandBar {
 
 		// Show featured content when there's no search query
 		if (!query) {
-			this.liveRegion.textContent = 'Featured content: Latest posts, case studies, and useful pages';
+			this.liveRegion.textContent = 'Featured content: Latest posts, case studies, and quick links';
 			this.renderFeaturedContent();
 			return;
 		}
@@ -305,14 +305,14 @@ class CommandBar {
 			this.resultsContainer.appendChild(csSection);
 		}
 
-		// Useful Pages Section
+		// Quick Links Section
 		if (this.corePages.length > 0) {
 			const pagesSection = document.createElement('div');
 			pagesSection.className = 'command-bar-section';
 
 			const pagesHeader = document.createElement('h2');
 			pagesHeader.className = 'command-bar-section-header';
-			pagesHeader.textContent = 'Useful Pages';
+		    pagesHeader.textContent = 'Quick Links';
 			pagesSection.appendChild(pagesHeader);
 
 			const startIdx = this.featuredPosts.length + this.featuredCaseStudies.length;
