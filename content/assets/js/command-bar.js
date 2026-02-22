@@ -16,6 +16,7 @@ class CommandBar {
 		this.featuredPosts = [];
 		this.featuredCaseStudies = [];
 		this.corePages = [];
+		this.lastFocusedElement = null;
 		this.inputElement = null;
 		this.resultsContainer = null;
 		this.modalElement = null;
@@ -191,6 +192,10 @@ class CommandBar {
 		`;
 		document.body.appendChild(this.modalElement);
 
+		this.modalElement.querySelector('.command-bar-container').setAttribute('role', 'dialog');
+		this.modalElement.querySelector('.command-bar-container').setAttribute('aria-modal', 'true');
+		this.modalElement.querySelector('.command-bar-container').setAttribute('aria-label', 'Command palette');
+
 		this.inputElement = this.modalElement.querySelector('.command-bar-input');
 		this.resultsContainer = this.modalElement.querySelector('.command-bar-results');
 		this.clearButton = this.modalElement.querySelector('.command-bar-clear');
@@ -361,10 +366,12 @@ class CommandBar {
 	 */
 	open() {
 		this.isOpen = true;
+		this.lastFocusedElement = document.activeElement;
 		this.modalElement.classList.add('open');
 		this.inputElement.focus();
 		this.selectedIndex = 0;
 		this.renderResults();
+		this.modalElement.addEventListener('keydown', this.handleFocusTrap);
 	}
 
 	/**
@@ -376,6 +383,49 @@ class CommandBar {
 		this.inputElement.value = '';
 		this.filteredCommands = [...this.commands];
 		this.clearButton.classList.remove('visible');
+		this.modalElement.removeEventListener('keydown', this.handleFocusTrap);
+		if (this.lastFocusedElement && this.lastFocusedElement.focus) {
+			this.lastFocusedElement.focus();
+		}
+	}
+
+	/**
+	 * Keep focus trapped within the command bar while open
+	 */
+	handleFocusTrap = (e) => {
+		if (e.key !== 'Tab') return;
+
+		const focusable = this.getFocusableElements();
+		if (focusable.length === 0) return;
+
+		const first = focusable[0];
+		const last = focusable[focusable.length - 1];
+		const isShift = e.shiftKey;
+		const active = document.activeElement;
+
+		if (isShift && active === first) {
+			e.preventDefault();
+			last.focus();
+			return;
+		}
+
+		if (!isShift && active === last) {
+			e.preventDefault();
+			first.focus();
+		}
+	}
+
+	getFocusableElements() {
+		const selectors = [
+			'a[href]',
+			'button:not([disabled])',
+			'input:not([disabled])',
+			'[tabindex]:not([tabindex="-1"])'
+		];
+
+		return Array.from(this.modalElement.querySelectorAll(selectors.join(','))).filter(
+			(el) => !el.hasAttribute('disabled') && el.offsetParent !== null
+		);
 	}
 
 	/**
