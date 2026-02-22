@@ -224,6 +224,7 @@ class CommandBar {
 		this.filteredCommands.forEach((cmd, idx) => {
 			const item = document.createElement('div');
 			item.className = `command-bar-item ${idx === this.selectedIndex ? 'selected' : ''}`;
+			item.setAttribute('tabindex', '0');
 			item.innerHTML = `
 				<h3 class="command-bar-item-name">${this.escapeHtml(cmd.name)}</h3>
 				<p class="command-bar-item-description">${this.escapeHtml(cmd.description)}</p>
@@ -231,6 +232,13 @@ class CommandBar {
 			item.addEventListener('click', () => {
 				this.selectedIndex = idx;
 				this.selectCurrent();
+			});
+			item.addEventListener('keydown', (e) => {
+				if (e.key === 'Enter') {
+					e.preventDefault();
+					this.selectedIndex = idx;
+					this.selectCurrent();
+				}
 			});
 			this.resultsContainer.appendChild(item);
 		});
@@ -305,6 +313,7 @@ class CommandBar {
 			this.corePages.forEach((page, idx) => {
 				const item = document.createElement('div');
 				item.className = `command-bar-item ${(startIdx + idx) === this.selectedIndex ? 'selected' : ''}`;
+				item.setAttribute('tabindex', '0');
 				item.innerHTML = `
 					<h3 class="command-bar-item-name">${this.escapeHtml(page.name)}</h3>
 					<p class="command-bar-item-description">${this.escapeHtml(page.description)}</p>
@@ -312,6 +321,13 @@ class CommandBar {
 				item.addEventListener('click', () => {
 					this.selectedIndex = startIdx + idx;
 					this.selectCurrent();
+				});
+				item.addEventListener('keydown', (e) => {
+					if (e.key === 'Enter') {
+						e.preventDefault();
+						this.selectedIndex = startIdx + idx;
+						this.selectCurrent();
+					}
 				});
 				pagesSection.appendChild(item);
 			});
@@ -340,6 +356,7 @@ class CommandBar {
 	createFeaturedItem(item, idx) {
 		const elem = document.createElement('div');
 		elem.className = `command-bar-item command-bar-featured-item ${idx === this.selectedIndex ? 'selected' : ''}`;
+		elem.setAttribute('tabindex', '0');
 		
 		const thumbnailHtml = item.thumbnail 
 			? `<img src="${this.escapeHtml(item.thumbnail)}" alt="${this.escapeHtml(item.thumbnailAlt)}" class="command-bar-thumbnail" />`
@@ -356,6 +373,13 @@ class CommandBar {
 		elem.addEventListener('click', () => {
 			this.selectedIndex = idx;
 			this.selectCurrent();
+		});
+		elem.addEventListener('keydown', (e) => {
+			if (e.key === 'Enter') {
+				e.preventDefault();
+				this.selectedIndex = idx;
+				this.selectCurrent();
+			}
 		});
 		
 		return elem;
