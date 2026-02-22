@@ -55,10 +55,25 @@ module.exports = async function() {
 				const slug = entry.name;
 				const url = `/blog/${slug}/`;
 
+				// Check if it's a case study
+				const tags = Array.isArray(data.tags) ? data.tags : [];
+				const isCaseStudy = tags.some(tag => {
+					const lowercaseTag = String(tag).toLowerCase();
+					return lowercaseTag === 'case-study' || 
+					       lowercaseTag === 'case study' || 
+					       lowercaseTag === 'featured-case-study' ||
+					       lowercaseTag === 'featured case study';
+				});
+
 				blogPosts.push({
 					name: data.title || slug,
 					description: data.description || 'Blog post',
 					url: url,
+					date: data.date ? new Date(data.date).toISOString() : null,
+					thumbnail: data.thumbnail || null,
+					thumbnailAlt: data.thumbnailAlt || data.title || '',
+					tags: tags,
+					isCaseStudy: isCaseStudy,
 				});
 			} catch (error) {
 				console.warn(`Failed to parse blog post ${entry.name}:`, error.message);
@@ -68,7 +83,26 @@ module.exports = async function() {
 		console.warn('Failed to read blog directory:', error.message);
 	}
 
-	// Combine and return sorted
-	return [...corePages, ...blogPosts.sort((a, b) => a.name.localeCompare(b.name))];
+	// Sort by date (newest first)
+	blogPosts.sort((a, b) => {
+		if (!a.date && !b.date) return 0;
+		if (!a.date) return 1;
+		if (!b.date) return -1;
+		return new Date(b.date) - new Date(a.date);
+	});
+
+	// Get latest posts and case studies for featured content
+	const latestPosts = blogPosts.filter(p => !p.isCaseStudy).slice(0, 3);
+	const latestCaseStudies = blogPosts.filter(p => p.isCaseStudy).slice(0, 2);
+
+	// Return both the full command list and featured content
+	return {
+		commands: [...corePages, ...blogPosts],
+		featured: {
+			posts: latestPosts,
+			caseStudies: latestCaseStudies,
+			corePages: corePages,
+		}
+	};
 };
 

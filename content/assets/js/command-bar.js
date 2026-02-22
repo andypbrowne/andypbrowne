@@ -13,6 +13,9 @@ class CommandBar {
 		this.selectedIndex = 0;
 		this.commands = [];
 		this.filteredCommands = [];
+		this.featuredPosts = [];
+		this.featuredCaseStudies = [];
+		this.corePages = [];
 		this.inputElement = null;
 		this.resultsContainer = null;
 		this.modalElement = null;
@@ -33,13 +36,45 @@ class CommandBar {
 	 */
 	registerDefaultCommands() {
 		// Get command index from global data inlined at build time
-		const commandsData = window.COMMAND_INDEX || [];
+		const indexData = window.COMMAND_INDEX || { commands: [], featured: { posts: [], caseStudies: [], corePages: [] } };
+		
+		// Handle both old format (array) and new format (object with commands/featured)
+		const commandsData = Array.isArray(indexData) ? indexData : (indexData.commands || []);
+		const featuredData = Array.isArray(indexData) ? { posts: [], caseStudies: [], corePages: [] } : (indexData.featured || { posts: [], caseStudies: [], corePages: [] });
 
 		// Convert data objects to commands with action methods
 		this.commands = commandsData.map(cmd => ({
 			name: cmd.name,
 			description: cmd.description,
-			action: () => this.navigate(cmd.url)
+			action: () => this.navigate(cmd.url),
+			thumbnail: cmd.thumbnail,
+			thumbnailAlt: cmd.thumbnailAlt,
+		}));
+
+		// Store featured content
+		this.featuredPosts = featuredData.posts.map(post => ({
+			name: post.name,
+			description: post.description,
+			url: post.url,
+			thumbnail: post.thumbnail,
+			thumbnailAlt: post.thumbnailAlt,
+			action: () => this.navigate(post.url),
+		}));
+
+		this.featuredCaseStudies = featuredData.caseStudies.map(cs => ({
+			name: cs.name,
+			description: cs.description,
+			url: cs.url,
+			thumbnail: cs.thumbnail,
+			thumbnailAlt: cs.thumbnailAlt,
+			action: () => this.navigate(cs.url),
+		}));
+
+		this.corePages = featuredData.corePages.map(page => ({
+			name: page.name,
+			description: page.description,
+			url: page.url,
+			action: () => this.navigate(page.url),
 		}));
 
 		this.filteredCommands = [...this.commands];
@@ -163,11 +198,19 @@ class CommandBar {
 	}
 
 	/**
-	 * Render filtered results list
+	 * Render filtered results list or featured content
 	 */
 	renderResults() {
 		this.resultsContainer.innerHTML = '';
+		const query = this.inputElement.value.trim();
 
+		// Show featured content when there's no search query
+		if (!query) {
+			this.renderFeaturedContent();
+			return;
+		}
+
+		// Show search results
 		if (this.filteredCommands.length === 0) {
 			this.resultsContainer.innerHTML = '<div class="command-bar-empty">No results found</div>';
 			return;
@@ -177,8 +220,8 @@ class CommandBar {
 			const item = document.createElement('div');
 			item.className = `command-bar-item ${idx === this.selectedIndex ? 'selected' : ''}`;
 			item.innerHTML = `
-				<div class="command-bar-item-name">${this.escapeHtml(cmd.name)}</div>
-				<div class="command-bar-item-description">${this.escapeHtml(cmd.description)}</div>
+				<h3 class="command-bar-item-name">${this.escapeHtml(cmd.name)}</h3>
+				<p class="command-bar-item-description">${this.escapeHtml(cmd.description)}</p>
 			`;
 			item.addEventListener('click', () => {
 				this.selectedIndex = idx;
@@ -186,6 +229,106 @@ class CommandBar {
 			});
 			this.resultsContainer.appendChild(item);
 		});
+	}
+
+	/**
+	 * Render featured posts and case studies
+	 */
+	renderFeaturedContent() {
+		// Latest Posts Section
+		if (this.featuredPosts.length > 0) {
+			const postsSection = document.createElement('div');
+			postsSection.className = 'command-bar-section';
+
+			const postsHeader = document.createElement('h2');
+			postsHeader.className = 'command-bar-section-header';
+			postsHeader.textContent = 'Latest Posts';
+			postsSection.appendChild(postsHeader);
+
+			this.featuredPosts.forEach((post, idx) => {
+				const item = this.createFeaturedItem(post, idx);
+				postsSection.appendChild(item);
+			});
+
+			this.resultsContainer.appendChild(postsSection);
+		}
+
+		// Latest Case Studies Section
+		if (this.featuredCaseStudies.length > 0) {
+			const csSection = document.createElement('div');
+			csSection.className = 'command-bar-section';
+
+			const csHeader = document.createElement('h2');
+			csHeader.className = 'command-bar-section-header';
+			csHeader.textContent = 'Latest Case Studies';
+			csSection.appendChild(csHeader);
+
+			const startIdx = this.featuredPosts.length;
+			this.featuredCaseStudies.forEach((cs, idx) => {
+				const item = this.createFeaturedItem(cs, startIdx + idx);
+				csSection.appendChild(item);
+			});
+
+			this.resultsContainer.appendChild(csSection);
+		}
+
+		// Useful Pages Section
+		if (this.corePages.length > 0) {
+			const pagesSection = document.createElement('div');
+			pagesSection.className = 'command-bar-section';
+
+			const pagesHeader = document.createElement('h2');
+			pagesHeader.className = 'command-bar-section-header';
+			pagesHeader.textContent = 'Useful Pages';
+			pagesSection.appendChild(pagesHeader);
+
+			const startIdx = this.featuredPosts.length + this.featuredCaseStudies.length;
+			this.corePages.forEach((page, idx) => {
+				const item = document.createElement('div');
+				item.className = `command-bar-item ${(startIdx + idx) === this.selectedIndex ? 'selected' : ''}`;
+				item.innerHTML = `
+					<h3 class="command-bar-item-name">${this.escapeHtml(page.name)}</h3>
+					<p class="command-bar-item-description">${this.escapeHtml(page.description)}</p>
+				`;
+				item.addEventListener('click', () => {
+					this.selectedIndex = startIdx + idx;
+					this.selectCurrent();
+				});
+				pagesSection.appendChild(item);
+			});
+
+			this.resultsContainer.appendChild(pagesSection);
+		}
+
+		// Update total selectable items for keyboard navigation
+		this.filteredCommands = [...this.featuredPosts, ...this.featuredCaseStudies, ...this.corePages];
+	}
+
+	/**
+	 * Create a featured item with thumbnail
+	 */
+	createFeaturedItem(item, idx) {
+		const elem = document.createElement('div');
+		elem.className = `command-bar-item command-bar-featured-item ${idx === this.selectedIndex ? 'selected' : ''}`;
+		
+		const thumbnailHtml = item.thumbnail 
+			? `<img src="${this.escapeHtml(item.thumbnail)}" alt="${this.escapeHtml(item.thumbnailAlt)}" class="command-bar-thumbnail" />`
+			: '<div class="command-bar-thumbnail-placeholder"></div>';
+
+		elem.innerHTML = `
+			${thumbnailHtml}
+			<div class="command-bar-item-content">
+				<h3 class="command-bar-item-name">${this.escapeHtml(item.name)}</h3>
+				<p class="command-bar-item-description">${this.escapeHtml(item.description)}</p>
+			</div>
+		`;
+		
+		elem.addEventListener('click', () => {
+			this.selectedIndex = idx;
+			this.selectCurrent();
+		});
+		
+		return elem;
 	}
 
 	/**
