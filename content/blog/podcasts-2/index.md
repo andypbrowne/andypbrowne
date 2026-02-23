@@ -1,5 +1,5 @@
 ---
-title: Template
+title: Podcasts 2
 description: post description
 thumbnail: assets/images/thumb-fpo.png
 thumbnailAlt: Just a placeholder image that says FPO which means for  

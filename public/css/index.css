@@ -121,6 +121,7 @@
 		--color-midnight-80: #E3E4E5;
 
 		--color-aside: var(--color-midnight-20);
+		--subtle-border: #2b3e5166;
 
 		/* --text-color: var(--color-midnight-20); */
 		--text-color-link: #1493fb;

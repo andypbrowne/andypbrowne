@@ -1,6 +1,8 @@
 ---
 title: Fontana
 description: An artist’s installations making use of sound as a sculptural medium to transform the audience’s perceptions of visual and architectural settings 
+thumbnail: assets/images/thumb-paris.jpg
+thumbnailAlt: A wide shot of the Arc de Triomphe
 date: 2009-12-17
 tags: 
  - post

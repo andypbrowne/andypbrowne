@@ -1,6 +1,8 @@
 ---
 title: Hope Act Love
 description: A group gallery show to benefit natural disaster victims
+thumbnail: assets/images/thumb-hope.jpg
+thumbnailAlt: A collage of water color and text elements
 date: 2011-06-18
 tags:
   - fine art
