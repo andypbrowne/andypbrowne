@@ -170,6 +170,7 @@ class CommandBar {
 					<div class="command-bar-input-wrapper">
 						<input
 							type="text"
+							spellcheck="false"
 							class="command-bar-input"
 							placeholder="Search pages and posts…"
 							aria-label="Search command palette"
@@ -201,6 +202,7 @@ class CommandBar {
 		this.resultsContainer = this.modalElement.querySelector('.command-bar-results');
 		this.liveRegion = this.modalElement.querySelector('.command-bar-live');
 		this.clearButton = this.modalElement.querySelector('.command-bar-clear');
+		this.clearButton.setAttribute('disabled', 'true');
 		this.closeButton = this.modalElement.querySelector('.command-bar-close');
 	}
 
@@ -413,6 +415,7 @@ class CommandBar {
 		this.inputElement.value = '';
 		this.filteredCommands = [...this.commands];
 		this.clearButton.classList.remove('visible');
+		this.clearButton.setAttribute('disabled', 'true');
 		this.modalElement.removeEventListener('keydown', this.handleFocusTrap);
 		if (this.lastFocusedElement && this.lastFocusedElement.focus) {
 			this.lastFocusedElement.focus();
@@ -541,8 +544,10 @@ class CommandBar {
 			// Show/hide clear button based on input
 			if (e.target.value.length > 0) {
 				this.clearButton.classList.add('visible');
+				this.clearButton.removeAttribute('disabled');
 			} else {
 				this.clearButton.classList.remove('visible');
+				this.clearButton.setAttribute('disabled', 'true');
 			}
 		});
 
@@ -552,6 +557,7 @@ class CommandBar {
 			this.fuzzySearch('');
 			this.renderResults();
 			this.clearButton.classList.remove('visible');
+			this.clearButton.setAttribute('disabled', 'true');
 			this.inputElement.focus();
 		});
 
