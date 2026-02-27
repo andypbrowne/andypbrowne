@@ -189,6 +189,7 @@ class CommandBar {
 					<span><kbd>↑↓</kbd> Navigate</span>
 					<span><kbd>↵</kbd> Select</span>
 					<span><kbd>ESC</kbd> Close</span>
+					<span><kbd>⌘</kbd>+ <kbd>K</kbd> Open/close </span>
 				</div>
 			</div>
 		`;
