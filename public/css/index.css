@@ -642,6 +642,20 @@ section.featured-case-study .featured-case-study-image img {
 	grid-auto-flow: dense;
 }
 
+.image-thumbnail-grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 1rem;
+	margin-block: 2rem;
+}
+
+.image-thumbnail-grid img {
+	width: 100%;
+	aspect-ratio: 1 / 1;
+	object-fit: cover;
+	border-radius: 0.25rem;
+}
+
 section.hero .hero-details {
 	display: flex;
 	flex-direction: column;
