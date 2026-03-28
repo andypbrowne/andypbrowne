@@ -26,6 +26,9 @@ resources:
   - id: 5
     title: review last commit
     snippet: git log [BRANCH NAME]
+  - id: 6
+    title: Speed up commit
+    snippit: it add . && git commit -m "message"
 ---
 
 A list of helpful code snippets for us making this, my personal blog. This post assumes you are using the command line to work on a personal website. The primary reasons for doing this is to speed up workflow and to look cool while you are doing it.

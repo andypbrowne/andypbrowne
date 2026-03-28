@@ -190,5 +190,17 @@
     "tags": ["fantasy", "fiction", "humor"],
     "status": "currently-reading",
     "description": ""
+  },
+  {
+    "cover": "https://m.media-amazon.com/images/I/91qIIwtU5FL._SY300_.jpg",
+    "coverAlt": "Kitchen Confidential 25th Anniversary Edition cover",
+    "link": "https://en.wikipedia.org/wiki/Kitchen_Confidential",
+    "title": "Kitchen Confidential",
+    "subTitle": "Adventures in the Culinary Underbelly (25th Anniversary Edition)",
+    "author": "Anthony Bourdain",
+    "type": "book",
+    "tags": ["memoir", "food", "non-fiction"],
+    "status": "want-to-read",
+    "description": ""
   }
 ]
