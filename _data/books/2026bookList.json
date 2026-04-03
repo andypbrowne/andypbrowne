@@ -44,7 +44,7 @@
     "author": "Ursula K. Le Guin",
     "type": "",
     "tags": ["sci-fi"],
-    "status": "want-to-read",
+    "status": "dnf",
     "description": ""
   },
   {
@@ -152,7 +152,7 @@
     "author": "Kim Stanley Robinson",
     "type": "",
     "tags": ["sci-fi", "fiction"],
-    "status": "want-to-read",
+    "status": "currently-reading",
     "description": ""
   },
   {
@@ -188,8 +188,8 @@
     "author": "Matt Dinniman",
     "type": "book",
     "tags": ["fantasy", "fiction", "humor"],
-    "status": "currently-reading",
-    "description": ""
+    "status": "read",
+    "description": "Will be reading this whole series when I can get my hands on them from the library"
   },
   {
     "cover": "https://m.media-amazon.com/images/I/91qIIwtU5FL._SY300_.jpg",
@@ -200,7 +200,7 @@
     "author": "Anthony Bourdain",
     "type": "book",
     "tags": ["memoir", "food", "non-fiction"],
-    "status": "want-to-read",
+    "status": "read",
     "description": ""
   }
 ]
