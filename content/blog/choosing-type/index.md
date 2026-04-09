@@ -10,7 +10,7 @@ tags:
 draft: true
 ---
 
-There are some useful ways to choose typography for a project. There are an abundance of choices and I am going to help you choose. A free on in-expensive typeface may be the right choice for a project. These choices can provide utility and ensure that the qualities of your chosen typeface are aligned with your use case. 
+There are a lot of ways to choose typography for a project — more than anyone needs, honestly. A free or inexpensive typeface may be exactly right. Another might something worth paying for. Either way, I'm going to help you choose.
 
 <aside>
 
@@ -29,11 +29,11 @@ Note: I will use the word type and fonts interchangeably in this post. There is 
 
 ## Good design is invisible
 
-A good typeface is invisible in it’s specific application. That means if you are designing a website for an HVAC repair technician you are not using fonts that would more commonly be applied to a fashion magazine. The type just belongs there. 
+A good typeface disappears. That means if you are designing a website for an HVAC repair technician you are not using fonts that would more commonly be applied to a fashion magazine. The type just belongs there.
 
 ## Traditionally…
 
-A traditional way of choosing a typeface has to do with the style. Serif vs sans-serif, decorative, gothic, old-style, humanist or geometric. This post is not a lesson in typgraphy you can read [Thinking with Type](https://ellenlupton.com/Thinking-with-Type) by Ellen Lupton, or [another book](#) by this other guy to get all of that. 
+The traditional approach to choosing type starts with style. Serif vs sans-serif, decorative, gothic, old-style, humanist or geometric. This post is not a lesson in typgraphy — you can read [Thinking with Type](https://ellenlupton.com/Thinking-with-Type) by Ellen Lupton, or [another book](#) by this other guy to get all of that.
 
 ## Why choose
 
@@ -57,7 +57,20 @@ Hot tip: Let the type designer do the hard work for you. A quality typeface can 
 
 Once you have chosen a typeface – it is important to let the type do the work.  
 
-
-
+## Notes
 
 [1] By the way, [everyone is a designer](#) and everything is designed. It’s just a matter of… was the design intentional or not. 
+
+## Further Reading
+
+- [Using UI System Fonts In Web Design: A Quick Practical Guide — Marcin Wichary](https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/)
+- [The Elements of Typographic Style Applied to the Web — Richard Rutter](https://webtypography.net/toc)
+- [Flexible Typesetting — Tim Brown](https://abookapart.com/products/flexible-typesetting)
+- [Thinking with Type, Third Edition — Ellen Lupton](https://ellenlupton.com/Thinking-with-Type)
+- [The Elements of Typographic Style: Version 4.0 — Robert Bringhurst](https://www.amazon.com/gp/product/0881792128?camp=1789&creative=9325&creativeASIN=0881792128&linkId=b63f00e321327067f028be2d97304d51)
+- [Designing with Type, 5th Edition: The Essential Guide to Typography — James Craig and Irene Korol Scala](https://www.amazon.com/gp/product/0823014134?camp=1789&creative=9325&creativeASIN=0823014134&linkId=b8cc77a51437237a71ecae8a03b06d44)
+- [Just My Type: A Book About Fonts — Simon Garfield](https://www.amazon.com/gp/product/1592407463?camp=1789&creative=9325&creativeASIN=1592407463&linkId=87f7183171e37cd5ebf637244a5ae664)
+- [Flawless Typography Checklist — Jeremiah Shoaf](https://www.typewolf.com/checklist)
+- [Practical Typography, 2nd Edition — Matthew Butterick](https://practicaltypography.com/)
+
+
