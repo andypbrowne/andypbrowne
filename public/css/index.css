@@ -179,7 +179,7 @@ article {
 	margin: 0 auto;
 }
 
-article p:first-of-type::first-letter {
+article > p:first-of-type::first-letter {
 	float: left;
 	font-family: var(--font-family-cedar);
 	font-size: 6.2rem;
