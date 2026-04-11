@@ -54,32 +54,33 @@ ol.bookshelf li div.info {
 ol.bookshelf li div.info h3,
 .featured-book h3 {
     margin: 0;
-    font-family: var(--font-family-cedar);
+    font-family: var(--font-family);
     font-size: var(--font-size-md);
     font-weight: 600;
     font-variation-settings: "wght" 650;
-    margin-block: 0 .6rem;
-    font-style: italic;
+    margin-block: 0 .2rem;
+    font-style: normal;
     /* margin-bottom: .4rem; */
 }
 
 .featured-book h3 {
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-md);
 }
 
 ol.bookshelf li .info .author,
 .featured-book .info .author {
+  font-size: var(--font-size-base);
   font-weight: 600;
-  font-variation-settings: "wght" 650;
-  font-family: var(--font-family-cedar);
+  font-variation-settings: "wght" 500;
+  font-family: var(--font-family);
 }
 
 ol.bookshelf li div.info p.sub-title,
 .featured-book p.sub-title {
-  font-family: var(--font-family-cedar);
+  font-family: var(--font-family);
 	font-size: var(--font-size-base);
 	font-weight: 600;
-	font-variation-settings: "wght" 650;
+	font-variation-settings: "wght" 500;
   font-style: italic;
 }
 
