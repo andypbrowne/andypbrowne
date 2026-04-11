@@ -1,6 +1,6 @@
 ---
 title: Choosing Type
-description: post description
+description: A story-first guide to choosing type that fits your project, your voice, and your context.
 thumbnail: assets/images/thumb-fpo.png
 thumbnailAlt: Just a placeholder image that says FPO which means for  
 date: 2026-04-06
@@ -57,7 +57,9 @@ furtherReading:
     url: "https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/"
 ---
 
-There are a lot of ways to choose typography for a project — more than anyone needs, honestly. A free or inexpensive typeface may be exactly right. Another might require something worth paying for. Either way, I'm going to help you choose.
+There are a lot of ways to choose typography for a project, more than anyone needs, honestly. A free typeface may be exactly right. Another might require something worth paying for. Either way, I am going to help you choose.
+
+A few weeks ago I was helping an un-named client tune up a website that already had good writing, good photos, and a clear offer. But the whole thing still felt slightly off. We changed one typeface pairing and suddenly the tone matched the person. Nothing else changed. It just clicked.
 
 <aside>
 
@@ -65,34 +67,40 @@ Note: I will use the word type and fonts interchangeably in this post. There is 
 
 </aside>
 
-## What you might need to choose for
+## Where this usually shows up
 
 - A better than default font for your e-reader
 - Personal or professional website or email newsletter
 - Coding, writing, or generally working
 - Business papers
-- Cover letter or a résumé
+- Cover letter or a resume
 - Marketing materials like a post card or a poster
 
-## Good design is invisible
+Most of these are "small" decisions that quietly become daily decisions. If you are staring at text for hours, the type is part of your mood, your pace, and your confidence. That is why this matters even when nobody else can name the font.
 
-A good typeface disappears. That means if you are designing a website for an HVAC repair technician you are not using fonts that would more commonly be applied to a fashion magazine. The type just belongs there.
+## When type disappears, it is working
 
-The traditional approach to choosing type starts with style. Serif vs sans-serif, decorative, gothic, old-style, humanist or geometric. This post is not a lesson in typgraphy — you can read [Thinking with Type](https://ellenlupton.com/Thinking-with-Type) by Ellen Lupton, or [another book](#) by this other guy to get all of that.
+A good typeface disappears. If you are designing a website for an HVAC repair technician, you are probably not using fonts that feel like a fashion magazine. The type should feel like it belongs before anyone notices it.
 
-## Why choose
+That does not mean boring. It means appropriate. The voice can be warm, stern, playful, or technical, but it should feel like the same person who wrote the words.
+
+The traditional approach starts with style labels: serif vs sans-serif, decorative, gothic, old-style, humanist, geometric. Useful, yes. But this post is not a full typography class. You can read [Thinking with Type](https://ellenlupton.com/Thinking-with-Type) by Ellen Lupton, or one of the books in the list below, for that.
+
+## Why bother choosing at all
 
 What this post is about is some alternative ways to choose. A choice is important because just going with the default is a [non-choice](#). Choose so that you can seek inspiration, have a point-of-view, or justify the value of your work. 
 
-Anyway, a good story works better than an academic argument or snobbery (I say this because I’m guilty). The useful alternative is speaking in plain language. As designers <sup>[1]</sup> we are taught to speak simply - because [because Design-isms](https://uxdesign.cc/poster-prompts-for-avoiding-design-isms-8be43625c482). So when you tell your type story you can do that too.  
+Also, a good story works better than an academic argument or design snobbery (I say this because I am guilty). The useful alternative is plain language. As designers <sup>[1]</sup> we are taught to speak simply, because [because Design-isms](https://uxdesign.cc/poster-prompts-for-avoiding-design-isms-8be43625c482). So when you explain your type choices, you can do that too.
 
-## Some ways to choose
+In practice, this helps with clients, collaborators, and your future self. “I chose this because x-height and modulation” is fine. "I chose this because it sounds like your voice when read out loud" usually lands better.
 
-- **Origin of Type Foundary Relates To Project** - I worked on an author’s website who has roots in Argentina. We chose a typeface called [Manuale](https://www.omnibus-type.com/fonts/manuale/) from Omni-bus Type because they are located in Buenos Aires and was designed for books, newspapers, and magazines.
-- **Historical or Geographic Reference** - Often a typeface is designed as an homage to a historial period. This is a good way to make it feel like your type matches your content. 
-- **Typeface Has a Cool Name** - That same author had a character in one of her novels name *Manu*. Guess what – Omni type has a typeface called Manuale. Thats really fun.
-- **Have the Choice Made For You** - Many type foundaries offer parings on thier sites. Often times fonts designed by the same type designer will pair well together. I own a [type capsule]() from Hoefler and Co. that includes Gotham, Decimal, and Operator Mono. I use these on my Résumé, note cards, and my code-editor respectivly. 
-- **Special Features** - A family of typefaces from a high-quality source may include display fonts that work better at large sizes that matches the smaller body copy. Sometimes a typeface will have specific cuts (A and B for example) for specific applications like printing on different quality paper. These typefaces will also include open type features like swashes,ligatures, lining/traditional/tabular figures. I personally love the swashes found in [Named font](#) that I never got to use for a knitting business.    
+## Five story-first ways to choose type
+
+- **The foundry has a meaningful connection** - I worked on an author website for someone with roots in Argentina.
+- **Use a historical or geographic reference** - A lot of typefaces are built as quiet homages to specific eras and places. If your project already has context (a city, a decade, a cultural reference), type can reinforce it without becoming costume.
+- **The name itself creates a thread** - That same author had a character named Manu. Omnibus-Type has a family called [Manuale](https://www.omnibus-type.com/fonts/manuale/) from Omnibus-Type in Buenos Aires. It was designed for books, newspapers, and magazines, so it fit the writing-heavy work and the personal story at the same time. Is that a technical reason? Not really. Is it memorable and useful for buy-in? Absolutely.
+- **Let experts pre-pair it for you** - Many foundries publish pairings, and those are often solid because the faces were designed to work together. I still use a type capsule from Hoefler and Co. with Gotham, Decimal, and Operator Mono across resume, note cards, and code editor work.
+- **Choose for features, not just vibes** - Better families include practical options: display cuts, text cuts, figure styles, and OpenType features like ligatures or swashes. Those details matter when a system has to flex across print, web, and tiny UI moments.
 
 <aside>
 
@@ -100,7 +108,7 @@ Hot tip: Let the type designer do the hard work for you. A quality typeface can 
 
 </aside>
 
-Once you have chosen a typeface – it is important to let the type do the work.  
+Once you choose a typeface, let it do the work. If you are constantly decorating around it, the choice probably is not pulling its weight yet.
 
 ## Notes
 
