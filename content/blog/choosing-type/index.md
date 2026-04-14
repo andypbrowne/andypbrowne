@@ -1,6 +1,6 @@
 ---
 title: Choosing Type
-description: A story-first guide to choosing type that fits your project, your voice, and your context.
+description: A story-first guide to choosing type that fits 
 thumbnail: assets/images/thumb-fpo.png
 thumbnailAlt: Just a placeholder image that says FPO which means for  
 date: 2026-04-06
@@ -22,52 +22,68 @@ furtherReading:
     url: "https://ellenlupton.com/Thinking-with-Type"
   - title: "Flawless Typography Checklist"
     author: "Jeremiah Shoaf"
-    image: "https://www.typewolf.com/assets/img/checklist/screenshot-01-2x.jpg"
+    image: "./cover-flawless-typography-checklist.png"
     imageAlt: "Screenshot of Flawless Typography Checklist"
     url: "https://www.typewolf.com/checklist"
   - title: "The Elements of Typographic Style"
     author: "Robert Bringhurst"
-    image: "../../assets/images/thumb-fpo.png"
-    imageAlt: "Placeholder cover"
-    url: "https://www.amazon.com/gp/product/0881792128?camp=1789&creative=9325&creativeASIN=0881792128&linkId=b63f00e321327067f028be2d97304d51"
+    image: "https://m.media-amazon.com/images/I/61C+aVo1+eL._SY522_.jpg"
+    imageAlt: "Book information set in old-style text and a collage of letters make an illustration"
+    url: "https://webtypography.net/toc"
   - title: "Designing with Type"
     author: "James Craig & Irene Korol Scala"
-    image: "../../assets/images/thumb-fpo.png"
-    imageAlt: "Placeholder cover"
+    image: "https://m.media-amazon.com/images/I/61HzP6b0XHL._SY522_.jpg"
+    imageAlt: "A bright cover that lets us know it is the 5th edition"
     url: "https://www.amazon.com/gp/product/0823014134?camp=1789&creative=9325&creativeASIN=0823014134&linkId=b8cc77a51437237a71ecae8a03b06d44"
   - title: "Flexible Typesetting"
     author: "Tim Brown"
-    image: "../../assets/images/thumb-fpo.png"
+    image: "https://m.media-amazon.com/images/I/317y-i30FTL.jpg"
     imageAlt: "Placeholder cover"
-    url: "https://abookapart.com/products/flexible-typesetting"
+    url: "https://flexibletypesetting.com/"
   - title: "Practical Typography"
     author: "Matthew Butterick"
-    image: "../../assets/images/thumb-fpo.png"
-    imageAlt: "Placeholder cover"
+    image: "cover-practical-typography.png"
+    imageAlt: "A shaded letter A to accompany the title"
     url: "https://practicaltypography.com/"
-  - title: "The Elements of Typographic Style Applied to the Web"
+  - title: "Web Typography"
     author: "Richard Rutter"
-    image: "../../assets/images/thumb-fpo.png"
+    image: "https://m.media-amazon.com/images/I/31nEPQoCQ2L._SY445_SX342_FMwebp_.jpg"
     imageAlt: "Placeholder cover"
-    url: "https://webtypography.net/toc"
-  - title: "Using UI System Fonts In Web Design"
-    author: "Marcin Wichary"
-    image: "../../assets/images/thumb-fpo.png"
-    imageAlt: "Placeholder cover"
-    url: "https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/"
+    url: "https://book.webtypography.net/"
 ---
 
-There are a lot of ways to choose typography for a project, more than anyone needs, honestly. A free typeface may be exactly right. Another might require something worth paying for. Either way, I am going to help you choose.
+There are too many ways to choose type for a project, honestly. Some of them are technical, some are historical, and some amount to a designer staring at two perfectly good options until one feels slightly less wrong. Sometimes a free typeface is exactly right. Sometimes the right one is worth paying for. Either way, I think there are better ways to choose than just calling one “clean” and moving on.
 
-A few weeks ago I was helping an un-named client tune up a website that already had good writing, good photos, and a clear offer. But the whole thing still felt slightly off. We changed one typeface pairing and suddenly the tone matched the person. Nothing else changed. It just clicked.
+A few weeks ago I was helping an unnamed client tune up a website that already had good writing, good photos, and a clear offer. But the whole thing still felt slightly off. We changed one typeface pairing and suddenly the tone matched the project. Nothing else changed. It just clicked.
+
+In this post, I will share five story-first tests you can use to choose type when technical criteria alone are not enough.
 
 <aside>
 
-Note: I will use the word type and fonts interchangeably in this post. There is no real difference unless you just want to sound fancy by using the words typography and type. 
+**Note**: I will use the word type and fonts interchangeably in this post. There is no real difference unless you just want to sound fancy by using the words typography and type. 
 
 </aside>
 
 ## Where this usually shows up
+
+Look at these type specimens. I used them to choose my e-reader font. I did look closely at curves and serifs, but that was not the deciding factor. I chose Valkyrie partly to support [Butterick's Practical Typography](https://practicaltypography.com/), which I have referenced for years.
+
+<div class="image-thumbnail-grid">
+  <figure>
+    <img src="./type-tester-01.png" alt="Type tester example one" alt="A series of 9 fonts I lined up vertically that have the same letters: Rival’s Mounted 012"/>
+    <figcaption>9 fonts considered for use in my e-reader</figcaption>
+  </figure>
+  <figure>
+    <img src="./type-tester-02.png" alt="Type tester example two" alt="5 paragraphs of type layed out like a book."/>
+    <figcaption>Valkarie typeface version A</figcaption>
+  </figure>
+  <figure>
+    <img src="./type-tester-03.png" alt="Type tester example three" alt="5 more paragraphs of type"/>
+    <figcaption>Valkarie typeface version B</figcaption>
+  </figure>
+</div>
+
+My e-reader choice is one small example. The same story-first reasoning shows up in places like these:
 
 - A better than default font for your e-reader
 - Personal or professional website or email newsletter
@@ -76,7 +92,7 @@ Note: I will use the word type and fonts interchangeably in this post. There is 
 - Cover letter or a resume
 - Marketing materials like a post card or a poster
 
-Most of these are "small" decisions that quietly become daily decisions. If you are staring at text for hours, the type is part of your mood, your pace, and your confidence. That is why this matters even when nobody else can name the font.
+Most of these are “small” decisions that quietly become daily decisions. If you are staring at text for hours, the type is part of your mood, your pace, and your confidence. That is why this matters even when nobody else can name the font.
 
 ## When type disappears, it is working
 
@@ -88,7 +104,7 @@ The traditional approach starts with style labels: serif vs sans-serif, decorati
 
 ## Why bother choosing at all
 
-What this post is about is some alternative ways to choose. A choice is important because just going with the default is a [non-choice](#). Choose so that you can seek inspiration, have a point-of-view, or justify the value of your work. 
+What this post is about is some alternative ways to choose. A choice is important because just going with the default is a [non-choice](https://practicaltypography.com/minion-alternatives.html). Choose so that you can seek inspiration, have a point-of-view, or justify the value of your work. 
 
 Also, a good story works better than an academic argument or design snobbery (I say this because I am guilty). The useful alternative is plain language. As designers <sup>[1]</sup> we are taught to speak simply, because [because Design-isms](https://uxdesign.cc/poster-prompts-for-avoiding-design-isms-8be43625c482). So when you explain your type choices, you can do that too.
 
@@ -96,15 +112,15 @@ In practice, this helps with clients, collaborators, and your future self. “I 
 
 ## Five story-first ways to choose type
 
-- **The foundry has a meaningful connection** - I worked on an author website for someone with roots in Argentina.
-- **Use a historical or geographic reference** - A lot of typefaces are built as quiet homages to specific eras and places. If your project already has context (a city, a decade, a cultural reference), type can reinforce it without becoming costume.
-- **The name itself creates a thread** - That same author had a character named Manu. Omnibus-Type has a family called [Manuale](https://www.omnibus-type.com/fonts/manuale/) from Omnibus-Type in Buenos Aires. It was designed for books, newspapers, and magazines, so it fit the writing-heavy work and the personal story at the same time. Is that a technical reason? Not really. Is it memorable and useful for buy-in? Absolutely.
-- **Let experts pre-pair it for you** - Many foundries publish pairings, and those are often solid because the faces were designed to work together. I still use a type capsule from Hoefler and Co. with Gotham, Decimal, and Operator Mono across resume, note cards, and code editor work.
-- **Choose for features, not just vibes** - Better families include practical options: display cuts, text cuts, figure styles, and OpenType features like ligatures or swashes. Those details matter when a system has to flex across print, web, and tiny UI moments.
+- **Test 1: Does this type connect to the project's context?** A lot of typefaces are quiet homages to specific places and eras. A font may have been created by a foundary from a certain place. I used that on a site for an author with roots in Argentina. She can now say that her typeface has roots in Argentina too.
+- **Test 2: Does the name of the typeface help you explain the choice?** That same author had a character named Manu in one of her stories, so [Manuale](https://www.omnibus-type.com/fonts/manuale/) created a useful thread. For non-designers, this matters because memorable logic makes feedback and approval easier.
+- **Test 3: Can you start from a trusted pairing instead of inventing one?** Many foundries publish pairings that were designed together. I still use a Hoefler and Co. capsule with Gotham, Decimal, and Operator Mono across resumes, note cards, and editor themes. For everyday teams, this matters because it lowers risk and speeds up decisions.
+- **Test 4: Will this family hold up across real use cases?** Better families include text cuts, display cuts, figure styles, and OpenType options. Those details help when one system has to work in long-form reading, UI labels, and small utility text. For general readers, this matters because consistency reduces friction.
+- **Test 5: Is it readable and fast for the audience?** Sometimes a system font or common web font is the right choice because it loads quickly and reads clearly. See this practical [Smashing Magazine post](https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/). For non-designers, this matters because better readability and performance usually beat novelty.
 
 <aside>
 
-Hot tip: Let the type designer do the hard work for you. A quality typeface can hold a brand. This means you can rely less on other design elements like color or graphics. Your subject will be recognizable just by the type.
+**Hot tip**: Let the type designer do the hard work for you. A quality typeface can hold a brand. This means you can rely less on other design elements like color or graphics. Your subject will be recognizable just by the type.
 
 </aside>
 
@@ -115,6 +131,8 @@ Once you choose a typeface, let it do the work. If you are constantly decorating
 [1] By the way, [everyone is a designer](#) and everything is designed. It’s just a matter of… was the design intentional or not. 
 
 ## Further Reading
+
+Pick even one title from this list and you’ll come away with a sharper eye and even more ways to explain away your type choices.
 
 <ol class="bookshelf">
 {%- for book in furtherReading %}

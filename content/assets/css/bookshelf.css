@@ -28,9 +28,9 @@ ol.bookshelf {
 
 ol.bookshelf li {
     display: grid;
-    grid-template-columns: subgrid;
     grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    gap: .2rem;
+  align-items: start;
 }
 
 ol.bookshelf li div.info {
@@ -45,9 +45,8 @@ ol.bookshelf li div.info {
         grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
     }
     ol.bookshelf li {
-        display: subgrid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr min-content;
+    display: flex;
+    flex-direction: column;
     }
 }
 
@@ -55,7 +54,7 @@ ol.bookshelf li div.info h3,
 .featured-book h3 {
     margin: 0;
     font-family: var(--font-family);
-    font-size: var(--font-size-md);
+    font-size: var(--font-size-base);
     font-weight: 600;
     font-variation-settings: "wght" 650;
     margin-block: 0 .2rem;

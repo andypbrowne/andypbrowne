@@ -143,3 +143,4 @@ Watch for these patterns when adding static assets:
 - Markdown files are pre-processed with Nunjucks (configured in eleventy.config.js)
 - Date format follows ISO 8601: `YYYY-MM-DD`
 - Tags are lowercase, hyphenated (e.g., "favorite-thing", not "Favorite Thing")
+- Use smart quotes in editorial prose and blog copy when appropriate; keep straight quotes in code, frontmatter, URLs, selectors, and markup

@@ -645,16 +645,14 @@ section.featured-case-study .featured-case-study-image img {
 
 .image-thumbnail-grid {
 	display: grid;
-	grid-template-columns: repeat(2, minmax(0, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
 	gap: 1rem;
 	margin-block: 2rem;
 }
 
 .image-thumbnail-grid img {
 	width: 100%;
-	aspect-ratio: 1 / 1;
-	object-fit: cover;
-	border-radius: 0.25rem;
+	border-radius: var(--border-radius);
 }
 
 section.hero .hero-details {
@@ -752,9 +750,6 @@ ul.post-tags li {
 		grid-template-columns: repeat(2, 1fr);
 		gap: 2rem;
 	}
-	.image-thumbnail-grid {
-		grid-template-columns: repeat(3, 1fr);
-	}
 	.image-gallery-grid {
 		grid-template-columns: repeat(2, 1fr);
 	}
@@ -779,9 +774,6 @@ ul.post-tags li {
 	.about-page section.bio-details,
 	.postlist-container .post-counter {
 		grid-column: 3 / 4;
-	}
-	.image-thumbnail-grid {
-		grid-template-columns: repeat(4, 1fr);
 	}
 }
 @media screen and (min-width: 1600px) {
@@ -817,9 +809,6 @@ ul.post-tags li {
 	.about-page section.bio-details,
 	.postlist-container .post-counter {
 		grid-column: 6 / 9;
-	}
-	.image-thumbnail-grid {
-		grid-template-columns: repeat(5, 1fr);
 	}
 	.image-gallery-grid {
 		grid-template-columns: repeat(2, 1fr);
