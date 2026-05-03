@@ -182,6 +182,8 @@
   {
     "cover": "https://m.media-amazon.com/images/I/71agPjqADHL._SY522_.jpg",
     "coverAlt": "Large block lettering of the title with some additional iconography among the letters showing an evil eye, large teeth and man running",
+    "graphic": "/assets/images/donut-book-1.jpg",
+    "graphicAlt": "A fluffy cat jumping through the air",
     "link": "https://www.goodreads.com/book/show/56353874-dungeon-crawler-carl",
     "title": "Dungeon Crawler Carl",
     "subTitle": "",
