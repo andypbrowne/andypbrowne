@@ -152,7 +152,7 @@
     "author": "Kim Stanley Robinson",
     "type": "",
     "tags": ["sci-fi", "fiction"],
-    "status": "currently-reading",
+    "status": "dnf",
     "description": ""
   },
   {
@@ -186,7 +186,7 @@
     "graphicAlt": "A fluffy cat jumping through the air",
     "link": "https://www.goodreads.com/book/show/56353874-dungeon-crawler-carl",
     "title": "Dungeon Crawler Carl",
-    "subTitle": "",
+    "subTitle": "Book 1",
     "author": "Matt Dinniman",
     "type": "book",
     "tags": ["fantasy", "fiction", "humor"],
@@ -204,5 +204,85 @@
     "tags": ["memoir", "food", "non-fiction"],
     "status": "read",
     "description": ""
+  },
+  {
+    "cover": "https://m.media-amazon.com/images/I/5154BXpLuDL.jpg",
+    "coverAlt": "Cover of Carl's Doomsday Scenario by Matt Dinniman",
+    "graphic": "/assets/images/donut-book-2.jpg",
+    "graphicAlt": "A fluffy cat running in a tiara",
+    "link": "https://mattdinniman.com/books/carls-doomsday-scenario/",
+    "title": "Carl's Doomsday Scenario",
+    "subTitle": "Book 2",
+    "author": "Matt Dinniman",
+    "type": "book",
+    "tags": ["fantasy", "fiction", "humor"],
+    "status": "read",
+    "description": "I really love the illustrations that come with the updated book covers. In addition the fan art for this series is top notch."
+  },
+  {
+    "cover": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1719949594i/211721809.jpg",
+    "coverAlt": "Cover of The Dungeon Anarchist's Cookbook by Matt Dinniman",
+    "link": "https://mattdinniman.com/books/the-dungeon-anarchists-cookbook/",
+    "title": "The Dungeon Anarchist's Cookbook",
+    "subTitle": "Book 3",
+    "author": "Matt Dinniman",
+    "type": "book",
+    "tags": ["fantasy", "fiction", "humor"],
+    "status": "read",
+    "description": ""
+  },
+  {
+    "cover": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1734098514i/220772908.jpg",
+    "coverAlt": "Cover of The Gate of the Feral Gods by Matt Dinniman",
+    "graphic": "/assets/images/donut-book-4.jpg",
+    "graphicAlt": "A fluffy cat with sunglasses flying through the air",
+    "link": "https://mattdinniman.com/books/the-gate-of-the-feral-gods/",
+    "title": "The Gate of the Feral Gods",
+    "subTitle": "Book 4",
+    "author": "Matt Dinniman",
+    "type": "book",
+    "tags": ["fantasy", "fiction", "humor"],
+    "status": "currently-reading",
+    "description": "Not my favorite of the series, but they just keep getting better as you get closer to the climax."
+  },
+  {
+    "cover": "https://m.media-amazon.com/images/I/4112dk69mDL.jpg",
+    "coverAlt": "Cover of The Butcher's Masquerade by Matt Dinniman",
+    "graphic": "/assets/images/donut-book-5.jpg",
+    "graphicAlt": "A fluffy cat standing on a platform looking smug",
+    "link": "https://mattdinniman.com/books/the-butcher-s-masquerade",
+    "title": "The Butcher's Masquerade",
+    "subTitle": "Book 5",
+    "author": "Matt Dinniman",
+    "type": "book",
+    "tags": ["fantasy", "fiction", "humor"],
+    "status": "want-to-read",
+    "description": "I've had more luck getting these from the library if I hold them far enough in advance."
+  },
+  {
+    "cover": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1734098749i/220772912.jpg",
+    "coverAlt": "Cover of The Eye of the Bedlam Bride by Matt Dinniman",
+    "link": "https://mattdinniman.com/books/the-eye-of-the-bedlam-bride",
+    "title": "The Eye of the Bedlam Bride",
+    "subTitle": "Book 6",
+    "author": "Matt Dinniman",
+    "type": "book",
+    "tags": ["fantasy", "fiction", "humor"],
+    "status": "want-to-read",
+    "description": "This books grow in size and complexity, will we take a break, or finish before the tv show comes out!"
+  },
+  {
+    "cover": "https://m.media-amazon.com/images/I/51CpxCzhWiL._SY445_SX342_FMwebp_.jpg",
+    "coverAlt": "Cover of This Inevitable Ruin by Matt Dinniman",
+    "graphic": "/assets/images/donut-book-7.jpg",
+    "graphicAlt": "A fluffy cat with a crown, sunglasses, and a cape",
+    "link": "https://mattdinniman.com/books/this-inevitable-ruin",
+    "title": "This Inevitable Ruin",
+    "subTitle": "Book 7",
+    "author": "Matt Dinniman",
+    "type": "book",
+    "tags": ["fantasy", "fiction", "humor"],
+    "status": "want-to-read",
+    "description": "I will read them all!"
   }
 ]
