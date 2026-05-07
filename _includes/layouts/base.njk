@@ -137,6 +137,13 @@
 			<p>
 				andypbrowne.com {{ helpers.currentYear() }} 
 			</p>
+			{% if showNetlifyStatusBadge %}
+			<p class="footer-netlify-badge" role="presentation">
+				<a href="https://app.netlify.com/sites/andypbrowne/deploys" title="Production deploy status (shown on local previews only)" rel="noopener noreferrer" target="_blank">
+					<img src="https://api.netlify.com/api/v1/badges/ed5fde85-356a-4808-add2-55da73b7695d/deploy-status" width="154" height="20" decoding="async" fetchpriority="low" alt="Netlify deploy status" />
+				</a>
+			</p>
+			{% endif %}
 			</div>
 			</div>
 		</footer>

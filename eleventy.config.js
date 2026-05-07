@@ -8,6 +8,13 @@ const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 const readingTime = require('eleventy-plugin-reading-time');
 
 module.exports = function(eleventyConfig) {
+	// Netlify injects NETLIFY=true during hosted builds — omit badge from production/previews there.
+	// Local runs (`eleventy` / `--serve`) leave it unset, so this acts as your “offline” reminder.
+	eleventyConfig.addGlobalData(
+		"showNetlifyStatusBadge",
+		() => process.env.NETLIFY !== "true"
+	);
+
 	// Copy the contents of the `public` folder to the output folder
 	// For example, `./public/css/` ends up in `_site/css/`
 	eleventyConfig.addPassthroughCopy({

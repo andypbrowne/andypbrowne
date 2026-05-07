@@ -1118,6 +1118,18 @@ footer .footer-links {
 	font-size: smaller;
 	max-width: 48ch;
 }
+
+.license .footer-netlify-badge {
+	margin-block-start: 0.75rem;
+	margin-block-end: 0;
+}
+
+.license .footer-netlify-badge img {
+	display: inline-block;
+	vertical-align: middle;
+	max-width: 100%;
+	height: auto;
+}
 .home-link {
 	font-size: 1em; /* 16px /16 */
 	font-weight: 700;
