@@ -15,7 +15,7 @@
     <summary><strong>Notes</strong></summary>
     <div class="notes">
       {% if book.graphic %}
-      <img loading="lazy" style="border: none; mix-blend-mode: multiply;" width="180" height="270" src="{{ book.graphic }}" alt="{{ book.graphicAlt }}" />
+      <img loading="lazy" class="sketch book-graphic" width="180" height="270" src="{{ book.graphic }}" alt="{{ book.graphicAlt }}" />
       {% endif %} 
       <p>{{ book.description | safe }}</p>
     </div>

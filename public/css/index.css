@@ -633,6 +633,38 @@ section.featured-case-study .featured-case-study-image img {
 	}
 }
 
+/* section.favorite things {
+	background-color: var(--color-aside)
+} */
+
+img.book-graphic {
+	border: none; 
+	mix-blend-mode: multiply;
+}
+
+@media (prefers-color-scheme: dark) {
+    figure.sketch img, 
+	img.sketch {
+	    filter: invert(1);
+    }
+	img.book-graphic {
+		mix-blend-mode: screen;
+	}
+}
+
+sub { font-variant-position: sub; }
+sup { font-variant-position: super; }
+.fraction {
+    font-feature-settings: frac;
+}
+
+@supports (font-variant-numeric: diagonal-fractions) {
+  .fraction {
+      font-feature-settings: frac;
+      font-variant-numeric: diagonal-fractions;
+  }
+}
+
 /* section.featured-case-study {
 	background-color: var(--color-aside)
 } */

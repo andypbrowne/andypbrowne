@@ -92,10 +92,10 @@ ol.bookshelf li div.info p {
   margin-bottom: .4rem;
 }
 
-ol.bookshelf li img,
+/* ol.bookshelf li img,
 .featured-book img {
     border: 1px solid var(--color-midnight-60);
-}
+} */
 
 details {
   position: relative;
