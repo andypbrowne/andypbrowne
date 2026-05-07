@@ -11,15 +11,17 @@
   <p class="sub-title">{{ book.subTitle }}</p>
   <p class="author">{{ book.author }}</p>
   {% if book.description %}
-  <details>
-    <summary><strong>Notes</strong></summary>
-    <div class="notes">
-      {% if book.graphic %}
-      <img loading="lazy" class="sketch book-graphic" width="180" height="270" src="{{ book.graphic }}" alt="{{ book.graphicAlt }}" />
-      {% endif %} 
-      <p>{{ book.description | safe }}</p>
-    </div>
-  </details>
+  {% set _notesId = ('bn-' ~ _bookShelfSection ~ '-' ~ loop.index) | replace(' ', '-') %}
+  {% set _notesAnchor = '--' ~ _notesId %}
+  <button type="button" class="book-notes-trigger" popovertarget="{{ _notesId }}" style="anchor-name: {{ _notesAnchor }};">
+    <strong>Notes</strong>
+  </button>
+  <div id="{{ _notesId }}" class="notes notes-popover" popover="auto" style="position-anchor: {{ _notesAnchor }};">
+    {% if book.graphic %}
+    <img loading="lazy" class="sketch book-graphic" width="180" height="270" src="{{ book.graphic }}" alt="{{ book.graphicAlt }}" />
+    {% endif %}
+    <p>{{ book.description | safe }}</p>
+  </div>
   {% endif %}
   </div>
 </li>

@@ -101,6 +101,7 @@ js: /assets/js/bookshelf.js
     <span class="bookcount">{{ bookCount2026 }} books</span>
 </header>
 <ol class="bookshelf filter-grid">  
+{% set _bookShelfSection = '2026' %}
 {% for book in books.2026bookList -%}
 {% include "../_includes/bookcard.njk" %}
 {% endfor -%}
@@ -114,6 +115,7 @@ js: /assets/js/bookshelf.js
     <span class="bookcount">{{ bookCount2025 }} books</span>
 </header>
 <ol class="bookshelf filter-grid">  
+{% set _bookShelfSection = '2025' %}
 {% for book in books.2025bookList -%}
 {% include "../_includes/bookcard.njk" %}
 {% endfor -%}
@@ -127,6 +129,7 @@ js: /assets/js/bookshelf.js
     <span class="bookcount">{{ bookCount2024 }} books</span>
 </header>
 <ol class="bookshelf filter-grid">  
+{% set _bookShelfSection = '2024' %}
 {% for book in books.2024bookList -%}
 {% include "../_includes/bookcard.njk" %}
 {% endfor -%}
@@ -138,6 +141,7 @@ js: /assets/js/bookshelf.js
     <span class="bookcount">{{ bookCount2023 }} books</span>
 </header>
 <ol class="bookshelf filter-grid">
+    {% set _bookShelfSection = '2023' %}
     {% for book in books.2023bookList -%}
     {% include "../_includes/bookcard.njk" %}
     {% endfor -%}
@@ -149,6 +153,7 @@ js: /assets/js/bookshelf.js
     <span class="bookcount">{{ bookCount2022 }} books</span>
 </header>
 <ol class="bookshelf filter-grid">
+    {% set _bookShelfSection = '2022' %}
     {% for book in books.2022bookList -%}
     {% include "../_includes/bookcard.njk" %}
     {% endfor -%}
@@ -160,6 +165,7 @@ js: /assets/js/bookshelf.js
     <span class="bookcount">{{ bookCount2019 }} books</span>
 </header>
 <ol class="bookshelf filter-grid">
+    {% set _bookShelfSection = '2019-2021' %}
     {% for book in books.2019bookList -%}
     {% include "../_includes/bookcard.njk" %}
     {% endfor -%}
@@ -171,6 +177,7 @@ js: /assets/js/bookshelf.js
     <span class="bookcount">{{ bookCount2016 }} books</span>
 </header>
 <ol class="bookshelf filter-grid">
+    {% set _bookShelfSection = '2016-2018' %}
     {% for book in books.2016bookList -%}
     {% include "../_includes/bookcard.njk" %}
     {% endfor -%}
@@ -182,6 +189,7 @@ js: /assets/js/bookshelf.js
     <span class="bookcount">{{ bookCount0000 }} books</span>
 </header>
 <ol class="bookshelf filter-grid">
+    {% set _bookShelfSection = 'older' %}
     {% for book in books.0000bookList -%}
     {% include "../_includes/bookcard.njk" %}
     {% endfor -%}

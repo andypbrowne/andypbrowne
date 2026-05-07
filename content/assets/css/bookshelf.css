@@ -97,33 +97,70 @@ ol.bookshelf li div.info p {
     border: 1px solid var(--color-midnight-60);
 } */
 
-details {
-  position: relative;
-}
-
-details[open] > summary {
-  z-index: 2;
-}
-
-details > summary {
+.book-notes-trigger {
+  all: unset;
+  color: inherit;
   cursor: pointer;
-  position: relative;
+  margin-top: 0.35rem;
+  text-decoration-line: underline;
+  text-underline-offset: 0.12em;
   -webkit-user-select: none;
+  user-select: none;
+}
+
+.book-notes-trigger:focus-visible {
+  outline: 2px solid var(--color-midnight-60, currentColor);
+  outline-offset: 2px;
 }
 
 .notes {
   font-family: var(--font-family);
+  color: inherit;
   background: var(--color-base-bg);
   border: 1px solid var(--color-midnight-40);
-  /* border: 1px solid pink; */
   border-radius: var(--border-radius);
-  margin: -1.5em -0.5em;
-  padding: 2em 0.5em 0.5em;
-  position: absolute;
-  top: 100%;
-  z-index: 1;
-  transition-behavior: allow-discrete;
-  transition: opacity 0.2s ease-out, display 0.2s ease-out, height 0.2s ease-out;
+}
+
+.notes.notes-popover {
+  --popover-notes-max-w: 300px;
+
+  padding: 0.75rem 1rem;
+  margin: 0;
+  overflow: auto;
+  box-sizing: border-box;
+  width: var(--popover-notes-max-w);
+  max-height: min(75vh, 75dvh);
+}
+
+.notes.notes-popover .book-graphic,
+.notes.notes-popover img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*
+  Corner tether (LTR): popover top edge at anchor.bottom, horizontal origin at anchor.left
+  clamped inside the viewport so the fixed tray width stays on-screen.
+  Only flip vertically (below → above) — avoids jitter from multi-axis try fallbacks.
+*/
+.notes.notes-popover:popover-open {
+  position: fixed;
+  inset: unset;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@supports (position-anchor: --a) {
+  .notes.notes-popover:popover-open {
+    inset: unset;
+    top: anchor(bottom);
+    left: clamp(0.75rem, anchor(left), calc(100vw - var(--popover-notes-max-w) - 0.75rem));
+    transform: none;
+    margin-block-start: 0.35rem;
+    position-try: flip-block;
+    position-try-fallbacks: flip-block;
+  }
 }
 
 /* Filter group styles */
@@ -139,6 +176,13 @@ details > summary {
 
 .filtering-details summary {
   list-style: none;
+  cursor: pointer;
+  position: relative;
+  -webkit-user-select: none;
+}
+
+.filtering-details[open] > summary {
+  z-index: 2;
 }
 
 .filtering-details summary::-webkit-details-marker {

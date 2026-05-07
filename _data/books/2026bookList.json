@@ -284,5 +284,17 @@
     "tags": ["fantasy", "fiction", "humor"],
     "status": "want-to-read",
     "description": "I will read them all!"
+  },
+  {
+    "cover": "https://www.oreilly.com/covers/urn:orm:book:9781098176495/522w/",
+    "coverAlt": "Cover of Building Applications with AI Agents (O’Reilly animal illustration)",
+    "link": "https://www.oreilly.com/library/view/building-applications-with/9781098176495/",
+    "title": "Building Applications with AI Agents",
+    "subTitle": "Designing and Implementing Multiagent Systems",
+    "author": "Michael Albada",
+    "type": "book",
+    "tags": ["technology", "AI"],
+    "status": "currently-reading",
+    "description": ""
   }
 ]
