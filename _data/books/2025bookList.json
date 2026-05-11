@@ -27,6 +27,8 @@
     "cover": "https://m.media-amazon.com/images/I/71VM7BbHS5L._SY522_.jpg",
     "coverAlt": "An illustration of a man dressed in a suit and 2 limurs are sitting around him",
     "link": "https://www.penguin.co.uk/books/441254/creativity-by-cleese-john/9781529157529",
+    "graphic": "/assets/images/graphic-creativity.jpg",
+    "graphicAlt": "A limur with a curious tail",
     "title": "Creativity",
     "subTitle": "A Short and Cheerful Guide",
     "author": "John Cleese",
