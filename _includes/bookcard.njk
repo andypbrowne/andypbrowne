@@ -21,6 +21,17 @@
     <img loading="lazy" class="sketch book-graphic" width="180" height="270" src="{{ book.graphic }}" alt="{{ book.graphicAlt }}" />
     {% endif %}
     <p>{{ book.description | safe }}</p>
+    <div class="notes-footer">
+      <p class="notes-footer-title">{{ book.title }}</p>
+      <p class="notes-footer-author">{{ book.author }}</p>
+      {% if book.tags and book.tags.length %}
+      <div class="notes-footer-tags" aria-label="Book tags">
+        {% for tag in book.tags %}
+        <span class="notes-tag-pill">{{ tag }}</span>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
   </div>
   {% endif %}
   </div>
