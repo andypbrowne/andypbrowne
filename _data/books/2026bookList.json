@@ -256,7 +256,7 @@
     "author": "Matt Dinniman",
     "type": "book",
     "tags": ["fantasy", "fiction", "humor"],
-    "status": "currently-reading",
+    "status": "read",
     "description": "I've had more luck getting these from the library if I hold them far enough in advance."
   },
   {
@@ -268,7 +268,7 @@
     "author": "Matt Dinniman",
     "type": "book",
     "tags": ["fantasy", "fiction", "humor"],
-    "status": "want-to-read",
+    "status": "currently-reading",
     "description": "This books grow in size and complexity, will we take a break, or finish before the tv show comes out!"
   },
   {
@@ -296,5 +296,19 @@
     "tags": ["technology", "AI"],
     "status": "currently-reading",
     "description": ""
+  },
+  {
+    "cover": "https://m.media-amazon.com/images/I/81LSCmmTvqL._SL1500_.jpg",
+    "coverAlt": "A chaotic illustration of a truck a man and a cat",
+    "graphic": "",
+    "graphicAlt": "",
+    "link": "https://mattdinniman.com/books/a-parade-of-horribles/",
+    "title": "A Parade of Horribles",
+    "subTitle": "Book 8",
+    "author": "Matt Dinniman",
+    "type": "book",
+    "tags": ["fantasy", "fiction", "humor"],
+    "status": "want-to-read",
+    "description": "I will read them all and you will not break me!"
   }
 ]

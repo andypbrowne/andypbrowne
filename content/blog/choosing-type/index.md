@@ -66,7 +66,9 @@ In this post, I will share five story-first tests you can use to choose type whe
 
 ## Where this usually shows up
 
-Look at these type specimens. I used them to choose my e-reader font. I did look closely at curves and serifs, but that was not the deciding factor. I chose Valkyrie partly to support [Butterick's Practical Typography](https://practicaltypography.com/), which I have referenced for years.
+Look at these type specimens. I used them to choose my e-reader font. I did look closely at curves and serifs, but that was not the deciding factor. I chose Valkyrie partly to support [Butterick's Practical Typography](https://practicaltypography.com/), which I have referenced for years. A good resource like this really helps inform your taste. You pick up knowledge along the way and that helps give you confidence in your choices. 
+
+In the specimines below we can learn how different cuts, A and B, are made to support printing on different qualities of paper. Maybe that helps us decide which cut is better for an e-ink display. 
 
 <div class="image-thumbnail-grid">
   <figure>
@@ -85,7 +87,6 @@ Look at these type specimens. I used them to choose my e-reader font. I did look
 
 My e-reader choice is one small example. The same story-first reasoning shows up in places like these:
 
-- A better than default font for your e-reader
 - Personal or professional website or email newsletter
 - Coding, writing, or generally working
 - Business papers
@@ -116,7 +117,7 @@ In practice, this helps with clients, collaborators, and your future self. “I 
 - **Test 2: Does the name of the typeface help you explain the choice?** That same author had a character named Manu in one of her stories, so [Manuale](https://www.omnibus-type.com/fonts/manuale/) created a useful thread. For non-designers, this matters because memorable logic makes feedback and approval easier.
 - **Test 3: Can you start from a trusted pairing instead of inventing one?** Many foundries publish pairings that were designed together. I still use a Hoefler and Co. capsule with Gotham, Decimal, and Operator Mono across resumes, note cards, and editor themes. For everyday teams, this matters because it lowers risk and speeds up decisions.
 - **Test 4: Will this family hold up across real use cases?** Better families include text cuts, display cuts, figure styles, and OpenType options. Those details help when one system has to work in long-form reading, UI labels, and small utility text. For general readers, this matters because consistency reduces friction.
-- **Test 5: Is it readable and fast for the audience?** Sometimes a system font or common web font is the right choice because it loads quickly and reads clearly. See this practical [Smashing Magazine post](https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/). For non-designers, this matters because better readability and performance usually beat novelty.
+- **Test 5: Is it readable and fast for the audience?** Sometimes a system font or common web font is the right choice because it loads quickly and predictably. See this practical [Smashing Magazine post](https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/). For non-designers, this matters because better accessibility and performance usually beat novelty.
 
 <aside>
 
@@ -125,6 +126,43 @@ In practice, this helps with clients, collaborators, and your future self. “I 
 </aside>
 
 Once you choose a typeface, let it do the work. If you are constantly decorating around it, the choice probably is not pulling its weight yet.
+
+## Fonts to try
+
+### Coding
+
+- [Monospace](https://monaspace.githubnext.com/)
+- [Operator Mono](https://www.typography.com/blog/introducing-operator)
+- [Mononoki](https://madmalik.github.io/mononoki/)
+- [Fira Code](https://github.com/tonsky/FiraCode)
+- [Cascadia Code](https://github.com/microsoft/cascadia-code)
+- [MonoLisa](https://www.monolisa.dev/)
+
+### Writing
+
+For drafting, the type should stay quiet: easy to read at a glance, hard to mistake for “design,” and fast enough that you keep moving. These are good places to start.
+
+- [iA Writer Quattro](https://github.com/iaolo/iA-Fonts) — built for focused writing apps; neutral and low-contrast
+- [Charter](https://fonts.adobe.com/fonts/charter) — screen-tuned serif; comfortable for long sessions without feeling editorial
+- [Literata](https://fonts.google.com/specimen/Literata) — open source; made for sustained reading and writing on screens
+- [IBM Plex Sans](https://fonts.google.com/specimen/IBM+Plex+Sans) — clear, even rhythm; good when you want sans without UI gimmicks
+- [Source Sans 3](https://fonts.adobe.com/fonts/source-sans-3) — a reliable workhorse; pairs naturally with Source Serif if you read in one and write in the other
+- [Atkinson Hyperlegible](https://fonts.google.com/specimen/Atkinson+Hyperlegible) — letterforms designed for clarity first; low visual noise
+- [Lexend](https://fonts.google.com/specimen/Lexend) — spacing tuned for reading speed; helpful when you want the page to feel “quick”
+- [Equity](https://mbtype.com/fonts/equity/) — Butterick’s text family; distraction-free and opinionated in a good way
+- [Newsreader](https://fonts.google.com/specimen/Newsreader) — literary serif that still feels plain enough for everyday drafting
+
+### Reading
+
+- [Minion](https://fonts.adobe.com/fonts/minion)
+- [ITC Galliard](https://fonts.adobe.com/fonts/itc-galliard)
+- [Crimson Pro](https://fonts.google.com/specimen/Crimson+Pro)
+- [Source Serif 4](https://fonts.adobe.com/fonts/source-serif-4)
+- [Valkyrie](https://mbtype.com/fonts/valkyrie/)
+- [Lyon](https://commercialtype.com/catalog/lyon_text)
+- [Hoefler Text](https://www.typography.com/fonts/hoefler-text)
+- [Mercury Text](https://www.typography.com/fonts/mercury-text/overview)
+- [Adobe Jenson](https://fonts.adobe.com/fonts/adobe-jenson)
 
 ## Notes
 
@@ -145,5 +183,8 @@ Pick even one title from this list and you’ll come away with a sharper eye and
 </li>
 {%- endfor %}
 </ol>
+
+More fun links:
+ - [Coding font game](https://www.codingfont.com/)
 
 
