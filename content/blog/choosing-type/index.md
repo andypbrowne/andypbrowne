@@ -7,7 +7,7 @@ date: 2026-04-06
 tags:
   - post
   - featured
-draft: true
+draft: false
 css: /assets/css/choosing-type.css
 furtherReading:
   - title: "Just My Type"

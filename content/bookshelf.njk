@@ -39,6 +39,11 @@ js: /assets/js/bookshelf.js
     </div>
 
     <div>
+      <input name="filter" id="ai" type="radio" value="ai">
+      <label for="ai">Ai</label>
+    </div>
+
+    <div>
       <input name="filter" id="business" type="radio" value="business">
       <label for="business">Business</label>
     </div>
@@ -59,6 +64,10 @@ js: /assets/js/bookshelf.js
       <label for="history">History</label>
     </div>
     <div>
+      <input name="filter" id="map" type="radio" value="map">
+      <label for="map">Map</label>
+    </div>
+    <div>
       <input name="filter" id="sci-fi" type="radio" value="sci-fi">
       <label for="sci-fi">Sci-fi</label>
     </div>
@@ -75,6 +84,7 @@ js: /assets/js/bookshelf.js
       <div class="select-wrap">
         <label for="status-select" class="visually-hidden">Status</label>
         <select id="status-select" name="status">
+          <option value="all" selected>All</option>
           <option value="read">Read</option>
           <option value="want-to-read">Want to read</option>
           <option value="dnf">Did not finish (DNF)</option>
