@@ -1124,15 +1124,16 @@ footer .footer-links {
 	max-width: 48ch;
 }
 
-.license .footer-netlify-badge {
+.footer-netlify-badge {
 	margin-block-start: 0.75rem;
 	margin-block-end: 0;
 }
 
-.license .footer-netlify-badge img {
+.footer-netlify-badge img {
 	display: inline-block;
 	vertical-align: middle;
-	max-width: 100%;
+	width: auto;
+	max-width: none;
 	height: auto;
 }
 .home-link {
