@@ -192,7 +192,6 @@ article aside p:first-of-type::first-letter {
 	float: none;
 	font-family: var(--font-family);
 	font-size: inherit;
-	font-weight: normal;
 	line-height: inherit;
 	margin: inherit;
 }
