@@ -216,6 +216,12 @@ article h2 {
 	margin-block-start: 4rem;
 }
 
+@media screen and (min-width: 650px) {
+	article {
+		max-width: 60ch;
+	}
+}
+
 div.end-mark {
 	text-align: center;
 	line-height: 1;
@@ -458,11 +464,11 @@ p:last-child {
 	margin-bottom: 0;
 }
 p {
-	line-height: 1.5;
+	line-height: 1.6;
 }
 
 li {
-	line-height: 1.5;
+	line-height: 1.6;
 }
 
 /* links */

@@ -1,14 +1,14 @@
 ---
 title: Choosing Type
 description: A story-first guide to choosing type that fits 
-thumbnail: assets/images/thumb-fpo.png
-thumbnailAlt: Just a placeholder image that says FPO which means for  
+thumbnail: assets/images/thumb-choosing-type.png
+thumbnailAlt: An image of an e-reader and a list of typefaces
 date: 2026-04-06
 tags:
   - post
   - featured
 draft: true
-css: /assets/css/bookshelf.css
+css: /assets/css/choosing-type.css
 furtherReading:
   - title: "Just My Type"
     author: "Simon Garfield"
@@ -54,21 +54,17 @@ furtherReading:
 
 There are too many ways to choose type for a project, honestly. Some of them are technical, some are historical, and some amount to a designer staring at two perfectly good options until one feels slightly less wrong. Sometimes a free typeface is exactly right. Sometimes the right one is worth paying for. Either way, I think there are better ways to choose than just calling one “clean” and moving on.
 
-A few weeks ago I was helping an unnamed client tune up a website that already had good writing, good photos, and a clear offer. But the whole thing still felt slightly off. We changed one typeface pairing and suddenly the tone matched the project. Nothing else changed. It just clicked.
-
-In this post, I will share five story-first tests you can use to choose type when technical criteria alone are not enough.
-
 <aside>
 
-**Note**: I will use the word type and fonts interchangeably in this post. There is no real difference unless you just want to sound fancy by using the words typography and type. 
+**Note**: I will use the word *type* and *font* interchangeably in this post. There is no real difference unless you just want to sound fancy by using the words typography and type. 
 
 </aside>
 
 ## Where this usually shows up
 
-Look at these type specimens. I used them to choose my e-reader font. I did look closely at curves and serifs, but that was not the deciding factor. I chose Valkyrie partly to support [Butterick's Practical Typography](https://practicaltypography.com/), which I have referenced for years. A good resource like this really helps inform your taste. You pick up knowledge along the way and that helps give you confidence in your choices. 
+Look at these type specimens below. I used them to choose my e-reader font. I did look closely at curves and serifs, but that was not the deciding factor. I chose Valkyrie partly to support [Butterick's Practical Typography](https://practicaltypography.com/), which I have referenced for years. A good resource like this really helps inform your taste. You pick up knowledge along the way and that helps give you confidence in your choices. 
 
-In the specimines below we can learn how different cuts, A and B, are made to support printing on different qualities of paper. Maybe that helps us decide which cut is better for an e-ink display. 
+One thing we can learn about is how different cuts, A and B, are made to support printing on different qualities of paper. Maybe that can help us decide which cut is better for an e-ink display. I really like Valkyrie because it includes a lot of special features like that. 
 
 <div class="image-thumbnail-grid">
   <figure>
@@ -95,19 +91,15 @@ My e-reader choice is one small example. The same story-first reasoning shows up
 
 Most of these are “small” decisions that quietly become daily decisions. If you are staring at text for hours, the type is part of your mood, your pace, and your confidence. That is why this matters even when nobody else can name the font.
 
-## When type disappears, it is working
+## Choosing type that disappears
 
 A good typeface disappears. If you are designing a website for an HVAC repair technician, you are probably not using fonts that feel like a fashion magazine. The type should feel like it belongs before anyone notices it.
 
-That does not mean boring. It means appropriate. The voice can be warm, stern, playful, or technical, but it should feel like the same person who wrote the words.
+That does not mean boring. It means appropriate. The voice can be warm, stern, playful, or technical, but it should feel like the same person who wrote the words. The traditional approach for selecting type starts with style labels: serif vs sans-serif, decorative, gothic, old-style, humanist, geometric. Useful, yes. But this post is not a full typography class. You can read [Thinking with Type](https://ellenlupton.com/Thinking-with-Type) by Ellen Lupton, or one of the books further down this post for that.
 
-The traditional approach starts with style labels: serif vs sans-serif, decorative, gothic, old-style, humanist, geometric. Useful, yes. But this post is not a full typography class. You can read [Thinking with Type](https://ellenlupton.com/Thinking-with-Type) by Ellen Lupton, or one of the books in the list below, for that.
+Let me offer an alternative ways to choose. Don’t just choose a default. That is a [non-choice](https://practicaltypography.com/minion-alternatives.html). Choose, so that you can seek inspiration, have a point-of-view, or justify the value of your work. 
 
-## Why bother choosing at all
-
-What this post is about is some alternative ways to choose. A choice is important because just going with the default is a [non-choice](https://practicaltypography.com/minion-alternatives.html). Choose so that you can seek inspiration, have a point-of-view, or justify the value of your work. 
-
-Also, a good story works better than an academic argument or design snobbery (I say this because I am guilty). The useful alternative is plain language. As designers <sup>[1]</sup> we are taught to speak simply, because [because Design-isms](https://uxdesign.cc/poster-prompts-for-avoiding-design-isms-8be43625c482). So when you explain your type choices, you can do that too.
+I would argue that a good story works better than an academic argument or design snobbery (I say this because I am guilty). The useful alternative is plain language. As designers <sup>[1]</sup> we are taught to speak simply, because [because Design-isms](https://uxdesign.cc/poster-prompts-for-avoiding-design-isms-8be43625c482). So when you explain your type choices, you can do that too.
 
 In practice, this helps with clients, collaborators, and your future self. “I chose this because x-height and modulation” is fine. "I chose this because it sounds like your voice when read out loud" usually lands better.
 
@@ -129,40 +121,62 @@ Once you choose a typeface, let it do the work. If you are constantly decorating
 
 ## Fonts to try
 
-### Coding
+<div class="font-tabs">
+  <input type="radio" name="font-use" id="font-use-coding" class="font-tabs__input" checked>
+  <input type="radio" name="font-use" id="font-use-writing" class="font-tabs__input">
+  <input type="radio" name="font-use" id="font-use-reading" class="font-tabs__input">
 
-- [Monospace](https://monaspace.githubnext.com/)
-- [Operator Mono](https://www.typography.com/blog/introducing-operator)
-- [Mononoki](https://madmalik.github.io/mononoki/)
-- [Fira Code](https://github.com/tonsky/FiraCode)
-- [Cascadia Code](https://github.com/microsoft/cascadia-code)
-- [MonoLisa](https://www.monolisa.dev/)
+  <fieldset class="font-tabs__controls">
+    <legend class="vh">Font categories to try</legend>
+    <div class="font-tabs__labels">
+      <label class="font-tabs__label" for="font-use-coding">Coding</label>
+      <label class="font-tabs__label" for="font-use-writing">Writing</label>
+      <label class="font-tabs__label" for="font-use-reading">Reading</label>
+    </div>
+  </fieldset>
 
-### Writing
-
-For drafting, the type should stay quiet: easy to read at a glance, hard to mistake for “design,” and fast enough that you keep moving. These are good places to start.
-
-- [iA Writer Quattro](https://github.com/iaolo/iA-Fonts) — built for focused writing apps; neutral and low-contrast
-- [Charter](https://fonts.adobe.com/fonts/charter) — screen-tuned serif; comfortable for long sessions without feeling editorial
-- [Literata](https://fonts.google.com/specimen/Literata) — open source; made for sustained reading and writing on screens
-- [IBM Plex Sans](https://fonts.google.com/specimen/IBM+Plex+Sans) — clear, even rhythm; good when you want sans without UI gimmicks
-- [Source Sans 3](https://fonts.adobe.com/fonts/source-sans-3) — a reliable workhorse; pairs naturally with Source Serif if you read in one and write in the other
-- [Atkinson Hyperlegible](https://fonts.google.com/specimen/Atkinson+Hyperlegible) — letterforms designed for clarity first; low visual noise
-- [Lexend](https://fonts.google.com/specimen/Lexend) — spacing tuned for reading speed; helpful when you want the page to feel “quick”
-- [Equity](https://mbtype.com/fonts/equity/) — Butterick’s text family; distraction-free and opinionated in a good way
-- [Newsreader](https://fonts.google.com/specimen/Newsreader) — literary serif that still feels plain enough for everyday drafting
-
-### Reading
-
-- [Minion](https://fonts.adobe.com/fonts/minion)
-- [ITC Galliard](https://fonts.adobe.com/fonts/itc-galliard)
-- [Crimson Pro](https://fonts.google.com/specimen/Crimson+Pro)
-- [Source Serif 4](https://fonts.adobe.com/fonts/source-serif-4)
-- [Valkyrie](https://mbtype.com/fonts/valkyrie/)
-- [Lyon](https://commercialtype.com/catalog/lyon_text)
-- [Hoefler Text](https://www.typography.com/fonts/hoefler-text)
-- [Mercury Text](https://www.typography.com/fonts/mercury-text/overview)
-- [Adobe Jenson](https://fonts.adobe.com/fonts/adobe-jenson)
+  <div class="font-tabs__panels">
+    <div class="font-tabs__panel font-tabs__panel--coding" role="region" aria-labelledby="font-use-coding">
+      <h3 class="vh">Coding</h3>
+      <ul>
+        <li><a href="https://monaspace.githubnext.com/">Monospace</a> — variable family from GitHub; swap personalities without changing editors</li>
+        <li><a href="https://www.typography.com/blog/introducing-operator">Operator Mono</a> — a little voice in your comments; easy to explain if you already use Hoefler typefaces elsewhere</li>
+        <li><a href="https://madmalik.github.io/mononoki/">Mononoki</a> — calm and crisp; strong distinction between similar characters</li>
+        <li><a href="https://github.com/tonsky/FiraCode">Fira Code</a> — ligatures for common operators; helpful if you read code as shapes</li>
+        <li><a href="https://github.com/microsoft/cascadia-code">Cascadia Code</a> — friendly and modern; a sensible default if you live in VS Code</li>
+        <li><a href="https://www.monolisa.dev/">MonoLisa</a> — slightly geometric; readable without feeling like a novelty font</li>
+      </ul>
+    </div>
+    <div class="font-tabs__panel font-tabs__panel--writing" role="region" aria-labelledby="font-use-writing">
+      <h3 class="vh">Writing</h3>
+      <ul>
+        <li><a href="https://github.com/iaolo/iA-Fonts">iA Writer Quattro</a> — built for focused writing apps; neutral and low-contrast</li>
+        <li><a href="https://fonts.adobe.com/fonts/charter">Charter</a> — screen-tuned serif; comfortable for long sessions without feeling editorial</li>
+        <li><a href="https://fonts.google.com/specimen/Literata">Literata</a> — open source; made for sustained reading and writing on screens</li>
+        <li><a href="https://fonts.google.com/specimen/IBM+Plex+Sans">IBM Plex Sans</a> — clear, even rhythm; good when you want sans without UI gimmicks</li>
+        <li><a href="https://fonts.adobe.com/fonts/source-sans-3">Source Sans 3</a> — a reliable workhorse; pairs naturally with Source Serif if you read in one and write in the other</li>
+        <li><a href="https://fonts.google.com/specimen/Atkinson+Hyperlegible">Atkinson Hyperlegible</a> — letterforms designed for clarity first; low visual noise</li>
+        <li><a href="https://fonts.google.com/specimen/Lexend">Lexend</a> — spacing tuned for reading speed; helpful when you want the page to feel “quick”</li>
+        <li><a href="https://mbtype.com/fonts/equity/">Equity</a> — Butterick’s text family; distraction-free and opinionated in a good way</li>
+        <li><a href="https://fonts.google.com/specimen/Newsreader">Newsreader</a> — literary serif that still feels plain enough for everyday drafting</li>
+      </ul>
+    </div>
+    <div class="font-tabs__panel font-tabs__panel--reading" role="region" aria-labelledby="font-use-reading">
+      <h3 class="vh">Reading</h3>
+      <ul>
+        <li><a href="https://fonts.adobe.com/fonts/minion">Minion</a> — familiar book tone; hard to argue with for long-form comfort</li>
+        <li><a href="https://fonts.adobe.com/fonts/itc-galliard">ITC Galliard</a> — lively old-style energy; more personality than most e-reader defaults</li>
+        <li><a href="https://fonts.google.com/specimen/Crimson+Pro">Crimson Pro</a> — open source; warm and steady on screens</li>
+        <li><a href="https://fonts.adobe.com/fonts/source-serif-4">Source Serif 4</a> — neutral and dependable; good when you want the text, not the type, to lead</li>
+        <li><a href="https://mbtype.com/fonts/valkyrie/">Valkyrie</a> — my e-reader pick; ties to a resource I already trust</li>
+        <li><a href="https://commercialtype.com/catalog/lyon_text">Lyon</a> — refined and literary; feels considered without being fussy</li>
+        <li><a href="https://www.typography.com/fonts/hoefler-text">Hoefler Text</a> — a classic screen serif; part of a family I use across other projects</li>
+        <li><a href="https://www.typography.com/fonts/mercury-text/overview">Mercury Text</a> — built for small sizes and dense pages; holds up on e-ink</li>
+        <li><a href="https://fonts.adobe.com/fonts/adobe-jenson">Adobe Jenson</a> — humanist warmth; a good match when you want reading to feel like a real book</li>
+      </ul>
+    </div>
+  </div>
+</div>
 
 ## Notes
 
@@ -184,7 +198,11 @@ Pick even one title from this list and you’ll come away with a sharper eye and
 {%- endfor %}
 </ol>
 
-More fun links:
- - [Coding font game](https://www.codingfont.com/)
+## More fun links:
+- [Typewolf](https://www.typewolf.com/) 
+- [Fonts in Use](https://fontsinuse.com/)
+- [24 Best Fonts for Websites from Figma](https://www.figma.com/resource-library/best-fonts-for-websites/)
+- [Coding font game](https://www.codingfont.com/)
+- [I Love Typography](https://fonts.ilovetypography.com/)
 
 
