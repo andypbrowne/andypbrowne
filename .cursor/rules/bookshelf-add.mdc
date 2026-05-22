@@ -1,0 +1,51 @@
+---
+description: Add books to the digital bookshelf JSON (fast, minimal scope)
+globs: _data/books/*bookList.json,_data/books/book-schema.json
+alwaysApply: false
+---
+
+# Add a book to the bookshelf
+
+## Scope (credit-efficient)
+
+- Read **`_data/books/book-schema.json`** once per task — it is the source of truth for required fields, enums, and types (also wired in `.vscode/settings.json` for editor validation).
+- Edit **one** list file: `_data/books/[YEAR]bookList.json`. Default to the **newest year** file (e.g. `2026bookList.json`) unless the user names a year.
+- **Append** one object before the closing `]`; match **field order and style** of the last entry in that file.
+- Every new entry must **conform to the schema** (required keys present; `status`, `type`, and each `tags` item use schema `enum` values only).
+- Do **not** search the codebase, scan other year files for duplicates, run `npm`, or commit unless the user asks.
+
+## Schema (from `book-schema.json`)
+
+**Required:** `cover`, `coverAlt`, `link`, `title`, `author`, `tags`, `status`
+
+**Also include:** `subTitle` (`""` if none), `type`, `description` (`""` unless the user provides notes)
+
+| Field | Schema constraint |
+|-------|-------------------|
+| `cover`, `link` | URI strings |
+| `type` | `""`, `book`, `audiobook`, or `ebook` |
+| `status` | `want-to-read`, `currently-reading`, `read`, or `dnf` |
+| `tags` | Array, min 1; each value from schema `tags.items.enum` |
+
+**Optional (not in schema):** `graphic`, `graphicAlt` — local paths under `/assets/images/`.
+
+**New tag:** If none of the schema tag enums fit, **add the tag to `book-schema.json`** in the same change, then use it in the book entry.
+
+## Lookup
+
+- If the user supplies **link + cover URL**, use them — no web search.
+- Only fetch metadata when a required field is missing and the user did not provide it.
+
+## User message shape
+
+```
+Title: …
+Author: …
+Status: want-to-read
+Tags: tag1, tag2
+Link: …
+Cover: … (or "from link")
+Notes: … (or none)
+```
+
+Batch: numbered lines with the same fields; still one append per book, same file.

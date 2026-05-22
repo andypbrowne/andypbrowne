@@ -310,5 +310,29 @@
     "tags": ["fantasy", "fiction", "humor"],
     "status": "want-to-read",
     "description": "I will read them all and you will not break me!"
+  },
+  {
+    "cover": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1347764845i/8628267.jpg",
+    "coverAlt": "Cover of Yield: red title over a sunset city skyline with silhouetted buildings and a street lamp",
+    "link": "https://www.goodreads.com/book/show/8628267-yield",
+    "title": "Yield",
+    "subTitle": "a novel",
+    "author": "Lee Houck",
+    "type": "book",
+    "tags": ["fiction"],
+    "status": "want-to-read",
+    "description": "This is my neighbor’s debut novel. He does not expect me to ready it but I really want to."
+  },
+  {
+    "cover": "/assets/images/cover-every-layout.svg",
+    "coverAlt": "Every Layout book cover with geometric layout diagrams and bold title text",
+    "link": "https://every-layout.dev/",
+    "title": "Every Layout",
+    "subTitle": "Relearn CSS layout by example",
+    "author": "Heydon Pickering & Andy Bell",
+    "type": "book",
+    "tags": ["design", "reference"],
+    "status": "want-to-read",
+    "description": ""
   }
 ]
