@@ -1084,6 +1084,7 @@ p kbd:not(:has(kbd, samp)) {
 header {
 	flex-wrap: wrap;
 	padding: .2rem 0 2rem;
+	vertical-align: middle;
 }
 
 @media screen and (min-width: 650px) {
@@ -1100,6 +1101,12 @@ footer .footer-container {
 	justify-content: space-between;
 	gap: 1em .5em;
 	align-items: center;
+}
+header > div {
+	display: flex;
+	align-items: center;
+	vertical-align: middle;
+	gap: 1rem;
 }
 footer .footer-container {
 	align-items: flex-start;
@@ -1125,8 +1132,7 @@ footer .footer-links {
 }
 
 .footer-netlify-badge {
-	margin-block-start: 0.75rem;
-	margin-block-end: 0;
+	margin: 0;
 }
 
 .footer-netlify-badge img {
@@ -1139,7 +1145,6 @@ footer .footer-links {
 .home-link {
 	font-size: 1em; /* 16px /16 */
 	font-weight: 700;
-	margin-right: 2em;
 }
 .home-link:link:not(:hover) {
 	text-decoration: none;
@@ -1169,6 +1174,10 @@ footer .footer-links {
 /* Nav */
 .nav {
 	display: flex;
+	align-items: center;
+	height: fit-content;
+	vertical-align: middle;
+	line-height: 1;
 	gap: 1.8rem;
 	padding: 0;
 	margin: 0;
@@ -1178,6 +1187,7 @@ footer .footer-links {
 	display: inline-block;
 	/* margin-right: 1em; */
 	margin-bottom: 0px;
+	line-height: 1;
 }
 .nav-item a[href]:not(:hover) {
 	text-decoration: none;
