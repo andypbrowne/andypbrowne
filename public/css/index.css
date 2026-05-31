@@ -714,7 +714,7 @@ article header.post-header {
 	gap: 2rem;
 }
 
-article header.post-titles {
+article header.post-header .post-titles {
 	display: flex;
 	flex-direction: column;
 	gap: 2rem;
@@ -781,6 +781,7 @@ ul.post-tags li {
 	article h2.post-deck {
 		font-size: var(--font-size-xl);
 		/* margin-block-end: 16vh; */
+		margin-block: 0px;
 	}
 	.about-page section.bio-details {
 		display: grid;
