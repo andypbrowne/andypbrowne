@@ -99,6 +99,12 @@ resources:
   <section id="podcast-{{ loop.index0 }}" class="podcast-overlay" aria-labelledby="podcast-title-{{ loop.index0 }}">
     <a class="podcast-overlay-backdrop" href="#podcast-grid" aria-label="Close details"></a>
     <div class="podcast-panel">
+      <a class="podcast-panel-close" href="#podcast-grid" aria-label="Close podcast details">
+        <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false">
+          <path d="M6 6L18 18M18 6L6 18"></path>
+        </svg>
+        <span class="visually-hidden">Close</span>
+      </a>
       <div class="podcast-panel-media">
         {%- if (resource.image) -%}
           <img src="{{ resource.image }}" alt="{{ resource.alt or ('Cover art for ' + resource.title) }}" style="view-transition-name: podcast-cover-{{ loop.index0 }};">
@@ -110,7 +116,7 @@ resources:
         <p class="resource-tag">{{ resource.tag }}</p>
         <h3 id="podcast-title-{{ loop.index0 }}">{{ resource.title }}</h3>
         <p>{{ resource.description }}</p>
-        <p><a href="{{ resource.link }}" rel="noreferrer noopener" target="_blank">Listen to this podcast</a></p>
+        <p><a href="{{ resource.link }}" rel="noreferrer noopener" target="_blank">Listen to {{ resource.title }}</a></p>
         {% if resource.favoriteEpisodes %}
           <h4>Favorite episodes</h4>
           <ul>
@@ -123,11 +129,11 @@ resources:
             {% endfor %}
           </ul>
         {% endif %}
-        <div class="podcast-panel-nav">
+        {# <div class="podcast-panel-nav">
           <a href="#podcast-{{ prevIndex }}">Previous</a>
           <a href="#podcast-grid">Close</a>
           <a href="#podcast-{{ nextIndex }}">Next</a>
-        </div>
+        </div> #}
       </div>
     </div>
   </section>
