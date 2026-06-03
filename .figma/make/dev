@@ -1,0 +1,4 @@
+#!/bin/bash
+set -e
+
+npx @11ty/eleventy --serve --quiet --port="${PORT:-8080}"

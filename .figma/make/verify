@@ -1,0 +1,21 @@
+#!/bin/bash
+set -e
+
+URL="${FIGMA_MAKE_URL:-http://localhost:${PORT:-8080}}"
+TIMEOUT=120
+INTERVAL=2
+ELAPSED=0
+
+echo "Waiting for $URL ..."
+
+while [ "$ELAPSED" -lt "$TIMEOUT" ]; do
+  if curl -s -o /dev/null -w '' "$URL" 2>/dev/null; then
+    echo "Server is ready"
+    exit 0
+  fi
+  sleep "$INTERVAL"
+  ELAPSED=$((ELAPSED + INTERVAL))
+done
+
+echo "Server did not start within ${TIMEOUT}s"
+exit 1

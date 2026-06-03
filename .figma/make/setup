@@ -1,0 +1,10 @@
+#!/bin/bash
+set -e
+
+# Check that Node.js is available
+if ! command -v node &> /dev/null; then
+  echo "Node.js is not installed. Please install Node.js >= 14."
+  exit 1
+fi
+
+echo "Node $(node --version) found"

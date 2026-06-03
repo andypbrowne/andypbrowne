@@ -24,6 +24,7 @@
 }
 
 .podcast-tile img {
+    view-transition-name: var(--podcast-vt-name);
     width: 100%;
     aspect-ratio: 1 / 1;
     object-fit: cover;
@@ -70,6 +71,18 @@
     pointer-events: auto;
 }
 
+.podcast-overlay .podcast-panel-media img {
+    view-transition-name: none;
+}
+
+article:has(.podcast-overlay:target) .podcast-tile img {
+    view-transition-name: none;
+}
+
+.podcast-overlay:target .podcast-panel-media img {
+    view-transition-name: var(--podcast-vt-name);
+}
+
 .podcast-overlay-backdrop {
     position: absolute;
     inset: 0;
@@ -88,6 +101,14 @@
     border: 1px solid var(--subtle-border);
     border-radius: var(--border-radius);
     background: var(--color-base-bg);
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+    transition: transform 0.22s ease, opacity 0.22s ease;
+}
+
+.podcast-overlay:target .podcast-panel {
+    opacity: 1;
+    transform: translateY(0) scale(1);
 }
 
 .podcast-panel-close {
@@ -179,7 +200,30 @@
 
 @media (prefers-reduced-motion: reduce) {
     .podcast-tile img,
-    .podcast-overlay {
+    .podcast-overlay,
+    .podcast-panel {
         transition: none;
+    }
+}
+
+@keyframes podcast-cover-in {
+    from {
+        opacity: 0.9;
+        filter: saturate(0.95);
+    }
+    to {
+        opacity: 1;
+        filter: saturate(1);
+    }
+}
+
+@keyframes podcast-cover-out {
+    from {
+        opacity: 1;
+        filter: saturate(1);
+    }
+    to {
+        opacity: 0.9;
+        filter: saturate(0.95);
     }
 }

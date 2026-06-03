@@ -82,9 +82,9 @@ resources:
   {% for resource in resources %}
     <a class="podcast-tile" href="#podcast-{{ loop.index0 }}" aria-label="Open details for {{ resource.title }}">
       {%- if (resource.image) -%}
-        <img src="{{ resource.image }}" alt="{{ resource.alt or ('Cover art for ' + resource.title) }}" style="view-transition-name: podcast-cover-{{ loop.index0 }};">
+        <img src="{{ resource.image }}" alt="{{ resource.alt or ('Cover art for ' + resource.title) }}" style="--podcast-vt-name: podcast-cover-{{ loop.index0 }};">
       {%- else -%}
-        <img src="https://placehold.co/600x600?text=Podcast+Cover" alt="Cover art placeholder for {{ resource.title }}" style="view-transition-name: podcast-cover-{{ loop.index0 }};">
+        <img src="https://placehold.co/600x600?text=Podcast+Cover" alt="Cover art placeholder for {{ resource.title }}" style="--podcast-vt-name: podcast-cover-{{ loop.index0 }};">
       {%- endif -%}
       <h3 class="podcast-cover-title">{{ resource.title }}</h3>
     </a>
@@ -107,9 +107,9 @@ resources:
       </a>
       <div class="podcast-panel-media">
         {%- if (resource.image) -%}
-          <img src="{{ resource.image }}" alt="{{ resource.alt or ('Cover art for ' + resource.title) }}" style="view-transition-name: podcast-cover-{{ loop.index0 }};">
+          <img src="{{ resource.image }}" alt="{{ resource.alt or ('Cover art for ' + resource.title) }}" style="--podcast-vt-name: podcast-cover-{{ loop.index0 }};">
         {%- else -%}
-          <img src="https://placehold.co/600x600?text=Podcast+Cover" alt="Cover art placeholder for {{ resource.title }}" style="view-transition-name: podcast-cover-{{ loop.index0 }};">
+          <img src="https://placehold.co/600x600?text=Podcast+Cover" alt="Cover art placeholder for {{ resource.title }}" style="--podcast-vt-name: podcast-cover-{{ loop.index0 }};">
         {%- endif -%}
       </div>
       <div class="podcast-panel-content">
@@ -138,4 +138,23 @@ resources:
     </div>
   </section>
 {% endfor %}
+
+<style>
+@media not (prefers-reduced-motion: reduce) {
+  {% for resource in resources %}
+  ::view-transition-group(podcast-cover-{{ loop.index0 }}) {
+    animation-duration: 420ms;
+    animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+
+  ::view-transition-old(podcast-cover-{{ loop.index0 }}) {
+    animation: podcast-cover-out 420ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  }
+
+  ::view-transition-new(podcast-cover-{{ loop.index0 }}) {
+    animation: podcast-cover-in 420ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  }
+  {% endfor %}
+}
+</style>
 
