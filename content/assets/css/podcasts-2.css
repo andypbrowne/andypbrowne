@@ -257,6 +257,10 @@ article:has(.podcast-dialog[open]) .podcast-tile-trigger img {
 }
 
 @media not (prefers-reduced-motion: reduce) {
+    article header.post-header {
+        view-transition-name: none;
+    }
+
     /* Avoid default full-page crossfade so dialog/backdrop timing feels crisp. */
     ::view-transition-old(root),
     ::view-transition-new(root) {
