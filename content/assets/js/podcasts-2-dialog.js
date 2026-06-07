@@ -71,3 +71,23 @@
     });
   });
 })();
+
+(() => {
+  const filterRadios = document.querySelectorAll('input[name="podcast-filter"]');
+  const tiles = document.querySelectorAll(".podcast-tile[data-tags]");
+  if (!filterRadios.length || !tiles.length) return;
+
+  filterRadios.forEach((radio) => {
+    radio.addEventListener("change", () => {
+      const tag = radio.value;
+      tiles.forEach((tile) => {
+        if (tag === "all") {
+          tile.hidden = false;
+          return;
+        }
+        const tags = tile.dataset.tags ? tile.dataset.tags.split(",") : [];
+        tile.hidden = !tags.includes(tag);
+      });
+    });
+  });
+})();

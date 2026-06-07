@@ -1,6 +1,6 @@
 ---
 title: Podcasts 2
-description: post description
+description: A simple list to help you pick your next listen
 thumbnail: assets/images/thumb-fpo.png
 thumbnailAlt: Just a placeholder image that says FPO which means for  
 date: 2026-05-31
@@ -218,9 +218,28 @@ resources:
       - career
 ---
 
+<fieldset class="podcast-filters filtering">
+  <legend class="vh">Filter podcasts by topic</legend>
+  <div class="overflow">
+    <div>
+      <input name="podcast-filter" id="podcast-filter-all" type="radio" value="all" checked>
+      <label for="podcast-filter-all">All</label>
+    </div>
+    {% for tagObj in resources | allTagsSorted %}
+      {% if tagObj.count >= 3 %}
+        <div>
+          <input name="podcast-filter" id="podcast-filter-{{ tagObj.tag }}" type="radio" value="{{ tagObj.tag }}">
+          <label for="podcast-filter-{{ tagObj.tag }}">{{ tagObj.tag }}</label>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</fieldset>
+
 <div id="podcast-grid" class="podcast-grid">
   {% for resource in resources %}
-    <div class="podcast-tile">
+    {% set tagList = resource.tags | default([]) %}
+    <div class="podcast-tile" data-tags="{{ tagList | join(',') }}">
       <a
         class="podcast-tile-trigger"
         href="#podcast-dialog-{{ loop.index0 }}"
