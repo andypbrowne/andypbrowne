@@ -59,6 +59,15 @@
     color: var(--color-midnight-20, #fff);
 }
 
+.podcast-filters.filtering .filter-count {
+    font-weight: 300;
+    font-variation-settings: "wght" 450;
+    margin-left: 0.25rem;
+    font-variant-caps: normal;
+    font-family: monospace;
+    font-size: smaller;
+}
+
 .podcast-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));

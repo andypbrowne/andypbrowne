@@ -224,13 +224,13 @@ resources:
   <div class="overflow">
     <div>
       <input name="podcast-filter" id="podcast-filter-all" type="radio" value="all" checked>
-      <label for="podcast-filter-all">All</label>
+      <label for="podcast-filter-all">All <span class="filter-count">({{ resources.length }})</span></label>
     </div>
     {% for tagObj in resources | allTagsSorted %}
       {% if tagObj.count >= 3 %}
         <div>
           <input name="podcast-filter" id="podcast-filter-{{ tagObj.tag }}" type="radio" value="{{ tagObj.tag }}">
-          <label for="podcast-filter-{{ tagObj.tag }}">{{ tagObj.tag }}</label>
+          <label for="podcast-filter-{{ tagObj.tag }}">{{ tagObj.tag }} <span class="filter-count">({{ tagObj.count }})</span></label>
         </div>
       {% endif %}
     {% endfor %}
