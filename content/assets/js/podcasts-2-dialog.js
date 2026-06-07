@@ -10,14 +10,29 @@
     callback();
   };
 
+  const pageUrl = window.location.pathname + window.location.search;
+
+  const syncHash = (dialog) => {
+    history.replaceState(null, "", dialog ? `${pageUrl}#${dialog.id}` : pageUrl);
+  };
+
+  const getDialogFromHash = () => {
+    const id = window.location.hash.slice(1);
+    if (!id) return null;
+    const dialog = document.getElementById(id);
+    return dialog?.classList.contains("podcast-dialog") ? dialog : null;
+  };
+
   const openDialog = (dialog) => {
     if (!dialog || dialog.open) return;
     runWithTransition(() => dialog.showModal());
+    syncHash(dialog);
   };
 
   const closeDialog = (dialog) => {
     if (!dialog || !dialog.open) return;
     runWithTransition(() => dialog.close());
+    syncHash(null);
   };
 
   const switchDialog = (currentDialog, targetDialog) => {
@@ -26,6 +41,7 @@
       if (currentDialog.open) currentDialog.close();
       if (!targetDialog.open) targetDialog.showModal();
     });
+    syncHash(targetDialog);
   };
 
   document.querySelectorAll("[data-dialog-target]").forEach((trigger) => {
@@ -70,6 +86,9 @@
       });
     });
   });
+
+  const hashDialog = getDialogFromHash();
+  if (hashDialog) openDialog(hashDialog);
 })();
 
 (() => {
