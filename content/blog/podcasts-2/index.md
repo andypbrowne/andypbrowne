@@ -66,6 +66,11 @@ resources:
     tags:
       - history
       - storytelling
+    favoriteEpisodes:
+      - title: Bletchley Park
+        link: "https://www.noiser.com/short-history-of/bletchley-park"
+      - title: The Dambusters
+        link: "https://www.noiser.com/short-history-of/the-dambusters"
   - title: The Daily
     image: https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/ab/64/66/ab6466a9-9a7d-e20e-7a3d-bc5be37d29ce/mza_15084852813176276273.jpg/600x600bb.webp
     alt: A graphic cover including a gradient that looks like a sunrise. The NY Times logo is prominant
@@ -120,6 +125,13 @@ resources:
       - storytelling
       - history
       - economics
+    favoriteEpisodes:
+      - title: Death on the Dance Floor
+        link: "https://timharford.com/2022/03/cautionary-tales-death-on-the-dance-floor/"
+      - title: The Spreadsheet of Life and Death
+        link: "https://timharford.com/2020/06/cautionary-tales-the-spreadsheet-of-life-and-death/"
+      - title: Martin Luther King Jr, the Jewelry Genius, and the art of public speaking
+        link: "https://timharford.com/2024/01/cautionary-tales-martin-luther-king-jr-the-jewelry-genius-and-the-art-of-public-speaking-classic/"
   - title: Against the Rules
     image: https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/dc/06/b1/dc06b135-6330-aac0-375f-0c7831abc375/mza_10497111809156393391.jpg/600x600bb.webp
     alt: Cover of Against the Rules with Michael Lewis by Pushkin
@@ -129,6 +141,13 @@ resources:
       - storytelling
       - history
       - economics
+    favoriteEpisodes:
+      - title: Ref, You Suck!
+        link: "https://www.pushkin.fm/podcasts/against-the-rules/ref-you-suck"
+      - title: The Neutral
+        link: "https://www.pushkin.fm/podcasts/against-the-rules/the-neutral"
+      - title: The Coach in Your Head
+        link: "https://www.pushkin.fm/podcasts/against-the-rules/the-coach-in-your-head"
   - title: Conan O’Brien Needs a Friend
     image: https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/c6/02/8a/c6028ab7-bffd-db83-53e4-34a4ea9bef21/mza_16944101310108746053.jpg/600x600bb.webp
     alt: Cover of Conan O’Brien Needs a Friend from Team Coco
@@ -154,6 +173,11 @@ resources:
       - science
       - storytelling
       - mysteries
+    favoriteEpisodes:
+      - title: My octopus friend?
+        link: "https://podcasts.apple.com/us/podcast/my-octopus-friend/id1554578197?i=1000558838022"
+      - title: Who let the wolves in?
+        link: "https://pod.link/unexplainable/episode/4517829cfa939b38f5464d865325c24f"
   - title: Planet Money
     image: https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/85/df/53/85df5334-0fae-28a9-2bc4-b97b81061d0e/mza_10839245066228881011.jpg/500x500bb.webp
     alt: Cover of Planet Money from NPR
@@ -163,6 +187,11 @@ resources:
       - economics
       - storytelling
       - explainers
+    favoriteEpisodes:
+      - title: Where The Planet Money T-Shirt Began
+        link: "https://www.npr.org/series/248787926/planet-money-makes-a-t-shirt"
+      - title: "Brilliant Vs. Boring"
+        link: "https://www.npr.org/sections/money/2019/01/23/688018907/episode-688-brilliant-vs-boring"
   - title: Imaginary Worlds
     image: https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/8c/e9/84/8ce984ca-2f4c-b51c-955a-5b83e3995980/mza_10398003753481478412.jpg/600x600bb.webp
     alt: Cover of Imaginary Worlds hosted by Eric Molinsky
@@ -172,6 +201,11 @@ resources:
       - storytelling
       - sci-fi
       - culture
+    favoriteEpisodes:
+      - title: The Team Behind Hans Zimmer
+        link: "https://www.imaginaryworldspodcast.org/episodes/the-team-behind-hans-zimmer"
+      - title: The Ecology of Dune
+        link: "https://www.imaginaryworldspodcast.org/episodes/the-ecology-of-dune"
   - title: Search Engine
     image: https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/90/5b/62/905b6220-b426-6e2d-b97c-9f0a16ed31c4/mza_1372109499010593679.jpeg/600x600bb.webp
     alt: Cover of Search Engine with PJ Vogt
@@ -181,6 +215,11 @@ resources:
       - storytelling
       - explainers
       - curiosity
+    favoriteEpisodes:
+      - title: What happens when a cemetery goes out of business?
+        link: "https://www.searchengine.show/what-happens-when-a-cemetery-goes-out-of-business/"
+      - title: Where’s the best free restaurant bread in America?
+        link: "https://www.searchengine.show/wheres-the-best-free-restaurant-bread-in-america/"
   - title: Hyperfixed
     image: https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/e2/3f/e9/e23fe938-6d7f-e8f9-6502-8fdd4ff1f257/mza_388709505018701815.jpg/600x600bb.webp
     alt: Cover of Hyperfixed hosted by Alex Goldman
@@ -190,6 +229,11 @@ resources:
       - storytelling
       - curiosity
       - humor
+    favoriteEpisodes:
+      - title: "Garbage Fruit [Or, The Fruit of Theseus]"
+        link: "https://www.hyperfixedpod.com/listen/hyperfixed/garbage-fruit-or-the-fruit-of-theseus"
+      - title: The Aldean Instrument
+        link: "https://www.hyperfixedpod.com/listen/hyperfixed/the-aldean-instrument"
   - title: Twenty Thousand Hertz
     image: https://is1-ssl.mzstatic.com/image/thumb/Podcasts112/v4/df/fb/d7/dffbd730-85cd-cc3f-44ac-324af78e64bb/mza_10893787860356189042.jpg/600x600bb.webp
     alt: Cover of Twenty Thousand Hertz hosted by Dallas Taylor
@@ -215,6 +259,13 @@ resources:
       - storytelling
       - culture
       - explainers
+    favoriteEpisodes:
+      - title: Longbox
+        link: "https://99percentinvisible.org/episode/longbox/"
+      - title: The Pool and the Stream
+        link: "https://99percentinvisible.org/episode/the-pool-and-the-stream/"
+      - title: 77 Steps
+        link: "https://99percentinvisible.org/episode/77-steps/"
   - title: Radiolab
     image: https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/2b/b2/4d/2bb24d28-f3bb-916f-6bf3-9e125ba5219b/mza_4476298389845914795.jpg/600x600bb.webp
     alt: Cover of Radiolab from WNYC Studios
@@ -224,6 +275,13 @@ resources:
       - science
       - storytelling
       - curiosity
+    favoriteEpisodes:
+      - title: Colors
+        link: "https://radiolab.org/podcast/211119-colors"
+      - title: Why Isn't the Sky Blue?
+        link: "https://radiolab.org/podcast/211213-sky-isnt-blue"
+      - title: Zoos
+        link: "https://radiolab.org/podcast/91552-zoos"
   - title: Shop Talk Show
     image: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts125/v4/7b/29/20/7b2920d0-37a9-36e6-aa84-f3249b03f48e/mza_4868856405339949426.png/600x600bb.webp"
     alt: Shop talk show cover graphic that includes a small wrench
@@ -234,6 +292,13 @@ resources:
       - frontend
       - technology
       - career
+    favoriteEpisodes:
+      - title: "Mouthblogging HTML in 2025"
+        link: "https://shoptalkshow.com/644/"
+      - title: "Mouthblogging CSS in 2024"
+        link: "https://shoptalkshow.com/645/"
+      - title: "Design Tokens, Web Components, and Web Monetization"
+        link: "https://shoptalkshow.com/672/"
 ---
 
 <div class="podcast-layout">
