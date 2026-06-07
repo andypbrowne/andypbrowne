@@ -54,6 +54,36 @@
     });
   });
 
+  const navigateDialog = (dialog, direction) => {
+    const navButtons = dialog.querySelectorAll(".podcast-panel-nav-controls [data-dialog-nav]");
+    const button = direction === "prev" ? navButtons[0] : navButtons[1];
+    if (!button) return;
+    const targetId = button.getAttribute("data-dialog-nav");
+    const targetDialog = targetId ? document.getElementById(targetId) : null;
+    if (!targetDialog) return;
+    switchDialog(dialog, targetDialog);
+  };
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
+
+    const dialog = document.querySelector(".podcast-dialog[open]");
+    if (!dialog) return;
+
+    const target = event.target;
+    if (
+      target instanceof HTMLInputElement ||
+      target instanceof HTMLTextAreaElement ||
+      target instanceof HTMLSelectElement ||
+      target?.isContentEditable
+    ) {
+      return;
+    }
+
+    event.preventDefault();
+    navigateDialog(dialog, event.key === "ArrowLeft" ? "prev" : "next");
+  });
+
   document.querySelectorAll(".podcast-dialog").forEach((dialog) => {
     dialog.querySelectorAll("[data-dialog-close]").forEach((button) => {
       button.addEventListener("click", () => closeDialog(dialog));
@@ -77,12 +107,9 @@
       closeDialog(dialog);
     });
 
-    dialog.querySelectorAll("[data-dialog-nav]").forEach((button) => {
+    dialog.querySelectorAll(".podcast-panel-nav-controls [data-dialog-nav]").forEach((button, index) => {
       button.addEventListener("click", () => {
-        const targetId = button.getAttribute("data-dialog-nav");
-        const targetDialog = targetId ? document.getElementById(targetId) : null;
-        if (!targetDialog) return;
-        switchDialog(dialog, targetDialog);
+        navigateDialog(dialog, index === 0 ? "prev" : "next");
       });
     });
   });
