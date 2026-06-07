@@ -1,3 +1,12 @@
+article:has(.podcast-layout) > p:first-of-type::first-letter {
+    float: none;
+    font-size: inherit;
+    font-weight: normal;
+    line-height: inherit;
+    margin: inherit;
+    font-family: inherit;
+}
+
 .podcast-layout {
     width: 100%;
     min-width: 0;
