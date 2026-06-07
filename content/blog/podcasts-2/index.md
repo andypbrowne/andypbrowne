@@ -120,6 +120,15 @@ resources:
       - storytelling
       - history
       - economics
+  - title: Against the Rules
+    image: https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/dc/06/b1/dc06b135-6330-aac0-375f-0c7831abc375/mza_10497111809156393391.jpg/600x600bb.webp
+    alt: Cover of Against the Rules with Michael Lewis by Pushkin
+    description: Michael Lewis explores the people we rely on for fairness—in sports, business, courts, and beyond—and what happens when that trust breaks down.
+    link: "https://www.pushkin.fm/podcasts/against-the-rules"
+    tags:
+      - storytelling
+      - history
+      - economics
   - title: Conan O’Brien Needs a Friend
     image: https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/c6/02/8a/c6028ab7-bffd-db83-53e4-34a4ea9bef21/mza_16944101310108746053.jpg/600x600bb.webp
     alt: Cover of Conan O’Brien Needs a Friend from Team Coco
@@ -197,6 +206,15 @@ resources:
       - storytelling
       - science
       - culture
+  - title: 99% Invisible
+    image: https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/79/d0/35/79d035ea-9043-b43e-7380-33cd47bd968b/mza_2606971010425550919.jpg/600x600bb.webp
+    alt: Cover of 99% Invisible hosted by Roman Mars
+    description: Stories behind the designed world—architecture, infrastructure, and the hidden details that shape everyday life.
+    link: "https://99percentinvisible.org/"
+    tags:
+      - storytelling
+      - culture
+      - explainers
   - title: Radiolab
     image: https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/2b/b2/4d/2bb24d28-f3bb-916f-6bf3-9e125ba5219b/mza_4476298389845914795.jpg/600x600bb.webp
     alt: Cover of Radiolab from WNYC Studios
