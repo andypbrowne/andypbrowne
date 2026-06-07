@@ -1,13 +1,13 @@
 ---
 title: Podcasts 2
 description: A simple list to help you pick your next listen
-thumbnail: assets/images/thumb-fpo.png
-thumbnailAlt: Just a placeholder image that says FPO which means for  
-date: 2026-05-31
+thumbnail: assets/images/thumb-podcasts-2.jpg
+thumbnailAlt: A dense grid of podcast cover art from the post
+date: 2026-06-06
 tags:
   - post
   - featured
-draft: true
+draft: false
 css: /assets/css/podcasts-2.css
 js: /assets/js/podcasts-2-dialog.js
 templateEngineOverride: njk
@@ -218,6 +218,7 @@ resources:
       - career
 ---
 
+<div class="podcast-layout">
 <fieldset class="podcast-filters filtering">
   <legend class="vh">Filter podcasts by topic</legend>
   <div class="overflow">
@@ -257,6 +258,7 @@ resources:
       </a>
     </div>
   {% endfor %}
+</div>
 </div>
 
 {% for resource in resources %}

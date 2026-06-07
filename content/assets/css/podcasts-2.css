@@ -1,13 +1,21 @@
+.podcast-layout {
+    width: 100%;
+    min-width: 0;
+}
+
 .podcast-filters.filtering {
-    all: unset;
-    display: block;
-    margin-bottom: 1.25rem;
+    border: 0;
+    margin: 0 0 1.25rem;
+    padding: 0;
+    min-width: 0;
+    width: 100%;
 }
 
 .podcast-filters.filtering .overflow {
     display: flex;
     flex-wrap: wrap;
     gap: 0.4rem;
+    width: 100%;
 }
 
 .podcast-filters.filtering input[type="radio"] {
@@ -60,8 +68,9 @@
 }
 
 @media screen and (min-width: 1400px) {
-    .podcast-filters,
-    .podcast-grid {
+    .podcast-layout {
+        width: calc(100% + 24rem);
+        max-width: none;
         margin-inline: -12rem;
     }
 }
