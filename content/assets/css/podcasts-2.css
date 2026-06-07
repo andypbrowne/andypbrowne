@@ -145,6 +145,7 @@ article:has(.podcast-layout) > p:first-of-type::first-letter {
     border: 0;
     padding: 0;
     background: transparent;
+    color: var(--text-color);
     margin: 1rem auto auto;
 }
 
@@ -176,6 +177,7 @@ article:has(.podcast-dialog[open]) .podcast-tile-trigger img {
     border: 1px solid var(--subtle-border);
     border-radius: var(--border-radius);
     background: var(--color-base-bg);
+    color: var(--text-color);
     opacity: 0;
     transform: translateY(8px) scale(0.98);
     transition: transform 0.22s ease, opacity 0.22s ease;
@@ -198,6 +200,7 @@ article:has(.podcast-dialog[open]) .podcast-tile-trigger img {
     border-radius: 999px;
     padding: 0;
     background: var(--color-base-bg);
+    color: var(--text-color);
     cursor: pointer;
 }
 
@@ -284,6 +287,7 @@ article:has(.podcast-dialog[open]) .podcast-tile-trigger img {
     display: inline-block;
     margin: 0;
     font-size: var(--font-size-xs);
+    color: var(--text-color);
     border: 1px solid var(--color-midnight-40);
     border-radius: 8px;
     padding: 0.2rem 0.6rem;
