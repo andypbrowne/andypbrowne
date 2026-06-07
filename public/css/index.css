@@ -751,7 +751,13 @@ section.hero .hero-details {
 }
 
 article header.post-header {
-	margin-block-end: 6rem;
+	margin-block-end: 3rem;
+}
+
+@media screen and (min-width: 720px) {
+	article header.post-header {
+		margin-block-end: 6rem;
+	}
 }
 
 
