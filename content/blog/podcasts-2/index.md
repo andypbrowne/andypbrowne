@@ -19,7 +19,7 @@ resources:
     link: "https://www.vermontpublic.org/podcast/but-why-a-podcast-for-curious-kids"
     tags:
       - bedtime
-      - kids
+      - kid-friendly
       - science
       - family
     favoriteEpisodes:
@@ -36,7 +36,7 @@ resources:
     link: "https://radiolab.org/podcast/terrestrials"
     tags:
       - bedtime
-      - kids
+      - kid-friendly
       - science
       - storytelling
     favoriteEpisodes:
@@ -247,6 +247,7 @@ resources:
       - title: The Heartfelt Music of Bluey w/ Composer Joff Bush
         link: "https://www.20k.org/episodes/themusicofbluey"
     tags:
+      - kid-friendly
       - storytelling
       - science
       - culture
@@ -313,7 +314,7 @@ resources:
       {% if tagObj.count >= 3 %}
         <div>
           <input name="podcast-filter" id="podcast-filter-{{ tagObj.tag }}" type="radio" value="{{ tagObj.tag }}">
-          <label for="podcast-filter-{{ tagObj.tag }}">{{ tagObj.tag }} <span class="filter-count">({{ tagObj.count }})</span></label>
+          <label for="podcast-filter-{{ tagObj.tag }}">{% if tagObj.tag == "kid-friendly" %}Kid-friendly{% else %}{{ tagObj.tag }}{% endif %} <span class="filter-count">({{ tagObj.count }})</span></label>
         </div>
       {% endif %}
     {% endfor %}
