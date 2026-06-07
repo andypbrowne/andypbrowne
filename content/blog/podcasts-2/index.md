@@ -19,7 +19,7 @@ resources:
     link: "https://www.vermontpublic.org/podcast/but-why-a-podcast-for-curious-kids"
     tags:
       - bedtime
-      - kid-friendly
+      - kids
       - science
       - family
     favoriteEpisodes:
@@ -36,7 +36,7 @@ resources:
     link: "https://radiolab.org/podcast/terrestrials"
     tags:
       - bedtime
-      - kid-friendly
+      - kids
       - science
       - storytelling
     favoriteEpisodes:
@@ -84,7 +84,6 @@ resources:
     tags:
       - news
       - daily
-      - current-events
   - title: Hard Fork
     image: https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/de/c5/20/dec52092-6be0-9007-875c-6aa8e690a905/mza_12490014444602578825.jpg/600x600bb.webp
     alt: Cover of Hard Fork from The New York Times, hosted by Kevin Roose and Casey Newton
@@ -100,7 +99,6 @@ resources:
     tags:
       - technology
       - news
-      - current-events
   - title: Today, Explained
     image: https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/57/bc/e4/57bce477-b6e7-ba7d-5bca-6289f3f32e26/mza_17986217629149107841.jpeg/600x600bb.webp
     alt: Cover of Today explained podcast
@@ -108,9 +106,7 @@ resources:
     link: "https://www.vox.com/today-explained-podcast"
     tags:
       - news
-      - explainers
       - daily
-      - current-events
     favoriteEpisodes:
       - title: The most underrated sites at our national parks — according to a guy who’s seen them all
         link: "https://www.vox.com/podcasts/489283/national-park-service-sites-underrated-gems-mikah-meyer"
@@ -186,7 +182,6 @@ resources:
     tags:
       - economics
       - storytelling
-      - explainers
     favoriteEpisodes:
       - title: Where The Planet Money T-Shirt Began
         link: "https://www.npr.org/series/248787926/planet-money-makes-a-t-shirt"
@@ -200,7 +195,6 @@ resources:
     tags:
       - storytelling
       - sci-fi
-      - culture
     favoriteEpisodes:
       - title: The Team Behind Hans Zimmer
         link: "https://www.imaginaryworldspodcast.org/episodes/the-team-behind-hans-zimmer"
@@ -213,8 +207,6 @@ resources:
     link: "https://www.searchengine.show/"
     tags:
       - storytelling
-      - explainers
-      - curiosity
     favoriteEpisodes:
       - title: What happens when a cemetery goes out of business?
         link: "https://www.searchengine.show/what-happens-when-a-cemetery-goes-out-of-business/"
@@ -227,7 +219,6 @@ resources:
     link: "https://www.hyperfixedpod.com/"
     tags:
       - storytelling
-      - curiosity
       - humor
     favoriteEpisodes:
       - title: "Garbage Fruit [Or, The Fruit of Theseus]"
@@ -247,10 +238,9 @@ resources:
       - title: The Heartfelt Music of Bluey w/ Composer Joff Bush
         link: "https://www.20k.org/episodes/themusicofbluey"
     tags:
-      - kid-friendly
+      - kids
       - storytelling
       - science
-      - culture
   - title: 99% Invisible
     image: https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/79/d0/35/79d035ea-9043-b43e-7380-33cd47bd968b/mza_2606971010425550919.jpg/600x600bb.webp
     alt: Cover of 99% Invisible hosted by Roman Mars
@@ -258,8 +248,6 @@ resources:
     link: "https://99percentinvisible.org/"
     tags:
       - storytelling
-      - culture
-      - explainers
     favoriteEpisodes:
       - title: Longbox
         link: "https://99percentinvisible.org/episode/longbox/"
@@ -275,7 +263,6 @@ resources:
     tags:
       - science
       - storytelling
-      - curiosity
     favoriteEpisodes:
       - title: Colors
         link: "https://radiolab.org/podcast/211119-colors"
@@ -314,7 +301,7 @@ resources:
       {% if tagObj.count >= 3 %}
         <div>
           <input name="podcast-filter" id="podcast-filter-{{ tagObj.tag }}" type="radio" value="{{ tagObj.tag }}">
-          <label for="podcast-filter-{{ tagObj.tag }}">{% if tagObj.tag == "kid-friendly" %}Kid-friendly{% else %}{{ tagObj.tag }}{% endif %} <span class="filter-count">({{ tagObj.count }})</span></label>
+          <label for="podcast-filter-{{ tagObj.tag }}">{{ tagObj.tag }} <span class="filter-count">({{ tagObj.count }})</span></label>
         </div>
       {% endif %}
     {% endfor %}
