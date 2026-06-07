@@ -393,7 +393,15 @@ resources:
         {% endif %}
         <h3 id="podcast-title-{{ loop.index0 }}">{{ resource.title }}</h3>
         <p>{{ resource.description }}</p>
-        <p><a href="{{ resource.link }}" rel="noreferrer noopener" target="_blank">Listen to {{ resource.title }}</a></p>
+        <p class="podcast-panel-cta">
+          <a class="action-pill" href="{{ resource.link }}" rel="noreferrer noopener" target="_blank">
+            Visit podcast
+            <span class="visually-hidden">: {{ resource.title }}</span>
+            <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false">
+              <path d="M14 3h7v7M10 14L21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            </svg>
+          </a>
+        </p>
         {% if resource.favoriteEpisodes %}
           <h4>Favorite episodes</h4>
           <ul>

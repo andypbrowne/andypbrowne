@@ -284,6 +284,10 @@ article:has(.podcast-dialog[open]) .podcast-tile-trigger img {
     margin-bottom: 0.75rem;
 }
 
+.podcast-panel-cta {
+    margin: 1.25rem 0 0;
+}
+
 .podcast-panel-content h4 {
     margin-top: 1rem;
     margin-bottom: 0.5rem;
