@@ -131,14 +131,32 @@ resources:
 </div>
 
 {% for resource in resources %}
+  {% set prevIndex = loop.index0 - 1 %}
+  {% if prevIndex < 0 %}{% set prevIndex = resources.length - 1 %}{% endif %}
+  {% set nextIndex = loop.index0 + 1 %}
+  {% if nextIndex >= resources.length %}{% set nextIndex = 0 %}{% endif %}
   <dialog id="podcast-dialog-{{ loop.index0 }}" class="podcast-dialog" aria-labelledby="podcast-title-{{ loop.index0 }}">
     <div class="podcast-panel">
-      <button type="button" class="podcast-panel-close" data-dialog-close aria-label="Close podcast details">
-        <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false">
-          <path d="M6 6L18 18M18 6L6 18"></path>
-        </svg>
-        <span class="visually-hidden">Close</span>
-      </button>
+      <div class="podcast-panel-topbar">
+        <div class="podcast-panel-nav-controls" aria-label="Browse podcasts">
+          <button type="button" class="podcast-panel-nav-button" data-dialog-nav="podcast-dialog-{{ prevIndex }}" aria-label="Previous podcast">
+            <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false">
+              <path d="M15 6L9 12L15 18"></path>
+            </svg>
+          </button>
+          <button type="button" class="podcast-panel-nav-button" data-dialog-nav="podcast-dialog-{{ nextIndex }}" aria-label="Next podcast">
+            <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false">
+              <path d="M9 6L15 12L9 18"></path>
+            </svg>
+          </button>
+        </div>
+        <button type="button" class="podcast-panel-close" data-dialog-close aria-label="Close podcast details">
+          <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false">
+            <path d="M6 6L18 18M18 6L6 18"></path>
+          </svg>
+          <span class="visually-hidden">Close</span>
+        </button>
+      </div>
       <div class="podcast-panel-media">
         {%- if (resource.image) -%}
           <img class="podcast-panel-image" src="{{ resource.image }}" alt="{{ resource.alt or ('Cover art for ' + resource.title) }}" style="--podcast-vt-name: podcast-cover-{{ loop.index0 }};">

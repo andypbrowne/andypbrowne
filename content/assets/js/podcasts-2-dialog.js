@@ -20,6 +20,14 @@
     runWithTransition(() => dialog.close());
   };
 
+  const switchDialog = (currentDialog, targetDialog) => {
+    if (!currentDialog || !targetDialog || currentDialog === targetDialog) return;
+    runWithTransition(() => {
+      if (currentDialog.open) currentDialog.close();
+      if (!targetDialog.open) targetDialog.showModal();
+    });
+  };
+
   document.querySelectorAll("[data-dialog-target]").forEach((trigger) => {
     trigger.addEventListener("click", (event) => {
       const targetId = trigger.getAttribute("data-dialog-target");
@@ -51,6 +59,15 @@
     dialog.addEventListener("cancel", (event) => {
       event.preventDefault();
       closeDialog(dialog);
+    });
+
+    dialog.querySelectorAll("[data-dialog-nav]").forEach((button) => {
+      button.addEventListener("click", () => {
+        const targetId = button.getAttribute("data-dialog-nav");
+        const targetDialog = targetId ? document.getElementById(targetId) : null;
+        if (!targetDialog) return;
+        switchDialog(dialog, targetDialog);
+      });
     });
   });
 })();

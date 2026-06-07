@@ -64,6 +64,7 @@
     border: 0;
     padding: 0;
     background: transparent;
+    margin: 1rem auto auto;
 }
 
 .podcast-dialog::backdrop {
@@ -104,10 +105,8 @@ article:has(.podcast-dialog[open]) .podcast-tile-trigger img {
     transform: translateY(0) scale(1);
 }
 
-.podcast-panel-close {
-    position: absolute;
-    top: 0.75rem;
-    right: 0.75rem;
+.podcast-panel-close,
+.podcast-panel-nav-button {
     width: 2rem;
     height: 2rem;
     display: inline-flex;
@@ -121,6 +120,10 @@ article:has(.podcast-dialog[open]) .podcast-tile-trigger img {
     cursor: pointer;
 }
 
+.podcast-panel-close {
+    flex-shrink: 0;
+}
+
 .podcast-panel-close svg {
     width: 1rem;
     height: 1rem;
@@ -128,6 +131,33 @@ article:has(.podcast-dialog[open]) .podcast-tile-trigger img {
     stroke: currentColor;
     stroke-width: 2.25;
     stroke-linecap: round;
+}
+
+.podcast-panel-nav-button {
+    flex-shrink: 0;
+}
+
+.podcast-panel-nav-button svg {
+    width: 1rem;
+    height: 1rem;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2.25;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.podcast-panel-nav-controls {
+    display: flex;
+    gap: 0.45rem;
+}
+
+.podcast-panel-topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75rem;
+    grid-column: 1 / -1;
 }
 
 .podcast-panel-media img {
@@ -188,6 +218,7 @@ article:has(.podcast-dialog[open]) .podcast-tile-trigger img {
 }
 
 .podcast-panel a:focus-visible,
+.podcast-panel button:focus-visible,
 .podcast-panel-nav a:focus-visible {
     outline: 2px solid var(--color-midnight-60);
     outline-offset: 3px;
@@ -196,9 +227,25 @@ article:has(.podcast-dialog[open]) .podcast-tile-trigger img {
 
 @media screen and (min-width: 720px) {
     .podcast-panel {
-        grid-template-columns: auto 1fr;
+        grid-template-columns: minmax(12rem, 16rem) 1fr;
         gap: 1.5rem;
         padding: 1.5rem;
+        align-items: start;
+    }
+
+    .podcast-panel-topbar {
+        grid-column: 1 / -1;
+        grid-row: 1;
+    }
+
+    .podcast-panel-media {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .podcast-panel-content {
+        grid-column: 2;
+        grid-row: 2;
     }
 }
 
