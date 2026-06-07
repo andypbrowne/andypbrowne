@@ -58,6 +58,14 @@ resources:
         link: "https://podcasts.apple.com/us/podcast/wwi-the-christmas-truce/id1537788786?i=1000741833897"
       - title: "Nelson: Slaughter in Naples (Part 1)"
         link: "https://podcasts.apple.com/us/podcast/nelson-slaughter-in-naples-part-1/id1537788786?i=1000730798662"
+  - title: Short History Of…
+    image: https://is1-ssl.mzstatic.com/image/thumb/Podcasts112/v4/57/9e/e8/579ee81e-be15-4b29-1d13-26abd9296e88/mza_9274260941010613844.jpeg/600x600bb.webp
+    alt: Cover of Short History Of... from Noiser, hosted by John Hopkins
+    description: Standalone weekly episodes on historical figures and events. Each one transports you back to witness an incredible moment or remarkable person from the past.
+    link: "https://www.noiser.com/short-history-of"
+    tags:
+      - history
+      - storytelling
   - title: The Daily
     image: https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/ab/64/66/ab6466a9-9a7d-e20e-7a3d-bc5be37d29ce/mza_15084852813176276273.jpg/600x600bb.webp
     alt: A graphic cover including a gradient that looks like a sunrise. The NY Times logo is prominant
@@ -71,6 +79,22 @@ resources:
     tags:
       - news
       - daily
+      - current-events
+  - title: Hard Fork
+    image: https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/de/c5/20/dec52092-6be0-9007-875c-6aa8e690a905/mza_12490014444602578825.jpg/600x600bb.webp
+    alt: Cover of Hard Fork from The New York Times, hosted by Kevin Roose and Casey Newton
+    description: Kevin Roose and Casey Newton explore and make sense of the rapidly changing world of tech. Smart, timely, and often funny.
+    link: "https://www.nytimes.com/column/hard-fork"
+    favoriteEpisodes:
+      - title: Hard Fork's 100 Most Iconic Technologies
+        link: "https://podcasts.apple.com/us/podcast/hard-forks-100-most-iconic-technologies/id1528594034?i=1000678629781"
+      - title: What's a Hard Fork?
+        link: "https://www.nytimes.com/2022/10/04/podcasts/hard-fork-technology.html"
+      - title: Why L.L.M.s Can't Write Well
+        link: "https://podcasts.apple.com/us/podcast/a-i-washing-layoffs-why-l-l-m-s-cant-write-well-tokenmaxxing/id1528594034?i=1000756315732"
+    tags:
+      - technology
+      - news
       - current-events
   - title: Today, Explained
     image: https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/57/bc/e4/57bce477-b6e7-ba7d-5bca-6289f3f32e26/mza_17986217629149107841.jpeg/600x600bb.webp
@@ -96,6 +120,92 @@ resources:
       - storytelling
       - history
       - economics
+  - title: Conan O’Brien Needs a Friend
+    image: https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/c6/02/8a/c6028ab7-bffd-db83-53e4-34a4ea9bef21/mza_16944101310108746053.jpg/600x600bb.webp
+    alt: Cover of Conan O’Brien Needs a Friend from Team Coco
+    description: Conan hangs out with celebrity guests in long, unfiltered conversations—with Sona and Matt along for the ride. Funny, warm, and surprisingly sincere.
+    link: "https://teamcoco.com/podcasts/conan-obrien-needs-a-friend"
+    favoriteEpisodes:
+      - title: Paul Rudd
+        link: "https://podcasts.apple.com/us/podcast/paul-rudd/id1438054347?i=1000456429734"
+      - title: Tom Hanks Returns
+        link: "https://podcasts.apple.com/us/podcast/tom-hanks-returns/id1438054347?i=1000675566954"
+      - title: Steve Martin and Martin Short
+        link: "https://podcasts.apple.com/us/podcast/steve-martin-and-martin-short/id1438054347?i=1000625083542"
+    tags:
+      - comedy
+      - humor
+      - interviews
+  - title: Unexplainable
+    image: https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/eb/87/4d/eb874d60-4424-62df-a136-d5b5f32c451b/mza_11680166435885601347.jpg/600x600bb.webp
+    alt: Cover of Unexplainable from Vox
+    description: Takes you right up to the edge of what we know about science—and then keeps going. Perfect for unanswered questions and scientific mysteries.
+    link: "https://www.vox.com/unexplainable"
+    tags:
+      - science
+      - storytelling
+      - mysteries
+  - title: Planet Money
+    image: https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/85/df/53/85df5334-0fae-28a9-2bc4-b97b81061d0e/mza_10839245066228881011.jpg/500x500bb.webp
+    alt: Cover of Planet Money from NPR
+    description: Give them any topic and they’ll tie it back to the economy. Clever, accessible storytelling about the forces that shape everyday life.
+    link: "https://www.npr.org/podcasts/510289/planet-money"
+    tags:
+      - economics
+      - storytelling
+      - explainers
+  - title: Imaginary Worlds
+    image: https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/8c/e9/84/8ce984ca-2f4c-b51c-955a-5b83e3995980/mza_10398003753481478412.jpg/600x600bb.webp
+    alt: Cover of Imaginary Worlds hosted by Eric Molinsky
+    description: Eric Molinsky explores sci-fi, fantasy, and speculative fiction—how we imagine other worlds and what that reveals about our own.
+    link: "https://www.imaginaryworldspodcast.org/"
+    tags:
+      - storytelling
+      - sci-fi
+      - culture
+  - title: Search Engine
+    image: https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/90/5b/62/905b6220-b426-6e2d-b97c-9f0a16ed31c4/mza_1372109499010593679.jpeg/600x600bb.webp
+    alt: Cover of Search Engine with PJ Vogt
+    description: PJ Vogt answers the questions you might ask the internet when you can’t sleep. Curious, human, and often surprisingly moving.
+    link: "https://www.searchengine.show/"
+    tags:
+      - storytelling
+      - explainers
+      - curiosity
+  - title: Hyperfixed
+    image: https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/e2/3f/e9/e23fe938-6d7f-e8f9-6502-8fdd4ff1f257/mza_388709505018701815.jpg/600x600bb.webp
+    alt: Cover of Hyperfixed hosted by Alex Goldman
+    description: Alex Goldman takes on life’s weird, intractable problems—and actually tries to get to the bottom of them. From the co-creator of Reply All.
+    link: "https://www.hyperfixedpod.com/"
+    tags:
+      - storytelling
+      - curiosity
+      - humor
+  - title: Twenty Thousand Hertz
+    image: https://is1-ssl.mzstatic.com/image/thumb/Podcasts112/v4/df/fb/d7/dffbd730-85cd-cc3f-44ac-324af78e64bb/mza_10893787860356189042.jpg/600x600bb.webp
+    alt: Cover of Twenty Thousand Hertz hosted by Dallas Taylor
+    description: The stories behind the world’s most recognizable sounds—from Netflix’s “Tadum” to the McDonald’s jingle. A celebration of sound for all ages.
+    link: "https://www.20k.org/"
+    favoriteEpisodes:
+      - title: The Organic Sound of Bluey w/ Sound Designer Dan Brumm
+        link: "https://www.20k.org/episodes/thesoundofbluey"
+      - title: The Voices of Bluey w/ Uncle Stripe
+        link: "https://www.20k.org/episodes/thevoicesofbluey"
+      - title: The Heartfelt Music of Bluey w/ Composer Joff Bush
+        link: "https://www.20k.org/episodes/themusicofbluey"
+    tags:
+      - storytelling
+      - science
+      - culture
+  - title: Radiolab
+    image: https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/2b/b2/4d/2bb24d28-f3bb-916f-6bf3-9e125ba5219b/mza_4476298389845914795.jpg/600x600bb.webp
+    alt: Cover of Radiolab from WNYC Studios
+    description: Tests the outer edges of what you think you know. A longtime favorite—we’re subscribers in The Lab.
+    link: "https://radiolab.org/"
+    tags:
+      - science
+      - storytelling
+      - curiosity
   - title: Shop Talk Show
     image: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts125/v4/7b/29/20/7b2920d0-37a9-36e6-aa84-f3249b03f48e/mza_4868856405339949426.png/600x600bb.webp"
     alt: Shop talk show cover graphic that includes a small wrench
