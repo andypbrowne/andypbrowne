@@ -9,6 +9,7 @@ tags:
   - featured
 draft: true
 css: /assets/css/podcasts-2.css
+js: /assets/js/podcasts-2-dialog.js
 templateEngineOverride: njk
 resources:
   - title: But Why
@@ -24,6 +25,10 @@ resources:
     favoriteEpisodes:
       - title: Who invented tacos?
         link: "https://www.vermontpublic.org/podcast/but-why-a-podcast-for-curious-kids/2025-03-21/who-invented-tacos"
+      - title: Why can’t animals talk to us?
+        link: "https://www.vermontpublic.org/podcast/but-why-a-podcast-for-curious-kids/2024-11-29/why-cant-animals-talk-to-us"
+      - title: Do people eat bugs?
+        link: "https://www.vermontpublic.org/podcast/but-why-a-podcast-for-curious-kids/2024-06-07/do-people-eat-bugs"
   - title: Radiolab for Kids
     image: https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/56/8c/3a/568c3ac4-1c78-8139-e8b8-6bd0b0835617/mza_10174058825638805373.jpg/600x600bb.webp
     alt: Cover of radiolab presents terrestrials from WNYC illustrating plants
@@ -115,9 +120,9 @@ resources:
         aria-label="Open details for {{ resource.title }}"
       >
         {%- if (resource.image) -%}
-          <img src="{{ resource.image }}" alt="{{ resource.alt or ('Cover art for ' + resource.title) }}" style="--podcast-vt-name: podcast-cover-{{ loop.index0 }};">
+          <img class="podcast-cover-image" src="{{ resource.image }}" alt="{{ resource.alt or ('Cover art for ' + resource.title) }}" style="--podcast-vt-name: podcast-cover-{{ loop.index0 }};">
         {%- else -%}
-          <img src="https://placehold.co/600x600?text=Podcast+Cover" alt="Cover art placeholder for {{ resource.title }}" style="--podcast-vt-name: podcast-cover-{{ loop.index0 }};">
+          <img class="podcast-cover-image" src="https://placehold.co/600x600?text=Podcast+Cover" alt="Cover art placeholder for {{ resource.title }}" style="--podcast-vt-name: podcast-cover-{{ loop.index0 }};">
         {%- endif -%}
         <h3 class="podcast-cover-title">{{ resource.title }}</h3>
       </a>
@@ -136,9 +141,9 @@ resources:
       </button>
       <div class="podcast-panel-media">
         {%- if (resource.image) -%}
-          <img src="{{ resource.image }}" alt="{{ resource.alt or ('Cover art for ' + resource.title) }}" style="--podcast-vt-name: podcast-cover-{{ loop.index0 }};">
+          <img class="podcast-panel-image" src="{{ resource.image }}" alt="{{ resource.alt or ('Cover art for ' + resource.title) }}" style="--podcast-vt-name: podcast-cover-{{ loop.index0 }};">
         {%- else -%}
-          <img src="https://placehold.co/600x600?text=Podcast+Cover" alt="Cover art placeholder for {{ resource.title }}" style="--podcast-vt-name: podcast-cover-{{ loop.index0 }};">
+          <img class="podcast-panel-image" src="https://placehold.co/600x600?text=Podcast+Cover" alt="Cover art placeholder for {{ resource.title }}" style="--podcast-vt-name: podcast-cover-{{ loop.index0 }};">
         {%- endif -%}
       </div>
       <div class="podcast-panel-content">
@@ -173,81 +178,4 @@ resources:
   </dialog>
 {% endfor %}
 
-<style>
-@media not (prefers-reduced-motion: reduce) {
-  {% for resource in resources %}
-  ::view-transition-group(podcast-cover-{{ loop.index0 }}) {
-    animation-duration: 420ms;
-    animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
-  }
-
-  ::view-transition-old(podcast-cover-{{ loop.index0 }}) {
-    animation: podcast-cover-out 420ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
-  }
-
-  ::view-transition-new(podcast-cover-{{ loop.index0 }}) {
-    animation: podcast-cover-in 420ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
-  }
-  {% endfor %}
-}
-</style>
-
-<script>
-(() => {
-  if (!("HTMLDialogElement" in window)) return;
-
-  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-  const runWithTransition = (callback) => {
-    if (!prefersReducedMotion.matches && "startViewTransition" in document) {
-      document.startViewTransition(callback);
-      return;
-    }
-    callback();
-  };
-
-  const openDialog = (dialog) => {
-    if (!dialog || dialog.open) return;
-    runWithTransition(() => dialog.showModal());
-  };
-
-  const closeDialog = (dialog) => {
-    if (!dialog || !dialog.open) return;
-    runWithTransition(() => dialog.close());
-  };
-
-  document.querySelectorAll("[data-dialog-target]").forEach((trigger) => {
-    trigger.addEventListener("click", (event) => {
-      const targetId = trigger.getAttribute("data-dialog-target");
-      const dialog = targetId ? document.getElementById(targetId) : null;
-      if (!dialog) return;
-      event.preventDefault();
-      openDialog(dialog);
-    });
-  });
-
-  document.querySelectorAll(".podcast-dialog").forEach((dialog) => {
-    dialog.querySelectorAll("[data-dialog-close]").forEach((button) => {
-      button.addEventListener("click", () => closeDialog(dialog));
-    });
-
-    dialog.addEventListener("click", (event) => {
-      const panel = dialog.querySelector(".podcast-panel");
-      if (!panel) return;
-      const rect = panel.getBoundingClientRect();
-      const clickedInsidePanel =
-        event.clientX >= rect.left &&
-        event.clientX <= rect.right &&
-        event.clientY >= rect.top &&
-        event.clientY <= rect.bottom;
-
-      if (!clickedInsidePanel) closeDialog(dialog);
-    });
-
-    dialog.addEventListener("cancel", (event) => {
-      event.preventDefault();
-      closeDialog(dialog);
-    });
-  });
-})();
-</script>
 

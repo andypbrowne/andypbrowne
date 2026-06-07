@@ -118,6 +118,7 @@ article:has(.podcast-dialog[open]) .podcast-tile-trigger img {
     border-radius: 999px;
     padding: 0;
     background: var(--color-base-bg);
+    cursor: pointer;
 }
 
 .podcast-panel-close svg {
@@ -208,24 +209,11 @@ article:has(.podcast-dialog[open]) .podcast-tile-trigger img {
     }
 }
 
-@keyframes podcast-cover-in {
-    from {
-        opacity: 0.9;
-        filter: saturate(0.95);
-    }
-    to {
-        opacity: 1;
-        filter: saturate(1);
-    }
-}
-
-@keyframes podcast-cover-out {
-    from {
-        opacity: 1;
-        filter: saturate(1);
-    }
-    to {
-        opacity: 0.9;
-        filter: saturate(0.95);
+@media not (prefers-reduced-motion: reduce) {
+    /* Avoid default full-page crossfade so dialog/backdrop timing feels crisp. */
+    ::view-transition-old(root),
+    ::view-transition-new(root) {
+        animation: none;
+        mix-blend-mode: normal;
     }
 }
