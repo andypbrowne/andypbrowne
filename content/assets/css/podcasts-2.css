@@ -179,6 +179,7 @@ article:has(.podcast-dialog[open]) .podcast-tile-trigger img {
     overflow: auto;
     display: grid;
     gap: 1rem;
+    align-items: start;
     padding: 1rem;
     border: 1px solid var(--subtle-border);
     border-radius: var(--border-radius);
@@ -250,13 +251,29 @@ article:has(.podcast-dialog[open]) .podcast-tile-trigger img {
     grid-column: 1 / -1;
 }
 
-.podcast-panel-media img {
+.podcast-panel-media {
+    display: grid;
     width: 100%;
     max-width: 16rem;
     aspect-ratio: 1 / 1;
-    object-fit: cover;
+    min-height: 0;
+    min-width: 0;
+    overflow: hidden;
+    align-self: start;
+    justify-self: start;
     border-radius: var(--border-radius);
     border: 1px solid var(--subtle-border);
+}
+
+.podcast-panel-media img {
+    display: block;
+    grid-area: 1 / 1;
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    min-width: 0;
+    object-fit: cover;
+    border-radius: inherit;
 }
 
 .podcast-panel-content h3 {
@@ -331,7 +348,6 @@ article:has(.podcast-dialog[open]) .podcast-tile-trigger img {
         grid-template-columns: minmax(12rem, 16rem) 1fr;
         gap: 1.5rem;
         padding: 1.5rem;
-        align-items: start;
     }
 
     .podcast-panel-topbar {
@@ -351,6 +367,12 @@ article:has(.podcast-dialog[open]) .podcast-tile-trigger img {
 }
 
 @media screen and (max-width: 719px) {
+    html:has(.podcast-dialog[open]),
+    html:has(.podcast-dialog[open]) body {
+        overflow: hidden;
+        overscroll-behavior: none;
+    }
+
     .podcast-dialog {
         position: fixed;
         inset: 0;
@@ -367,6 +389,10 @@ article:has(.podcast-dialog[open]) .podcast-tile-trigger img {
         max-height: 100dvh;
         border: 0;
         border-radius: 0;
+    }
+
+    .podcast-panel-media {
+        max-width: none;
     }
 }
 
