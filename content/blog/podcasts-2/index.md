@@ -270,6 +270,29 @@ resources:
         link: "https://radiolab.org/podcast/211213-sky-isnt-blue"
       - title: Zoos
         link: "https://radiolab.org/podcast/91552-zoos"
+  - title: Sold a Story
+    image: https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/be/3a/c3/be3ac32d-e256-b71a-3983-1bc663b917ab/mza_8053056458972201913.jpg/600x600bb.webp
+    alt: Cover of Sold a Story from APM Reports, hosted by Emily Hanford
+    description: Emily Hanford investigates why so many schools teach reading with methods cognitive scientists debunked decades ago—and the authors and publishers who profited from the idea. Essential listening for parents and anyone who cares about education.
+    link: "https://features.apmreports.org/sold-a-story/"
+    tags:
+      - storytelling
+      - news
+    favoriteEpisodes:
+      - title: The Problem
+        link: "https://podcasts.apple.com/us/podcast/1-the-problem/id1649580473?i=1000583258897"
+      - title: The Superstar
+        link: "https://podcasts.apple.com/us/podcast/4-the-superstar/id1649580473?i=1000584885997"
+      - title: The Outlier
+        link: "https://podcasts.apple.com/us/podcast/11-the-outlier/id1649580473?i=1000694254052"
+  - title: The Secret World of Roald Dahl
+    image: https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/d4/7b/82/d47b825b-a727-058e-05f4-a8fb5c8986a6/mza_5454411339317650258.jpg/600x600bb.webp
+    alt: Cover of The Secret World of Roald Dahl from iHeartPodcasts, hosted by Aaron Tracy
+    description: Aaron Tracy uncovers the hidden life behind Roald Dahl, author of Willy Wonka and Matilda. A fighter pilot, MI6 spy, struggling screenwriter, and a complicated, controversial icon. Dark, twisty, and much stranger than the books we grew up on.
+    link: "https://www.listentoparallax.com/shows/secretworldofpodcast"
+    tags:
+      - storytelling
+      - history
   - title: Shop Talk Show
     image: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts125/v4/7b/29/20/7b2920d0-37a9-36e6-aa84-f3249b03f48e/mza_4868856405339949426.png/600x600bb.webp"
     alt: Shop talk show cover graphic that includes a small wrench
