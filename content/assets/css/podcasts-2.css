@@ -1,3 +1,83 @@
+/* Plain list: RSS, print, no-JS, and readers without post CSS */
+.podcast-readable-list {
+    display: grid;
+    gap: 2rem;
+    margin: 0 0 2rem;
+}
+
+.podcast-readable-item {
+    display: grid;
+    gap: 1rem;
+    align-items: start;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--subtle-border);
+}
+
+.podcast-readable-item:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+.podcast-readable-cover {
+    width: 8rem;
+    height: 8rem;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--subtle-border);
+}
+
+.podcast-readable-body h3 {
+    margin: 0 0 0.5rem;
+    font-size: var(--font-size-lg);
+}
+
+.podcast-readable-body h4 {
+    margin: 1rem 0 0.5rem;
+}
+
+.podcast-readable-body ul {
+    margin: 0;
+    padding-left: 1.25rem;
+}
+
+.podcast-readable-body .resource-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 0.6rem;
+}
+
+.podcast-readable-body .resource-tag {
+    display: inline-block;
+    margin: 0;
+    font-size: var(--font-size-xs);
+    color: var(--text-color);
+    border: 1px solid var(--color-midnight-40);
+    border-radius: 8px;
+    padding: 0.2rem 0.6rem;
+}
+
+@media screen and (min-width: 720px) {
+    .podcast-readable-item {
+        grid-template-columns: 8rem 1fr;
+    }
+}
+
+/* Hide plain list once JS enhances the interactive grid */
+html.podcasts-enhanced .podcast-readable-list {
+    display: none;
+}
+
+/* No-JS and print: skip the grid and dialogs, keep the readable list */
+@media (scripting: none), print {
+    .podcast-layout,
+    .podcast-dialog {
+        display: none !important;
+    }
+}
+
 article:has(.podcast-layout) > p:first-of-type::first-letter {
     float: none;
     font-size: inherit;

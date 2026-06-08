@@ -289,6 +289,10 @@ resources:
         link: "https://shoptalkshow.com/672/"
 ---
 
+<p>This isn’t a complete catalog—it’s what I actually listen to. Browse the grid on the site, or read the full list below.</p>
+
+{% include "_includes/components/podcast-resource-list.njk" %}
+
 <div class="podcast-layout">
 <fieldset class="podcast-filters filtering">
   <legend class="vh">Filter podcasts by topic</legend>
@@ -408,5 +412,5 @@ resources:
 
 <h2>Recommend something</h2>
 
-<p>This isn’t a complete catalog—it’s what I actually listen to. If you think a good show is missing, <a href="https://bsky.app/profile/andypbrowne.bsky.social">send me a recommendation on Bluesky</a>. I give a listen.</p>
+<p>If you think a good show is missing, <a href="https://bsky.app/profile/andypbrowne.bsky.social">send me a recommendation on Bluesky</a>. I give a listen.</p>
 

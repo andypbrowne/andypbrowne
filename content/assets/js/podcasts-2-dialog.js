@@ -1,6 +1,8 @@
 (() => {
   if (!("HTMLDialogElement" in window)) return;
 
+  document.documentElement.classList.add("podcasts-enhanced");
+
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   const runWithTransition = (callback) => {
     if (!prefersReducedMotion.matches && "startViewTransition" in document) {
