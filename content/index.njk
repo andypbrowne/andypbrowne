@@ -42,6 +42,18 @@ css: /assets/css/bookshelf.css
 
 </section>
 
+{# {% if collections.fieldGuides.length %}
+<section class="field-guides">
+  <h2>Field guides</h2>
+  <p>Curated obsessions with a filter attached. New URLs only — no archive archaeology required.</p>
+  <div class="featured-post-grid">
+    {% set postslist = collections.fieldGuides | reverse %}
+    {% set postslistCounter = collections.fieldGuides | length %}
+    {% include "postslist.njk" %}
+  </div>
+</section>
+{% endif %} #}
+
 <section class="featured-case-study">
 
   {% set caseStudies = [] %}

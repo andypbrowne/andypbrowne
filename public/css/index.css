@@ -342,10 +342,14 @@ h1 {
 }
 
 h2 {
-	font-family: "Inter V";
+	font-family: var(--font-family);
 	font-size: var(--font-size-lg);
 	font-weight: 800;
 	font-variation-settings: "wght" 750;
+}
+
+h3 {
+	font-family: var(--font-family);
 }
 
 h2, h3 {
@@ -650,6 +654,20 @@ section.featured-case-study .featured-case-study-image img {
 .featured-case-study-content .postlist-date {
 		padding-block-start: 1em;
 	}
+
+section.field-guides {
+	margin-block: 3rem 2rem;
+}
+
+section.field-guides h2 {
+	margin-block-end: 0.5rem;
+}
+
+section.field-guides > p {
+	margin-block-end: 1.5rem;
+	font-size: var(--font-size-sm);
+	opacity: 0.9;
+}
 
 @media screen and (min-width: 650px) {
 	.case-study-wrapper {
@@ -1286,6 +1304,9 @@ footer .footer-links {
 	font-weight: 650;
 	opacity: .8;
 	font-variant-caps: all-small-caps;
+}
+time.postlist-date {
+	font-family: var(--font-family);
 }
 .postlist-date,
 .post-number {

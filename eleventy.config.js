@@ -143,6 +143,10 @@ module.exports = function(eleventyConfig) {
 		return collectionApi.getFilteredByTags("favorite-thing");
 	});
 
+	eleventyConfig.addCollection("fieldGuides", function(collectionApi) {
+		return collectionApi.getFilteredByTag("field-guide");
+	});
+
 	// Customize Markdown library settings:
 	eleventyConfig.amendLibrary("md", mdLib => {
 		mdLib.use(markdownItAnchor, {

@@ -1,0 +1,46 @@
+<section class="workshop-moves-filters" aria-label="Workshop and meeting moves">
+
+<input type="radio" id="filter-all" name="workshop-duration" value="showAll" checked>
+<input type="radio" id="filter-five" name="workshop-duration" value="five">
+<input type="radio" id="filter-fifteen" name="workshop-duration" value="fifteen">
+<input type="radio" id="filter-sixty" name="workshop-duration" value="sixty">
+
+<ol class="filters">
+  <li><label for="filter-all">All</label></li>
+  <li><label for="filter-five">~5 min</label></li>
+  <li><label for="filter-fifteen">~15 min</label></li>
+  <li><label for="filter-sixty">60+ min</label></li>
+</ol>
+
+<ol class="workshop-moves-grid">
+  {% for move in resources %}
+    {% set duration = move.duration | default("fifteen") %}
+    <li
+      class="workshop-move-card"
+      data-category="{{ move.categories }}"
+    >
+      <ul class="workshop-move-meta" aria-label="Move details">
+        <li class="resource-tag">{{ move.durationLabel | default(duration) }}</li>
+        {% for fmt in move.format | default([]) %}
+          <li class="resource-tag">{{ fmt }}</li>
+        {% endfor %}
+        {% for supply in move.supplies | default([]) %}
+          <li class="resource-tag">{{ supply }}</li>
+        {% endfor %}
+        {% if move.cringe %}
+          <li class="resource-tag">cringe: {{ move.cringe }}</li>
+        {% endif %}
+      </ul>
+      <h3>{{ move.title }}</h3>
+      <p>{{ move.description }}</p>
+      {% if move.link %}
+        <p><a href="{{ move.link }}" rel="noreferrer noopener">{{ move.linkLabel | default("Open resource") }}</a></p>
+      {% endif %}
+      {% if move.relatedPost %}
+        <p class="workshop-move-related">From <a href="{{ move.relatedPost }}">{{ move.relatedLabel }}</a></p>
+      {% endif %}
+    </li>
+  {% endfor %}
+</ol>
+
+</section>
