@@ -210,7 +210,8 @@
 }
 
 .command-bar-item-name {
-	font-size: var(--font-size-md);
+	font-family: var(--font-family);
+	font-size: var(--font-size-base);
 	font-weight: 500;
 	color: var(--text-color);
 	margin: 0 0 4px 0;
@@ -218,7 +219,7 @@
 
 .command-bar-item-description {
 	font-size: var(--font-size-base);
-	color: var(--color-gray-60);
+	color: var(--text-color);
 	margin: 0;
 }
 
