@@ -342,6 +342,7 @@ h1 {
 }
 
 h2 {
+	font-family: "Inter V";
 	font-size: var(--font-size-lg);
 	font-weight: 800;
 	font-variation-settings: "wght" 750;
