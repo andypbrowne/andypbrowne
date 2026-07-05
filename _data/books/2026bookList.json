@@ -282,7 +282,7 @@
     "author": "Matt Dinniman",
     "type": "book",
     "tags": ["fantasy", "fiction", "humor"],
-    "status": "want-to-read",
+    "status": "read",
     "description": "I will read them all!"
   },
   {
@@ -333,6 +333,18 @@
     "type": "book",
     "tags": ["design", "reference"],
     "status": "want-to-read",
+    "description": ""
+  },
+  {
+    "cover": "https://m.media-amazon.com/images/I/316z7to-npL._SY445_SX342_FMwebp_.jpg",
+    "coverAlt": "Cover of How to Think More Effectively with geometric THINK lettering on a light grey background",
+    "link": "https://www.theschooloflife.com/shop/tsol-press-how-to-think-more-effectively/",
+    "title": "How to Think More Effectively",
+    "subTitle": "A guide to greater productivity, insight and creativity",
+    "author": "The School of Life",
+    "type": "book",
+    "tags": ["psychology", "philosophy", "creativity"],
+    "status": "currently-reading",
     "description": ""
   }
 ]
