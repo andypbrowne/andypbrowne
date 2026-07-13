@@ -20,7 +20,7 @@
     "author": "William Dodson & Laurie Dodson",
     "type": "book",
     "tags": ["parenting", "psychology"],
-    "status": "currently-reading",
+    "status": "read",
     "description": ""
   },
   {
@@ -140,7 +140,7 @@
     "author": "Adam Johnson",
     "type": "",
     "tags": ["fiction", "literature"],
-    "status": "currently-reading",
+    "status": "dnf",
     "description": ""
   },
   {
@@ -308,7 +308,7 @@
     "author": "Matt Dinniman",
     "type": "book",
     "tags": ["fantasy", "fiction", "humor"],
-    "status": "want-to-read",
+    "status": "currently-reading",
     "description": "I will read them all and you will not break me!"
   },
   {
@@ -345,6 +345,66 @@
     "type": "book",
     "tags": ["psychology", "philosophy", "creativity"],
     "status": "currently-reading",
+    "description": ""
+  },
+  {
+    "cover": "https://m.media-amazon.com/images/I/51kD6K4Bx9L._SY445_SX342_FMwebp_.jpg",
+    "coverAlt": "Cover of Red Rising with a textured red wing",
+    "link": "https://www.piercebrown.com/redrisingsaga",
+    "title": "Red Rising",
+    "subTitle": "",
+    "author": "Pierce Brown",
+    "type": "book",
+    "tags": ["sci-fi", "fiction"],
+    "status": "want-to-read",
+    "description": ""
+  },
+  {
+    "cover": "https://m.media-amazon.com/images/I/81ENrS2YfNL._SY522_.jpg",
+    "coverAlt": "Cover of Recursion with a maze-patterned infinity symbol",
+    "link": "https://blakecrouch.com/books/recursion/",
+    "title": "Recursion",
+    "subTitle": "",
+    "author": "Blake Crouch",
+    "type": "book",
+    "tags": ["sci-fi", "fiction"],
+    "status": "want-to-read",
+    "description": ""
+  },
+  {
+    "cover": "https://m.media-amazon.com/images/I/71s6iz6phLL._SY522_.jpg",
+    "coverAlt": "Cover of Funny Money with an orange oil pumpjack wearing a necktie on a blue background",
+    "link": "https://www.amazon.com/dp/0618197273?lv=shuf&channelId=500&plpRedirect=mhFallback",
+    "title": "Funny Money",
+    "subTitle": "",
+    "author": "Mark Singer",
+    "type": "book",
+    "tags": ["non-fiction", "business", "history"],
+    "status": "want-to-read",
+    "description": ""
+  },
+  {
+    "cover": "https://covers.openlibrary.org/b/id/9157148-L.jpg",
+    "coverAlt": "Cover of All Systems Red with a red-lit android figure against a dark background",
+    "link": "https://www.marthawells.com/murderbot1.htm",
+    "title": "All Systems Red",
+    "subTitle": "The Murderbot Diaries",
+    "author": "Martha Wells",
+    "type": "book",
+    "tags": ["sci-fi", "fiction"],
+    "status": "want-to-read",
+    "description": ""
+  },
+  {
+    "cover": "https://covers.openlibrary.org/b/id/10482258-M.jpg",
+    "coverAlt": "Cover of Good Omens with illustrated angel and demon figures",
+    "link": "https://www.neilgaiman.com/works/Books/Good+Omens/",
+    "title": "Good Omens",
+    "subTitle": "The Nice and Accurate Prophecies of Agnes Nutter, Witch",
+    "author": "Neil Gaiman & Terry Pratchett",
+    "type": "book",
+    "tags": ["fantasy", "fiction"],
+    "status": "want-to-read",
     "description": ""
   }
 ]

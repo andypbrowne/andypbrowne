@@ -201,5 +201,27 @@
     "tags": ["historical fiction", "history"],
     "status": "read",
     "description": "Don't visit the Morgan Libary and Museum without reading this book. You won't learn much about J.P. Morgan but you do get a great perspective on New York City, race, and feminism"
+  },
+  {
+    "cover": "https://covers.openlibrary.org/b/id/11937903-M.jpg",
+    "coverAlt": "Cover of Ruined by Design with bold typographic title treatment",
+    "link": "https://www.ruinedby.design/zine",
+    "title": "Ruined by Design",
+    "subTitle": "How Designers Destroyed the World, and What We Can Do to Fix It",
+    "author": "Mike Monteiro",
+    "tags": ["design", "business", "non-fiction"],
+    "status": "read",
+    "description": "I read the newsprint special edition."
+  },
+  {
+    "cover": "https://m.media-amazon.com/images/I/41uE1qssEXL._SY445_SX342_.jpg",
+    "coverAlt": "Cover of Don't Make Me Think, Revisited with illustrated man holding a web page",
+    "link": "https://www.amazon.com/Dont-Make-Think-Revisited-Usability/dp/0321965515",
+    "title": "Don't Make Me Think, Revisited",
+    "subTitle": "A Common Sense Approach to Web Usability",
+    "author": "Steve Krug",
+    "tags": ["design", "accessibility"],
+    "status": "read",
+    "description": ""
   }
 ]
