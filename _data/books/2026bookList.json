@@ -294,7 +294,7 @@
     "author": "Michael Albada",
     "type": "book",
     "tags": ["technology", "AI"],
-    "status": "currently-reading",
+    "status": "dnf",
     "description": ""
   },
   {
@@ -308,7 +308,7 @@
     "author": "Matt Dinniman",
     "type": "book",
     "tags": ["fantasy", "fiction", "humor"],
-    "status": "currently-reading",
+    "status": "read",
     "description": "I will read them all and you will not break me!"
   },
   {
@@ -364,11 +364,11 @@
     "coverAlt": "Cover of Recursion with a maze-patterned infinity symbol",
     "link": "https://blakecrouch.com/books/recursion/",
     "title": "Recursion",
-    "subTitle": "",
+    "subTitle": "A Novel",
     "author": "Blake Crouch",
     "type": "book",
     "tags": ["sci-fi", "fiction"],
-    "status": "want-to-read",
+    "status": "currently-reading",
     "description": ""
   },
   {
