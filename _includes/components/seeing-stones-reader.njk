@@ -1,0 +1,37 @@
+<section class="seeing-stones-reader" aria-labelledby="seeing-stones-reader-heading">
+  <h2 id="seeing-stones-reader-heading">Try a virtual reading</h2>
+
+  <p class="seeing-stones-reader-intro">Hold a question in mind, then spill the stones. What do you see?</p>
+
+  <label class="seeing-stones-question-label" for="seeing-stones-question">Your question</label>
+  <textarea
+    id="seeing-stones-question"
+    class="seeing-stones-question"
+    rows="2"
+    placeholder="Something unknown, non-trivial, and without malicious intent."
+  ></textarea>
+
+  <div class="seeing-stones-actions">
+    <button type="button" class="seeing-stones-spill" id="seeing-stones-spill">
+      Spill the stones
+    </button>
+  </div>
+
+  <div class="seeing-stones-cloth" id="seeing-stones-cloth" aria-live="polite" aria-atomic="true">
+    <p class="seeing-stones-cloth-empty" id="seeing-stones-cloth-empty">Five stones will land here.</p>
+  </div>
+
+  <details class="seeing-stones-prompts">
+    <summary>How to read this spread</summary>
+    <ol>
+      <li>Notice the overall shape and vibe of the stones before you read any single symbol.</li>
+      <li>Look at each symbol. Consider rotation and what sits beside it.</li>
+      <li>Zoom out again. What connects them? What story do they tell together?</li>
+      <li>Draw a conclusion — or sit with the ambiguity.</li>
+    </ol>
+  </details>
+</section>
+
+<script>
+  window.SEEING_STONES = {{ seeingStones.symbols | dump | safe }};
+</script>

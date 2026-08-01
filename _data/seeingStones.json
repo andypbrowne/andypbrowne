@@ -1,0 +1,304 @@
+{
+  "symbols": [
+    {
+      "id": 1,
+      "slug": "symbol-01",
+      "svg": "/assets/svg/seeing-stones/symbol-01.svg"
+    },
+    {
+      "id": 2,
+      "slug": "symbol-02",
+      "svg": "/assets/svg/seeing-stones/symbol-02.svg"
+    },
+    {
+      "id": 3,
+      "slug": "symbol-03",
+      "svg": "/assets/svg/seeing-stones/symbol-03.svg"
+    },
+    {
+      "id": 4,
+      "slug": "symbol-04",
+      "svg": "/assets/svg/seeing-stones/symbol-04.svg"
+    },
+    {
+      "id": 5,
+      "slug": "symbol-05",
+      "svg": "/assets/svg/seeing-stones/symbol-05.svg"
+    },
+    {
+      "id": 6,
+      "slug": "symbol-06",
+      "svg": "/assets/svg/seeing-stones/symbol-06.svg"
+    },
+    {
+      "id": 7,
+      "slug": "symbol-07",
+      "svg": "/assets/svg/seeing-stones/symbol-07.svg"
+    },
+    {
+      "id": 8,
+      "slug": "symbol-08",
+      "svg": "/assets/svg/seeing-stones/symbol-08.svg"
+    },
+    {
+      "id": 9,
+      "slug": "symbol-09",
+      "svg": "/assets/svg/seeing-stones/symbol-09.svg"
+    },
+    {
+      "id": 10,
+      "slug": "symbol-10",
+      "svg": "/assets/svg/seeing-stones/symbol-10.svg"
+    },
+    {
+      "id": 11,
+      "slug": "symbol-11",
+      "svg": "/assets/svg/seeing-stones/symbol-11.svg"
+    },
+    {
+      "id": 12,
+      "slug": "symbol-12",
+      "svg": "/assets/svg/seeing-stones/symbol-12.svg"
+    },
+    {
+      "id": 13,
+      "slug": "symbol-13",
+      "svg": "/assets/svg/seeing-stones/symbol-13.svg"
+    },
+    {
+      "id": 14,
+      "slug": "symbol-14",
+      "svg": "/assets/svg/seeing-stones/symbol-14.svg"
+    },
+    {
+      "id": 15,
+      "slug": "symbol-15",
+      "svg": "/assets/svg/seeing-stones/symbol-15.svg"
+    },
+    {
+      "id": 16,
+      "slug": "symbol-16",
+      "svg": "/assets/svg/seeing-stones/symbol-16.svg"
+    },
+    {
+      "id": 17,
+      "slug": "symbol-17",
+      "svg": "/assets/svg/seeing-stones/symbol-17.svg"
+    },
+    {
+      "id": 18,
+      "slug": "symbol-18",
+      "svg": "/assets/svg/seeing-stones/symbol-18.svg"
+    },
+    {
+      "id": 19,
+      "slug": "symbol-19",
+      "svg": "/assets/svg/seeing-stones/symbol-19.svg"
+    },
+    {
+      "id": 20,
+      "slug": "symbol-20",
+      "svg": "/assets/svg/seeing-stones/symbol-20.svg"
+    },
+    {
+      "id": 21,
+      "slug": "symbol-21",
+      "svg": "/assets/svg/seeing-stones/symbol-21.svg"
+    },
+    {
+      "id": 22,
+      "slug": "symbol-22",
+      "svg": "/assets/svg/seeing-stones/symbol-22.svg"
+    },
+    {
+      "id": 23,
+      "slug": "symbol-23",
+      "svg": "/assets/svg/seeing-stones/symbol-23.svg"
+    },
+    {
+      "id": 24,
+      "slug": "symbol-24",
+      "svg": "/assets/svg/seeing-stones/symbol-24.svg"
+    },
+    {
+      "id": 25,
+      "slug": "symbol-25",
+      "svg": "/assets/svg/seeing-stones/symbol-25.svg"
+    },
+    {
+      "id": 26,
+      "slug": "symbol-26",
+      "svg": "/assets/svg/seeing-stones/symbol-26.svg"
+    },
+    {
+      "id": 27,
+      "slug": "symbol-27",
+      "svg": "/assets/svg/seeing-stones/symbol-27.svg"
+    },
+    {
+      "id": 28,
+      "slug": "symbol-28",
+      "svg": "/assets/svg/seeing-stones/symbol-28.svg"
+    },
+    {
+      "id": 29,
+      "slug": "symbol-29",
+      "svg": "/assets/svg/seeing-stones/symbol-29.svg"
+    },
+    {
+      "id": 30,
+      "slug": "symbol-30",
+      "svg": "/assets/svg/seeing-stones/symbol-30.svg"
+    },
+    {
+      "id": 31,
+      "slug": "symbol-31",
+      "svg": "/assets/svg/seeing-stones/symbol-31.svg"
+    },
+    {
+      "id": 32,
+      "slug": "symbol-32",
+      "svg": "/assets/svg/seeing-stones/symbol-32.svg"
+    },
+    {
+      "id": 33,
+      "slug": "symbol-33",
+      "svg": "/assets/svg/seeing-stones/symbol-33.svg"
+    },
+    {
+      "id": 34,
+      "slug": "symbol-34",
+      "svg": "/assets/svg/seeing-stones/symbol-34.svg"
+    },
+    {
+      "id": 35,
+      "slug": "symbol-35",
+      "svg": "/assets/svg/seeing-stones/symbol-35.svg"
+    },
+    {
+      "id": 36,
+      "slug": "symbol-36",
+      "svg": "/assets/svg/seeing-stones/symbol-36.svg"
+    },
+    {
+      "id": 37,
+      "slug": "symbol-37",
+      "svg": "/assets/svg/seeing-stones/symbol-37.svg"
+    },
+    {
+      "id": 38,
+      "slug": "symbol-38",
+      "svg": "/assets/svg/seeing-stones/symbol-38.svg"
+    },
+    {
+      "id": 39,
+      "slug": "symbol-39",
+      "svg": "/assets/svg/seeing-stones/symbol-39.svg"
+    },
+    {
+      "id": 40,
+      "slug": "symbol-40",
+      "svg": "/assets/svg/seeing-stones/symbol-40.svg"
+    },
+    {
+      "id": 41,
+      "slug": "symbol-41",
+      "svg": "/assets/svg/seeing-stones/symbol-41.svg"
+    },
+    {
+      "id": 42,
+      "slug": "symbol-42",
+      "svg": "/assets/svg/seeing-stones/symbol-42.svg"
+    },
+    {
+      "id": 43,
+      "slug": "symbol-43",
+      "svg": "/assets/svg/seeing-stones/symbol-43.svg"
+    },
+    {
+      "id": 44,
+      "slug": "symbol-44",
+      "svg": "/assets/svg/seeing-stones/symbol-44.svg"
+    },
+    {
+      "id": 45,
+      "slug": "symbol-45",
+      "svg": "/assets/svg/seeing-stones/symbol-45.svg"
+    },
+    {
+      "id": 46,
+      "slug": "symbol-46",
+      "svg": "/assets/svg/seeing-stones/symbol-46.svg"
+    },
+    {
+      "id": 47,
+      "slug": "symbol-47",
+      "svg": "/assets/svg/seeing-stones/symbol-47.svg"
+    },
+    {
+      "id": 48,
+      "slug": "symbol-48",
+      "svg": "/assets/svg/seeing-stones/symbol-48.svg"
+    },
+    {
+      "id": 49,
+      "slug": "symbol-49",
+      "svg": "/assets/svg/seeing-stones/symbol-49.svg"
+    },
+    {
+      "id": 50,
+      "slug": "symbol-50",
+      "svg": "/assets/svg/seeing-stones/symbol-50.svg"
+    },
+    {
+      "id": 51,
+      "slug": "symbol-51",
+      "svg": "/assets/svg/seeing-stones/symbol-51.svg"
+    },
+    {
+      "id": 52,
+      "slug": "symbol-52",
+      "svg": "/assets/svg/seeing-stones/symbol-52.svg"
+    },
+    {
+      "id": 53,
+      "slug": "symbol-53",
+      "svg": "/assets/svg/seeing-stones/symbol-53.svg"
+    },
+    {
+      "id": 54,
+      "slug": "symbol-54",
+      "svg": "/assets/svg/seeing-stones/symbol-54.svg"
+    },
+    {
+      "id": 55,
+      "slug": "symbol-55",
+      "svg": "/assets/svg/seeing-stones/symbol-55.svg"
+    },
+    {
+      "id": 56,
+      "slug": "symbol-56",
+      "svg": "/assets/svg/seeing-stones/symbol-56.svg"
+    },
+    {
+      "id": 57,
+      "slug": "symbol-57",
+      "svg": "/assets/svg/seeing-stones/symbol-57.svg"
+    },
+    {
+      "id": 58,
+      "slug": "symbol-58",
+      "svg": "/assets/svg/seeing-stones/symbol-58.svg"
+    },
+    {
+      "id": 59,
+      "slug": "symbol-59",
+      "svg": "/assets/svg/seeing-stones/symbol-59.svg"
+    },
+    {
+      "id": 60,
+      "slug": "symbol-60",
+      "svg": "/assets/svg/seeing-stones/symbol-60.svg"
+    }
+  ]
+}
