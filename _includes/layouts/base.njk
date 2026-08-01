@@ -19,7 +19,7 @@
 		<meta name="og:description" content="{{ description or renderData.description }}" />
 		<meta property="og:image" content="/{{ thumbnail or renderData.thumbnail or metadata.thumbnail}}">
 		<meta name="twitter:image:alt" content="{{ thumbnailAlt or renderData.thumbnailAlt or metadata.thumbnailAlt }}">
-		<meta property="og:url" content="{{ page.url }}">
+		<meta property="og:url" content="{{ page.url | htmlBaseUrl(metadata.url) }}">
 
 		<!-- favicons -->
 		<link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
@@ -140,7 +140,7 @@
 			</div>
 			<div class="license">
 			<p>
-				This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>
+				This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>
 			</p>
 			<p>
 				andypbrowne.com {{ helpers.currentYear() }} 
