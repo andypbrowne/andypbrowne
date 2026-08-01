@@ -9,6 +9,7 @@
 		Content-Security-Policy = "frame-ancestors 'none'; object-src 'none'; base-uri 'none'"
 		Referrer-Policy = "strict-origin-when-cross-origin"
 		Strict-Transport-Security = "max-age=31536000; includeSubDomains"
+		Link = "</llms.txt>; rel=\"alternate\"; type=\"text/plain\", </index.json>; rel=\"alternate\"; type=\"application/json\", </feed/feed.xml>; rel=\"alternate\"; type=\"application/atom+xml\", </sitemap.xml>; rel=\"sitemap\""
 
 [[headers]]
 	for = "/.well-known/security.txt"

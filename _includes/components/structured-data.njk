@@ -1,0 +1,59 @@
+{%- set pageUrl = page.url | htmlBaseUrl(metadata.url) -%}
+{%- set authorId = metadata.url ~ "#person" -%}
+{%- set websiteId = metadata.url ~ "#website" -%}
+{%- if page.url == "/" -%}
+<script type="application/ld+json">
+{
+	"@context": "https://schema.org",
+	"@graph": [
+		{
+			"@type": "WebSite",
+			"@id": {{ websiteId | dump | safe }},
+			"url": {{ metadata.url | dump | safe }},
+			"name": {{ metadata.title | dump | safe }},
+			"description": {{ metadata.description | dump | safe }},
+			"publisher": { "@id": {{ authorId | dump | safe }} }
+		},
+		{
+			"@type": "Person",
+			"@id": {{ authorId | dump | safe }},
+			"name": {{ metadata.author.name | dump | safe }},
+			"url": {{ metadata.author.url | dump | safe }},
+			"sameAs": [
+				"https://www.linkedin.com/in/andypbrowne",
+				"https://bsky.app/profile/andypbrowne.bsky.social",
+				"https://www.instagram.com/andypbrowne/",
+				"https://github.com/andypbrowne",
+				"https://codepen.io/andypbrowne"
+			]
+		}
+	]
+}
+</script>
+{%- elif tags and ("post" in tags or "case-study" in tags) and date -%}
+{%- set postImage = thumbnail or renderData.thumbnail -%}
+{%- if postImage and postImage[0] != "/" -%}
+{%- set postImage = "/" ~ postImage -%}
+{%- endif -%}
+<script type="application/ld+json">
+{
+	"@context": "https://schema.org",
+	"@type": "BlogPosting",
+	"headline": {{ title | dump | safe }},
+	"description": {{ (description or renderData.description) | dump | safe }},
+	"datePublished": {{ (date | htmlDateString) | dump | safe }},
+	"url": {{ pageUrl | dump | safe }},
+	"author": {
+		"@type": "Person",
+		"name": {{ metadata.author.name | dump | safe }},
+		"url": {{ metadata.author.url | dump | safe }}
+	},
+	"publisher": {
+		"@type": "Person",
+		"name": {{ metadata.author.name | dump | safe }},
+		"url": {{ metadata.author.url | dump | safe }}
+	}{% if postImage %},
+	"image": {{ (postImage | htmlBaseUrl(metadata.url)) | dump | safe }}{% endif %}
+}
+</script>
+{%- endif -%}

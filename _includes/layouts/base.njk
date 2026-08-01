@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="color-scheme" content="light dark">
 		<meta name="theme-color" content="#FFFAF6" media="(prefers-color-scheme: light)">
 		<meta name="theme-color" content="#101C27" media="(prefers-color-scheme: dark)">
 		<meta name="apple-mobile-web-app-capable" content="yes">
@@ -17,9 +18,17 @@
 		<meta property="og:title" content="{{ title or renderData.title or metadata.title }}"/>
 		<meta property="og:type" content="article" />
 		<meta name="og:description" content="{{ description or renderData.description }}" />
-		<meta property="og:image" content="/{{ thumbnail or renderData.thumbnail or metadata.thumbnail}}">
+		{%- set ogImage = thumbnail or renderData.thumbnail or metadata.thumbnail -%}
+		{%- if ogImage -%}
+		{%- if ogImage[0] != "/" -%}
+		{%- set ogImage = "/" ~ ogImage -%}
+		{%- endif -%}
+		<meta property="og:image" content="{{ ogImage | htmlBaseUrl(metadata.url) }}">
+		{%- endif -%}
 		<meta name="twitter:image:alt" content="{{ thumbnailAlt or renderData.thumbnailAlt or metadata.thumbnailAlt }}">
 		<meta property="og:url" content="{{ page.url | htmlBaseUrl(metadata.url) }}">
+
+		{% include "components/structured-data.njk" %}
 
 		<!-- favicons -->
 		<link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">

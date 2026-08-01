@@ -148,6 +148,15 @@
 	box-sizing: border-box;
 }
 
+:focus {
+	outline: none;
+}
+
+:focus-visible {
+	outline: 2px solid var(--color-midnight-60);
+	outline-offset: 2px;
+}
+
 @view-transition {
 	navigation: auto;
 }
