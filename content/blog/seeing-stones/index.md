@@ -7,7 +7,7 @@ date: 2026-08-01
 tags:
   - post
   - field-guide
-draft: true
+draft: false
 css: /assets/css/seeing-stones.css
 js: /assets/js/seeing-stones.js
 ---
