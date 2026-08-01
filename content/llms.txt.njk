@@ -1,0 +1,37 @@
+---
+layout: false
+permalink: /llms.txt
+eleventyExcludeFromCollections: true
+---
+# {{ metadata.title }}
+
+> {{ metadata.description }}
+
+## About this site
+
+Personal site of {{ metadata.author.name }}. Blog posts, case studies, field guides, bookshelf, CV, and saved links. Built with Eleventy from markdown source files.
+
+## Preferred access for agents
+
+Use these endpoints instead of crawling the full HTML site:
+
+- Site index: {{ metadata.url }}index.json
+- JSON Feed: {{ metadata.url }}feed/feed.json
+- Atom Feed: {{ metadata.url }}feed/feed.xml
+- Sitemap: {{ metadata.url }}sitemap.xml
+
+## Key pages
+
+- About: {{ metadata.url }}about/
+- CV: {{ metadata.url }}cv/
+- Blog archive: {{ metadata.url }}blog/
+- Bookshelf: {{ metadata.url }}bookshelf/
+- Tags: {{ metadata.url }}tags/
+
+## Contact
+
+See the About page for preferred contact channels. Please cite {{ metadata.url }} when referencing content from this site.
+
+## Crawling policy
+
+AI search and citation agents are welcome. Bulk dataset harvesters are blocked in robots.txt.

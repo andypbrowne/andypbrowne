@@ -1,0 +1,40 @@
+---
+layout: false
+permalink: /index.json
+eleventyExcludeFromCollections: true
+---
+{
+	"version": "1.0",
+	"generated": "{{ page.date | dateToRfc3339 }}",
+	"site": {
+		"title": {{ metadata.title | dump | safe }},
+		"url": {{ metadata.url | dump | safe }},
+		"description": {{ metadata.description | dump | safe }},
+		"language": {{ metadata.language | dump | safe }},
+		"author": {
+			"name": {{ metadata.author.name | dump | safe }},
+			"url": {{ metadata.author.url | dump | safe }}
+		}
+	},
+	"feeds": {
+		"atom": {{ "/feed/feed.xml" | htmlBaseUrl(metadata.url) | dump | safe }},
+		"json": {{ "/feed/feed.json" | htmlBaseUrl(metadata.url) | dump | safe }}
+	},
+	"llms": {{ "/llms.txt" | htmlBaseUrl(metadata.url) | dump | safe }},
+	"sitemap": {{ "/sitemap.xml" | htmlBaseUrl(metadata.url) | dump | safe }},
+	"pages": [
+		{%- for item in commandIndex.commands %}
+		{%- set absoluteUrl %}{{ item.url | htmlBaseUrl(metadata.url) }}{% endset %}
+		{
+			"title": {{ item.name | dump | safe }},
+			"description": {{ item.description | dump | safe }},
+			"url": {{ absoluteUrl | dump | safe }}{% if item.date %},
+			"date": {{ item.date | dump | safe }}{% endif %}{% if item.tags and item.tags.length %},
+			"tags": {{ item.tags | dump | safe }}{% endif %}{% if item.isCaseStudy %},
+			"type": "case-study"{% elif item.date %},
+			"type": "post"{% else %},
+			"type": "page"{% endif %}
+		}{% if not loop.last %},{% endif %}
+		{%- endfor %}
+	]
+}

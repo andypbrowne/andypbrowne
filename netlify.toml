@@ -2,3 +2,9 @@
 	publish = "_site"
 	command = "npm run build"
 
+[[headers]]
+	for = "/*"
+	[headers.values]
+		X-Content-Type-Options = "nosniff"
+		Content-Security-Policy = "frame-ancestors 'none'; object-src 'none'; base-uri 'none'"
+
