@@ -165,7 +165,7 @@ article:has(.podcast-layout) > p:first-of-type::first-letter {
     align-items: start;
 }
 
-.podcast-grid > * {
+.podcast-grid > .podcast-tile {
     grid-column: auto / span 1;
     grid-row: auto / span 1;
 }

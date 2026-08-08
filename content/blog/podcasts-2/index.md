@@ -10,6 +10,9 @@ tags:
 draft: false
 css: /assets/css/podcasts-2.css
 js: /assets/js/podcasts-2-dialog.js
+# HTML-heavy page: Markdown would wrap tiles in <p> and break the grid.
+# Write prose below as HTML (see Try next). Site-wide .md posts still get njk→md via config.
+templateEngineOverride: njk
 resources:
   - title: But Why
     image: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts112/v4/ad/e9/90/ade9900f-7bff-100b-c444-0687ac7f28ea/mza_4228241252633750087.png/600x600bb.webp"
@@ -447,15 +450,17 @@ resources:
   </dialog>
 {% endfor %}
 
-## Try next
+<h2>Try next</h2>
 
-Based on what’s already on this list — narrative nonfiction, smart explainers, family-friendly curiosity, and a little humor — these are the five I’ll try next:
+<p>Based on what’s already on this list — narrative nonfiction, smart explainers, family-friendly curiosity, and a little humor — these are the five I’ll try next:</p>
 
-1. [Revisionist History](https://revisionisthistory.com/) — Pushkin sibling to *Cautionary Tales* and *Against the Rules*; history and ideas reframed with narrative punch
-2. [Ologies](https://www.alieward.com/ologies) — *Unexplainable* / *Radiolab* energy with infectious enthusiasm; one deep dive per “-ology”
-3. [Heavyweight](https://gimletmedia.com/shows/heavyweight) — emotional, funny quests; closest cousin to *Search Engine* and *Hyperfixed*
-4. [Hardcore History](https://www.dancarlin.com/hardcore-history-series/) — epic WWII-depth history when you want more after *World War II with Tom Hanks*
-5. [Brains On!](https://www.brainson.org/) — kid questions, science answers; very *But Why*-adjacent for family listening
+<ol>
+  <li><a href="https://revisionisthistory.com/">Revisionist History</a> — Pushkin sibling to <em>Cautionary Tales</em> and <em>Against the Rules</em>; history and ideas reframed with narrative punch</li>
+  <li><a href="https://www.alieward.com/ologies">Ologies</a> — <em>Unexplainable</em> / <em>Radiolab</em> energy with infectious enthusiasm; one deep dive per “-ology”</li>
+  <li><a href="https://gimletmedia.com/shows/heavyweight">Heavyweight</a> — emotional, funny quests; closest cousin to <em>Search Engine</em> and <em>Hyperfixed</em></li>
+  <li><a href="https://www.dancarlin.com/hardcore-history-series/">Hardcore History</a> — epic WWII-depth history when you want more after <em>World War II with Tom Hanks</em></li>
+  <li><a href="https://www.brainson.org/">Brains On!</a> — kid questions, science answers; very <em>But Why</em>-adjacent for family listening</li>
+</ol>
 
 <div class="vh">
 
