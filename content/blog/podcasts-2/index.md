@@ -10,7 +10,6 @@ tags:
 draft: false
 css: /assets/css/podcasts-2.css
 js: /assets/js/podcasts-2-dialog.js
-templateEngineOverride: njk
 resources:
   - title: But Why
     image: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts112/v4/ad/e9/90/ade9900f-7bff-100b-c444-0687ac7f28ea/mza_4228241252633750087.png/600x600bb.webp"
@@ -460,61 +459,77 @@ Based on what’s already on this list — narrative nonfiction, smart explainer
 
 <div class="vh">
 
-## Podcast recommendations (detailed)
+<h2>Podcast recommendations (detailed)</h2>
 
-Suggestions based on favorites in this post. High-production narrative nonfiction, curious explainers, and warm humor — not shock-jock true crime or bro-podcast energy.
+<p>Suggestions based on favorites in this post. High-production narrative nonfiction, curious explainers, and warm humor — not shock-jock true crime or bro-podcast energy.</p>
 
-### Taste profile
+<h3>Taste profile</h3>
 
-- **Narrative nonfiction** — Pushkin, Vox, NYT, NPR, WNYC (Cautionary Tales, The Daily, Radiolab)
-- **History with personality** — vivid and human, not textbook (The Rest Is History, Short History Of, WWII with Tom Hanks)
-- **Smart explainers** — news, tech, and systems (Hard Fork, Planet Money, Sold a Story)
-- **Curious “how does the world work?”** — 99% Invisible, Search Engine, Hyperfixed, Unexplainable
-- **Family-friendly listens** that still work for adults (But Why, Terrestrials, Twenty Thousand Hertz)
-- **Warm humor** without being pure comedy (Conan, Rest Is History)
+<ul>
+  <li><strong>Narrative nonfiction</strong> — Pushkin, Vox, NYT, NPR, WNYC (Cautionary Tales, The Daily, Radiolab)</li>
+  <li><strong>History with personality</strong> — vivid and human, not textbook (The Rest Is History, Short History Of, WWII with Tom Hanks)</li>
+  <li><strong>Smart explainers</strong> — news, tech, and systems (Hard Fork, Planet Money, Sold a Story)</li>
+  <li><strong>Curious “how does the world work?”</strong> — 99% Invisible, Search Engine, Hyperfixed, Unexplainable</li>
+  <li><strong>Family-friendly listens</strong> that still work for adults (But Why, Terrestrials, Twenty Thousand Hertz)</li>
+  <li><strong>Warm humor</strong> without being pure comedy (Conan, Rest Is History)</li>
+</ul>
 
-### Strong matches
+<h3>Strong matches</h3>
 
-- [Revisionist History](https://revisionisthistory.com/) — Malcolm Gladwell, Pushkin
-- [Ologies](https://www.alieward.com/ologies) — Alie Ward
-- [Heavyweight](https://gimletmedia.com/shows/heavyweight) — Jonathan Goldstein
-- [Decoder Ring](https://slate.com/podcasts/decoder-ring) — Willa Paskin; cultural mysteries like Imaginary Worlds and 99% Invisible
-- [Hardcore History](https://www.dancarlin.com/hardcore-history-series/) — Dan Carlin; start with “Blueprint for Armageddon” or “Supernova in the East”
+<ul>
+  <li><a href="https://revisionisthistory.com/">Revisionist History</a> — Malcolm Gladwell, Pushkin</li>
+  <li><a href="https://www.alieward.com/ologies">Ologies</a> — Alie Ward</li>
+  <li><a href="https://gimletmedia.com/shows/heavyweight">Heavyweight</a> — Jonathan Goldstein</li>
+  <li><a href="https://slate.com/podcasts/decoder-ring">Decoder Ring</a> — Willa Paskin; cultural mysteries like Imaginary Worlds and 99% Invisible</li>
+  <li><a href="https://www.dancarlin.com/hardcore-history-series/">Hardcore History</a> — Dan Carlin; start with “Blueprint for Armageddon” or “Supernova in the East”</li>
+</ul>
 
-### History and narrative
+<h3>History and narrative</h3>
 
-- [Slow Burn](https://slate.com/podcasts/slow-burn) — season-long historical investigations
-- [You’re Dead to Me](https://www.bbc.co.uk/programmes/p07mdbhg) — funny, accessible BBC history
-- [Revolutions](https://www.revolutionspodcast.com/) — Mike Duncan; long-form narrative
-- [Stuff the British Stole](https://www.abc.net.au/listen/programs/stuff-the-british-stole/) — colonial history through objects and stories
+<ul>
+  <li><a href="https://slate.com/podcasts/slow-burn">Slow Burn</a> — season-long historical investigations</li>
+  <li><a href="https://www.bbc.co.uk/programmes/p07mdbhg">You’re Dead to Me</a> — funny, accessible BBC history</li>
+  <li><a href="https://www.revolutionspodcast.com/">Revolutions</a> — Mike Duncan; long-form narrative</li>
+  <li><a href="https://www.abc.net.au/listen/programs/stuff-the-british-stole/">Stuff the British Stole</a> — colonial history through objects and stories</li>
+</ul>
 
-### News, tech, and systems
+<h3>News, tech, and systems</h3>
 
-- [Pivot](https://www.vox.com/pivot-podcast) — tech, business, and power; pairs with Hard Fork
-- [The Indicator](https://www.npr.org/podcasts/510325/the-indicator-from-planet-money) — short Planet Money explainers
-- [Decoder](https://www.theverge.com/decoder-podcast-with-nilay-patel) — how products and companies actually work
+<ul>
+  <li><a href="https://www.vox.com/pivot-podcast">Pivot</a> — tech, business, and power; pairs with Hard Fork</li>
+  <li><a href="https://www.npr.org/podcasts/510325/the-indicator-from-planet-money">The Indicator</a> — short Planet Money explainers</li>
+  <li><a href="https://www.theverge.com/decoder-podcast-with-nilay-patel">Decoder</a> — how products and companies actually work</li>
+</ul>
 
-### Kids and family
+<h3>Kids and family</h3>
 
-- [Brains On!](https://www.brainson.org/) — science Q&A for kids
-- [Wow in the World](https://www.npr.org/podcasts/510321/wow-in-the-world) — upbeat NPR science adventures
-- [Circle Round](https://www.wbur.org/circle-round) — folktales; good bedtime option
+<ul>
+  <li><a href="https://www.brainson.org/">Brains On!</a> — science Q&amp;A for kids</li>
+  <li><a href="https://www.npr.org/podcasts/510321/wow-in-the-world">Wow in the World</a> — upbeat NPR science adventures</li>
+  <li><a href="https://www.wbur.org/circle-round">Circle Round</a> — folktales; good bedtime option</li>
+</ul>
 
-### Web and craft
+<h3>Web and craft</h3>
 
-- [Syntax](https://syntax.fm/) — practical front-end talk
-- [Soft Skills Engineering](https://softskills.audio/) — career and teamwork; complements Shop Talk Show
-- [Articles of Interest](https://articlesofinterest.substack.com/) — Avery Trufelman; design and culture after 99% Invisible
+<ul>
+  <li><a href="https://syntax.fm/">Syntax</a> — practical front-end talk</li>
+  <li><a href="https://softskills.audio/">Soft Skills Engineering</a> — career and teamwork; complements Shop Talk Show</li>
+  <li><a href="https://articlesofinterest.substack.com/">Articles of Interest</a> — Avery Trufelman; design and culture after 99% Invisible</li>
+</ul>
 
-### Comedy and interviews
+<h3>Comedy and interviews</h3>
 
-- [SmartLess](https://www.smartless.com/) — A-list guests, loose and funny
-- [Off Menu](https://offmenu.witherspoon.com/) — warm celebrity chats over imaginary meals
+<ul>
+  <li><a href="https://www.smartless.com/">SmartLess</a> — A-list guests, loose and funny</li>
+  <li><a href="https://offmenu.witherspoon.com/">Off Menu</a> — warm celebrity chats over imaginary meals</li>
+</ul>
 
-### Investigative
+<h3>Investigative</h3>
 
-- [Nice White Parents](https://www.nytimes.com/2020/07/23/podcasts/nice-white-parents-serial.html) — Serial / NYT
-- [The Retrievals](https://www.nytimes.com/2023/06/22/podcasts/the-retrievals-ivf-serial.html) — NYT; same “how did we let this happen?” vein as Sold a Story
+<ul>
+  <li><a href="https://www.nytimes.com/2020/07/23/podcasts/nice-white-parents-serial.html">Nice White Parents</a> — Serial / NYT</li>
+  <li><a href="https://www.nytimes.com/2023/06/22/podcasts/the-retrievals-ivf-serial.html">The Retrievals</a> — NYT; same “how did we let this happen?” vein as Sold a Story</li>
+</ul>
 
 </div>
 

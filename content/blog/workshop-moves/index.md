@@ -9,7 +9,6 @@ tags:
   - field-guide
 draft: true
 css: /assets/css/workshop-moves.css
-templateEngineOverride: njk
 resources:
   - title: Custom license plate
     description: Ask what someone would put on a custom plate. You learn identity, humor, and hobbies fast. My answer is LEGO® DAD — which opens a story about building with my daughter.
