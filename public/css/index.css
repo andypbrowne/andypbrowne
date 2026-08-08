@@ -188,7 +188,9 @@ article {
 	margin: 0 auto;
 }
 
-article > p:first-of-type::first-letter {
+/* Drop cap: first direct paragraph in the post intro — before the first heading */
+article > p:first-of-type:has(~ :is(h2, h3, h4, h5, h6))::first-letter,
+article:not(:has(> :is(h2, h3, h4, h5, h6))) > p:first-of-type::first-letter {
 	float: left;
 	font-family: var(--font-family-cedar);
 	font-size: 6.2rem;
