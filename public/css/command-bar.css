@@ -376,8 +376,17 @@
 		/* font-size: var(--font-size-xs); */
 	}
 
-	.command-bar-item {
+	.command-bar-item,
+	.command-bar-featured-item {
 		padding: 10px 12px;
+	}
+
+	.command-bar-section-header {
+		padding: 12px 12px 8px 12px;
+	}
+
+	.command-bar-section-link {
+		padding: 8px 12px 12px 12px;
 	}
 
 	.command-bar-header {
