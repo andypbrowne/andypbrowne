@@ -71,6 +71,21 @@ resources:
         link: "https://www.noiser.com/short-history-of/bletchley-park"
       - title: The Dambusters
         link: "https://www.noiser.com/short-history-of/the-dambusters"
+  - title: World War II with Tom Hanks
+    image: https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/ca/de/71/cade7141-30ec-5437-99aa-4b43a10564f0/mza_7246282932912745813.jpg/600x600bb.jpg
+    alt: Cover of World War II with Tom Hanks from the HISTORY Channel
+    description: A sweeping twenty-hour retelling of WWII guided by Tom Hanks—from fascism’s rise to Hiroshima—with expert interviews and human stories at every turn.
+    link: "https://www.history.com/podcasts/world-war-ii-with-tom-hanks"
+    tags:
+      - history
+      - storytelling
+    favoriteEpisodes:
+      - title: The Beginning
+        link: "https://podcasts.apple.com/us/podcast/the-beginning/id1896760409?i=1000769611430"
+      - title: Pearl Harbor
+        link: "https://podcasts.apple.com/us/podcast/pearl-harbor/id1896760409?i=1000770737795"
+      - title: Darkness Falls
+        link: "https://podcasts.apple.com/us/podcast/darkness-falls/id1896760409?i=1000771834521"
   - title: The Daily
     image: https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/ab/64/66/ab6466a9-9a7d-e20e-7a3d-bc5be37d29ce/mza_15084852813176276273.jpg/600x600bb.webp
     alt: A graphic cover including a gradient that looks like a sunrise. The NY Times logo is prominant
@@ -432,6 +447,76 @@ resources:
     </div>
   </dialog>
 {% endfor %}
+
+## Try next
+
+Based on what’s already on this list — narrative nonfiction, smart explainers, family-friendly curiosity, and a little humor — these are the five I’ll try next:
+
+1. [Revisionist History](https://revisionisthistory.com/) — Pushkin sibling to *Cautionary Tales* and *Against the Rules*; history and ideas reframed with narrative punch
+2. [Ologies](https://www.alieward.com/ologies) — *Unexplainable* / *Radiolab* energy with infectious enthusiasm; one deep dive per “-ology”
+3. [Heavyweight](https://gimletmedia.com/shows/heavyweight) — emotional, funny quests; closest cousin to *Search Engine* and *Hyperfixed*
+4. [Hardcore History](https://www.dancarlin.com/hardcore-history-series/) — epic WWII-depth history when you want more after *World War II with Tom Hanks*
+5. [Brains On!](https://www.brainson.org/) — kid questions, science answers; very *But Why*-adjacent for family listening
+
+<div class="vh">
+
+## Podcast recommendations (detailed)
+
+Suggestions based on favorites in this post. High-production narrative nonfiction, curious explainers, and warm humor — not shock-jock true crime or bro-podcast energy.
+
+### Taste profile
+
+- **Narrative nonfiction** — Pushkin, Vox, NYT, NPR, WNYC (Cautionary Tales, The Daily, Radiolab)
+- **History with personality** — vivid and human, not textbook (The Rest Is History, Short History Of, WWII with Tom Hanks)
+- **Smart explainers** — news, tech, and systems (Hard Fork, Planet Money, Sold a Story)
+- **Curious “how does the world work?”** — 99% Invisible, Search Engine, Hyperfixed, Unexplainable
+- **Family-friendly listens** that still work for adults (But Why, Terrestrials, Twenty Thousand Hertz)
+- **Warm humor** without being pure comedy (Conan, Rest Is History)
+
+### Strong matches
+
+- [Revisionist History](https://revisionisthistory.com/) — Malcolm Gladwell, Pushkin
+- [Ologies](https://www.alieward.com/ologies) — Alie Ward
+- [Heavyweight](https://gimletmedia.com/shows/heavyweight) — Jonathan Goldstein
+- [Decoder Ring](https://slate.com/podcasts/decoder-ring) — Willa Paskin; cultural mysteries like Imaginary Worlds and 99% Invisible
+- [Hardcore History](https://www.dancarlin.com/hardcore-history-series/) — Dan Carlin; start with “Blueprint for Armageddon” or “Supernova in the East”
+
+### History and narrative
+
+- [Slow Burn](https://slate.com/podcasts/slow-burn) — season-long historical investigations
+- [You’re Dead to Me](https://www.bbc.co.uk/programmes/p07mdbhg) — funny, accessible BBC history
+- [Revolutions](https://www.revolutionspodcast.com/) — Mike Duncan; long-form narrative
+- [Stuff the British Stole](https://www.abc.net.au/listen/programs/stuff-the-british-stole/) — colonial history through objects and stories
+
+### News, tech, and systems
+
+- [Pivot](https://www.vox.com/pivot-podcast) — tech, business, and power; pairs with Hard Fork
+- [The Indicator](https://www.npr.org/podcasts/510325/the-indicator-from-planet-money) — short Planet Money explainers
+- [Decoder](https://www.theverge.com/decoder-podcast-with-nilay-patel) — how products and companies actually work
+
+### Kids and family
+
+- [Brains On!](https://www.brainson.org/) — science Q&A for kids
+- [Wow in the World](https://www.npr.org/podcasts/510321/wow-in-the-world) — upbeat NPR science adventures
+- [Circle Round](https://www.wbur.org/circle-round) — folktales; good bedtime option
+
+### Web and craft
+
+- [Syntax](https://syntax.fm/) — practical front-end talk
+- [Soft Skills Engineering](https://softskills.audio/) — career and teamwork; complements Shop Talk Show
+- [Articles of Interest](https://articlesofinterest.substack.com/) — Avery Trufelman; design and culture after 99% Invisible
+
+### Comedy and interviews
+
+- [SmartLess](https://www.smartless.com/) — A-list guests, loose and funny
+- [Off Menu](https://offmenu.witherspoon.com/) — warm celebrity chats over imaginary meals
+
+### Investigative
+
+- [Nice White Parents](https://www.nytimes.com/2020/07/23/podcasts/nice-white-parents-serial.html) — Serial / NYT
+- [The Retrievals](https://www.nytimes.com/2023/06/22/podcasts/the-retrievals-ivf-serial.html) — NYT; same “how did we let this happen?” vein as Sold a Story
+
+</div>
 
 <h2>Recommend something</h2>
 
