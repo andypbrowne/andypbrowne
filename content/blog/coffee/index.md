@@ -144,6 +144,19 @@ resources:
     link: https://counterculturecoffee.com/products/apollo
     image: ./apollo.jpg
     alt: a sunny gradient printing on coffee bag
+  - brand: Ace Coffee Outpost
+    name: Primer
+    origin:
+      - Multi-origin
+    process: 
+    roast: Medium
+    flavors:
+      - Pecan
+      - Baker's Chocolate
+      - Hazelnut
+    link: https://acecoffeeoutpost.com/collections/coffees/products/breakfast-blend
+    image: ./ace.jpg
+    alt: Kraft paper bag with bold Ace Coffee lettering
 ---
 
 <div class="grid"> {% for resource in resources %}
@@ -172,20 +185,65 @@ resources:
         <hr>
     </div>{% endfor %}</div>
 
+## Try next
+
+Based on what's already on this list — bright Ethiopias, light–medium roasts, and approachable Brooklyn roasters — these are the five I’ll reach for next:
+
+1. [Ace Coffee Outpost — Ethiopia Natural Yirgacheffe](https://acecoffeeoutpost.com/products/ethiopia-natural-yirgacheffe) — same roaster as Primer; fruit-forward Yirgacheffe energy
+2. [Onyx — Ethiopia Chelbessa](https://onyxcoffeelab.com/products/ethiopia-chelbessa) — in the Apollo / Negus lane: citrus, floral, clean
+3. [La Cabra — current washed Ethiopia or Colombia](https://us.lacabra.com/collections/coffee) — a step up in curiosity
+4. [Coffee Collective — Guatemala Finca Vista Hermosa](https://coffeecollective.dk/collections/filter-coffee) — sweet citrus structure, close to Yafa Huehuetenango
+5. [Sey — current washed Ethiopia](https://www.seycoffee.com/collections/coffee) — local, tea-like florals; El Diviso Gesha is a splurge
+
 <div class="vh">
 
-Coffee to try based on these favorites (AI recomendations)
+## Coffee recommendations (detailed)
 
-- [JBC](https://jbccoffeeroasters.com/product/mengeche-derso-natural/)
-- [Browny Ethiopia Medium Roast](https://brownycoffee.com/products/ethiopia-medium-roast-coffee)
-- [Coffee Man Honduras + Brasil Rise From the Ashes Blend](https://drinkcoffeeman.com/products/honduras-brazil-rise-from-the-ashes-blend-copy)  - This is too dark
-- [La Cabra Coffee](https://us.lacabra.com/collections/coffee)
-- [Sey El Diviso](https://www.seycoffee.com/products/el-diviso-gesha)
-- [Onyx Coffee Lab Ethiopia Chelbessa](https://onyxcoffeelab.com/products/ethiopia-chelbessa)
-- [Tim Wendelboe Finca Tamana Variedad Colombia](https://timwendelboe.no/product/finca-tamana-colombian-filter-coffe-2/)
-- [Coffee Collective – Guatemala Finca Vista Hermosa](https://coffeecollective.dk/collections/filter-coffee)
+Suggestions based on favorites in this post. Light–medium roast, bright and sweet, rarely heavy or dark.
+
+### Taste profile
+
+- **Bright, clean cups** — citrus, cherry, floral, tea-like notes (Apollo, Negus, Nura Korate, Vivid Bloom)
+- **Ethiopia as a through-line** — half the list is Ethiopian or East African
+- **Sweet structure without heaviness** — honey, almond, caramel, cocoa (Jumpstart, Toro, Yafa, Primer)
+- **NYC/Brooklyn roasters** — Brooklyn Roasting, Yafa, Devoción, Oslo, Ace, Partners, Superlost
+
+### Strong matches
+
+**Ethiopia, washed, bright**
+
+- [Onyx — Ethiopia Chelbessa](https://onyxcoffeelab.com/products/ethiopia-chelbessa)
+- [Sey — El Diviso Gesha](https://www.seycoffee.com/products/el-diviso-gesha) — more floral/tea, pricier
+- [Ace Coffee Outpost — Ethiopia Natural Yirgacheffe](https://acecoffeeoutpost.com/products/ethiopia-natural-yirgacheffe)
+- [Counter Culture — Idido](https://counterculturecoffee.com/products/idido) — natural-leaning Ethiopian counterpart to Apollo
+
+**Guatemala / Central America, sweet + citrus**
+
+- [Coffee Collective — Guatemala Finca Vista Hermosa](https://coffeecollective.dk/collections/filter-coffee)
+- [Devoción — single origins](https://www.devocion.com/collections/all-coffee)
+
+**Fruit + structure (Supernatural lane)**
+
+- [JBC — Mengeche Derso Natural](https://jbccoffeeroasters.com/product/mengeche-derso-natural/)
+- [La Cabra](https://us.lacabra.com/collections/coffee) — washed Ethiopias and light Colombias
+
+### Brooklyn-adjacent
+
+- [Sey](https://www.seycoffee.com/collections/coffee) — washed Ethiopia or Colombia
+- [Partners — other blends and singles](https://www.partnerscoffee.com/collections/coffee)
+- [Superlost — other light Colombias](https://www.superlost.com/collections/coffee)
+- [Oslo — single origins](https://oslocoffee.com/collections/coffee)
+
+### More to explore
+
+- [JBC — Mengeche Derso Natural](https://jbccoffeeroasters.com/product/mengeche-derso-natural/)
+- [Browny — Ethiopia Medium Roast](https://brownycoffee.com/products/ethiopia-medium-roast-coffee)
+- [Tim Wendelboe — Finca Tamana Variedad Colombia](https://timwendelboe.no/product/finca-tamana-colombian-filter-coffe-2/)
+
+### Probably skip
+
+- Dark or classic breakfast blends beyond Primer's nutty/chocolate lane
+- [Coffee Man — Honduras + Brazil Rise From the Ashes](https://drinkcoffeeman.com/products/honduras-brazil-rise-from-the-ashes-blend-copy) — too dark
+- Heavy anaerobic naturals unless experimenting beyond Supernatural
 
 </div>
-
-
-￼

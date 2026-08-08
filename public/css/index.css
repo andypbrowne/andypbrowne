@@ -1385,6 +1385,19 @@ li.postlist-item a h3 {
 	margin-right: 1em;
 }
 
+/* Resource tags */
+.resource-tags,
+.workshop-move-meta,
+.card-footer:has(.resource-tag) {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.4rem;
+}
+
+.resource-tag {
+	display: inline-block;
+}
+
 /* Direct Links / Markdown Headers */
 .header-anchor {
 	text-decoration: none;

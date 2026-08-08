@@ -64,6 +64,7 @@ img.custom-size-image {
 .card .card-footer {
     display: flex;
     flex-wrap: wrap;
+    gap: 0.4rem;
 }
 
 .card .card-body h2 a {
