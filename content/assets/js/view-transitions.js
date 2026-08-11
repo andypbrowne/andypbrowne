@@ -26,7 +26,11 @@ function findCard(slug) {
 	if (!slug) return null;
 	const safe =
 		typeof CSS !== "undefined" && CSS.escape ? CSS.escape(slug) : slug;
-	return document.querySelector(`[data-vt-post="${safe}"]`);
+	// Prefer a command-bar selection (just-tagged) over an on-page card
+	return (
+		document.querySelector(`.command-bar-item[data-vt-post="${safe}"]`) ||
+		document.querySelector(`[data-vt-post="${safe}"]`)
+	);
 }
 
 function findPostHeader() {
@@ -37,7 +41,7 @@ function imageIn(root) {
 	return (
 		root.querySelector('[data-vt="image"]') ||
 		root.querySelector(
-			".featured-case-study-image img, picture img, img.thumbnail-nextprev",
+			".featured-case-study-image img, picture img, img.thumbnail-nextprev, img.command-bar-thumbnail",
 		)
 	);
 }
