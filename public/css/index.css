@@ -820,11 +820,42 @@ article header.post-header .post-titles {
 	}
 }
 
-/* view transitions */
+/* view transitions — just-in-time names via view-transitions.js */
 
 @media not (prefers-reduced-motion: reduce) {
-	article header.post-header { view-transition-name: post-header;}
-	.featured-case-study { view-transition-name: post-header;}
+	body > header {
+		view-transition-name: site-header;
+	}
+}
+
+::view-transition-group(post-title),
+::view-transition-group(post-desc),
+::view-transition-group(post-image) {
+	animation-duration: 0.4s;
+	animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+::view-transition-group(site-header) {
+	animation: none;
+}
+
+::view-transition-old(site-header),
+::view-transition-new(site-header) {
+	animation: none;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+	animation-duration: 0.28s;
+	animation-timing-function: ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	::view-transition-group(*),
+	::view-transition-old(*),
+	::view-transition-new(*) {
+		animation: none !important;
+	}
 }
 
 .postlist-container {

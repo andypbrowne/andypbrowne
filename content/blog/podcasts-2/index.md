@@ -365,9 +365,9 @@ resources:
         aria-label="Open details for {{ resource.title }}"
       >
         {%- if (resource.image) -%}
-          <img class="podcast-cover-image" src="{{ resource.image }}" alt="{{ resource.alt or ('Cover art for ' + resource.title) }}" style="--podcast-vt-name: podcast-cover-{{ loop.index0 }};">
+          <img class="podcast-cover-image" src="{{ resource.image }}" alt="{{ resource.alt or ('Cover art for ' + resource.title) }}">
         {%- else -%}
-          <img class="podcast-cover-image" src="https://placehold.co/600x600?text=Podcast+Cover" alt="Cover art placeholder for {{ resource.title }}" style="--podcast-vt-name: podcast-cover-{{ loop.index0 }};">
+          <img class="podcast-cover-image" src="https://placehold.co/600x600?text=Podcast+Cover" alt="Cover art placeholder for {{ resource.title }}">
         {%- endif -%}
         <h3 class="podcast-cover-title">{{ resource.title }}</h3>
       </a>
@@ -405,9 +405,9 @@ resources:
       </div>
       <div class="podcast-panel-media">
         {%- if (resource.image) -%}
-          <img class="podcast-panel-image" src="{{ resource.image }}" alt="{{ resource.alt or ('Cover art for ' + resource.title) }}" style="--podcast-vt-name: podcast-cover-{{ loop.index0 }};">
+          <img class="podcast-panel-image" src="{{ resource.image }}" alt="{{ resource.alt or ('Cover art for ' + resource.title) }}">
         {%- else -%}
-          <img class="podcast-panel-image" src="https://placehold.co/600x600?text=Podcast+Cover" alt="Cover art placeholder for {{ resource.title }}" style="--podcast-vt-name: podcast-cover-{{ loop.index0 }};">
+          <img class="podcast-panel-image" src="https://placehold.co/600x600?text=Podcast+Cover" alt="Cover art placeholder for {{ resource.title }}">
         {%- endif -%}
       </div>
       <div class="podcast-panel-content">

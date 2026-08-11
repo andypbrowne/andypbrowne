@@ -77,6 +77,8 @@
       		<link rel="stylesheet" href="{{css}}" media="print" onload="this.media='all'; this.onload=null;" />
 			<noscript><link rel="stylesheet" href="{{css}}" /></noscript>
     	{% endif %}
+		{# Render-blocking: must run before pagereveal #}
+		<script src="/assets/js/view-transitions.js"></script>
 {#
 		3. You could even swap between the two methods above using {% if eleventy.env.runMode === "serve" %}
 		4. Concatenate CSS to one file (site performance is slower than 2 but faster than 1):

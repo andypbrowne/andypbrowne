@@ -192,15 +192,18 @@ article:has(.podcast-layout) > p:first-of-type::first-letter {
     display: block;
     text-decoration: none;
     color: inherit;
+    border-radius: var(--border-radius);
+    background: var(--color-base-bg);
+    overflow: clip;
+    padding: 0 0 0.75rem;
 }
 
 .podcast-tile-trigger img {
-    view-transition-name: var(--podcast-vt-name);
     width: 100%;
     aspect-ratio: 1 / 1;
     object-fit: cover;
     border-radius: var(--border-radius);
-    border: 1px solid var(--subtle-border);
+    border: 0;
     transition: opacity 0.2s ease;
 }
 
@@ -212,11 +215,10 @@ article:has(.podcast-layout) > p:first-of-type::first-letter {
 .podcast-tile-trigger:focus-visible {
     outline: 2px solid var(--color-midnight-60);
     outline-offset: 4px;
-    border-radius: var(--border-radius);
 }
 
 .podcast-cover-title {
-    margin: 0.4rem 0 0;
+    margin: 0.65rem 0 0;
     font-size: var(--font-size-base);
     font-family: var(--font-family);
     font-weight: 650;
@@ -239,18 +241,6 @@ article:has(.podcast-layout) > p:first-of-type::first-letter {
     background: rgb(0 0 0 / 0.5);
 }
 
-.podcast-dialog .podcast-panel-media img {
-    view-transition-name: none;
-}
-
-article:has(.podcast-dialog[open]) .podcast-tile-trigger img {
-    view-transition-name: none;
-}
-
-.podcast-dialog[open] .podcast-panel-media img {
-    view-transition-name: var(--podcast-vt-name);
-}
-
 .podcast-panel {
     position: relative;
     z-index: 1;
@@ -265,14 +255,6 @@ article:has(.podcast-dialog[open]) .podcast-tile-trigger img {
     border-radius: var(--border-radius);
     background: var(--color-base-bg);
     color: var(--text-color);
-    opacity: 0;
-    transform: translateY(8px) scale(0.98);
-    transition: transform 0.22s ease, opacity 0.22s ease;
-}
-
-.podcast-dialog[open] .podcast-panel {
-    opacity: 1;
-    transform: translateY(0) scale(1);
 }
 
 .podcast-panel-close,
@@ -477,9 +459,14 @@ article:has(.podcast-dialog[open]) .podcast-tile-trigger img {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .podcast-tile-trigger img,
-    .podcast-panel {
+    .podcast-tile-trigger img {
         transition: none;
+    }
+
+    ::view-transition-group(*),
+    ::view-transition-old(*),
+    ::view-transition-new(*) {
+        animation: none !important;
     }
 }
 
@@ -488,10 +475,54 @@ article:has(.podcast-dialog[open]) .podcast-tile-trigger img {
         view-transition-name: none;
     }
 
-    /* Avoid default full-page crossfade so dialog/backdrop timing feels crisp. */
+    /* Card expands in place — skip the full-page crossfade */
     ::view-transition-old(root),
     ::view-transition-new(root) {
         animation: none;
         mix-blend-mode: normal;
     }
+
+    ::view-transition-group(podcast-card) {
+        animation-duration: 0.42s;
+        animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+        overflow: clip;
+        border-radius: var(--border-radius);
+        z-index: 1;
+    }
+
+    /* Crossfade tile ↔ panel content while the card box morphs */
+    ::view-transition-old(podcast-card),
+    ::view-transition-new(podcast-card) {
+        height: 100%;
+        width: 100%;
+        object-fit: none;
+        overflow: clip;
+        border-radius: inherit;
+    }
+
+    ::view-transition-old(podcast-card) {
+        animation: podcast-card-fade-out 0.32s ease both;
+    }
+
+    ::view-transition-new(podcast-card) {
+        animation: podcast-card-fade-in 0.32s ease both;
+    }
+
+    /* Backdrop fades in as the card expands */
+    .podcast-dialog::backdrop {
+        opacity: 0;
+        transition: opacity 0.35s ease;
+    }
+
+    .podcast-dialog[open]::backdrop {
+        opacity: 1;
+    }
+}
+
+@keyframes podcast-card-fade-out {
+    to { opacity: 0; }
+}
+
+@keyframes podcast-card-fade-in {
+    from { opacity: 0; }
 }
