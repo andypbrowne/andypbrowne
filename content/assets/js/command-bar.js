@@ -1,11 +1,17 @@
 /**
  * Command Bar - Global keyboard-driven command palette
  * Trigger with Cmd+K (Mac) or Ctrl+K (Windows/Linux)
- * 
+ *
  * Extensible architecture:
  * - Navigation commands (pages, blog posts)
  * - Future: theme toggle, search, custom actions
  */
+
+const CMD_REDUCED_MOTION = "(prefers-reduced-motion: reduce)";
+const CMD_VT = {
+	overlay: "cmd-overlay",
+	panel: "cmd-panel",
+};
 
 class CommandBar {
 	constructor() {
@@ -20,8 +26,16 @@ class CommandBar {
 		this.inputElement = null;
 		this.resultsContainer = null;
 		this.modalElement = null;
-		
+		this._vtBusy = false;
+
 		this.init();
+	}
+
+	canUseViewTransitions() {
+		return (
+			typeof document.startViewTransition === "function" &&
+			!window.matchMedia(CMD_REDUCED_MOTION).matches
+		);
 	}
 
 	init() {
@@ -36,24 +50,29 @@ class CommandBar {
 	 * Includes all pages and blog posts, excluding drafts
 	 */
 	registerDefaultCommands() {
-		// Get command index from global data inlined at build time
-		const indexData = window.COMMAND_INDEX || { commands: [], featured: { posts: [], caseStudies: [], corePages: [] } };
-		
-		// Handle both old format (array) and new format (object with commands/featured)
-		const commandsData = Array.isArray(indexData) ? indexData : (indexData.commands || []);
-		const featuredData = Array.isArray(indexData) ? { posts: [], caseStudies: [], corePages: [] } : (indexData.featured || { posts: [], caseStudies: [], corePages: [] });
+		const indexData =
+			window.COMMAND_INDEX || {
+				commands: [],
+				featured: { posts: [], caseStudies: [], corePages: [] },
+			};
 
-		// Convert data objects to commands with action methods
-		this.commands = commandsData.map(cmd => ({
+		const commandsData = Array.isArray(indexData)
+			? indexData
+			: indexData.commands || [];
+		const featuredData = Array.isArray(indexData)
+			? { posts: [], caseStudies: [], corePages: [] }
+			: indexData.featured || { posts: [], caseStudies: [], corePages: [] };
+
+		this.commands = commandsData.map((cmd) => ({
 			name: cmd.name,
 			description: cmd.description,
+			url: cmd.url,
 			action: () => this.navigate(cmd.url),
 			thumbnail: cmd.thumbnail,
 			thumbnailAlt: cmd.thumbnailAlt,
 		}));
 
-		// Store featured content
-		this.featuredPosts = featuredData.posts.map(post => ({
+		this.featuredPosts = featuredData.posts.map((post) => ({
 			name: post.name,
 			description: post.description,
 			url: post.url,
@@ -62,7 +81,7 @@ class CommandBar {
 			action: () => this.navigate(post.url),
 		}));
 
-		this.featuredCaseStudies = featuredData.caseStudies.map(cs => ({
+		this.featuredCaseStudies = featuredData.caseStudies.map((cs) => ({
 			name: cs.name,
 			description: cs.description,
 			url: cs.url,
@@ -71,7 +90,7 @@ class CommandBar {
 			action: () => this.navigate(cs.url),
 		}));
 
-		this.corePages = featuredData.corePages.map(page => ({
+		this.corePages = featuredData.corePages.map((page) => ({
 			name: page.name,
 			description: page.description,
 			url: page.url,
@@ -81,19 +100,6 @@ class CommandBar {
 		this.filteredCommands = [...this.commands];
 	}
 
-	/**
-	 * Smarter fuzzy search with word boundary awareness
-	 * Prioritizes:
-	 * 1. Exact substring matches
-	 * 2. Matches at word starts (capital letters, after spaces)
-	 * 3. Consecutive character matches
-	 * 4. Scattered matches (lowest priority)
-	 * 
-	 * Examples:
-	 * "book" → "Bookshelf" (score: 1000, substring)
-	 * "a" → "About" (score: 90, word boundary)
-	 * "a" → "Tags" (score: 10, scattered)
-	 */
 	fuzzySearch(query) {
 		if (!query) {
 			this.filteredCommands = [...this.commands];
@@ -101,49 +107,39 @@ class CommandBar {
 		}
 
 		const lowerQuery = query.toLowerCase();
-		
-		// Score each command and filter by minimum threshold
-		const scored = this.commands.map(cmd => ({
-			cmd,
-			score: this.calculateFuzzyScore(cmd.name, lowerQuery)
-		})).filter(item => item.score > 0);
+		const scored = this.commands
+			.map((cmd) => ({
+				cmd,
+				score: this.calculateFuzzyScore(cmd.name, lowerQuery),
+			}))
+			.filter((item) => item.score > 0);
 
-		// Sort by score (highest first)
 		scored.sort((a, b) => b.score - a.score);
-		this.filteredCommands = scored.map(item => item.cmd);
+		this.filteredCommands = scored.map((item) => item.cmd);
 		this.selectedIndex = 0;
 	}
 
-	/**
-	 * Calculate fuzzy match score
-	 * Higher score = better match
-	 */
 	calculateFuzzyScore(name, query) {
 		const lowerName = name.toLowerCase();
 		let queryIdx = 0;
 		let score = 0;
 		let consecutiveMatches = 0;
 
-		// Check if query exists as a substring (highest priority)
 		if (lowerName.includes(query)) {
 			return 1000;
 		}
 
-		// Try to match characters in order with scoring
 		for (let i = 0; i < lowerName.length && queryIdx < query.length; i++) {
 			if (lowerName[i] === query[queryIdx]) {
 				queryIdx++;
 				consecutiveMatches++;
 
-				// Bonus for matching at word boundaries (capitals or after space)
-				const isWordBoundary = i === 0 || lowerName[i - 1] === ' ';
+				const isWordBoundary = i === 0 || lowerName[i - 1] === " ";
 				if (isWordBoundary) {
 					score += 100;
 				} else if (consecutiveMatches > 1) {
-					// Bonus for consecutive matches
 					score += 50;
 				} else {
-					// Smaller bonus for scattered matches
 					score += 10;
 				}
 			} else {
@@ -151,17 +147,12 @@ class CommandBar {
 			}
 		}
 
-		// Only return a score if all query characters were matched
 		return queryIdx === query.length ? score : 0;
 	}
 
-	/**
-	 * Create the modal, input field, and results container
-	 */
 	createModal() {
-		// Modal backdrop
-		this.modalElement = document.createElement('div');
-		this.modalElement.className = 'command-bar-modal';
+		this.modalElement = document.createElement("div");
+		this.modalElement.className = "command-bar-modal";
 		this.modalElement.innerHTML = `
 			<div class="command-bar-overlay"></div>
 			<div class="command-bar-container">
@@ -195,55 +186,127 @@ class CommandBar {
 		`;
 		document.body.appendChild(this.modalElement);
 
-		this.modalElement.querySelector('.command-bar-container').setAttribute('role', 'dialog');
-		this.modalElement.querySelector('.command-bar-container').setAttribute('aria-modal', 'true');
-		this.modalElement.querySelector('.command-bar-container').setAttribute('aria-label', 'Command palette');
+		this.modalElement
+			.querySelector(".command-bar-container")
+			.setAttribute("role", "dialog");
+		this.modalElement
+			.querySelector(".command-bar-container")
+			.setAttribute("aria-modal", "true");
+		this.modalElement
+			.querySelector(".command-bar-container")
+			.setAttribute("aria-label", "Command palette");
 
-		this.inputElement = this.modalElement.querySelector('.command-bar-input');
-		this.resultsContainer = this.modalElement.querySelector('.command-bar-results');
-		this.liveRegion = this.modalElement.querySelector('.command-bar-live');
-		this.clearButton = this.modalElement.querySelector('.command-bar-clear');
-		this.clearButton.setAttribute('disabled', 'true');
-		this.closeButton = this.modalElement.querySelector('.command-bar-close');
+		this.overlayElement = this.modalElement.querySelector(".command-bar-overlay");
+		this.panelElement = this.modalElement.querySelector(".command-bar-container");
+		this.inputElement = this.modalElement.querySelector(".command-bar-input");
+		this.resultsContainer = this.modalElement.querySelector(".command-bar-results");
+		this.liveRegion = this.modalElement.querySelector(".command-bar-live");
+		this.clearButton = this.modalElement.querySelector(".command-bar-clear");
+		this.clearButton.setAttribute("disabled", "true");
+		this.closeButton = this.modalElement.querySelector(".command-bar-close");
+	}
+
+	clearVtName(el) {
+		if (!el) return;
+		el.style.viewTransitionName = "none";
+		el.style.removeProperty("view-transition-name");
+	}
+
+	setChromeNames(on) {
+		if (on) {
+			if (this.overlayElement) {
+				this.overlayElement.style.viewTransitionName = CMD_VT.overlay;
+			}
+			if (this.panelElement) {
+				this.panelElement.style.viewTransitionName = CMD_VT.panel;
+			}
+		} else {
+			this.clearVtName(this.overlayElement);
+			this.clearVtName(this.panelElement);
+		}
+	}
+
+	slugFromUrl(url) {
+		try {
+			const path = new URL(url, window.location.origin).pathname;
+			const parts = path.split("/").filter(Boolean);
+			if (parts[0] === "blog" && parts[1]) return parts[1];
+		} catch {
+			/* ignore */
+		}
+		return null;
 	}
 
 	/**
-	 * Render filtered results list or featured content
+	 * Tag the selected result so cross-document VT can morph into the post header.
+	 * Leave the palette open so pageswap can snapshot these elements.
 	 */
+	prepareNavigationMorph(itemEl, url) {
+		if (!itemEl || !url || !this.canUseViewTransitions()) return;
+		const slug = this.slugFromUrl(url);
+		if (!slug) return;
+
+		// Drop open/close chrome names so only the result ↔ post morph runs
+		this.setChromeNames(false);
+
+		itemEl.setAttribute("data-vt-post", slug);
+		itemEl
+			.querySelector(".command-bar-item-name")
+			?.setAttribute("data-vt", "title");
+		itemEl
+			.querySelector(".command-bar-item-description")
+			?.setAttribute("data-vt", "description");
+		itemEl
+			.querySelector(".command-bar-thumbnail")
+			?.setAttribute("data-vt", "image");
+	}
+
 	renderResults() {
-		this.resultsContainer.innerHTML = '';
+		this.resultsContainer.innerHTML = "";
 		const query = this.inputElement.value.trim();
 
-		// Show featured content when there's no search query
 		if (!query) {
-			this.liveRegion.textContent = 'Featured content: Latest posts, case studies, and quick links';
+			this.liveRegion.textContent =
+				"Featured content: Latest posts, case studies, and quick links";
 			this.renderFeaturedContent();
 			return;
 		}
 
-		// Show search results
 		if (this.filteredCommands.length === 0) {
-			this.resultsContainer.innerHTML = '<div class="command-bar-empty">No results found</div>';
+			this.resultsContainer.innerHTML =
+				'<div class="command-bar-empty">No results found</div>';
 			this.liveRegion.textContent = `No results found for "${query}"`;
 			return;
 		}
 
-		this.liveRegion.textContent = `${this.filteredCommands.length} result${this.filteredCommands.length !== 1 ? 's' : ''} found for "${query}"`;
+		this.liveRegion.textContent = `${this.filteredCommands.length} result${
+			this.filteredCommands.length !== 1 ? "s" : ""
+		} found for "${query}"`;
 
 		this.filteredCommands.forEach((cmd, idx) => {
-			const item = document.createElement('div');
-			item.className = `command-bar-item ${idx === this.selectedIndex ? 'selected' : ''}`;
-			item.setAttribute('tabindex', '0');
-			item.innerHTML = `
-				<h3 class="command-bar-item-name">${this.escapeHtml(cmd.name)}</h3>
-				<p class="command-bar-item-description">${this.escapeHtml(cmd.description)}</p>
-			`;
-			item.addEventListener('click', () => {
+			const item = document.createElement("div");
+			item.className = `command-bar-item ${
+				cmd.thumbnail ? "command-bar-featured-item" : ""
+			} ${idx === this.selectedIndex ? "selected" : ""}`;
+			item.setAttribute("tabindex", "0");
+
+			item.innerHTML = cmd.thumbnail
+				? `<img src="${this.escapeHtml(cmd.thumbnail)}" alt="${this.escapeHtml(
+						cmd.thumbnailAlt || "",
+					)}" class="command-bar-thumbnail" />
+					<div class="command-bar-item-content">
+						<h3 class="command-bar-item-name">${this.escapeHtml(cmd.name)}</h3>
+						<p class="command-bar-item-description">${this.escapeHtml(cmd.description)}</p>
+					</div>`
+				: `<h3 class="command-bar-item-name">${this.escapeHtml(cmd.name)}</h3>
+					<p class="command-bar-item-description">${this.escapeHtml(cmd.description)}</p>`;
+
+			item.addEventListener("click", () => {
 				this.selectedIndex = idx;
 				this.selectCurrent();
 			});
-			item.addEventListener('keydown', (e) => {
-				if (e.key === 'Enter') {
+			item.addEventListener("keydown", (e) => {
+				if (e.key === "Enter") {
 					e.preventDefault();
 					this.selectedIndex = idx;
 					this.selectCurrent();
@@ -255,84 +318,79 @@ class CommandBar {
 		this.scrollSelectedIntoView();
 	}
 
-	/**
-	 * Render featured posts and case studies
-	 */
 	renderFeaturedContent() {
-		// Latest Posts Section
 		if (this.featuredPosts.length > 0) {
-			const postsSection = document.createElement('div');
-			postsSection.className = 'command-bar-section';
+			const postsSection = document.createElement("div");
+			postsSection.className = "command-bar-section";
 
-			const postsHeader = document.createElement('h2');
-			postsHeader.className = 'command-bar-section-header';
-			postsHeader.textContent = 'Latest Posts';
+			const postsHeader = document.createElement("h2");
+			postsHeader.className = "command-bar-section-header";
+			postsHeader.textContent = "Latest Posts";
 			postsSection.appendChild(postsHeader);
 
 			this.featuredPosts.forEach((post, idx) => {
-				const item = this.createFeaturedItem(post, idx);
-				postsSection.appendChild(item);
+				postsSection.appendChild(this.createFeaturedItem(post, idx));
 			});
 
-			const postsLink = document.createElement('a');
-			postsLink.className = 'command-bar-section-link';
-			postsLink.href = '/blog/';
-			postsLink.textContent = 'View all posts →';
+			const postsLink = document.createElement("a");
+			postsLink.className = "command-bar-section-link";
+			postsLink.href = "/blog/";
+			postsLink.textContent = "View all posts →";
 			postsSection.appendChild(postsLink);
 
 			this.resultsContainer.appendChild(postsSection);
 		}
 
-		// Latest Case Studies Section
 		if (this.featuredCaseStudies.length > 0) {
-			const csSection = document.createElement('div');
-			csSection.className = 'command-bar-section';
+			const csSection = document.createElement("div");
+			csSection.className = "command-bar-section";
 
-			const csHeader = document.createElement('h2');
-			csHeader.className = 'command-bar-section-header';
-			csHeader.textContent = 'Latest Case Studies';
+			const csHeader = document.createElement("h2");
+			csHeader.className = "command-bar-section-header";
+			csHeader.textContent = "Latest Case Studies";
 			csSection.appendChild(csHeader);
 
 			const startIdx = this.featuredPosts.length;
 			this.featuredCaseStudies.forEach((cs, idx) => {
-				const item = this.createFeaturedItem(cs, startIdx + idx);
-				csSection.appendChild(item);
+				csSection.appendChild(this.createFeaturedItem(cs, startIdx + idx));
 			});
 
-			const caseStudiesLink = document.createElement('a');
-			caseStudiesLink.className = 'command-bar-section-link';
-			caseStudiesLink.href = '/tags/case-study/';
-			caseStudiesLink.textContent = 'View all case studies →';
+			const caseStudiesLink = document.createElement("a");
+			caseStudiesLink.className = "command-bar-section-link";
+			caseStudiesLink.href = "/tags/case-study/";
+			caseStudiesLink.textContent = "View all case studies →";
 			csSection.appendChild(caseStudiesLink);
 
 			this.resultsContainer.appendChild(csSection);
 		}
 
-		// Quick Links Section
 		if (this.corePages.length > 0) {
-			const pagesSection = document.createElement('div');
-			pagesSection.className = 'command-bar-section';
+			const pagesSection = document.createElement("div");
+			pagesSection.className = "command-bar-section";
 
-			const pagesHeader = document.createElement('h2');
-			pagesHeader.className = 'command-bar-section-header';
-		    pagesHeader.textContent = 'Quick Links';
+			const pagesHeader = document.createElement("h2");
+			pagesHeader.className = "command-bar-section-header";
+			pagesHeader.textContent = "Quick Links";
 			pagesSection.appendChild(pagesHeader);
 
-			const startIdx = this.featuredPosts.length + this.featuredCaseStudies.length;
+			const startIdx =
+				this.featuredPosts.length + this.featuredCaseStudies.length;
 			this.corePages.forEach((page, idx) => {
-				const item = document.createElement('div');
-				item.className = `command-bar-item ${(startIdx + idx) === this.selectedIndex ? 'selected' : ''}`;
-				item.setAttribute('tabindex', '0');
+				const item = document.createElement("div");
+				item.className = `command-bar-item ${
+					startIdx + idx === this.selectedIndex ? "selected" : ""
+				}`;
+				item.setAttribute("tabindex", "0");
 				item.innerHTML = `
 					<h3 class="command-bar-item-name">${this.escapeHtml(page.name)}</h3>
 					<p class="command-bar-item-description">${this.escapeHtml(page.description)}</p>
 				`;
-				item.addEventListener('click', () => {
+				item.addEventListener("click", () => {
 					this.selectedIndex = startIdx + idx;
 					this.selectCurrent();
 				});
-				item.addEventListener('keydown', (e) => {
-					if (e.key === 'Enter') {
+				item.addEventListener("keydown", (e) => {
+					if (e.key === "Enter") {
 						e.preventDefault();
 						this.selectedIndex = startIdx + idx;
 						this.selectCurrent();
@@ -344,31 +402,34 @@ class CommandBar {
 			this.resultsContainer.appendChild(pagesSection);
 		}
 
-		// Update total selectable items for keyboard navigation
-		this.filteredCommands = [...this.featuredPosts, ...this.featuredCaseStudies, ...this.corePages];
+		this.filteredCommands = [
+			...this.featuredPosts,
+			...this.featuredCaseStudies,
+			...this.corePages,
+		];
 		this.scrollSelectedIntoView();
 	}
 
-	/**
-	 * Ensure the selected item is visible in the scroll viewport
-	 */
 	scrollSelectedIntoView() {
-		const selected = this.resultsContainer.querySelector('.command-bar-item.selected');
+		const selected = this.resultsContainer.querySelector(
+			".command-bar-item.selected",
+		);
 		if (selected) {
-			selected.scrollIntoView({ block: 'nearest' });
+			selected.scrollIntoView({ block: "nearest" });
 		}
 	}
 
-	/**
-	 * Create a featured item with thumbnail
-	 */
 	createFeaturedItem(item, idx) {
-		const elem = document.createElement('div');
-		elem.className = `command-bar-item command-bar-featured-item ${idx === this.selectedIndex ? 'selected' : ''}`;
-		elem.setAttribute('tabindex', '0');
-		
-		const thumbnailHtml = item.thumbnail 
-			? `<img src="${this.escapeHtml(item.thumbnail)}" alt="${this.escapeHtml(item.thumbnailAlt)}" class="command-bar-thumbnail" />`
+		const elem = document.createElement("div");
+		elem.className = `command-bar-item command-bar-featured-item ${
+			idx === this.selectedIndex ? "selected" : ""
+		}`;
+		elem.setAttribute("tabindex", "0");
+
+		const thumbnailHtml = item.thumbnail
+			? `<img src="${this.escapeHtml(item.thumbnail)}" alt="${this.escapeHtml(
+					item.thumbnailAlt,
+				)}" class="command-bar-thumbnail" />`
 			: '<div class="command-bar-thumbnail-placeholder"></div>';
 
 		elem.innerHTML = `
@@ -378,56 +439,87 @@ class CommandBar {
 				<p class="command-bar-item-description">${this.escapeHtml(item.description)}</p>
 			</div>
 		`;
-		
-		elem.addEventListener('click', () => {
+
+		elem.addEventListener("click", () => {
 			this.selectedIndex = idx;
 			this.selectCurrent();
 		});
-		elem.addEventListener('keydown', (e) => {
-			if (e.key === 'Enter') {
+		elem.addEventListener("keydown", (e) => {
+			if (e.key === "Enter") {
 				e.preventDefault();
 				this.selectedIndex = idx;
 				this.selectCurrent();
 			}
 		});
-		
+
 		return elem;
 	}
 
-	/**
-	 * Open the command palette
-	 */
-	open() {
+	applyOpen() {
 		this.isOpen = true;
 		this.lastFocusedElement = document.activeElement;
-		this.modalElement.classList.add('open');
+		this.modalElement.classList.add("open");
+		this.setChromeNames(true);
 		this.inputElement.focus();
 		this.selectedIndex = 0;
 		this.renderResults();
-		this.modalElement.addEventListener('keydown', this.handleFocusTrap);
+		this.modalElement.addEventListener("keydown", this.handleFocusTrap);
 	}
 
-	/**
-	 * Close the command palette
-	 */
-	close() {
+	applyClose() {
 		this.isOpen = false;
-		this.modalElement.classList.remove('open');
-		this.inputElement.value = '';
+		this.modalElement.classList.remove("open");
+		this.setChromeNames(false);
+		this.inputElement.value = "";
 		this.filteredCommands = [...this.commands];
-		this.clearButton.classList.remove('visible');
-		this.clearButton.setAttribute('disabled', 'true');
-		this.modalElement.removeEventListener('keydown', this.handleFocusTrap);
+		this.clearButton.classList.remove("visible");
+		this.clearButton.setAttribute("disabled", "true");
+		this.modalElement.removeEventListener("keydown", this.handleFocusTrap);
 		if (this.lastFocusedElement && this.lastFocusedElement.focus) {
 			this.lastFocusedElement.focus();
 		}
 	}
 
-	/**
-	 * Keep focus trapped within the command bar while open
-	 */
+	open() {
+		if (this.isOpen || this._vtBusy) return;
+
+		if (this.canUseViewTransitions()) {
+			this.modalElement.classList.remove("use-css-anim");
+			this._vtBusy = true;
+			const transition = document.startViewTransition(() => {
+				this.applyOpen();
+			});
+			transition.finished.finally(() => {
+				this._vtBusy = false;
+			});
+			return;
+		}
+
+		this.modalElement.classList.add("use-css-anim");
+		this.applyOpen();
+	}
+
+	close() {
+		if (!this.isOpen || this._vtBusy) return;
+
+		if (this.canUseViewTransitions()) {
+			this.setChromeNames(true);
+			this._vtBusy = true;
+			const transition = document.startViewTransition(() => {
+				this.applyClose();
+			});
+			transition.finished.finally(() => {
+				this._vtBusy = false;
+				this.setChromeNames(false);
+			});
+			return;
+		}
+
+		this.applyClose();
+	}
+
 	handleFocusTrap = (e) => {
-		if (e.key !== 'Tab') return;
+		if (e.key !== "Tab") return;
 
 		const focusable = this.getFocusableElements();
 		if (focusable.length === 0) return;
@@ -447,55 +539,45 @@ class CommandBar {
 			e.preventDefault();
 			first.focus();
 		}
-	}
+	};
 
 	getFocusableElements() {
 		const selectors = [
-			'a[href]',
-			'button:not([disabled])',
-			'input:not([disabled])',
-			'[tabindex]:not([tabindex="-1"])'
+			"a[href]",
+			"button:not([disabled])",
+			"input:not([disabled])",
+			'[tabindex]:not([tabindex="-1"])',
 		];
 
-		return Array.from(this.modalElement.querySelectorAll(selectors.join(','))).filter(
-			(el) => !el.hasAttribute('disabled') && el.offsetParent !== null
-		);
+		return Array.from(
+			this.modalElement.querySelectorAll(selectors.join(",")),
+		).filter((el) => !el.hasAttribute("disabled") && el.offsetParent !== null);
 	}
 
-	/**
-	 * Execute the selected command
-	 */
 	selectCurrent() {
-		if (this.filteredCommands[this.selectedIndex]) {
-			const cmd = this.filteredCommands[this.selectedIndex];
-			this.close();
-			cmd.action();
-		}
+		if (!this.filteredCommands[this.selectedIndex]) return;
+		const cmd = this.filteredCommands[this.selectedIndex];
+		const selected = this.resultsContainer.querySelector(
+			".command-bar-item.selected",
+		);
+		// Keep palette open so pageswap can snapshot the selected row
+		this.prepareNavigationMorph(selected, cmd.url);
+		cmd.action();
 	}
 
-	/**
-	 * Navigate to a page/post
-	 */
 	navigate(url) {
 		window.location.href = url;
 	}
 
-	/**
-	 * HTML escape for safe rendering
-	 */
 	escapeHtml(text) {
-		const div = document.createElement('div');
+		const div = document.createElement("div");
 		div.textContent = text;
 		return div.innerHTML;
 	}
 
-	/**
-	 * Attach keyboard and UI event listeners
-	 */
 	attachEventListeners() {
-		// Global keyboard shortcut: Cmd+K or Ctrl+K
-		document.addEventListener('keydown', (e) => {
-			if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+		document.addEventListener("keydown", (e) => {
+			if ((e.metaKey || e.ctrlKey) && e.key === "k") {
 				e.preventDefault();
 				if (this.isOpen) {
 					this.close();
@@ -505,73 +587,67 @@ class CommandBar {
 			}
 		});
 
-		// Nav trigger button
-		const navTrigger = document.getElementById('command-bar-trigger');
+		const navTrigger = document.getElementById("command-bar-trigger");
 		if (navTrigger) {
-			navTrigger.addEventListener('click', (e) => {
+			navTrigger.addEventListener("click", (e) => {
 				e.preventDefault();
 				this.open();
 			});
 		}
 
-		// Keyboard navigation within the modal
-		this.inputElement.addEventListener('keydown', (e) => {
+		this.inputElement.addEventListener("keydown", (e) => {
 			switch (e.key) {
-				case 'ArrowDown':
+				case "ArrowDown":
 					e.preventDefault();
-					this.selectedIndex = Math.min(this.selectedIndex + 1, this.filteredCommands.length - 1);
+					this.selectedIndex = Math.min(
+						this.selectedIndex + 1,
+						this.filteredCommands.length - 1,
+					);
 					this.renderResults();
 					break;
-				case 'ArrowUp':
+				case "ArrowUp":
 					e.preventDefault();
 					this.selectedIndex = Math.max(this.selectedIndex - 1, 0);
 					this.renderResults();
 					break;
-				case 'Enter':
+				case "Enter":
 					e.preventDefault();
 					this.selectCurrent();
 					break;
-				case 'Escape':
+				case "Escape":
 					e.preventDefault();
 					this.close();
 					break;
 			}
 		});
 
-		// Search/filter as user types
-		this.inputElement.addEventListener('input', (e) => {
+		this.inputElement.addEventListener("input", (e) => {
 			this.fuzzySearch(e.target.value);
 			this.renderResults();
-			// Show/hide clear button based on input
 			if (e.target.value.length > 0) {
-				this.clearButton.classList.add('visible');
-				this.clearButton.removeAttribute('disabled');
+				this.clearButton.classList.add("visible");
+				this.clearButton.removeAttribute("disabled");
 			} else {
-				this.clearButton.classList.remove('visible');
-				this.clearButton.setAttribute('disabled', 'true');
+				this.clearButton.classList.remove("visible");
+				this.clearButton.setAttribute("disabled", "true");
 			}
 		});
 
-		// Clear button
-		this.clearButton.addEventListener('click', () => {
-			this.inputElement.value = '';
-			this.fuzzySearch('');
+		this.clearButton.addEventListener("click", () => {
+			this.inputElement.value = "";
+			this.fuzzySearch("");
 			this.renderResults();
-			this.clearButton.classList.remove('visible');
-			this.clearButton.setAttribute('disabled', 'true');
+			this.clearButton.classList.remove("visible");
+			this.clearButton.setAttribute("disabled", "true");
 			this.inputElement.focus();
 		});
 
-		// Close button
-		this.closeButton.addEventListener('click', () => this.close());
+		this.closeButton.addEventListener("click", () => this.close());
 
-		// Close when clicking backdrop
-		const overlay = this.modalElement.querySelector('.command-bar-overlay');
-		overlay.addEventListener('click', () => this.close());
+		this.overlayElement.addEventListener("click", () => this.close());
 	}
 }
 
-// Initialize command bar when DOM is ready
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
 	new CommandBar();
 });

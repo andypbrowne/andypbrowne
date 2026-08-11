@@ -1,7 +1,6 @@
 ---
 layout: layouts/base.njk
 ---
-
 <article class="h-entry">
 <div class="visually-hidden"><a tabindex="-1" class="u-url" href="https://andypbrowne.com/{{ page.url | url }}">{{ title }}</a></div>
 <time class="postlist-date dt-published" datetime="{{ page.date | htmlDateString }}">published on {{ page.date | readableDate }} • <span class="meta__stats">about {{ content | readingTime }} reading time</span></time>
@@ -10,15 +9,15 @@ layout: layouts/base.njk
 <div class="post-number">Favorite thing № {{ number }}</div>
 {% endif %}
 
-<header class="post-header">
-	{% if tags and 'featured' in tags or 'recipe' in tags %}
+<header class="post-header" data-vt-post="{{ page.fileSlug }}">
+	{% if thumbnail and (tags and ('featured' in tags or 'recipe' in tags or 'case study' in tags or 'featured case study' in tags)) %}
 	<figure>
-		<img src="../../{{ thumbnail }}" alt="{{ thumbnailAlt }}"/>
+		<img data-vt="image" src="../../{{ thumbnail }}" alt="{{ thumbnailAlt }}"/>
 	</figure>
 	{% endif %}
 <div class="post-titles">
-	<h1>{{ title }}</h1>
-	<h2 class="post-deck text-gradient">{{description}}</h2>
+	<h1 data-vt="title">{{ title }}</h1>
+	<h2 class="post-deck text-gradient" data-vt="description">{{description}}</h2>
 </div>
 </header>
 
@@ -33,12 +32,12 @@ layout: layouts/base.njk
 <ol class="postlist">
 	{%- for post in relatedPosts %}
 	{%- if not post.data.rss_only %}
-		<li class="postlist-item">
+		<li class="postlist-item" data-vt-post="{{ post.fileSlug }}">
 			<a href="{{ post.url }}">
-				<img class="thumbnail-nextprev" src="/{{ post.data.thumbnail }}" alt="{{ post.data.thumbnailAlt }}">
+				<img class="thumbnail-nextprev" data-vt="image" src="/{{ post.data.thumbnail }}" alt="{{ post.data.thumbnailAlt }}">
 			</a>
 			<time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("LLLL yyyy") }}</time><br>
-			<a class="postlist-link" href="{{ post.url }}"><h3>{{ post.data.title }}</h3></a>
+			<a class="postlist-link" href="{{ post.url }}"><h3 data-vt="title">{{ post.data.title }}</h3></a>
 		</li>
 	{% endif %}
 	{%- endfor %}
@@ -49,4 +48,3 @@ layout: layouts/base.njk
 {%- endif %}
 <div>More posts can be found in <a href="/blog/">the archive &rarr;</a></div>
 </div>
-

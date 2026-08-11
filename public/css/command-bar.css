@@ -66,19 +66,32 @@
 	background: var(--color-base-bg);
 	border: 1px solid var(--subtle-border);
 	box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-	animation: cmdBarSlideIn 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 	overflow: hidden;
+}
+
+/* CSS fallback when View Transitions API is unavailable */
+.command-bar-modal.use-css-anim.open .command-bar-container {
+	animation: cmdBarSlideIn 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.command-bar-modal.use-css-anim.open .command-bar-overlay {
+	animation: cmdOverlayIn 0.2s ease;
 }
 
 @keyframes cmdBarSlideIn {
 	from {
 		opacity: 0;
-		transform: translateY(-10px);
+		transform: translateY(-10px) scale(0.98);
 	}
 	to {
 		opacity: 1;
-		transform: translateY(0);
+		transform: translateY(0) scale(1);
 	}
+}
+
+@keyframes cmdOverlayIn {
+	from { opacity: 0; }
+	to { opacity: 1; }
 }
 
 /* Header with input */
@@ -396,5 +409,85 @@
 	.command-bar-input {
 		padding: 10px 12px;
 		font-size: var(--font-size-sm);
+	}
+}
+
+/* View Transitions: soft open/close */
+@media not (prefers-reduced-motion: reduce) {
+	::view-transition-group(cmd-overlay),
+	::view-transition-group(cmd-panel) {
+		animation-duration: 0.28s;
+		animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+		z-index: 10000;
+	}
+
+	::view-transition-old(cmd-overlay),
+	::view-transition-new(cmd-overlay) {
+		animation-duration: 0.24s;
+		animation-timing-function: ease;
+	}
+
+	::view-transition-new(cmd-overlay):only-child {
+		animation: cmd-vt-overlay-in 0.28s ease both;
+	}
+
+	::view-transition-old(cmd-overlay):only-child {
+		animation: cmd-vt-overlay-out 0.22s ease both;
+	}
+
+	::view-transition-new(cmd-panel):only-child {
+		animation: cmd-vt-panel-in 0.32s cubic-bezier(0.22, 1, 0.36, 1) both;
+	}
+
+	::view-transition-old(cmd-panel):only-child {
+		animation: cmd-vt-panel-out 0.22s ease both;
+	}
+}
+
+@keyframes cmd-vt-overlay-in {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+@keyframes cmd-vt-overlay-out {
+	from { opacity: 1; }
+	to { opacity: 0; }
+}
+
+@keyframes cmd-vt-panel-in {
+	from {
+		opacity: 0;
+		transform: translateY(-12px) scale(0.97);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0) scale(1);
+	}
+}
+
+@keyframes cmd-vt-panel-out {
+	from {
+		opacity: 1;
+		transform: translateY(0) scale(1);
+	}
+	to {
+		opacity: 0;
+		transform: translateY(-8px) scale(0.98);
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.command-bar-modal.use-css-anim.open .command-bar-container,
+	.command-bar-modal.use-css-anim.open .command-bar-overlay {
+		animation: none;
+	}
+
+	::view-transition-group(cmd-overlay),
+	::view-transition-group(cmd-panel),
+	::view-transition-old(cmd-overlay),
+	::view-transition-new(cmd-overlay),
+	::view-transition-old(cmd-panel),
+	::view-transition-new(cmd-panel) {
+		animation: none !important;
 	}
 }

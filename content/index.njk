@@ -64,7 +64,7 @@ css: /assets/css/bookshelf.css
   {% endfor %}
   
   {% for post in caseStudies | head(2) %}
-    <div class="case-study-wrapper">
+    <div class="case-study-wrapper" data-vt-post="{{ post.fileSlug }}">
       {% if loop.index % 2 == 1 %}
         <div class="featured-case-study-image">
           {% if post.data.thumbnail %}
@@ -79,13 +79,13 @@ css: /assets/css/bookshelf.css
         <p class="postlist-date">Case study</p>
         <a href="{{ post.url }}" class="postlist-link">
           {% if post.data.title %}
-          <h2>{{ post.data.title }}</h2>
+          <h2 data-vt="title">{{ post.data.title }}</h2>
           {% else %}
           <code>{{ post.url }}</code>
           {% endif %}
         </a>
         {% if post.data.description %}
-          <p style="font-size: var(--font-size-md); font-family: var(--font-family-cedar); font-style: italic; font-weight: 650;">{{ post.data.description }}</p>
+          <p data-vt="description" style="font-size: var(--font-size-md); font-family: var(--font-family-cedar); font-style: italic; font-weight: 650;">{{ post.data.description }}</p>
         {% endif %}
         <div style="display: flex; justify-content: flex-end; margin-block-end: 2rem;">
           <a href="{{ post.url }}" class="postlist-link">Read more &rarr;</a>
