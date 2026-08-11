@@ -27,8 +27,38 @@ class CommandBar {
 		this.resultsContainer = null;
 		this.modalElement = null;
 		this._vtBusy = false;
+		/** Native <dialog> closed while palette is open; restored on close. */
+		this._suspendedDialog = null;
 
 		this.init();
+	}
+
+	/**
+	 * Replace, don't stack: one modal at a time.
+	 * Quiet-close any open top-layer dialog so the palette can own focus/overlay.
+	 * Hash (if any) is left alone so the page dialog can resume cleanly.
+	 */
+	suspendOpenDialog() {
+		const dialog = document.querySelector("dialog[open]");
+		if (!dialog) {
+			this._suspendedDialog = null;
+			return;
+		}
+		this._suspendedDialog = dialog;
+		dialog.close();
+		// Drop page-dialog VT names so they don't collide with palette chrome
+		[dialog, ...dialog.querySelectorAll("*")].forEach((el) => {
+			if (el.style?.viewTransitionName) this.clearVtName(el);
+		});
+	}
+
+	resumeSuspendedDialog() {
+		const dialog = this._suspendedDialog;
+		this._suspendedDialog = null;
+		if (!dialog || dialog.open || !dialog.isConnected) return;
+		if (typeof dialog.showModal === "function") {
+			dialog.showModal();
+		}
 	}
 
 	canUseViewTransitions() {
@@ -483,6 +513,8 @@ class CommandBar {
 	open() {
 		if (this.isOpen || this._vtBusy) return;
 
+		this.suspendOpenDialog();
+
 		if (this.canUseViewTransitions()) {
 			this.modalElement.classList.remove("use-css-anim");
 			this._vtBusy = true;
@@ -511,11 +543,14 @@ class CommandBar {
 			transition.finished.finally(() => {
 				this._vtBusy = false;
 				this.setChromeNames(false);
+				// After palette is fully gone — restore the page dialog
+				this.resumeSuspendedDialog();
 			});
 			return;
 		}
 
 		this.applyClose();
+		this.resumeSuspendedDialog();
 	}
 
 	handleFocusTrap = (e) => {
@@ -566,6 +601,8 @@ class CommandBar {
 	}
 
 	navigate(url) {
+		// Leaving the page — don't resume a dialog on unload
+		this._suspendedDialog = null;
 		window.location.href = url;
 	}
 
