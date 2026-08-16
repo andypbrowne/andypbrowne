@@ -36,7 +36,7 @@
       "type": {
         "type": "string",
         "description": "Media type (book, audiobook, etc.)",
-        "enum": ["", "book", "audiobook", "ebook"]
+        "enum": ["", "book", "audiobook", "ebook", "zine"]
       },
       "tags": {
         "type": "array",
@@ -62,6 +62,7 @@
             "fantasy",
             "mystery",
             "graphic-novel",
+            "zine",
             "poetry",
             "philosophy",
             "science",

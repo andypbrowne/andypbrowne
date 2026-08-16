@@ -1,8 +1,8 @@
 ---
 title: Kickoff
 description: What is something you think about when you start a new project?
-thumbnail: assets/images/thumb-fpo.png
-thumbnailAlt: alternative text 
+thumbnail: assets/images/thumb-kickoff.jpg
+thumbnailAlt: An illustration a motivational concept of transition and growth, moving from a difficult present state bad today to an optimistic future outlook better tomorrow 
 date: 2024-03-23
 tags:
   - post
@@ -17,6 +17,11 @@ I always look for an opportunity to build trust with the client/collaborator/tea
 With a good icebreaker, you can find out about: communication styles; personalities; and shared interests. Also, it happens almost every time, we will find some unexpected inspiration for the project. For example we might use an icebreaker like What would you put on your custom license plate. My custom license plate might say <span style="text-transform: uppercase;"><em>LEGO® DAD</em></span>. This is because I love building things and spending time with my daughter. I could tell a story about how we built the Disney Castle and then went to go see it recently at Magic Kingdom. When telling this story, I am actually letting people know that building and making things is part of my identity. That client has also been given a meaningful and memorable story that connects things.
 
 ## The second thing
+
+<figure>
+  {% image "../../" + thumbnail, thumbnailAlt %}
+  <figcaption>Describe the bad today (A) and the better tomorrow (B).</figcaption>
+</figure>
 
 Just as important, find out what problem really needs to be solved. A client may be asking for a specific solution like “design me a poster.” But, it is the job of the designer to investigate what actual problem is being solved. Its possible that a poster is not the best way to get at the business needs at hand. Yes, of course, we will make you the poster. But we also see an opportunity to design a comprehensive brand, a fresh marketing campaign, or something truly innovative. 
 
@@ -36,14 +41,14 @@ This interview is no substitute for some real user research – but it is a grea
 
 ### Don't forget
 
-1. What is your timeframe? Is there a major event that we can time the completion with for the most impact?
-2. How will we measure success?
+8. What is your timeframe? Is there a major event that we can time the completion with for the most impact?
+9. How will we measure success?
 
 ### Next steps
 
-1. Gather some examples of other things we like (I call this a scrapbook and not a competitive analysis [because Design-isms](https://uxdesign.cc/poster-prompts-for-avoiding-design-isms-8be43625c482))
-2. Provide, in the intake or right after, all the sources of data, everything is useful to the designer.
-3. List the next steps and send intake to the client to confirm that we heard everything correctly.
+10. Gather some examples of other things we like (I call this a scrapbook and not a competitive analysis [because Design-isms](https://uxdesign.cc/poster-prompts-for-avoiding-design-isms-8be43625c482))
+11. Provide, in the intake or right after, all the sources of data, everything is useful to the designer.
+12. List the next steps and send intake to the client to confirm that we heard everything correctly.
 
 That’s it, the most important things I think about when starting a new project. I’d like to thank the graphic design students at [Hostos](https://www.hostos.cuny.edu/About-Hostos/) who recently asked me this question during a class visit. 
 

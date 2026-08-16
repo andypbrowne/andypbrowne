@@ -384,8 +384,8 @@
     "description": ""
   },
   {
-    "cover": "https://covers.openlibrary.org/b/id/9157148-L.jpg",
-    "coverAlt": "Cover of All Systems Red with a red-lit android figure against a dark background",
+    "cover": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1631585309i/32758901.jpg",
+    "coverAlt": "Cover of All Systems Red with an armored figure in a dark forest under a ringed planet",
     "link": "https://www.marthawells.com/murderbot1.htm",
     "title": "All Systems Red",
     "subTitle": "The Murderbot Diaries",
@@ -396,8 +396,8 @@
     "description": ""
   },
   {
-    "cover": "https://covers.openlibrary.org/b/id/10482258-M.jpg",
-    "coverAlt": "Cover of Good Omens with illustrated angel and demon figures",
+    "cover": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1615552073i/12067.jpg",
+    "coverAlt": "Cover of Good Omens with a winged figure reading a book on a black background with gold lettering",
     "link": "https://www.neilgaiman.com/works/Books/Good+Omens/",
     "title": "Good Omens",
     "subTitle": "The Nice and Accurate Prophecies of Agnes Nutter, Witch",
@@ -406,5 +406,53 @@
     "tags": ["fantasy", "fiction"],
     "status": "want-to-read",
     "description": ""
+  },
+  {
+    "cover": "https://images.penguinrandomhouse.com/cover/9780593873359",
+    "coverAlt": "Cover of Blood Over Bright Haven with a gold typewriter, red flames, and celestial gold arcs on a black background",
+    "link": "https://mlwangbooks.com/blood-over-bright-haven/",
+    "title": "Blood Over Bright Haven",
+    "subTitle": "A Novel",
+    "author": "M. L. Wang",
+    "type": "book",
+    "tags": ["fantasy", "fiction"],
+    "status": "want-to-read",
+    "description": "Loaned to me by my neighbor."
+  },
+  {
+    "cover": "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781982141189/the-will-of-the-many-9781982141189_lg.jpg",
+    "coverAlt": "Cover of The Will of the Many with a Roman-style city, a floating geometric structure, and a tall white obelisk under an orange sky",
+    "link": "https://www.simonandschuster.com/books/The-Will-of-the-Many/James-Islington/Hierarchy/9781982141189",
+    "title": "The Will of the Many",
+    "subTitle": "Hierarchy, Book 1",
+    "author": "James Islington",
+    "type": "book",
+    "tags": ["fantasy", "fiction"],
+    "status": "want-to-read",
+    "description": "Loaned to me by my neighbor."
+  },
+  {
+    "cover": "https://www.oreilly.com/covers/urn:orm:book:9780321648747/522w/",
+    "coverAlt": "Cover of Content Strategy for the Web with bold white title text on a solid red background",
+    "link": "https://www.oreilly.com/library/view/content-strategy-for/9780321648747/",
+    "title": "Content Strategy for the Web",
+    "subTitle": "",
+    "author": "Kristina Halvorson",
+    "type": "book",
+    "tags": ["design", "business"],
+    "status": "want-to-read",
+    "description": ""
+  },
+  {
+    "cover": "/assets/images/cover-snowys-saga.jpg",
+    "coverAlt": "Black and white zine cover of Snowy's Saga showing a fluffy white cat in a bubble above a planetary surface, with stars, a galaxy, and two large eyes in space",
+    "link": "https://www.robertelstein.com/",
+    "title": "Snowy's Saga",
+    "subTitle": "Part 1: Snowfall",
+    "author": "Robert Elstein, illustrated by Chloe Levitch",
+    "type": "zine",
+    "tags": ["zine", "sci-fi", "fiction"],
+    "status": "read",
+    "description": "Published by the Artmageddon Collective. Only available for purchase in the neighborhood."
   }
 ]
