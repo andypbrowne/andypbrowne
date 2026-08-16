@@ -1,0 +1,176 @@
+.seeing-stones-reader {
+  margin-block: 2.5rem 1rem;
+  padding-block: 1.5rem;
+  padding-inline: 1.5rem;
+  border: 1px solid var(--subtle-border);
+  border-radius: var(--border-radius);
+  background: var(--color-aside);
+  color: var(--text-color);
+}
+
+.seeing-stones-reader h2 {
+  margin-block-start: 0;
+}
+
+.seeing-stones-reader-intro {
+  margin-block-end: 1rem;
+}
+
+.seeing-stones-question-label {
+  display: block;
+  font-size: var(--font-size-sm);
+  margin-block-end: 0.35rem;
+}
+
+.seeing-stones-optional {
+  color: var(--color-gray-60);
+}
+
+.seeing-stones-question {
+  inline-size: 100%;
+  margin-block-end: 1rem;
+  padding-block: 0.65rem;
+  padding-inline: 0.75rem;
+  border: 1px solid var(--subtle-border);
+  border-radius: var(--border-radius);
+  font: inherit;
+  color: var(--text-color);
+  background: var(--color-base-bg);
+  resize: vertical;
+}
+
+.seeing-stones-question::placeholder {
+  color: var(--color-gray-60);
+}
+
+.seeing-stones-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-block-end: 1.25rem;
+}
+
+.seeing-stones-spill {
+  padding-block: 0.6rem;
+  padding-inline: 1.1rem;
+  border: 1px solid var(--color-midnight-60);
+  border-radius: 2rem;
+  background: var(--color-midnight-80);
+  color: var(--color-midnight-20);
+  font: inherit;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.seeing-stones-spill:hover {
+  background: var(--color-midnight-60);
+  border-color: var(--color-midnight-60);
+  color: var(--color-midnight-20);
+}
+
+.seeing-stones-spill:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.seeing-stones-cloth {
+  position: relative;
+  min-block-size: 14rem;
+  margin-block-end: 1rem;
+  border-radius: var(--border-radius);
+  background: var(--color-base-bg);
+  border: 1px solid var(--subtle-border);
+  color: var(--text-color);
+  overflow: hidden;
+}
+
+.seeing-stones-cloth.is-shaking {
+  animation: seeing-stones-shake 0.45s ease-in-out;
+}
+
+.seeing-stones-cloth-empty {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  margin: 0;
+  padding-block: 1rem;
+  padding-inline: 1rem;
+  text-align: center;
+  color: var(--color-gray-60);
+  font-size: var(--font-size-sm);
+}
+
+.seeing-stones-cloth.has-stones .seeing-stones-cloth-empty {
+  display: none;
+}
+
+.seeing-stone {
+  --x: 50%;
+  --y: 50%;
+  --rotation: 0deg;
+  position: absolute;
+  inset-inline-start: var(--x);
+  inset-block-start: var(--y);
+  inline-size: 6rem;
+  block-size: 6rem;
+  display: grid;
+  place-items: center;
+  color: var(--text-color);
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  transform: translate(-50%, -50%) rotate(var(--rotation));
+  animation: seeing-stones-drop 0.35s ease-out both;
+}
+
+.seeing-stone svg {
+  inline-size: 100%;
+  block-size: 100%;
+  opacity: 1;
+}
+
+.seeing-stones-prompts {
+  font-size: var(--font-size-sm);
+}
+
+.seeing-stones-prompts ol {
+  margin-block-end: 0;
+  padding-inline-start: 1.2rem;
+}
+
+@keyframes seeing-stones-shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-4px) rotate(-0.5deg);
+  }
+  40% {
+    transform: translateX(4px) rotate(0.5deg);
+  }
+  60% {
+    transform: translateX(-3px);
+  }
+  80% {
+    transform: translateX(3px);
+  }
+}
+
+@keyframes seeing-stones-drop {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -70%) rotate(calc(var(--rotation) - 20deg)) scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(var(--rotation)) scale(1);
+  }
+}
+
+@media screen and (min-width: 650px) {
+  .seeing-stones-cloth {
+    min-block-size: 16rem;
+  }
+}
