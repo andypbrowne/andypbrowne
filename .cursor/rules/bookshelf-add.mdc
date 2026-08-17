@@ -6,35 +6,30 @@ alwaysApply: false
 
 # Add a book to the bookshelf
 
-## Scope (credit-efficient)
+## Scope
 
-- Read **`_data/books/book-schema.json`** once per task — it is the source of truth for required fields, enums, and types (also wired in `.vscode/settings.json` for editor validation).
-- Edit **one** list file: `_data/books/[YEAR]bookList.json`. Default to the **newest year** file (e.g. `2026bookList.json`) unless the user names a year.
-- **Append** one object before the closing `]`; match **field order and style** of the last entry in that file.
-- Every new entry must **conform to the schema** (required keys present; `status`, `type`, and each `tags` item use schema `enum` values only).
-- Do **not** search the codebase, scan other year files for duplicates, run `npm`, or commit unless the user asks.
+- Read **`_data/books/book-schema.json`** once — do not copy enums into this rule.
+- Edit **one** list file: `_data/books/[YEAR]bookList.json`. Default to the **newest year** unless the user names a year or file (e.g. `0000bookList.json`).
+- **Append** one object before `]`. Match **field order and style** of that file’s last entry.
+- Conform to the schema. If a tag is missing, add it to `book-schema.json` in the same change.
+- Do **not** search the repo, other year files, publisher/indie product pages, or run `npm`.
 
-## Schema (from `book-schema.json`)
+**Always write:** `cover`, `coverAlt`, `link`, `title`, `subTitle` (`""` if none), `author`, `type`, `tags`, `status`, `description` (`""` unless the user gives notes). Optional: `graphic`, `graphicAlt` under `/assets/images/`.
 
-**Required:** `cover`, `coverAlt`, `link`, `title`, `author`, `tags`, `status`
+## Covers
 
-**Also include:** `subTitle` (`""` if none), `type`, `description` (`""` unless the user provides notes)
+Prefer **Open Library**, then **Amazon**. Never use publisher, indie, or storefront image URLs (HarperCollins, O’Reilly, Penguin, author sites, etc.).
 
-| Field | Schema constraint |
-|-------|-------------------|
-| `cover`, `link` | URI strings |
-| `type` | `""`, `book`, `audiobook`, or `ebook` |
-| `status` | `want-to-read`, `currently-reading`, `read`, or `dnf` |
-| `tags` | Array, min 1; each value from schema `tags.items.enum` |
+1. If the user gives an Open Library, Amazon, or local `/assets/images/` cover — use it. No search.
+2. Else get an ISBN (from the user’s link path, or one Open Library/ISBN search). Try:
 
-**Optional (not in schema):** `graphic`, `graphicAlt` — local paths under `/assets/images/`.
+   `https://covers.openlibrary.org/b/isbn/{ISBN}-L.jpg?default=false`
 
-**New tag:** If none of the schema tag enums fit, **add the tag to `book-schema.json`** in the same change, then use it in the book entry.
+   HEAD it. Use the URL **without** `?default=false` in JSON only if the HEAD is `200` and not a tiny placeholder.
+3. If Open Library 404s, times out, or is a 1×1 — Amazon `m.media-amazon.com` cover.
+4. If both fail — **stop**. Ask the user to drop a file in `content/assets/images/` and use `/assets/images/…`. Do not scrape another host.
 
-## Lookup
-
-- If the user supplies **link + cover URL**, use them — no web search.
-- Only fetch metadata when a required field is missing and the user did not provide it.
+Do not fetch JS storefront pages for metadata. Write `coverAlt` from the edition you actually used.
 
 ## User message shape
 
@@ -44,8 +39,8 @@ Author: …
 Status: want-to-read
 Tags: tag1, tag2
 Link: …
-Cover: … (or "from link")
+Cover: … (Open Library, Amazon, local path, or omit)
 Notes: … (or none)
 ```
 
-Batch: numbered lines with the same fields; still one append per book, same file.
+Batch: numbered lines, same fields; one append per book, same file.

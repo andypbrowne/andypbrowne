@@ -338,5 +338,17 @@
       "tags": ["sci-fi", "fiction"],
       "status": "read",
       "description": "Super fond memories of these embossed and shiny letters of the 90s. There is something very satisfying about the texture and the building mystery of stories like this."
+    },
+    {
+      "cover": "https://m.media-amazon.com/images/I/71aFt4+OTOL._SY522_.jpg",
+      "coverAlt": "Cover of The Alchemist with red title text over a glowing sun, orange sky, and silhouetted pyramids",
+      "link": "https://www.harpercollins.com/products/the-alchemist-paulo-coelho?variant=32122391101474",
+      "title": "The Alchemist",
+      "subTitle": "A Fable About Following Your Dream",
+      "author": "Paulo Coelho",
+      "type": "book",
+      "tags": ["fiction", "philosophy"],
+      "status": "read",
+      "description": "The 25th anniversary edition is the best to read because of the beautiful cover and the size."
     }
 ]
