@@ -216,25 +216,17 @@ document.addEventListener('DOMContentLoaded', function() {
       card.style.display = (statusMatches && tagMatches) ? '' : 'none';
     });
 
-    const filterActive = (statusKey !== 'all') || (tagKey !== 'all');
-
-    // If grouping is enabled, keep year headers and lists visible and do not flatten
+    // Grouping on: keep year headers and lists. Off: one flat shelf of visible cards.
     if (groupByYears) {
       restoreOriginalPositions();
       headers.forEach(h => h.style.display = '');
       bookLists.forEach(l => l.style.display = '');
       if (filteredContainer) filteredContainer.style.display = 'none';
     } else {
-      if (!filterActive) {
-        restoreOriginalPositions();
-        headers.forEach(h => h.style.display = '');
-        bookLists.forEach(l => l.style.display = '');
-      } else {
-        headers.forEach(h => h.style.display = 'none');
-        const visible = bookCards.filter(c => c.style.display !== 'none');
-        moveToFiltered(visible);
-        bookLists.forEach(l => l.style.display = 'none');
-      }
+      headers.forEach(h => h.style.display = 'none');
+      const visible = bookCards.filter(c => c.style.display !== 'none');
+      moveToFiltered(visible);
+      bookLists.forEach(l => l.style.display = 'none');
     }
 
     bookCards.forEach(c => c.classList.remove('book-find-target'));
