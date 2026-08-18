@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const filterRadios = Array.from(document.querySelectorAll('input[name="filter"]')); // tag radios
   const statusSelect = document.getElementById('status-select'); // the status dropdown
   const groupToggle = document.getElementById('group-by-years'); // new grouping checkbox
+  const coversToggle = document.getElementById('covers-only');
   const bookCards = Array.from(document.querySelectorAll('.book-card, .filter-grid-item'));
   const headers = document.querySelectorAll('.bookshelf-header');
   const bookLists = document.querySelectorAll('ol.bookshelf.filter-grid');
@@ -28,6 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // keep grouping state (true = show grouped headers / keep items in their lists)
   let groupByYears = groupToggle ? !!groupToggle.checked : true;
+  let coversOnly = coversToggle ? !!coversToggle.checked : false;
 
   function parseStoredState() {
     try {
@@ -51,11 +53,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const status = params.get('status');
     const groupRaw = params.get('group');
     const group = normalizeGroupValue(groupRaw);
-    if (!tag && !status && group === null) return null;
+    const covers = normalizeGroupValue(params.get('covers'));
+    if (!tag && !status && group === null && covers === null) return null;
     return {
       tag: tag || null,
       status: status || null,
-      groupByYears: group
+      groupByYears: group,
+      coversOnly: covers
     };
   }
 
@@ -63,7 +67,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const payload = {
       tag: currentTag,
       status: currentStatus,
-      groupByYears: groupByYears
+      groupByYears: groupByYears,
+      coversOnly: coversOnly
     };
     try {
       window.localStorage.setItem(STORAGE_KEY, JSON.stringify(payload));
@@ -75,6 +80,7 @@ document.addEventListener('DOMContentLoaded', function() {
     url.searchParams.set('tag', currentTag);
     url.searchParams.set('status', currentStatus);
     url.searchParams.set('group', groupByYears ? '1' : '0');
+    url.searchParams.set('covers', coversOnly ? '1' : '0');
     if (options && options.clearHash) {
       url.hash = '';
     }
@@ -85,6 +91,19 @@ document.addEventListener('DOMContentLoaded', function() {
       groupByYears = !!groupToggle.checked;
       persistState();
       applyFilters();
+    });
+  }
+
+  function applyCoversOnly() {
+    document.documentElement.classList.toggle('covers-only', coversOnly);
+    if (coversToggle) coversToggle.checked = !!coversOnly;
+  }
+
+  if (coversToggle) {
+    coversToggle.addEventListener('change', () => {
+      coversOnly = !!coversToggle.checked;
+      applyCoversOnly();
+      persistState();
     });
   }
 
@@ -290,6 +309,13 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
+  const coversSeed = (urlState && urlState.coversOnly !== null && urlState.coversOnly !== undefined)
+    ? urlState.coversOnly
+    : (storedState && storedState.coversOnly);
+  if (coversSeed !== null && coversSeed !== undefined) {
+    coversOnly = !!coversSeed;
+  }
+
   // ensure checkbox and JS state are in sync on load
   if (groupToggle) {
     // if initial status is want-to-read/currently-reading, override grouping to off
@@ -309,6 +335,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   updateFilterLabels();
   applyFilters();
+  applyCoversOnly();
 
   const SECTION_LABELS = {
     '2026': '2026',
@@ -380,10 +407,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     card.scrollIntoView({ block: 'center', behavior: reduceMotion ? 'auto' : 'smooth' });
     card.classList.add('book-find-target');
-    const heading = card.querySelector('h3');
-    if (heading) {
-      heading.setAttribute('tabindex', '-1');
-      heading.focus({ preventScroll: true });
+    if (coversOnly) {
+      const link = card.querySelector('a');
+      if (link) link.focus({ preventScroll: true });
+    } else {
+      const heading = card.querySelector('h3');
+      if (heading) {
+        heading.setAttribute('tabindex', '-1');
+        heading.focus({ preventScroll: true });
+      }
     }
     window.setTimeout(() => card.classList.remove('book-find-target'), 1800);
   }

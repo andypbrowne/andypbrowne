@@ -65,6 +65,40 @@ ol.bookshelf li div.info {
     }
 }
 
+.covers-only ol.bookshelf {
+    grid-template-columns: repeat(auto-fill, minmax(6.5rem, 1fr));
+    gap: 1rem;
+}
+
+.covers-only ol.bookshelf li {
+    display: block;
+    grid-template-columns: none;
+    grid-template-rows: none;
+    grid-row: auto;
+    gap: 0;
+}
+
+.covers-only ol.bookshelf li .info {
+    display: none;
+}
+
+.covers-only ol.bookshelf li > a {
+    display: block;
+    align-self: auto;
+}
+
+.covers-only ol.bookshelf li img {
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (min-width: 650px) {
+    .covers-only ol.bookshelf {
+        grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
+        gap: 1.25rem;
+    }
+}
+
 ol.bookshelf li .info h3:focus {
   outline: none;
 }
