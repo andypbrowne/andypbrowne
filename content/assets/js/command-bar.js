@@ -27,6 +27,8 @@ class CommandBar {
 		this.corePages = [];
 		this.lastFocusedElement = null;
 		this.inputElement = null;
+		this.scopeElement = null;
+		this.booksHintElement = null;
 		this.resultsContainer = null;
 		this.modalElement = null;
 		this._vtBusy = false;
@@ -153,22 +155,21 @@ class CommandBar {
 		this.filteredCommands = [...this.commands];
 	}
 
-	parseBookScope(raw) {
-		if (/^b\s*$/i.test(raw) || /^b$/i.test(raw.trim())) {
-			return { scoped: true, query: "" };
-		}
-		const match = raw.match(/^b\s+(\S.*)$/i);
-		if (match) {
-			return { scoped: true, query: match[1].trim() };
-		}
-		return { scoped: false, query: raw };
+	isBookPreview(raw) {
+		return /^b\s*$/i.test(raw);
 	}
 
 	setBookMode(on) {
 		this.bookMode = on;
+		if (this.scopeElement) this.scopeElement.hidden = !on;
+		if (this.booksHintElement) {
+			this.booksHintElement.innerHTML = on
+				? "<kbd>⌫</kbd> empty — All"
+				: "<kbd>b</kbd> then space — Books";
+		}
 		if (!this.inputElement) return;
 		this.inputElement.placeholder = on
-			? "Search books…"
+			? "Find a title or author"
 			: "Search pages and posts…";
 		this.inputElement.setAttribute(
 			"aria-label",
@@ -176,40 +177,78 @@ class CommandBar {
 		);
 	}
 
-	fuzzySearch(raw) {
-		const { scoped, query } = this.parseBookScope(raw);
-		this.setBookMode(scoped);
+	syncClearButton() {
+		if (!this.clearButton || !this.inputElement) return;
+		if (this.inputElement.value.length > 0) {
+			this.clearButton.classList.add("visible");
+			this.clearButton.removeAttribute("disabled");
+		} else {
+			this.clearButton.classList.remove("visible");
+			this.clearButton.setAttribute("disabled", "true");
+		}
+	}
 
-		if (scoped) {
-			if (!query) {
-				this.filteredCommands = [this.openBookshelfCommand];
-				this.selectedIndex = 0;
-				return;
-			}
+	exitBookMode() {
+		this.setBookMode(false);
+		if (this.inputElement) this.inputElement.value = "";
+		this.fuzzySearch("");
+		this.renderResults();
+		this.syncClearButton();
+		this.inputElement?.focus();
+	}
 
-			const lowerQuery = query.toLowerCase();
-			const scored = this.books
-				.map((cmd) => ({
-					cmd,
-					score: Math.max(
-						this.calculateFuzzyScore(cmd.name, lowerQuery),
-						this.calculateFuzzyScore(cmd.author, lowerQuery),
-					),
-				}))
-				.filter((item) => item.score > 0);
-
-			scored.sort((a, b) => b.score - a.score);
-			this.filteredCommands = scored.slice(0, 12).map((item) => item.cmd);
+	searchBooks(query) {
+		if (!String(query || "").trim()) {
+			this.filteredCommands = [this.openBookshelfCommand];
 			this.selectedIndex = 0;
 			return;
 		}
 
-		if (!query.trim()) {
-			this.filteredCommands = [...this.commands];
+		const lowerQuery = query.toLowerCase();
+		const scored = this.books
+			.map((cmd) => ({
+				cmd,
+				score: Math.max(
+					this.calculateFuzzyScore(cmd.name, lowerQuery),
+					this.calculateFuzzyScore(cmd.author, lowerQuery),
+				),
+			}))
+			.filter((item) => item.score > 0);
+
+		scored.sort((a, b) => b.score - a.score);
+		this.filteredCommands = scored.slice(0, 12).map((item) => item.cmd);
+		this.selectedIndex = 0;
+	}
+
+	fuzzySearch(raw) {
+		if (this.bookMode) {
+			this.searchBooks(raw);
 			return;
 		}
 
-		const lowerQuery = query.toLowerCase();
+		const locked = raw.match(/^b\s+(.*)$/i);
+		if (locked) {
+			const query = locked[1];
+			this.setBookMode(true);
+			if (this.inputElement && this.inputElement.value !== query) {
+				this.inputElement.value = query;
+			}
+			this.searchBooks(query);
+			return;
+		}
+
+		if (this.isBookPreview(raw)) {
+			this.searchBooks("");
+			return;
+		}
+
+		if (!raw.trim()) {
+			this.filteredCommands = [...this.commands];
+			this.selectedIndex = 0;
+			return;
+		}
+
+		const lowerQuery = raw.toLowerCase();
 		const scored = this.commands
 			.map((cmd) => ({
 				cmd,
@@ -262,6 +301,7 @@ class CommandBar {
 				<div class="command-bar-header">
 					<span class="command-bar-icon search-icon">🔍</span>
 					<div class="command-bar-input-wrapper">
+						<span class="command-bar-scope" hidden title="Backspace to search everything">Books</span>
 						<input
 							type="text"
 							spellcheck="false"
@@ -283,7 +323,7 @@ class CommandBar {
 					<span><kbd>↑↓</kbd> Navigate</span>
 					<span><kbd>↵</kbd> Select</span>
 					<span><kbd>ESC</kbd> Close</span>
-					<span><kbd>b</kbd> then space — Books</span>
+					<span class="command-bar-hint-books"><kbd>b</kbd> then space — Books</span>
 					<span><kbd>⌘</kbd>+ <kbd>K</kbd> Open/close </span>
 				</div>
 			</div>
@@ -303,6 +343,8 @@ class CommandBar {
 		this.overlayElement = this.modalElement.querySelector(".command-bar-overlay");
 		this.panelElement = this.modalElement.querySelector(".command-bar-container");
 		this.inputElement = this.modalElement.querySelector(".command-bar-input");
+		this.scopeElement = this.modalElement.querySelector(".command-bar-scope");
+		this.booksHintElement = this.modalElement.querySelector(".command-bar-hint-books");
 		this.resultsContainer = this.modalElement.querySelector(".command-bar-results");
 		this.liveRegion = this.modalElement.querySelector(".command-bar-live");
 		this.clearButton = this.modalElement.querySelector(".command-bar-clear");
@@ -368,16 +410,16 @@ class CommandBar {
 	renderResults() {
 		this.resultsContainer.innerHTML = "";
 		const raw = this.inputElement.value;
-		const { scoped, query } = this.parseBookScope(raw);
+		const inBooks = this.bookMode || this.isBookPreview(raw);
 
-		if (scoped && !query) {
+		if (inBooks && !raw.trim()) {
 			this.liveRegion.textContent =
-				"Bookshelf mode. Type a title or author, or open the bookshelf.";
+				"Searching books. Type a title or author, or open the bookshelf.";
 			this.renderCommandList();
 			return;
 		}
 
-		if (!raw.trim()) {
+		if (!inBooks && !raw.trim()) {
 			this.liveRegion.textContent =
 				"Featured content: Latest posts, case studies, and quick links";
 			this.renderFeaturedContent();
@@ -387,13 +429,13 @@ class CommandBar {
 		if (this.filteredCommands.length === 0) {
 			this.resultsContainer.innerHTML =
 				'<div class="command-bar-empty">No results found</div>';
-			this.liveRegion.textContent = `No results found for "${query}"`;
+			this.liveRegion.textContent = `No results found for "${raw.trim()}"`;
 			return;
 		}
 
 		this.liveRegion.textContent = `${this.filteredCommands.length} result${
 			this.filteredCommands.length !== 1 ? "s" : ""
-		} found for "${scoped ? query : raw.trim()}"`;
+		} found for "${raw.trim()}"`;
 
 		this.renderCommandList();
 	}
@@ -706,7 +748,7 @@ class CommandBar {
 			return;
 		}
 
-		window.location.href = url;
+		window.location.assign(dest.href);
 	}
 
 	escapeHtml(text) {
@@ -754,9 +796,30 @@ class CommandBar {
 					e.preventDefault();
 					this.selectCurrent();
 					break;
+				case "Backspace":
+					if (
+						this.bookMode &&
+						this.inputElement.value === "" &&
+						!e.metaKey &&
+						!e.ctrlKey &&
+						!e.altKey
+					) {
+						e.preventDefault();
+						this.exitBookMode();
+					}
+					break;
 				case "Escape":
 					e.preventDefault();
-					this.close();
+					if (this.bookMode && this.inputElement.value) {
+						this.inputElement.value = "";
+						this.fuzzySearch("");
+						this.renderResults();
+						this.syncClearButton();
+					} else if (this.bookMode) {
+						this.exitBookMode();
+					} else {
+						this.close();
+					}
 					break;
 			}
 		});
@@ -764,21 +827,16 @@ class CommandBar {
 		this.inputElement.addEventListener("input", (e) => {
 			this.fuzzySearch(e.target.value);
 			this.renderResults();
-			if (e.target.value.length > 0) {
-				this.clearButton.classList.add("visible");
-				this.clearButton.removeAttribute("disabled");
-			} else {
-				this.clearButton.classList.remove("visible");
-				this.clearButton.setAttribute("disabled", "true");
-			}
+			this.syncClearButton();
 		});
+
+		this.scopeElement.addEventListener("click", () => this.exitBookMode());
 
 		this.clearButton.addEventListener("click", () => {
 			this.inputElement.value = "";
 			this.fuzzySearch("");
 			this.renderResults();
-			this.clearButton.classList.remove("visible");
-			this.clearButton.setAttribute("disabled", "true");
+			this.syncClearButton();
 			this.inputElement.focus();
 		});
 
