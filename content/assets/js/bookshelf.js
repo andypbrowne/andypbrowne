@@ -138,10 +138,10 @@ document.addEventListener('DOMContentLoaded', function() {
   function restoreOriginalPositions() {
     bookCards.forEach(card => {
       const pos = originalPos.get(card);
-      if (!pos) return;
-      pos.parent.insertBefore(card, pos.next);
+      if (!pos || !pos.parent) return;
+      pos.parent.appendChild(card);
     });
-    filteredContainer.style.display = 'none';
+    if (filteredContainer) filteredContainer.style.display = 'none';
   }
 
   // Helper: treat "read" filter as including both "read" and "currently-reading"
@@ -381,8 +381,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
   function selectBook(id, options) {
     const writeHash = !options || options.writeHash !== false;
-    const card = document.getElementById(id);
-    if (!card) return;
 
     currentTag = 'all';
     currentStatus = 'all';
@@ -391,6 +389,18 @@ document.addEventListener('DOMContentLoaded', function() {
     if (statusSelect) statusSelect.value = 'all';
 
     persistState();
+    applyFilters();
+
+    const card = document.getElementById(id);
+    if (!card) return;
+
+    card.style.display = '';
+    const list = card.closest('ol.bookshelf');
+    if (list) list.style.display = '';
+    const header = list && list.previousElementSibling;
+    if (header && header.classList.contains('bookshelf-header')) {
+      header.style.display = '';
+    }
 
     if (writeHash) {
       const url = new URL(window.location.href);
@@ -398,26 +408,28 @@ document.addEventListener('DOMContentLoaded', function() {
       window.history.replaceState({}, '', url);
     }
 
-    applyFilters();
-
     if (filterDetails && window.innerWidth < 676) {
       filterDetails.removeAttribute('open');
     }
 
-    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    card.scrollIntoView({ block: 'center', behavior: reduceMotion ? 'auto' : 'smooth' });
-    card.classList.add('book-find-target');
-    if (coversOnly) {
-      const link = card.querySelector('a');
-      if (link) link.focus({ preventScroll: true });
-    } else {
-      const heading = card.querySelector('h3');
-      if (heading) {
-        heading.setAttribute('tabindex', '-1');
-        heading.focus({ preventScroll: true });
+    const jumpToCard = () => {
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      card.scrollIntoView({ block: 'center', behavior: reduceMotion ? 'auto' : 'smooth' });
+      card.classList.add('book-find-target');
+      if (coversOnly) {
+        const link = card.querySelector('a');
+        if (link) link.focus({ preventScroll: true });
+      } else {
+        const heading = card.querySelector('h3');
+        if (heading) {
+          heading.setAttribute('tabindex', '-1');
+          heading.focus({ preventScroll: true });
+        }
       }
-    }
-    window.setTimeout(() => card.classList.remove('book-find-target'), 1800);
+      window.setTimeout(() => card.classList.remove('book-find-target'), 1800);
+    };
+
+    requestAnimationFrame(() => requestAnimationFrame(jumpToCard));
   }
 
   function honorHash() {
