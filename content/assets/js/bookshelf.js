@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
     };
   }
 
-  function persistState() {
+  function persistState(options) {
     const payload = {
       tag: currentTag,
       status: currentStatus,
@@ -75,6 +75,9 @@ document.addEventListener('DOMContentLoaded', function() {
     url.searchParams.set('tag', currentTag);
     url.searchParams.set('status', currentStatus);
     url.searchParams.set('group', groupByYears ? '1' : '0');
+    if (options && options.clearHash) {
+      url.hash = '';
+    }
     window.history.replaceState({}, '', url);
   }
   if (groupToggle) {
@@ -215,6 +218,8 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
 
+    bookCards.forEach(c => c.classList.remove('book-find-target'));
+
     // show empty state when no visible cards
     const visibleCount = bookCards.filter(c => c.style.display !== 'none').length;
     if (emptyStateEl) {
@@ -229,7 +234,7 @@ document.addEventListener('DOMContentLoaded', function() {
   filterRadios.forEach(radio => {
     radio.addEventListener('change', function() {
       currentTag = (this.value || 'all').toLowerCase();
-      persistState();
+      persistState({ clearHash: true });
       applyFilters();
     });
   });
@@ -249,7 +254,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
 
       // apply filters with the same selected tag (don't reset radios)
-      persistState();
+      persistState({ clearHash: true });
       applyFilters();
     });
   }
@@ -304,4 +309,269 @@ document.addEventListener('DOMContentLoaded', function() {
 
   updateFilterLabels();
   applyFilters();
+
+  const SECTION_LABELS = {
+    '2026': '2026',
+    '2025': '2025',
+    '2024': '2024',
+    '2023': '2023',
+    '2022': '2022',
+    '2019-2021': '2019 to 2021',
+    '2016-2018': '2016 to 2018',
+    'older': 'Older Notable Reads'
+  };
+
+  function calculateFuzzyScore(name, query) {
+    const lowerName = String(name || '').toLowerCase();
+    let queryIdx = 0;
+    let score = 0;
+    let consecutiveMatches = 0;
+
+    if (lowerName.includes(query)) {
+      return 1000;
+    }
+
+    for (let i = 0; i < lowerName.length && queryIdx < query.length; i++) {
+      if (lowerName[i] === query[queryIdx]) {
+        queryIdx++;
+        consecutiveMatches++;
+
+        const isWordBoundary = i === 0 || lowerName[i - 1] === ' ';
+        if (isWordBoundary) {
+          score += 100;
+        } else if (consecutiveMatches > 1) {
+          score += 50;
+        } else {
+          score += 10;
+        }
+      } else {
+        consecutiveMatches = 0;
+      }
+    }
+
+    return queryIdx === query.length ? score : 0;
+  }
+
+  function selectBook(id, options) {
+    const writeHash = !options || options.writeHash !== false;
+    const card = document.getElementById(id);
+    if (!card) return;
+
+    currentTag = 'all';
+    currentStatus = 'all';
+    const allRadio = filterRadios.find(r => r.value.toLowerCase() === 'all');
+    if (allRadio) allRadio.checked = true;
+    if (statusSelect) statusSelect.value = 'all';
+
+    persistState();
+
+    if (writeHash) {
+      const url = new URL(window.location.href);
+      url.hash = id;
+      window.history.replaceState({}, '', url);
+    }
+
+    applyFilters();
+
+    if (filterDetails && window.innerWidth < 676) {
+      filterDetails.removeAttribute('open');
+    }
+
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    card.scrollIntoView({ block: 'center', behavior: reduceMotion ? 'auto' : 'smooth' });
+    card.classList.add('book-find-target');
+    const heading = card.querySelector('h3');
+    if (heading) {
+      heading.setAttribute('tabindex', '-1');
+      heading.focus({ preventScroll: true });
+    }
+    window.setTimeout(() => card.classList.remove('book-find-target'), 1800);
+  }
+
+  function honorHash() {
+    const id = (window.location.hash || '').replace(/^#/, '');
+    if (id && document.getElementById(id)) {
+      selectBook(id, { writeHash: false });
+    }
+  }
+
+  window.addEventListener('hashchange', honorHash);
+  honorHash();
+
+  const findInput = document.getElementById('bookshelf-find-input');
+  const findList = document.getElementById('bookshelf-find-list');
+  const findLive = document.getElementById('bookshelf-find-live');
+  const findClear = document.getElementById('bookshelf-find-clear');
+
+  if (findInput && findList) {
+    const bookIndex = bookCards.map(card => ({
+      id: card.id,
+      title: card.getAttribute('data-title') || '',
+      author: card.getAttribute('data-author') || '',
+      section: card.getAttribute('data-section') || ''
+    })).filter(book => book.id && book.title);
+
+    let findMatches = [];
+    let findIndex = 0;
+
+    function closeFindList() {
+      findList.hidden = true;
+      findList.innerHTML = '';
+      findInput.setAttribute('aria-expanded', 'false');
+      findInput.removeAttribute('aria-activedescendant');
+      findMatches = [];
+      findIndex = 0;
+    }
+
+    function announceFind(message) {
+      if (findLive) findLive.textContent = message;
+    }
+
+    function renderFindList() {
+      findList.innerHTML = '';
+      const query = findInput.value.trim();
+
+      if (!query) {
+        closeFindList();
+        announceFind('');
+        return;
+      }
+
+      const lowerQuery = query.toLowerCase();
+      findMatches = bookIndex
+        .map(book => ({
+          book,
+          score: Math.max(
+            calculateFuzzyScore(book.title, lowerQuery),
+            calculateFuzzyScore(book.author, lowerQuery)
+          )
+        }))
+        .filter(item => item.score > 0)
+        .sort((a, b) => b.score - a.score)
+        .slice(0, 8)
+        .map(item => item.book);
+
+      findIndex = 0;
+      findList.hidden = false;
+      findInput.setAttribute('aria-expanded', 'true');
+
+      if (findMatches.length === 0) {
+        const empty = document.createElement('li');
+        empty.className = 'bookshelf-find-empty';
+        empty.setAttribute('role', 'presentation');
+        empty.textContent = 'No matching books';
+        findList.appendChild(empty);
+        findInput.removeAttribute('aria-activedescendant');
+        announceFind('No matching books');
+        return;
+      }
+
+      findMatches.forEach((book, idx) => {
+        const option = document.createElement('li');
+        const optionId = `bookshelf-find-opt-${idx}`;
+        option.id = optionId;
+        option.className = 'bookshelf-find-option';
+        option.setAttribute('role', 'option');
+        option.setAttribute('aria-selected', idx === 0 ? 'true' : 'false');
+
+        const title = document.createElement('span');
+        title.className = 'bookshelf-find-option-title';
+        title.textContent = book.title;
+
+        const meta = document.createElement('span');
+        meta.className = 'bookshelf-find-option-meta';
+        const year = SECTION_LABELS[book.section] || book.section;
+        meta.textContent = year ? `${book.author} · ${year}` : book.author;
+
+        option.appendChild(title);
+        option.appendChild(meta);
+        option.addEventListener('mousedown', (event) => {
+          event.preventDefault();
+          chooseFindMatch(idx);
+        });
+        findList.appendChild(option);
+      });
+
+      findInput.setAttribute('aria-activedescendant', 'bookshelf-find-opt-0');
+      announceFind(`${findMatches.length} match${findMatches.length === 1 ? '' : 'es'}`);
+    }
+
+    function highlightFindOption(nextIndex) {
+      if (!findMatches.length) return;
+      findIndex = nextIndex;
+      const options = findList.querySelectorAll('[role="option"]');
+      options.forEach((option, idx) => {
+        option.setAttribute('aria-selected', idx === findIndex ? 'true' : 'false');
+      });
+      const active = options[findIndex];
+      if (active) {
+        findInput.setAttribute('aria-activedescendant', active.id);
+        active.scrollIntoView({ block: 'nearest' });
+      }
+    }
+
+    function chooseFindMatch(idx) {
+      const book = findMatches[idx];
+      if (!book) return;
+      findInput.value = book.title;
+      if (findClear) findClear.hidden = false;
+      closeFindList();
+      announceFind(`Showing ${book.title}`);
+      selectBook(book.id);
+    }
+
+    function syncFindClear() {
+      if (!findClear) return;
+      findClear.hidden = findInput.value.length === 0;
+    }
+
+    findInput.addEventListener('input', () => {
+      syncFindClear();
+      renderFindList();
+    });
+
+    findInput.addEventListener('keydown', (event) => {
+      if (event.key === 'ArrowDown') {
+        if (findList.hidden) renderFindList();
+        if (!findMatches.length) return;
+        event.preventDefault();
+        highlightFindOption(Math.min(findIndex + 1, findMatches.length - 1));
+      } else if (event.key === 'ArrowUp') {
+        if (findList.hidden || !findMatches.length) return;
+        event.preventDefault();
+        highlightFindOption(Math.max(findIndex - 1, 0));
+      } else if (event.key === 'Enter') {
+        if (findList.hidden) renderFindList();
+        if (!findMatches.length) return;
+        event.preventDefault();
+        chooseFindMatch(findIndex);
+      } else if (event.key === 'Escape') {
+        if (!findList.hidden) {
+          event.preventDefault();
+          closeFindList();
+        } else if (findInput.value) {
+          event.preventDefault();
+          findInput.value = '';
+          syncFindClear();
+          announceFind('');
+        }
+      }
+    });
+
+    findInput.addEventListener('blur', () => {
+      window.setTimeout(() => {
+        if (document.activeElement !== findInput) closeFindList();
+      }, 100);
+    });
+
+    if (findClear) {
+      findClear.addEventListener('click', () => {
+        findInput.value = '';
+        syncFindClear();
+        closeFindList();
+        announceFind('');
+        findInput.focus();
+      });
+    }
+  }
 });

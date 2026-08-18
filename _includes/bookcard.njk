@@ -1,5 +1,9 @@
-<li class="filter-grid-item" 
-  data-tags="{{ book.tags | join(', ') | lower }}"  
+<li class="filter-grid-item"
+  id="book-{{ _bookShelfSection }}-{{ book.title | slugify }}"
+  data-title="{{ book.title }}"
+  data-author="{{ book.author }}"
+  data-section="{{ _bookShelfSection }}"
+  data-tags="{{ book.tags | join(', ') | lower }}"
   data-status="{{ (book.status | default('')) | lower }}">
   <a href="{{ book.link }}"><img loading="lazy" width="180" height="270" src="{{ book.cover }}" alt="{{ book.coverAlt }}" /></a>
   <div class="info">
