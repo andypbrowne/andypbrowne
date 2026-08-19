@@ -264,7 +264,10 @@ ol.bookshelf li div.info p {
 .filtering-summary {
   display: none;
   align-items: center;
+  justify-content: space-between;
   gap: 0.65rem;
+  width: 100%;
+  box-sizing: border-box;
   cursor: pointer;
   font-family: var(--font-family);
   font-size: var(--font-size-base);
@@ -272,6 +275,12 @@ ol.bookshelf li div.info p {
   font-variation-settings: "wght" 650;
   padding: 0.75rem 0;
   color: var(--color-midnight-80, #111);
+}
+
+.filtering-summary-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
 }
 
 .filtering-icon {
@@ -566,11 +575,100 @@ ol#filtered-results {
   font-weight: 600;
 }
 
+.status-controls-end {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+  flex: 0 1 auto;
+  min-width: 0;
+}
+
 .bookshelf-find {
   position: relative;
   flex: 0 1 16rem;
   min-width: 12rem;
   max-width: 20rem;
+}
+
+.bookshelf-top {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  margin: 0;
+  padding: 0.45rem 1rem;
+  min-width: 6.75rem;
+  min-height: 2.35rem;
+  box-sizing: border-box;
+  border: 1px solid var(--color-midnight-80, #ccc);
+  border-radius: 2rem;
+  background: var(--color-base-bg);
+  color: var(--color-midnight-60, #222);
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  font-variation-settings: "wght" 650;
+  line-height: 1.2;
+  cursor: pointer;
+}
+
+.bookshelf-top:hover {
+  background: var(--color-midnight-20, #f0f0f0);
+  color: var(--color-midnight-80, #111);
+}
+
+.bookshelf-top:focus-visible {
+  outline: 2px solid var(--color-midnight-80, #222);
+  outline-offset: 2px;
+}
+
+.bookshelf-top svg {
+  width: 0.9rem;
+  height: 0.9rem;
+  flex-shrink: 0;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.25;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.bookshelf-top[data-jump="bottom"] svg {
+  transform: rotate(180deg);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .bookshelf-top svg {
+    transition: transform 0.15s ease;
+  }
+}
+
+.bookshelf-top-slot {
+  flex: 0 0 auto;
+  display: none;
+  align-items: center;
+  min-height: 2.35rem;
+}
+
+.bookshelf-top--summary {
+  flex-shrink: 0;
+}
+
+@media screen and (max-width: 675px) {
+  .bookshelf-top-slot {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 676px) {
+  .bookshelf-top-slot {
+    display: flex;
+  }
+
+  .bookshelf-top--summary {
+    display: none;
+  }
 }
 
 .bookshelf-find-input-wrap {
@@ -718,6 +816,7 @@ ol#filtered-results {
     padding-top: 0.5rem;
   }
 
+  .status-controls-end,
   .bookshelf-find {
     flex: 1 1 auto;
     min-width: 0;

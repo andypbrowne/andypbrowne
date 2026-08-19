@@ -610,4 +610,44 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     }
   }
+
+  const jumpButtons = Array.from(document.querySelectorAll('.bookshelf-top'));
+  const pageTitle = document.querySelector('h1');
+  let atTop = true;
+
+  function setJumpDirection(isAtTop) {
+    atTop = isAtTop;
+    jumpButtons.forEach((button) => {
+      const label = button.querySelector('.bookshelf-top-label');
+      button.dataset.jump = isAtTop ? 'bottom' : 'top';
+      if (label) label.textContent = isAtTop ? 'Bottom' : 'Top';
+    });
+  }
+
+  function handleJump(event) {
+    event.preventDefault();
+    event.stopPropagation();
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const behavior = reduceMotion ? 'auto' : 'smooth';
+    if (atTop) {
+      window.scrollTo({ top: document.documentElement.scrollHeight, behavior });
+    } else {
+      window.scrollTo({ top: 0, behavior });
+    }
+  }
+
+  jumpButtons.forEach((button) => {
+    button.addEventListener('click', handleJump);
+  });
+
+  if (pageTitle && 'IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      if (!entry) return;
+      setJumpDirection(entry.isIntersecting);
+    });
+    observer.observe(pageTitle);
+  } else {
+    setJumpDirection(true);
+  }
 });
