@@ -7,6 +7,7 @@
 const fs = require('fs');
 const path = require('path');
 const frontMatter = require('gray-matter');
+const slugifyTitle = require('@11ty/eleventy/src/Filters/Slugify');
 
 module.exports = async function() {
 	// Core navigation pages
@@ -100,9 +101,49 @@ module.exports = async function() {
 	const latestPosts = blogPosts.filter(p => !p.isCaseStudy).slice(0, 3);
 	const latestCaseStudies = blogPosts.filter(p => p.isCaseStudy).slice(0, 3);
 
+	const bookLists = [
+		{ file: '2026bookList.json', section: '2026', label: '2026' },
+		{ file: '2025bookList.json', section: '2025', label: '2025' },
+		{ file: '2024bookList.json', section: '2024', label: '2024' },
+		{ file: '2023bookList.json', section: '2023', label: '2023' },
+		{ file: '2022bookList.json', section: '2022', label: '2022' },
+		{ file: '2019bookList.json', section: '2019-2021', label: '2019 to 2021' },
+		{ file: '2016bookList.json', section: '2016-2018', label: '2016 to 2018' },
+		{ file: '0000bookList.json', section: 'older', label: 'Older Notable Reads' },
+	];
+
+	const booksDir = path.join(__dirname, 'books');
+	const books = [];
+
+	for (const list of bookLists) {
+		const listPath = path.join(booksDir, list.file);
+		if (!fs.existsSync(listPath)) continue;
+
+		try {
+			const entries = JSON.parse(fs.readFileSync(listPath, 'utf-8'));
+			if (!Array.isArray(entries)) continue;
+
+			for (const book of entries) {
+				if (!book || !book.title) continue;
+				const id = `book-${list.section}-${slugifyTitle(book.title)}`;
+				books.push({
+					name: book.title,
+					author: book.author || '',
+					description: book.author
+						? `${book.author} · ${list.label}`
+						: list.label,
+					url: `/bookshelf/?tag=all&status=all&group=1#${id}`,
+				});
+			}
+		} catch (error) {
+			console.warn(`Failed to parse book list ${list.file}:`, error.message);
+		}
+	}
+
 	// Return both the full command list and featured content
 	return {
 		commands: [...corePages, ...blogPosts],
+		books,
 		featured: {
 			posts: latestPosts,
 			caseStudies: latestCaseStudies,

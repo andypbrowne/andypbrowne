@@ -118,10 +118,39 @@
 	align-items: center;
 	position: relative;
 	flex: 1;
+	min-width: 0;
+}
+
+.command-bar-scope {
+	flex-shrink: 0;
+	margin-right: 8px;
+	padding: 0.35rem 0.7rem;
+	border: 1px solid var(--color-midnight-40);
+	border-radius: 6px;
+	background: var(--color-midnight-20);
+	color: var(--text-color);
+	font-size: var(--font-size-sm);
+	font-family: var(--font-family);
+	font-weight: 600;
+	font-variation-settings: "wght" 650;
+	line-height: 1.3;
+	cursor: pointer;
+	user-select: none;
+}
+
+.command-bar-scope:hover {
+	border-color: var(--color-midnight-60);
+}
+
+.command-bar-scope:focus-visible {
+	outline: 2px solid var(--color-midnight-60);
+	outline-offset: 2px;
 }
 
 .command-bar-input {
-	width: 100%;
+	flex: 1;
+	min-width: 0;
+	width: auto;
 	padding: 10px 12px 10px 0;
 	font-size: var(--font-size-base);
 	font-family: var(--font-family);

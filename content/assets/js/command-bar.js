@@ -18,12 +18,17 @@ class CommandBar {
 		this.isOpen = false;
 		this.selectedIndex = 0;
 		this.commands = [];
+		this.books = [];
+		this.bookMode = false;
+		this.openBookshelfCommand = null;
 		this.filteredCommands = [];
 		this.featuredPosts = [];
 		this.featuredCaseStudies = [];
 		this.corePages = [];
 		this.lastFocusedElement = null;
 		this.inputElement = null;
+		this.scopeElement = null;
+		this.booksHintElement = null;
 		this.resultsContainer = null;
 		this.modalElement = null;
 		this._vtBusy = false;
@@ -83,6 +88,7 @@ class CommandBar {
 		const indexData =
 			window.COMMAND_INDEX || {
 				commands: [],
+				books: [],
 				featured: { posts: [], caseStudies: [], corePages: [] },
 			};
 
@@ -127,16 +133,122 @@ class CommandBar {
 			action: () => this.navigate(page.url),
 		}));
 
+		const booksData = Array.isArray(indexData)
+			? []
+			: indexData.books || [];
+
+		this.books = booksData.map((book) => ({
+			name: book.name,
+			author: book.author || "",
+			description: book.description,
+			url: book.url,
+			action: () => this.navigate(book.url),
+		}));
+
+		this.openBookshelfCommand = {
+			name: "Open bookshelf",
+			description: "Browse the book collection",
+			url: "/bookshelf/",
+			action: () => this.navigate("/bookshelf/"),
+		};
+
 		this.filteredCommands = [...this.commands];
 	}
 
-	fuzzySearch(query) {
-		if (!query) {
-			this.filteredCommands = [...this.commands];
+	isBookPreview(raw) {
+		return /^b\s*$/i.test(raw);
+	}
+
+	setBookMode(on) {
+		this.bookMode = on;
+		if (this.scopeElement) this.scopeElement.hidden = !on;
+		if (this.booksHintElement) {
+			this.booksHintElement.innerHTML = on
+				? "<kbd>⌫</kbd> empty — All"
+				: "<kbd>b</kbd> then space — Books";
+		}
+		if (!this.inputElement) return;
+		this.inputElement.placeholder = on
+			? "Find a title or author"
+			: "Search pages and posts…";
+		this.inputElement.setAttribute(
+			"aria-label",
+			on ? "Search books" : "Search command palette",
+		);
+	}
+
+	syncClearButton() {
+		if (!this.clearButton || !this.inputElement) return;
+		if (this.inputElement.value.length > 0) {
+			this.clearButton.classList.add("visible");
+			this.clearButton.removeAttribute("disabled");
+		} else {
+			this.clearButton.classList.remove("visible");
+			this.clearButton.setAttribute("disabled", "true");
+		}
+	}
+
+	exitBookMode() {
+		this.setBookMode(false);
+		if (this.inputElement) this.inputElement.value = "";
+		this.fuzzySearch("");
+		this.renderResults();
+		this.syncClearButton();
+		this.inputElement?.focus();
+	}
+
+	searchBooks(query) {
+		if (!String(query || "").trim()) {
+			this.filteredCommands = [this.openBookshelfCommand];
+			this.selectedIndex = 0;
 			return;
 		}
 
 		const lowerQuery = query.toLowerCase();
+		const scored = this.books
+			.map((cmd) => ({
+				cmd,
+				score: Math.max(
+					this.calculateFuzzyScore(cmd.name, lowerQuery),
+					this.calculateFuzzyScore(cmd.author, lowerQuery),
+				),
+			}))
+			.filter((item) => item.score > 0);
+
+		scored.sort((a, b) => b.score - a.score);
+		this.filteredCommands = scored.slice(0, 12).map((item) => item.cmd);
+		this.selectedIndex = 0;
+	}
+
+	fuzzySearch(raw) {
+		if (this.bookMode) {
+			this.searchBooks(raw);
+			return;
+		}
+
+		const locked = raw.match(/^b\s+(.*)$/i);
+		if (locked) {
+			const query = locked[1];
+			this.setBookMode(true);
+			if (this.inputElement && this.inputElement.value !== query) {
+				this.inputElement.value = query;
+			}
+			this.searchBooks(query);
+			return;
+		}
+
+		if (this.isBookPreview(raw)) {
+			this.searchBooks("");
+			return;
+		}
+
+		if (!raw.trim()) {
+			this.filteredCommands = [...this.commands];
+			this.selectedIndex = 0;
+			return;
+		}
+
+		const lowerQuery = raw.toLowerCase();
 		const scored = this.commands
 			.map((cmd) => ({
 				cmd,
@@ -189,6 +301,7 @@ class CommandBar {
 				<div class="command-bar-header">
 					<span class="command-bar-icon search-icon">🔍</span>
 					<div class="command-bar-input-wrapper">
+						<span class="command-bar-scope" hidden title="Backspace to search everything">Books</span>
 						<input
 							type="text"
 							spellcheck="false"
@@ -210,6 +323,7 @@ class CommandBar {
 					<span><kbd>↑↓</kbd> Navigate</span>
 					<span><kbd>↵</kbd> Select</span>
 					<span><kbd>ESC</kbd> Close</span>
+					<span class="command-bar-hint-books"><kbd>b</kbd> then space — Books</span>
 					<span><kbd>⌘</kbd>+ <kbd>K</kbd> Open/close </span>
 				</div>
 			</div>
@@ -229,6 +343,8 @@ class CommandBar {
 		this.overlayElement = this.modalElement.querySelector(".command-bar-overlay");
 		this.panelElement = this.modalElement.querySelector(".command-bar-container");
 		this.inputElement = this.modalElement.querySelector(".command-bar-input");
+		this.scopeElement = this.modalElement.querySelector(".command-bar-scope");
+		this.booksHintElement = this.modalElement.querySelector(".command-bar-hint-books");
 		this.resultsContainer = this.modalElement.querySelector(".command-bar-results");
 		this.liveRegion = this.modalElement.querySelector(".command-bar-live");
 		this.clearButton = this.modalElement.querySelector(".command-bar-clear");
@@ -293,9 +409,17 @@ class CommandBar {
 
 	renderResults() {
 		this.resultsContainer.innerHTML = "";
-		const query = this.inputElement.value.trim();
+		const raw = this.inputElement.value;
+		const inBooks = this.bookMode || this.isBookPreview(raw);
 
-		if (!query) {
+		if (inBooks && !raw.trim()) {
+			this.liveRegion.textContent =
+				"Searching books. Type a title or author, or open the bookshelf.";
+			this.renderCommandList();
+			return;
+		}
+
+		if (!inBooks && !raw.trim()) {
 			this.liveRegion.textContent =
 				"Featured content: Latest posts, case studies, and quick links";
 			this.renderFeaturedContent();
@@ -305,14 +429,18 @@ class CommandBar {
 		if (this.filteredCommands.length === 0) {
 			this.resultsContainer.innerHTML =
 				'<div class="command-bar-empty">No results found</div>';
-			this.liveRegion.textContent = `No results found for "${query}"`;
+			this.liveRegion.textContent = `No results found for "${raw.trim()}"`;
 			return;
 		}
 
 		this.liveRegion.textContent = `${this.filteredCommands.length} result${
 			this.filteredCommands.length !== 1 ? "s" : ""
-		} found for "${query}"`;
+		} found for "${raw.trim()}"`;
 
+		this.renderCommandList();
+	}
+
+	renderCommandList() {
 		this.filteredCommands.forEach((cmd, idx) => {
 			const item = document.createElement("div");
 			item.className = `command-bar-item ${
@@ -496,16 +624,17 @@ class CommandBar {
 		this.modalElement.addEventListener("keydown", this.handleFocusTrap);
 	}
 
-	applyClose() {
+	applyClose(restoreFocus = true) {
 		this.isOpen = false;
 		this.modalElement.classList.remove("open");
 		this.setChromeNames(false);
 		this.inputElement.value = "";
+		this.setBookMode(false);
 		this.filteredCommands = [...this.commands];
 		this.clearButton.classList.remove("visible");
 		this.clearButton.setAttribute("disabled", "true");
 		this.modalElement.removeEventListener("keydown", this.handleFocusTrap);
-		if (this.lastFocusedElement && this.lastFocusedElement.focus) {
+		if (restoreFocus && this.lastFocusedElement && this.lastFocusedElement.focus) {
 			this.lastFocusedElement.focus();
 		}
 	}
@@ -531,14 +660,15 @@ class CommandBar {
 		this.applyOpen();
 	}
 
-	close() {
+	close(options) {
 		if (!this.isOpen || this._vtBusy) return;
+		const restoreFocus = !options || options.restoreFocus !== false;
 
 		if (this.canUseViewTransitions()) {
 			this.setChromeNames(true);
 			this._vtBusy = true;
 			const transition = document.startViewTransition(() => {
-				this.applyClose();
+				this.applyClose(restoreFocus);
 			});
 			transition.finished.finally(() => {
 				this._vtBusy = false;
@@ -549,7 +679,7 @@ class CommandBar {
 			return;
 		}
 
-		this.applyClose();
+		this.applyClose(restoreFocus);
 		this.resumeSuspendedDialog();
 	}
 
@@ -603,7 +733,22 @@ class CommandBar {
 	navigate(url) {
 		// Leaving the page — don't resume a dialog on unload
 		this._suspendedDialog = null;
-		window.location.href = url;
+		const dest = new URL(url, window.location.origin);
+		const here =
+			window.location.pathname.replace(/\/$/, "") ===
+			dest.pathname.replace(/\/$/, "");
+
+		if (here && dest.hash) {
+			this.close({ restoreFocus: false });
+			if (window.location.hash === dest.hash) {
+				window.dispatchEvent(new HashChangeEvent("hashchange"));
+			} else {
+				window.location.hash = dest.hash.slice(1);
+			}
+			return;
+		}
+
+		window.location.assign(dest.href);
 	}
 
 	escapeHtml(text) {
@@ -651,9 +796,30 @@ class CommandBar {
 					e.preventDefault();
 					this.selectCurrent();
 					break;
+				case "Backspace":
+					if (
+						this.bookMode &&
+						this.inputElement.value === "" &&
+						!e.metaKey &&
+						!e.ctrlKey &&
+						!e.altKey
+					) {
+						e.preventDefault();
+						this.exitBookMode();
+					}
+					break;
 				case "Escape":
 					e.preventDefault();
-					this.close();
+					if (this.bookMode && this.inputElement.value) {
+						this.inputElement.value = "";
+						this.fuzzySearch("");
+						this.renderResults();
+						this.syncClearButton();
+					} else if (this.bookMode) {
+						this.exitBookMode();
+					} else {
+						this.close();
+					}
 					break;
 			}
 		});
@@ -661,21 +827,16 @@ class CommandBar {
 		this.inputElement.addEventListener("input", (e) => {
 			this.fuzzySearch(e.target.value);
 			this.renderResults();
-			if (e.target.value.length > 0) {
-				this.clearButton.classList.add("visible");
-				this.clearButton.removeAttribute("disabled");
-			} else {
-				this.clearButton.classList.remove("visible");
-				this.clearButton.setAttribute("disabled", "true");
-			}
+			this.syncClearButton();
 		});
+
+		this.scopeElement.addEventListener("click", () => this.exitBookMode());
 
 		this.clearButton.addEventListener("click", () => {
 			this.inputElement.value = "";
 			this.fuzzySearch("");
 			this.renderResults();
-			this.clearButton.classList.remove("visible");
-			this.clearButton.setAttribute("disabled", "true");
+			this.syncClearButton();
 			this.inputElement.focus();
 		});
 

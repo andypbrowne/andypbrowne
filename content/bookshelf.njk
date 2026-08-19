@@ -19,14 +19,22 @@ js: /assets/js/bookshelf.js
 
 <details class="filtering-details">
   <summary class="filtering-summary">
-    <span class="filtering-icon" aria-hidden="true">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" focusable="false" aria-hidden="true">
-        <path d="M3 7h18" />
-        <path d="M6 12h12" />
-        <path d="M9 17h6" />
-      </svg>
+    <span class="filtering-summary-label">
+      <span class="filtering-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" focusable="false" aria-hidden="true">
+          <path d="M3 7h18" />
+          <path d="M6 12h12" />
+          <path d="M9 17h6" />
+        </svg>
+      </span>
+      <span>Filters</span>
     </span>
-    <span>Filters</span>
+    <button type="button" class="bookshelf-top bookshelf-top--summary" data-jump="bottom">
+      <span class="bookshelf-top-label">Bottom</span>
+      <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false">
+        <path d="M12 19V5M5 12l7-7 7 7"></path>
+      </svg>
+    </button>
   </summary>
 
   <fieldset class="filtering">
@@ -80,21 +88,64 @@ js: /assets/js/bookshelf.js
       <label for="travel">Travel</label>
     </div>
   </div>
-    <div class="status-controls" role="group" aria-label="Status controls">
-      <div class="select-wrap">
-        <label for="status-select" class="visually-hidden">Status</label>
-        <select id="status-select" name="status">
-          <option value="all" selected>All</option>
-          <option value="read">Read</option>
-          <option value="want-to-read">Want to read</option>
-          <option value="dnf">Did not finish (DNF)</option>
-          <option value="currently-reading">Currently reading</option>
-        </select>
+    <div class="status-controls">
+      <div class="status-controls-primary" role="group" aria-label="Status controls">
+        <div class="select-wrap">
+          <label for="status-select" class="visually-hidden">Status</label>
+          <select id="status-select" name="status">
+            <option value="all" selected>All</option>
+            <option value="read">Read</option>
+            <option value="want-to-read">Want to read</option>
+            <option value="dnf">Did not finish (DNF)</option>
+            <option value="currently-reading">Currently reading</option>
+          </select>
+        </div>
+
+        <div class="group-toggle">
+          <input id="group-by-years" type="checkbox" checked>
+          <label for="group-by-years">Group by year</label>
+        </div>
+
+        <div class="group-toggle">
+          <input id="covers-only" type="checkbox">
+          <label for="covers-only">Covers only</label>
+        </div>
       </div>
 
-      <div class="group-toggle">
-        <input id="group-by-years" type="checkbox" checked>
-        <label for="group-by-years">Group by year</label>
+      <div class="status-controls-end">
+        <div class="bookshelf-find">
+          <label for="bookshelf-find-input" class="visually-hidden">Find a title or author</label>
+          <div class="bookshelf-find-input-wrap">
+            <input
+              id="bookshelf-find-input"
+              type="search"
+              name="find"
+              placeholder="Find a title or author"
+              autocomplete="off"
+              autocapitalize="none"
+              spellcheck="false"
+              enterkeyhint="go"
+              role="combobox"
+              aria-autocomplete="list"
+              aria-expanded="false"
+              aria-controls="bookshelf-find-list"
+              aria-haspopup="listbox"
+            >
+            <button type="button" class="bookshelf-find-clear" id="bookshelf-find-clear" hidden aria-label="Clear find">
+              <span aria-hidden="true">✕</span>
+            </button>
+          </div>
+          <ul id="bookshelf-find-list" class="bookshelf-find-list" role="listbox" aria-label="Matching books" hidden></ul>
+          <div id="bookshelf-find-live" class="visually-hidden" aria-live="polite" aria-atomic="true"></div>
+        </div>
+        <div class="bookshelf-top-slot">
+          <button type="button" class="bookshelf-top bookshelf-top--bar" data-jump="bottom">
+            <span class="bookshelf-top-label">Bottom</span>
+            <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false">
+              <path d="M12 19V5M5 12l7-7 7 7"></path>
+            </svg>
+          </button>
+        </div>
       </div>
     </div>
   </fieldset>
