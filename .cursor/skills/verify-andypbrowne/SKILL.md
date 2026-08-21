@@ -1,12 +1,14 @@
 ---
 name: verify-andypbrowne
 description: >-
-  Drive the andypbrowne Eleventy site in a real browser and prove user-facing
-  behavior. Use when verifying UI changes, bookshelf, the command palette,
-  posts, about, or before calling a frontend change done.
+  Drive the andypbrowne Eleventy site in a real browser through
+  control-andypbrowne. Don't use the harness unless I ask.
+disable-model-invocation: true
 ---
 
 # Verify andypbrowne
+
+Don't use the harness unless I ask.
 
 Primary surface is the public website. Users read posts, filter the bookshelf, and search with the command palette. Secondary surfaces are the Atom/JSON feeds, `/llms.txt`, and `/index.json`. Prove those with `http`, not the browser, unless the change is specifically about discovery files.
 
