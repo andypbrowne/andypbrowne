@@ -21,6 +21,7 @@ module.exports = function(eleventyConfig) {
 		"./public/": "/",
 		"./node_modules/prismjs/themes/prism-okaidia.css": "/css/prism-okaidia.css",
 	});
+	eleventyConfig.addPassthroughCopy({ "content/feed.xsl": "/feed.xsl" });
 	eleventyConfig.addPassthroughCopy({ "content/blog": "blog" });
 	eleventyConfig.addPassthroughCopy('./content/assets');
 	eleventyConfig.addPassthroughCopy('./public/css/webfonts.css');

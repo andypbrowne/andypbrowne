@@ -16,3 +16,8 @@
 	[headers.values]
 		Content-Type = "text/plain; charset=utf-8"
 
+[[headers]]
+	for = "/feed.xsl"
+	[headers.values]
+		Content-Type = "text/xsl; charset=utf-8"
+
