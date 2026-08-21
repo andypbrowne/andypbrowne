@@ -1241,7 +1241,8 @@ footer .footer-container ul li {
 }
 footer .footer-links {
 	display: flex;
-	gap: 4rem;
+	flex-wrap: wrap;
+	gap: 2rem 4rem;
 }
 .license {
 	font-size: smaller;
@@ -1276,7 +1277,8 @@ footer .footer-links {
 		justify-content: space-between;
 	}
 	footer .footer-links {
-		gap: 8rem;
+		flex-wrap: nowrap;
+		gap: 4rem;
 	}
 }
 

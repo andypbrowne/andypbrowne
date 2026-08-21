@@ -4,3 +4,7 @@ package-lock.json
 content/blog/_template
 # Local Netlify folder
 .netlify
+# Verification harness (keep the skill and feature map)
+.cursor/skills/verify-andypbrowne/.run/
+.cursor/skills/verify-andypbrowne/artifacts/
+.cursor/skills/verify-andypbrowne/scripts/node_modules/

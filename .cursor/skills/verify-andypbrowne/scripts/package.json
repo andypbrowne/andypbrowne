@@ -1,0 +1,9 @@
+{
+  "name": "control-andypbrowne",
+  "private": true,
+  "type": "module",
+  "description": "Verification harness for the andypbrowne Eleventy site. Not a site runtime dependency.",
+  "dependencies": {
+    "playwright": "^1.55.0"
+  }
+}

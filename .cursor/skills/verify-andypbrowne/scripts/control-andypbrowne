@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -euo pipefail
+DIR="$(cd "$(dirname "$0")" && pwd)"
+if [[ ! -d "$DIR/node_modules/playwright" ]]; then
+  echo "Installing Playwright for verification (one-time)..." >&2
+  (cd "$DIR" && npm install --no-fund --no-audit)
+  (cd "$DIR" && npx playwright install chromium)
+fi
+exec node "$DIR/control-andypbrowne.mjs" "$@"
