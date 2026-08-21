@@ -666,6 +666,13 @@ section.featured-case-study .featured-case-study-image img {
 		padding-block-start: 1em;
 	}
 
+.featured-case-study-content [data-vt="description"] {
+	font-size: var(--font-size-base);
+	font-family: var(--font-family);
+	font-style: normal;
+	font-weight: 650;
+}
+
 section.field-guides {
 	margin-block: 3rem 2rem;
 }
@@ -1216,7 +1223,7 @@ footer .footer-container {
     margin: auto;
 	display: flex;
 	justify-content: space-between;
-	gap: 1em .5em;
+	gap: 1em 2rem;
 	align-items: center;
 }
 header > div {
@@ -1343,7 +1350,7 @@ footer .footer-links {
 .postlist-item:before,
 .post-number {
 	font-size: var(--font-size-md);
-	font-family: var(--font-family-cedar);
+	font-family: var(--font-family);
 	color: var(--text-color);
 	font-weight: 650;
 	opacity: .8;

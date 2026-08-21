@@ -85,7 +85,7 @@ css: /assets/css/bookshelf.css
           {% endif %}
         </a>
         {% if post.data.description %}
-          <p data-vt="description" style="font-size: var(--font-size-md); font-family: var(--font-family-cedar); font-style: italic; font-weight: 650;">{{ post.data.description }}</p>
+          <p data-vt="description">{{ post.data.description }}</p>
         {% endif %}
         <div style="display: flex; justify-content: flex-end; margin-block-end: 2rem;">
           <a href="{{ post.url }}" class="postlist-link">Read more &rarr;</a>
