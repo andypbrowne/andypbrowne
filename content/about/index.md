@@ -17,8 +17,8 @@ eleventyNavigation:
 
 </div>
 
-<input type="radio" id="snappy" name="categories" value="one" checked>
-<input type="radio" id="chatty" name="categories" value="two">
+<input type="radio" id="snappy" name="categories" value="one">
+<input type="radio" id="chatty" name="categories" value="two" checked>
 <input type="radio" id="windy" name="categories" value="three">
 
 <ol class="filters">
