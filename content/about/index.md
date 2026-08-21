@@ -31,7 +31,7 @@ eleventyNavigation:
 
 <section class="filter-grid-item" data-category="one">
 
-Andy is a User Experience Designer. He specializes in employee experience and design systems. He likes to say that he brings good order and discipline to the field of design. 
+Andy is a User Experience Designer. He specializes in employee experience and design operations. He likes to say that he brings good order and discipline to the field of design. 
 
 </section>
 <section class="filter-grid-item" data-category="two">
