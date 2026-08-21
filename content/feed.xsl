@@ -19,7 +19,6 @@
 				<style>
 					h1 {
 						text-align: start;
-						font-size: var(--font-size-lg);
 						margin-block: 0 1rem;
 					}
 					aside {
@@ -48,11 +47,9 @@
 				</header>
 				<main>
 					<h1>Feed</h1>
-					<p class="feed-intro">
-						Andy is a User Experience Designer who specializes in employee experience and design operations. He likes to say that he brings good order and discipline to the field of design.
-					</p>
 					<aside>
 						<p>
+
 							This is a feed of new posts. Copy this URL into Feedly, NetNewsWire, or another reader.
 							<xsl:text> </xsl:text>
 							<a href="https://aboutfeeds.com/">What is a feed?</a>
@@ -61,6 +58,9 @@
 							<code class="feed-url">https://andypbrowne.com/feed/feed.xml</code>
 						</p>
 					</aside>
+					<p class="feed-intro">
+						Andy is a User Experience Designer who specializes in employee experience and design operations. He likes to say that he brings good order and discipline to the field of design.
+					</p>
 					<ul class="feed-list">
 						<xsl:apply-templates select="atom:feed/atom:entry"/>
 					</ul>
