@@ -454,5 +454,17 @@
     "tags": ["zine", "sci-fi", "fiction"],
     "status": "read",
     "description": "Published by the Artmageddon Collective. Only available for purchase in the neighborhood."
+  },
+  {
+    "cover": "https://covers.openlibrary.org/b/isbn/9780316556347-L.jpg",
+    "coverAlt": "Cover of Circe with gold title lettering and a woman in a dark sea setting",
+    "link": "https://madelinemiller.com/the-books/",
+    "title": "Circe",
+    "subTitle": "",
+    "author": "Madeline Miller",
+    "type": "book",
+    "tags": ["fiction", "literature", "fantasy"],
+    "status": "want-to-read",
+    "description": ""
   }
 ]
