@@ -8,7 +8,7 @@
   <a href="{{ book.link }}"><img loading="lazy" width="180" height="270" src="{{ book.cover }}" alt="{{ book.coverAlt }}" /></a>
   <div class="info">
   <h3>{{ book.title }} 
-    {% if book.type == 'audio' or book.type == 'audiobook' %}
+    {% if book.type == 'audio' %}
     🎧  
     {% endif %} 
   </h3>
