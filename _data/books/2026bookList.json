@@ -514,5 +514,17 @@
     "tags": ["business", "non-fiction"],
     "status": "want-to-read",
     "description": ""
+  },
+  {
+    "cover": "https://covers.openlibrary.org/b/isbn/9780062913463-L.jpg",
+    "coverAlt": "Cover of Nothing to See Here: a child's legs in striped socks stand in a room while a burst of flame takes the place of their upper body",
+    "link": "https://www.harpercollins.com/products/nothing-to-see-here-kevin-wilson?variant=32123708407842",
+    "title": "Nothing to See Here",
+    "subTitle": "",
+    "author": "Kevin Wilson",
+    "type": "audiobook",
+    "tags": ["fiction", "literature"],
+    "status": "currently-reading",
+    "description": "About 4 hours 27 minutes at 1.5× (6 hours 40 minutes full length)."
   }
 ]
