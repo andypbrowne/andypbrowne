@@ -35,8 +35,8 @@
       },
       "type": {
         "type": "string",
-        "description": "Media type (book, audiobook, etc.)",
-        "enum": ["", "book", "audiobook", "ebook", "zine"]
+        "description": "Media type (book, audio, etc.)",
+        "enum": ["", "book", "audio", "ebook", "zine"]
       },
       "tags": {
         "type": "array",
