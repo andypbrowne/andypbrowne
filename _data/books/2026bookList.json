@@ -410,6 +410,8 @@
   {
     "cover": "https://m.media-amazon.com/images/I/81K9ZIQf4VL._SY522_.jpg",
     "coverAlt": "Cover of Blood Over Bright Haven with a gold typewriter, red flames, and celestial gold arcs on a black background",
+    "graphic": "/assets/images/graphic-blood-over-bright-haven-harlan2.jpg",
+    "graphicAlt": "Harlan 2 spellograph",
     "link": "https://mlwangbooks.com/blood-over-bright-haven/",
     "title": "Blood Over Bright Haven",
     "subTitle": "A Novel",
@@ -417,7 +419,7 @@
     "type": "book",
     "tags": ["fantasy", "fiction"],
     "status": "currently-reading",
-    "description": "Loaned to me by my neighbor."
+    "description": "Loaned to me by my neighbor. The magic system is interesting and complex in a way that makes it fun to learn about as you read."
   },
   {
     "cover": "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781982141189/the-will-of-the-many-9781982141189_lg.jpg",
