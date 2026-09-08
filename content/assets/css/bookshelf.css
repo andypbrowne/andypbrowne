@@ -281,6 +281,26 @@ ol.bookshelf li div.info p {
   display: inline-flex;
   align-items: center;
   gap: 0.65rem;
+  min-width: 0;
+}
+
+.filtering-active-label {
+  display: none;
+  min-width: 0;
+  max-width: 11rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 500;
+  font-variation-settings: "wght" 500;
+  font-size: var(--font-size-sm, 0.875rem);
+  color: var(--color-midnight-60, #444);
+}
+
+.filtering-active-label:not([hidden])::before {
+  content: "·";
+  margin-inline-end: 0.45rem;
+  color: var(--color-midnight-40, #888);
 }
 
 .filtering-icon {
@@ -329,6 +349,10 @@ fieldset.filtering legend {
 
   .filtering-details:not([open]) fieldset.filtering {
     display: none;
+  }
+
+  .filtering-details:not([open]) .filtering-active-label:not([hidden]) {
+    display: inline;
   }
 }
 

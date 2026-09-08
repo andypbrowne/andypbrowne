@@ -199,6 +199,41 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   const emptyStateEl = document.getElementById('empty-state');
+  const activeFilterLabel = document.getElementById('filtering-active-label');
+
+  const STATUS_SHORT = {
+    read: 'Read',
+    'want-to-read': 'Want',
+    'currently-reading': 'Reading',
+    dnf: 'DNF'
+  };
+
+  function tagLabelFor(value) {
+    const radio = filterRadios.find(r => r.value.toLowerCase() === value);
+    if (!radio) return value;
+    const label = document.querySelector(`label[for="${radio.id}"]`);
+    if (!label) return value;
+    if (!label.dataset.baseText) {
+      label.dataset.baseText = label.textContent.replace(/\s*\(\d+\)$/, '').trim();
+    }
+    return label.dataset.baseText || value;
+  }
+
+  function updateCollapsedFilterLabel() {
+    if (!activeFilterLabel) return;
+    const parts = [];
+    if (currentTag && currentTag !== 'all') parts.push(tagLabelFor(currentTag));
+    if (currentStatus && currentStatus !== 'all') {
+      parts.push(STATUS_SHORT[currentStatus] || currentStatus);
+    }
+    if (!parts.length) {
+      activeFilterLabel.textContent = '';
+      activeFilterLabel.hidden = true;
+      return;
+    }
+    activeFilterLabel.textContent = parts.join(' · ');
+    activeFilterLabel.hidden = false;
+  }
 
   // apply both currentTag and currentStatus to show matching cards
   function applyFilters() {
@@ -238,6 +273,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     updateFilterLabels();
+    updateCollapsedFilterLabel();
     if (typeof updateBookCounts === 'function') updateBookCounts();
   }
 
