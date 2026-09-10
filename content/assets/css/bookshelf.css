@@ -293,8 +293,8 @@ ol.bookshelf li div.info p {
   text-overflow: ellipsis;
   white-space: nowrap;
   font-size: var(--font-size-base);
-  font-weight: 500;
-  font-variation-settings: "wght" 500;
+  font-weight: 600;
+  font-variation-settings: "wght" 650;
   line-height: inherit;
   color: var(--color-midnight-60, #444);
 }
