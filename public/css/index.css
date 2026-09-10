@@ -786,10 +786,13 @@ sup { font-variant-position: super; }
 .image-slider {
 	--exposure: 50%;
 	--slider-thumb-size: 2rem;
+	/* Size the clipped “before” image against the full slider, not the strip */
+	container-type: inline-size;
 	display: grid;
 	position: relative;
 	border-radius: var(--border-radius);
 	isolation: isolate;
+	background-color: #fff;
 }
 
 .image-slider > .image-slider__after,
@@ -804,6 +807,8 @@ sup { font-variant-position: super; }
 	height: auto;
 	max-width: 100%;
 	border-radius: var(--border-radius);
+	background-color: #fff;
+	opacity: 1;
 	user-select: none;
 	pointer-events: none;
 }
@@ -812,16 +817,22 @@ sup { font-variant-position: super; }
 	width: var(--exposure);
 	overflow: hidden;
 	align-self: stretch;
+	justify-self: start;
 	z-index: 1;
 	pointer-events: none;
 	border-radius: var(--border-radius) 0 0 var(--border-radius);
+	/* Opaque crop so the after layer never ghosts through */
+	background-color: #fff;
+	opacity: 1;
 }
 
 .image-slider__before img {
 	display: block;
-	height: 100%;
-	width: auto;
+	/* Override global `img { width: 100% }` — match the after image’s full width */
+	width: 100cqi;
 	max-width: none;
+	height: auto;
+	opacity: 1;
 	user-select: none;
 }
 
@@ -853,6 +864,7 @@ sup { font-variant-position: super; }
 	height: 100%;
 	cursor: ew-resize;
 	outline: none;
+	opacity: 1;
 }
 
 .image-slider__range:focus-visible {
