@@ -37,6 +37,43 @@ module.exports = function(eleventyConfig) {
 		}" frameborder="0" allowfullscreen></iframe>
 	`;
 	  });
+
+	// Native HTML/CSS before/after image comparison slider.
+	// Usage in Markdown (Nunjucks): 
+	// {% imageSlider "./before.png", "./after.png", "Optional alt label" %}
+	// Caption text (optional)
+	// {% endimageSlider %}
+	eleventyConfig.addPairedShortcode("imageSlider", (content, beforeSrc, afterSrc, altText) => {
+		const escapeAttr = (value) => String(value ?? "")
+			.replace(/&/g, "&amp;")
+			.replace(/"/g, "&quot;")
+			.replace(/</g, "&lt;")
+			.replace(/>/g, "&gt;");
+
+		const before = escapeAttr(beforeSrc);
+		const after = escapeAttr(afterSrc);
+		const label = escapeAttr(altText || "Compare images with slider");
+		const caption = String(content || "").trim();
+
+		return `<figure class="image-slider-figure">
+	<div class="image-slider" style="--exposure: 50%;">
+		<img class="image-slider__after" src="${after}" alt="" decoding="async" loading="lazy" />
+		<div class="image-slider__before">
+			<img src="${before}" alt="" decoding="async" loading="lazy" />
+		</div>
+		<input
+			type="range"
+			class="image-slider__range"
+			min="0"
+			max="100"
+			value="50"
+			aria-label="${label}"
+			oninput="this.parentElement.style.setProperty('--exposure', this.value + '%')"
+		/>
+	</div>
+	${caption ? `<figcaption>${caption}</figcaption>` : ""}
+</figure>`;
+	});
 	
 	// Run Eleventy when these files change:
 	// https://www.11ty.dev/docs/watch-serve/#add-your-own-watch-targets

@@ -68,18 +68,14 @@ One thing we can learn about is how different cuts, A and B, are made to support
 
 <div class="image-thumbnail-grid">
   <figure>
-    <img src="./type-tester-01.png" alt="Type tester example one" alt="A series of 9 fonts I lined up vertically that have the same letters: Rival’s Mounted 012"/>
+    <img src="./type-tester-01.png" alt="A series of 9 fonts I lined up vertically that have the same letters: Rival’s Mounted 012"/>
     <figcaption>9 fonts considered for use in my e-reader</figcaption>
   </figure>
-  <figure>
-    <img src="./type-tester-02.png" alt="Type tester example two" alt="5 paragraphs of type layed out like a book."/>
-    <figcaption>Valkarie typeface version A</figcaption>
-  </figure>
-  <figure>
-    <img src="./type-tester-03.png" alt="Type tester example three" alt="5 more paragraphs of type"/>
-    <figcaption>Valkarie typeface version B</figcaption>
-  </figure>
 </div>
+
+{% imageSlider "./type-tester-02.png", "./type-tester-03.png", "Compare Valkyrie A and Valkyrie B type cuts" %}
+Drag to compare Valkyrie A (before) and Valkyrie B (after)
+{% endimageSlider %}
 
 My e-reader choice is one small example. The same story-first reasoning shows up in places like these:
 
