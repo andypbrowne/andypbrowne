@@ -263,7 +263,7 @@ ol.bookshelf li div.info p {
 
 .filtering-summary {
   display: none;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-between;
   gap: 0.65rem;
   width: 100%;
@@ -280,7 +280,7 @@ ol.bookshelf li div.info p {
 
 .filtering-summary-label {
   display: inline-flex;
-  align-items: baseline;
+  align-items: center;
   gap: 0.65rem;
   min-width: 0;
 }
@@ -308,19 +308,20 @@ ol.bookshelf li div.info p {
 .filtering-icon {
   display: inline-flex;
   flex-shrink: 0;
-  align-self: center;
   align-items: center;
   justify-content: center;
-  width: 2.25em;
-  height: 2.25em;
+  width: 2em;
+  height: 2em;
   border-radius: 999px;
   background: var(--color-midnight-20, #f0f0f0);
   color: var(--color-midnight-80, #111);
 }
 
 .filtering-icon svg {
-  width: 1.35em;
-  height: 1.35em;
+  display: block;
+  width: 1.1em;
+  height: 1.1em;
+  flex-shrink: 0;
 }
 
 fieldset.filtering {
@@ -680,7 +681,7 @@ ol#filtered-results {
 
 .bookshelf-top--summary {
   flex-shrink: 0;
-  align-self: baseline;
+  align-self: center;
   font-size: var(--font-size-base);
   min-height: 0;
   padding-block: 0.2rem;
