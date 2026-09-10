@@ -263,7 +263,7 @@ ol.bookshelf li div.info p {
 
 .filtering-summary {
   display: none;
-  align-items: center;
+  align-items: baseline;
   justify-content: space-between;
   gap: 0.65rem;
   width: 100%;
@@ -273,13 +273,14 @@ ol.bookshelf li div.info p {
   font-size: var(--font-size-base);
   font-weight: 600;
   font-variation-settings: "wght" 650;
+  line-height: 1.2;
   padding: 0.75rem 0;
   color: var(--color-midnight-80, #111);
 }
 
 .filtering-summary-label {
   display: inline-flex;
-  align-items: center;
+  align-items: baseline;
   gap: 0.65rem;
   min-width: 0;
 }
@@ -291,9 +292,10 @@ ol.bookshelf li div.info p {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  font-size: var(--font-size-base);
   font-weight: 500;
   font-variation-settings: "wght" 500;
-  font-size: var(--font-size-sm, 0.875rem);
+  line-height: inherit;
   color: var(--color-midnight-60, #444);
 }
 
@@ -306,6 +308,7 @@ ol.bookshelf li div.info p {
 .filtering-icon {
   display: inline-flex;
   flex-shrink: 0;
+  align-self: center;
   align-items: center;
   justify-content: center;
   width: 2.25em;
@@ -352,7 +355,7 @@ fieldset.filtering legend {
   }
 
   .filtering-details:not([open]) .filtering-active-label:not([hidden]) {
-    display: inline;
+    display: inline-block;
   }
 }
 
@@ -677,6 +680,10 @@ ol#filtered-results {
 
 .bookshelf-top--summary {
   flex-shrink: 0;
+  align-self: baseline;
+  font-size: var(--font-size-base);
+  min-height: 0;
+  padding-block: 0.2rem;
 }
 
 @media screen and (max-width: 675px) {
