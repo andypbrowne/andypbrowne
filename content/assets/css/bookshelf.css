@@ -273,6 +273,7 @@ ol.bookshelf li div.info p {
   font-size: var(--font-size-base);
   font-weight: 600;
   font-variation-settings: "wght" 650;
+  line-height: 1.2;
   padding: 0.75rem 0;
   color: var(--color-midnight-80, #111);
 }
@@ -281,6 +282,27 @@ ol.bookshelf li div.info p {
   display: inline-flex;
   align-items: center;
   gap: 0.65rem;
+  min-width: 0;
+}
+
+.filtering-active-label {
+  display: none;
+  min-width: 0;
+  max-width: 11rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  font-variation-settings: "wght" 650;
+  line-height: inherit;
+  color: var(--color-midnight-60, #444);
+}
+
+.filtering-active-label:not([hidden])::before {
+  content: "·";
+  margin-inline-end: 0.45rem;
+  color: var(--color-midnight-40, #888);
 }
 
 .filtering-icon {
@@ -288,16 +310,18 @@ ol.bookshelf li div.info p {
   flex-shrink: 0;
   align-items: center;
   justify-content: center;
-  width: 2.25em;
-  height: 2.25em;
+  width: 2em;
+  height: 2em;
   border-radius: 999px;
   background: var(--color-midnight-20, #f0f0f0);
   color: var(--color-midnight-80, #111);
 }
 
 .filtering-icon svg {
-  width: 1.35em;
-  height: 1.35em;
+  display: block;
+  width: 1.1em;
+  height: 1.1em;
+  flex-shrink: 0;
 }
 
 fieldset.filtering {
@@ -329,6 +353,10 @@ fieldset.filtering legend {
 
   .filtering-details:not([open]) fieldset.filtering {
     display: none;
+  }
+
+  .filtering-details:not([open]) .filtering-active-label:not([hidden]) {
+    display: inline-block;
   }
 }
 
@@ -653,6 +681,10 @@ ol#filtered-results {
 
 .bookshelf-top--summary {
   flex-shrink: 0;
+  align-self: center;
+  font-size: var(--font-size-base);
+  min-height: 0;
+  padding-block: 0.2rem;
 }
 
 @media screen and (max-width: 675px) {
